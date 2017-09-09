@@ -51,7 +51,8 @@ export function provideSettings(storage: Storage) {
     option1: true,
     option2: 'Ionitron J. Framework',
     option3: '3',
-    option4: 'Hello'
+    option4: 'Hello',
+    option5: 'karimou'
   });
 }
 

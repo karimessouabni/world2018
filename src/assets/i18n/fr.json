@@ -5,20 +5,20 @@
   "LOGIN": "Connexion",
   "SIGNUP": "Inscription",
 
-  "TAB1_TITLE": "Items",
+  "TAB1_TITLE": "liste",
   "TAB2_TITLE": "Recherche",
   "TAB3_TITLE": "Paramètres",
 
   "MAP_TITLE": "Carte",
 
-  "TUTORIAL_SLIDE1_TITLE": "Bienvenue dans le kit de démarrage Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> est un kit complet pour démarrer sur Ionic. Il repose sur les meilleures pratiques et implémente de nombreux types de pages.",
+  "TUTORIAL_SLIDE1_TITLE": "ParisFoot",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Pariez sur votre meilleur club et défier vos amis </b> <br> ParisFoot V.0.1 ",
 
-  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser le Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemblez les types de pages désirés et supprimez les autres. Le kit inclut plusieurs mises en page courantes d’applications mobiles, comme les pages de connexion et d’inscription, les onglets et cette page de tutoriel.",
+  "TUTORIAL_SLIDE2_TITLE": "Inscription en un seul clique",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Connectez-vous en un seul clique avec votre compte Facebook ou Google.",
 
   "TUTORIAL_SLIDE3_TITLE": "Pour commencer",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Si vous avez besoin d’aide, consultez le README du Super Starter pour un tutoriel complet.",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Des paris sur plus que le score d'un match. Gagnez de l'argents en parions avec vos amis",
 
   "SETTINGS_TITLE": "Paramètres",
   "SETTINGS_OPTION1": "Option 1",
@@ -26,7 +26,7 @@
   "SETTINGS_OPTION3": "Option 3",
   "SETTINGS_OPTION4": "Option 4",
 
-  "SETTINGS_PAGE_PROFILE": "Modifier le profil",
+  "SETTINGS_PAGE_PROFILE": "Modifier votre profil",
 
   "WELCOME_TITLE": "Bienvenue",
 
@@ -37,10 +37,10 @@
   "SIGNUP_ERROR": "Inscription impossible. Veuillez vérifier les informations de votre compte et réessayer.",
   "SIGNUP_BUTTON": "Inscription",
 
-  "LIST_MASTER_TITLE": "Items",
+  "LIST_MASTER_TITLE": "liste",
 
   "ITEM_CREATE_TITLE": "Nouvel item",
-  "ITEM_CREATE_CHOOSE_IMAGE": "Ajouter une image",
+  "ITEM_CREATE_CHOOSE_IMAGE": "Ajouter une photo de profil",
 
   "CARDS_TITLE": "Social",
 

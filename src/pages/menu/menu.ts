@@ -27,7 +27,7 @@ export class MenuPage {
   }
 
   ionViewDidLoad() {
-    console.log('Hello MenuPage Page');
+    console.log('Hello MenuPage Pannge');
   }
 
   openPage(page) {
