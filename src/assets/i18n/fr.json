@@ -20,6 +20,10 @@
   "TUTORIAL_SLIDE3_TITLE": "Pour commencer",
   "TUTORIAL_SLIDE3_DESCRIPTION": "Des paris sur plus que le score d'un match. Gagnez de l'argents en parions avec vos amis",
 
+  "TUTORIAL_SLIDE4_TITLE": "Et c'est parti !",
+  "TUTORIAL_SLIDE4_DESCRIPTION": "Switcher !",
+
+
   "SETTINGS_TITLE": "Paramètres",
   "SETTINGS_OPTION1": "Option 1",
   "SETTINGS_OPTION2": "Option 2",
@@ -36,7 +40,7 @@
   "SIGNUP_TITLE": "Inscription",
   "SIGNUP_ERROR": "Inscription impossible. Veuillez vérifier les informations de votre compte et réessayer.",
   "SIGNUP_BUTTON": "Inscription",
-
+  "TUTORIAL_CONTINUE_BUTTON": "GO", 
   "LIST_MASTER_TITLE": "liste",
 
   "ITEM_CREATE_TITLE": "Nouvel item",
