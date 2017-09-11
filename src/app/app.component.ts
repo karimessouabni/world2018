@@ -17,6 +17,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { HomeReviewPage } from '../pages/home-review/home-review';
 
 import { Settings } from '../providers/providers';
 
@@ -42,7 +43,7 @@ import { TranslateService } from '@ngx-translate/core'
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage : any = FirstRunPage;
+  rootPage : any = HomeReviewPage;
 
   @ViewChild(Nav) nav: Nav;
 

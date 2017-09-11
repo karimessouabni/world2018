@@ -6,6 +6,7 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 
+import { AddReviewPage } from '../pages/add-review/add-review';
 import { CardsPage } from '../pages/cards/cards';
 import { ContentPage } from '../pages/content/content';
 import { ItemCreatePage } from '../pages/item-create/item-create';
@@ -20,11 +21,13 @@ import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { HomeReviewPage } from '../pages/home-review/home-review';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
 import { Settings } from '../providers/settings';
 import { User } from '../providers/user';
+import { ReviewsProvider } from '../providers/reviews/reviews';
 
 import { Camera } from '@ionic-native/camera';
 import { GoogleMaps } from '@ionic-native/google-maps';
@@ -33,6 +36,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -59,6 +63,7 @@ export function provideSettings(storage: Storage) {
 @NgModule({
   declarations: [
     MyApp,
+    AddReviewPage,
     CardsPage,
     ContentPage,
     ItemCreatePage,
@@ -72,7 +77,8 @@ export function provideSettings(storage: Storage) {
     SignupPage,
     TabsPage,
     TutorialPage,
-    WelcomePage
+    WelcomePage, 
+    HomeReviewPage
   ],
   imports: [
     BrowserModule,
@@ -90,6 +96,7 @@ export function provideSettings(storage: Storage) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    AddReviewPage,
     CardsPage,
     ContentPage,
     ItemCreatePage,
@@ -103,10 +110,12 @@ export function provideSettings(storage: Storage) {
     SignupPage,
     TabsPage,
     TutorialPage,
-    WelcomePage
+    WelcomePage,
+    HomeReviewPage
   ],
   providers: [
     Api,
+    ReviewsProvider,
     Items,
     User,
     Camera,
