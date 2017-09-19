@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 
 import { LoginPage } from '../login/login';
 import { SignupPage } from '../signup/signup';
+import firebase from 'firebase';
+
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -15,11 +17,39 @@ import { SignupPage } from '../signup/signup';
   templateUrl: 'welcome.html'
 })
 export class WelcomePage {
+  public userProfile:any = null;
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController) { 
+
+    firebase.auth().onAuthStateChanged( user => {
+      if (user) {
+        console.log(user);
+        this.userProfile = user;
+      } else {
+        console.log("There's no user here");
+      }
+    });
+
+  }
 
   login() {
     this.navCtrl.push(LoginPage, {});
+  }
+
+  loginFB() {
+    console.log("lklkl");
+    let provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithRedirect(provider).then( ()=>{
+      firebase.auth().getRedirectResult().then((result) =>{
+        alert(JSON.stringify(result));
+        console.log(result);
+      }).catch(function(error){
+        alert(JSON.stringify(error));
+        console.log(error);
+      })
+    }
+      
+    )
   }
 
   signup() {

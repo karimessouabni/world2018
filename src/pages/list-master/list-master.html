@@ -15,6 +15,15 @@
 <ion-content>
 
   <ion-list>
+    <ion-item *ngFor="let compet of competitions2017">
+    
+      <h2>{{compet.caption}} {{compet.lastUpdated}}</h2>
+      <p>ddd</p>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
     <ion-item-sliding *ngFor="let item of currentItems">
       <button ion-item (click)="openItem(item)">
         <ion-avatar item-start>

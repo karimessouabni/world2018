@@ -4,10 +4,10 @@
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
     <universal-links>
-    <host name="https://g977v.app.goo.gl/" scheme="https" />
-    <host name="fbloginparisfoot.firebaseapp.com" scheme="https">
-        <path url="/__/auth/callback"/>
-    </host>
+        <host name="https://g977v.app.goo.gl/" scheme="https" />
+        <host name="fbloginparisfoot.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback" />
+        </host>
     </universal-links>
     <content src="index.html" />
     <access origin="*" />
@@ -96,4 +96,5 @@
     <plugin name="cordova-plugin-customurlscheme" spec="^4.3.0">
         <variable name="URL_SCHEME" value="com.firebase.cordova" />
     </plugin>
+    <engine name="android" spec="~6.2.3" />
 </widget>

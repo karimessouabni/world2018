@@ -38,6 +38,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import firebase from 'firebase';
+import { CompetitionProvider } from '../providers/competition/competition';
 
 
 // Firebase initialisation 
@@ -130,6 +131,7 @@ export function provideSettings(storage: Storage) {
   providers: [
     Api,
     ReviewsProvider,
+    CompetitionProvider,
     Items,
     User,
     Camera,
@@ -138,7 +140,8 @@ export function provideSettings(storage: Storage) {
     StatusBar,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    CompetitionProvider
   ]
 })
 export class AppModule { }

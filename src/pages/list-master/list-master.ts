@@ -6,6 +6,8 @@ import { ItemDetailPage } from '../item-detail/item-detail';
 
 import { Items } from '../../providers/providers';
 
+import {CompetitionProvider} from '../../providers/competition/competition';
+
 import { Item } from '../../models/item';
 
 @Component({
@@ -14,9 +16,14 @@ import { Item } from '../../models/item';
 })
 export class ListMasterPage {
   currentItems: Item[];
+  competitions2017 : any ;
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Items, public competitionsProvider : CompetitionProvider, public modalCtrl: ModalController) {
     this.currentItems = this.items.query();
+     this.competitionsProvider.getCompetitions2017()
+    .then(data => {
+      this.competitions2017 = data;
+    });
   }
 
   /**
