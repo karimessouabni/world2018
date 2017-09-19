@@ -37,6 +37,20 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import firebase from 'firebase';
+
+
+// Firebase initialisation 
+
+firebase.initializeApp({
+  apiKey: "AIzaSyBWsilu-S_dM_bEJ5kfsEdQPxN9ZBPOL28",
+  authDomain: "fbloginparisfoot.firebaseapp.com",
+  databaseURL: "https://fbloginparisfoot.firebaseio.com",
+  projectId: "fbloginparisfoot",
+  storageBucket: "fbloginparisfoot.appspot.com",
+  messagingSenderId: "513895090448"
+});
+
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
