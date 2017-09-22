@@ -56,6 +56,13 @@ export class ListMasterPage {
   /**
    * Navigate to the detail page for this item.
    */
+
+  openCompet(compet:any){
+    this.navCtrl.push(ItemDetailPage, {
+      item: compet
+    });
+  }
+
   openItem(item: Item) {
     this.navCtrl.push(ItemDetailPage, {
       item: item

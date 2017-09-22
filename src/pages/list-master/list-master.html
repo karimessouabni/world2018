@@ -16,9 +16,9 @@
 
   <ion-list>
     <ion-item *ngFor="let compet of competitions2017">
-    
+      <button ion-item (click)="openCompet(compet)">
       <h2>{{compet.caption}} {{compet.lastUpdated}}</h2>
-      <p>ddd</p>
+      </button>
     </ion-item>
   </ion-list>
 

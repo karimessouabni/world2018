@@ -11,6 +11,25 @@
   <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
 
+  <ion-list>
+    <ion-item *ngFor="let matchs of matches | keys">
+
+      <ion-item *ngFor="let match of matchs.value "> 
+      
+      <h2>{{match.homeTeamName}} {{match.result.goalsHomeTeam}} - {{match.result.goalsAwayTeam}}  {{match.awayTeamName}}</h2>
+      <p>{{match.date}}</p>
+      <!-- <p>{{getLinkTeamImg(match._links.homeTeam.href)}}</p> -->
+      
+      </ion-item>
+      
+      
+      
+    </ion-item>
+  </ion-list>
+
+
+
+
   <div class="item-detail" padding>
     <h2>{{item.name}}</h2>
     <p>{{item.about}}</p>

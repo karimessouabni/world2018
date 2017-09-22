@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers , RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -12,32 +12,69 @@ import 'rxjs/add/operator/map';
 export class CompetitionProvider {
 
   competitions : any; 
+  data : any; 
+  matches : any; 
+  opt = new RequestOptions() ;
   constructor(public http: Http) {
-    console.log('Hello CompetitionProvider Provider');
     this.competitions = null ;
+    let myHeaders = new Headers();
+    
+    myHeaders.append('X-Auth-Token', '73d809746bd849fcb67e49ace137252a');
+    myHeaders.append('Content-type', 'application/json');
+    this.opt = new RequestOptions({
+     headers: myHeaders
+    })   
   }
 
 
   getCompetitions2017(){        
-    console.log("lplplplplplplplpl");
        if (this.competitions) {
-         console.log(this.competitions);
          return Promise.resolve(this.competitions);
        }
-    
+      
        return new Promise(resolve => {
-        let myHeaders = new Headers();
-        myHeaders.append('Ocp-Apim-Subscription-Key', '2a29e04e233a4ab1a4a3856027f80dde');
-        myHeaders.append('Content-type', 'application/json');
-        
-         this.http.get('http://api.football-data.org/v1/competitions/?season=2017')
+         this.http.get('http://api.football-data.org/v1/competitions/?season=2017', this.opt )
            .map(res => res.json())
            .subscribe(competitions => {
              this.competitions = competitions;
              resolve(this.competitions);
            });
        });
-    
      }
+
+     getPremierLeagueLastMatches(){
+      if (this.data) {
+        return Promise.resolve(this.data);
+      }
+   
+      return new Promise(resolve => {
+        this.http.get('http://api.football-data.org/v1/competitions/445/fixtures', this.opt)
+          .map(res => res.json())
+          .subscribe(data => {
+            this.data = data;
+            resolve(this.data);
+          });
+      });
+     }
+
+
+     getPrimeraDivisionLastMatches(){//IN_PLAY
+      if (this.matches) {
+        
+        return Promise.resolve(this.matches);
+        
+      }
+   
+      return new Promise(resolve => {
+        this.http.get('http://api.football-data.org/v1/competitions/455/fixtures', this.opt)
+          .map(res => res.json())
+          .subscribe(matches => {
+            this.matches = matches;
+            resolve(this.matches);
+          });
+      });
+     }
+
+
 
 }

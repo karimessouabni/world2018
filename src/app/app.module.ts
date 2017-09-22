@@ -39,7 +39,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import firebase from 'firebase';
 import { CompetitionProvider } from '../providers/competition/competition';
-
+import {KeysPipe} from '../pages/item-detail/compet.pipes'
+import { TeamsProvider } from '../providers/teams/teams';
 
 // Firebase initialisation 
 
@@ -93,7 +94,8 @@ export function provideSettings(storage: Storage) {
     TabsPage,
     TutorialPage,
     WelcomePage, 
-    HomeReviewPage
+    HomeReviewPage,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
@@ -141,7 +143,8 @@ export function provideSettings(storage: Storage) {
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    CompetitionProvider
+    CompetitionProvider,
+    TeamsProvider
   ]
 })
 export class AppModule { }
