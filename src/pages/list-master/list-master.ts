@@ -59,13 +59,9 @@ export class ListMasterPage {
 
   openCompet(compet:any){
     this.navCtrl.push(ItemDetailPage, {
-      item: compet
+      compet: compet
     });
   }
 
-  openItem(item: Item) {
-    this.navCtrl.push(ItemDetailPage, {
-      item: item
-    });
-  }
+
 }

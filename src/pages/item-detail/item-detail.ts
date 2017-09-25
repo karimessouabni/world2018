@@ -20,17 +20,20 @@ export class ItemDetailPage {
   teamImgLink : any;
 
   constructor(public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items) {
-    this.item = navParams.get('item') || items.defaultItem;
-    this.competitionsProvider.getPrimeraDivisionLastMatches()
+    
+    this.item = navParams.get('compet');
+    this.competitionsProvider.getCompetitionLastMatches(this.item.idCompet)
     .then(data => { 
       this.matches =  data ;
     });
   }
 
+  ionViewDidLoad() {
+  
+  }  
 
   getLinkTeamImg(linkToApi : any){
     this.teamImgLink  = this.teamsProvider.getTeamImg(linkToApi);
-
   }
 
 }

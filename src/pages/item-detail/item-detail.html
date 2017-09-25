@@ -4,12 +4,31 @@
     <ion-title>{{ item.name }}</ion-title>
   </ion-navbar>
 
+  <ion-toolbar>
+      <ion-segment color="red">
+        <ion-segment-button value="passe">
+          <ion-icon name="list-box"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="encours">
+          <ion-icon name="desktop"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="futurs">
+            <ion-icon name="time"></ion-icon>
+          </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+
+
 </ion-header>
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  <div class="item-profile" >
+      <img [src]="item.picLink" />
   </div>
+
+
+
 
   <ion-list>
     <ion-item *ngFor="let matchs of matches | keys">
@@ -17,8 +36,7 @@
       <ion-item *ngFor="let match of matchs.value "> 
       
       <h2>{{match.homeTeamName}} {{match.result.goalsHomeTeam}} - {{match.result.goalsAwayTeam}}  {{match.awayTeamName}}</h2>
-      <p>{{match.date}}</p>
-      <!-- <p>{{getLinkTeamImg(match._links.homeTeam.href)}}</p> -->
+      <p>{{item.idCompet}}</p>
       
       </ion-item>
       
