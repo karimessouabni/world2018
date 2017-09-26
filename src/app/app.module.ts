@@ -36,6 +36,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DatePicker } from 'ionic2-date-picker';
+import { CalendarModule } from "ion2-calendar";
 
 import firebase from 'firebase';
 import { CompetitionProvider } from '../providers/competition/competition';
@@ -95,11 +97,13 @@ export function provideSettings(storage: Storage) {
     TutorialPage,
     WelcomePage, 
     HomeReviewPage,
-    KeysPipe
+    KeysPipe,
+    DatePicker
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    CalendarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -112,6 +116,7 @@ export function provideSettings(storage: Storage) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    DatePicker,
     MyApp,
     AddReviewPage,
     CardsPage,
