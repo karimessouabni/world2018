@@ -343,6 +343,105 @@ app.get('/api/allCompetitions', function (req, res) {
 
 
 
+
+//========================== Filters ========================//
+
+// Get all fixtures of Day d 
+app.get('/api/fixtures/:d', function (req, res) { 
+    
+    var regex = new RegExp(req.params.d, "i")
+,   query = { 'date': regex };
+
+Fixtures.find(query, function(err, fixtures) {
+    if (err) {
+        res.json(err);
+    }
+    console.log("requete Mongo par DAY Len = "+fixtures.length);
+    res.json(fixtures);
+
+});
+
+});  
+
+
+// Get all fixtures of a competitions a Day d 
+app.get('/api/fixtures/:d/:competName?', function (req, res) {    
+var idCompet = null;
+
+switch (req.params.competName){
+    
+    case "BSA": //444
+    idCompet = 444;
+    break;
+    case "DED": //449
+    idCompet = 449;
+    break;
+    case "PD": //455
+    idCompet = 455;
+    break;
+    case "CL": //464
+    idCompet = 464;
+    break;
+    case "ELC": //446
+    idCompet = 446;
+    break;
+    case "EL1": //552
+    idCompet = 552;
+    break;
+    case "PL": //445
+    idCompet = 445;
+    break;
+    case "EL2": //448
+    idCompet = 448;
+    break;
+    case "BL1": //452
+    idCompet = 452;
+    break;
+    case "DFB": //458
+    idCompet = 458;
+    break;
+    case "FL2": //451
+    idCompet = 451;
+    break;
+    case "PPL": //457
+    idCompet = 457;
+    break;
+    case "BL2": //306
+    idCompet = 306;
+    break;
+    case "SB": //462
+    idCompet = 462;
+    break;
+    case "FL1": //450
+    idCompet = 450;
+    break;
+    case "SA": //456
+    idCompet = 456;
+    break;
+    case "AAL": //466
+    idCompet = 466;
+    break;    
+    default:
+    idCompet = 464;
+}
+
+var regexDay = new RegExp(req.params.d, "i")
+, regexCompetName = new RegExp(idCompet)
+
+,   query = { $and:[{'date': regexDay}, {'_links.competition.href': regexCompetName}]};
+
+Fixtures.find(query, function(err, fixtures) {
+    if (err) {
+        res.json(err);
+    }
+    console.log("requete Mongo par compet et date Len = "+fixtures.length);
+    res.json(fixtures);
+});
+
+});  
+
+
+
 // listen (start app with node server.js) ======================================
 app.listen(port);
 console.log("App listening on port 8080");  

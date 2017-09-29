@@ -89,6 +89,30 @@ export class CompetitionProvider {
     });
   }
 
+  getFixturesByDay(day: any) {
+    return new Promise(resolve => {
+      this.http.get('http://localhost:8080/api/fixtures/'+day)
+        .map(res => res.json())
+        .subscribe(matches => {
+          this.matches = matches;
+          resolve(this.matches);
+        });
+    });
+  }
+
+  /*
+  * Code des compet pour la recherche : a voir sur le serveur nodeJS
+  */
+  getFixturesByDayAndCompet(day: any, compet: any) {
+    return new Promise(resolve => {
+      this.http.get('http://localhost:8080/api/fixtures/'+day+'/'+compet)
+        .map(res => res.json())
+        .subscribe(matches => {
+          this.matches = matches;
+          resolve(this.matches);
+        });
+    });
+  }
 
 
 }
