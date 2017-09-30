@@ -108,11 +108,20 @@ export class CompetitionProvider {
       this.http.get('http://localhost:8080/api/fixtures/'+day+'/'+compet)
         .map(res => res.json())
         .subscribe(matches => {
-          this.matches = matches;
           resolve(this.matches);
         });
     });
   }
 
+
+  getTeamsById(idTeam: any) {
+    return new Promise(resolve => {
+      this.http.get('http://localhost:8080/api/team/'+idTeam)
+        .map(res => res.json())
+        .subscribe(teams => {
+          resolve(this.matches);
+        });
+    });
+  }
 
 }

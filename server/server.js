@@ -104,14 +104,11 @@ app.get('/', function (req, res) {
 app.get('/api/reviews', function (req, res) {
 
     console.log("fetching reviews");
-
     // use mongoose to get all reviews in the database
     Review.find(function (err, reviews) {
-
         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
         if (err)
             res.send(err)
-
         res.json(reviews); // return all reviews in JSON format
     });
 });
@@ -240,8 +237,11 @@ app.post('/api/updateACompetitionFixturesToMongo', function (req, res) {
                         }
                     }).then(function(results) {
                             for (j = 0; j < results.data.fixtures.length; j++) { 
-                                // results.data.fixtures[j].HomeTeamLink = results.data.fixtures[j]._links.homeTeam.href;
-                                // results.data.fixtures[j].picAwayTeamLink = results.data.fixtures[j]._links.awayTeam.href;
+                                var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
+                                var indexIdAwayTeam = results.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
+
+                                results.data.fixtures[j].idHomeTeam = results.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam+1,results.data.fixtures[j]._links.homeTeam.href.length);
+                                results.data.fixtures[j].idAwayTeam = results.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam+1,results.data.fixtures[j]._links.awayTeam.href.length);
                                 Fixtures.create(results.data.fixtures[j], function (err, fixture) {
                                     if (err) {
                                         res.send(err);
@@ -277,6 +277,10 @@ app.post('/api/updateACompetitionTeamsToMongo', function (req, res) {
                         }
                     }).then(function(results) {
                             for (j = 0; j < results.data.teams.length; j++) { 
+                                var indexIdTeam = results.data.teams[j]._links.self.href.lastIndexOf("/");
+
+                                results.data.teams[j].idTeam = results.data.teams[j]._links.self.href.substring(indexIdTeam+1,results.data.teams[j]._links.self.href.length);
+                             
                                 Teams.create(results.data.teams[j], function (err, team) {
                                     if (err) {
                                         res.send(err);
@@ -352,17 +356,30 @@ app.get('/api/fixtures/:d', function (req, res) {
     var regex = new RegExp(req.params.d, "i")
 ,   query = { 'date': regex };
 
-Fixtures.find(query, function(err, fixtures) {
-    if (err) {
-        res.json(err);
-    }
-    console.log("requete Mongo par DAY Len = "+fixtures.length);
-    res.json(fixtures);
+    Fixtures.find(query, function(err, fixtures) {
+        if (err) {
+            res.json(err);
+        }
+        res.json(fixtures);
 
-});
+    });
 
 });  
 
+
+// Find A team by it's id 
+app.get('/api/team/:id', function (req, res) { 
+    var regex = new RegExp('^'+req.params.id+'$', "i")
+    ,   query = { 'idTeam': regex };
+
+    Teams.find(query, function(err, fixtures) {
+        if (err) {
+            res.json(err);
+        }
+        res.json(fixtures);
+
+    });
+});
 
 // Get all fixtures of a competitions a Day d 
 app.get('/api/fixtures/:d/:competName?', function (req, res) {    

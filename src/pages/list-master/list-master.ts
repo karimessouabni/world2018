@@ -27,20 +27,22 @@ export class ListMasterPage {
 
   updateListFixtureAndCompets() {
     this.allCompetUpdated = [];
-    this.competitionsProvider.getCompetitions2017().then(dataCompet => {
-      this.allCompets = dataCompet;
-      dataCompet.forEach(compet => {
-        this.competitionsProvider.getFixturesByDayAndCompet(this.selectedDate, compet.league)
-          .then(dataFixtures => {
-            this.FixtureByCompet[compet.league] = dataFixtures;
-            if (this.FixtureByCompet[compet.league].length > 0) {
-              this.addCompet(compet.league);
-            }
-          });
+    this.competitionsProvider.getCompetitions2017()
+      .then(dataCompet => {
+        this.allCompets = dataCompet;
+        dataCompet.forEach(compet => {
+          this.competitionsProvider.getFixturesByDayAndCompet(this.selectedDate, compet.league)
+            .then(dataFixtures => {
+              this.competitionsProvider.getTeamsById(dataFixtures["idHomeTeam"]);
+              this.FixtureByCompet[compet.league] = dataFixtures;
+              if (this.FixtureByCompet[compet.league].length > 0) {
+                this.addCompet(compet.league);
+              }
+            });
+        });
+
       });
 
-    });
-    
   }
 
 
@@ -137,6 +139,15 @@ export class ListMasterPage {
     this.competitionsProvider.getFixturesByDayAndCompet(this.selectedDate, compet)
       .then(data => {
         return data;
+      });
+  }
+
+
+  getUrlImageTeam(idTeam: any) {
+    this.competitionsProvider.getTeamsById(idTeam)
+      .then(data => {
+        console.log(data);
+
       });
   }
 
