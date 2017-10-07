@@ -17,6 +17,7 @@ export class CompetitionProvider {
   opt = new RequestOptions();
   constructor(public http: Http) {
     this.competitions = null;
+    this.data = null ;
     let myHeaders = new Headers();
 
     myHeaders.append('X-Auth-Token', '73d809746bd849fcb67e49ace137252a');
@@ -103,12 +104,13 @@ export class CompetitionProvider {
   /*
   * Code des compet pour la recherche : a voir sur le serveur nodeJS
   */
-  getFixturesByDayAndCompet(day: any, compet: any) {
+  getFixturesByDayAndCompet(day: any, compet: any) : any {
     return new Promise(resolve => {
       this.http.get('http://localhost:8080/api/fixtures/'+day+'/'+compet)
         .map(res => res.json())
-        .subscribe(matches => {
-          resolve(this.matches);
+        .subscribe(data => {
+          this.data = data;
+          resolve(this.data);
         });
     });
   }
@@ -118,8 +120,9 @@ export class CompetitionProvider {
     return new Promise(resolve => {
       this.http.get('http://localhost:8080/api/team/'+idTeam)
         .map(res => res.json())
-        .subscribe(teams => {
-          resolve(this.matches);
+        .subscribe(data => {
+          this.data = data;
+          resolve(this.data);
         });
     });
   }

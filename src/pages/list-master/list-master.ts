@@ -30,14 +30,23 @@ export class ListMasterPage {
     this.competitionsProvider.getCompetitions2017()
       .then(dataCompet => {
         this.allCompets = dataCompet;
-        dataCompet.forEach(compet => {
+        dataCompet.forEach(compet => { // pour chaque competition : PrimeraDivision
           this.competitionsProvider.getFixturesByDayAndCompet(this.selectedDate, compet.league)
-            .then(dataFixtures => {
-              this.competitionsProvider.getTeamsById(dataFixtures["idHomeTeam"]);
-              this.FixtureByCompet[compet.league] = dataFixtures;
-              if (this.FixtureByCompet[compet.league].length > 0) {
-                this.addCompet(compet.league);
-              }
+            .then(dataFixtures => { // match du jours : PrimeraDivision's Matchs of today 
+              dataFixtures.forEach(fixture => {
+
+                this.competitionsProvider.getTeamsById(fixture["idHomeTeam"])
+                  .then(dataTeam => {
+                    fixture['urlhomeTeam'] = dataTeam['crestUrl'];
+                  }); 
+
+                this.FixtureByCompet[compet.league] = dataFixtures;
+                if (this.FixtureByCompet[compet.league].length > 0) {
+                  this.addCompet(compet.league);
+                }
+
+              });
+
             });
         });
 
@@ -143,13 +152,13 @@ export class ListMasterPage {
   }
 
 
-  getUrlImageTeam(idTeam: any) {
-    this.competitionsProvider.getTeamsById(idTeam)
-      .then(data => {
-        console.log(data);
-
-      });
-  }
+  // getUrlImageTeam(idTeam: any) {
+  //   this.competitionsProvider.getTeamsById(idTeam)
+  //     .then(data => {
+  //       console.log(data['crestUrl']);
+  //       return data['crestUrl'];
+  //     });
+  // }
 
 
 }

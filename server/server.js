@@ -369,14 +369,13 @@ app.get('/api/fixtures/:d', function (req, res) {
 
 // Find A team by it's id 
 app.get('/api/team/:id', function (req, res) { 
-    var regex = new RegExp('^'+req.params.id+'$', "i")
-    ,   query = { 'idTeam': regex };
+    var   query = { 'idTeam': req.params.id };
 
     Teams.find(query, function(err, fixtures) {
         if (err) {
             res.json(err);
         }
-        res.json(fixtures);
+        res.json(fixtures[0]);
 
     });
 });

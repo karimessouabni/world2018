@@ -25,9 +25,9 @@
 
             <button ion-item (click)="openCompet(fixture)">
 
-                  <!-- <img [src]="getUrlImageTeam(fixture.idHomeTeam)" /> -->
-              <h2> {{fixture.homeTeamName}} - {{fixture.awayTeamName}} </h2>
-              <h2> {{getUrlImageTeam(fixture.idHomeTeam)}} </h2>
+
+              <h2> <img [src]="fixture.urlhomeTeam" height="42" width="42" />{{fixture.homeTeamName}} - {{fixture.awayTeamName}} </h2>
+
             </button>
 
             <!-- <ion-content>
