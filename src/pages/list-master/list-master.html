@@ -24,9 +24,9 @@
           <ion-item *ngFor="let fixture of FixtureByCompet[compet.league]">
 
             <button ion-item (click)="openCompet(fixture)">
-
-
-              <h2> <img [src]="fixture.urlhomeTeam" height="42" width="42" />{{fixture.homeTeamName}} - {{fixture.awayTeamName}} </h2>
+              
+              
+              <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:40px; height:40" alt=""/><h2> {{fixture.homeTeamName}} - {{fixture.awayTeamName}} </h2>
 
             </button>
 

@@ -38,14 +38,12 @@ export class ListMasterPage {
                 this.competitionsProvider.getTeamsById(fixture["idHomeTeam"])
                   .then(dataTeam => {
                     fixture['urlhomeTeam'] = dataTeam['crestUrl'];
-                  }); 
-
-                this.FixtureByCompet[compet.league] = dataFixtures;
-                if (this.FixtureByCompet[compet.league].length > 0) {
-                  this.addCompet(compet.league);
-                }
-
+                  });
               });
+              this.FixtureByCompet[compet.league] = dataFixtures;
+              if (this.FixtureByCompet[compet.league].length > 0) {
+                this.addCompet(compet.league);
+              }
 
             });
         });
