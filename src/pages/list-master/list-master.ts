@@ -38,7 +38,16 @@ export class ListMasterPage {
                 this.competitionsProvider.getTeamsById(fixture["idHomeTeam"])
                   .then(dataTeam => {
                     fixture['urlhomeTeam'] = dataTeam['crestUrl'];
+
+                    this.competitionsProvider.getTeamsById(fixture["idAwayTeam"])
+                    .then(dataTeam2 => {
+                      fixture['urlawayTeam'] = dataTeam2['crestUrl'];
+  
+                    });
+
                   });
+
+                
               });
               this.FixtureByCompet[compet.league] = dataFixtures;
               if (this.FixtureByCompet[compet.league].length > 0) {
