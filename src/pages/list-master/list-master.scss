@@ -8,3 +8,43 @@ page-list-master {
   }
   
   
+  .no-padding {
+    padding: 15px 0px 15px 0px !important;
+    padding-right: 0px;
+
+  }
+
+  .label {
+    margin: 0;
+ }
+ 
+ .item-inner {
+    padding-right: 0px!important;
+ }
+
+
+ .compet{
+  width: 100%; 
+  height: 100%; 
+  left: 0px; 
+  top: 0px; 
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px; 
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+ }
+
+ .compet a{
+  bottom: -11%;
+  color: #424242;
+  font-family: Roboto;
+  font-size: 1.2em;
+  left: 0;
+  padding: 0px 200px 0px 140px;
+  position: absolute;
+} 
+ .stretch {
+  width:100%;
+  height:50%;
+}

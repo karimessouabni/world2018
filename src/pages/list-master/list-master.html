@@ -1,52 +1,36 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
-
   </ion-navbar>
-
-  <button ion-button color="primary" (click)="openCalendar()">  <ion-icon name="calendar"></ion-icon></button> {{selectedDate}}
+  <button ion-button color="primary" (click)="openCalendar()">
+    <ion-icon name="calendar"></ion-icon>
+  </button> {{selectedDate}}
 </ion-header>
 
 <ion-content>
+  <ion-list >
+    <ion-item class="item no-padding"   *ngFor="let compet of allCompetUpdated" style="background-color: #f1f7f7;"> 
+      <div class="item item-divider compet">
+          <img [src]="compet.picLink" class="stretch" onError="this.src='assets/icon/favicon.ico';" alt="" /> 
+    <a> Journée {{compet.currentMatchday}}</a>
+      </div>
+        <ion-row *ngFor="let fixture of FixtureByCompet[compet.league]" (click)="openCompet(fixture)" text-wrap style="background-color: #ffffff;">
+            <ion-col col-5>
+            <div > {{fixture.homeTeamName}}</div>
+            </ion-col>
+            <ion-col col-1>
+            <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:20px; height:20"
+              alt="" /> </ion-col>
+            <ion-col col-1>
+              <img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:20px; height:20"
+              alt="" /> 
+              </ion-col>
+              <ion-col col-5>
+                  <div > {{fixture.awayTeamName}}</div>
+              </ion-col>
+          
 
-
-
-  <ion-list>
-    <ion-item *ngFor="let compet of allCompetUpdated">
-
-
-      <ion-card class="slide-in-both-ways">
-        <div class="item item-divider">
-          {{compet.caption}} - {{compet.league}}
-          </div>
-        <ion-list>
-          <ion-item *ngFor="let fixture of FixtureByCompet[compet.league]">
-
-            <button ion-item (click)="openCompet(fixture)">
-              
-              
-              <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:40px; height:40" alt=""/><h2> {{fixture.homeTeamName}} - {{fixture.awayTeamName}} </h2><img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:40px; height:40" alt=""/>
-
-            </button>
-
-            <!-- <ion-content>
-              <ion-fab bottom right #fab>
-                <button ion-fab> <ion-icon name="arrow-dropleft"></ion-icon></button>
-                <ion-fab-list side="left">
-
-                  <button ion-fab (click)="share('facebook', fab)"><ion-icon name="clipboard"></ion-icon></button>
-                  <button ion-fab (click)="share('twitter', fab)"><ion-icon name="trending-up"></ion-icon></button>
-                </ion-fab-list>
-              </ion-fab>
-            </ion-content> -->
-          </ion-item>
-        </ion-list>
-
-      </ion-card>
+        </ion-row>
     </ion-item>
   </ion-list>
-
-
-
 </ion-content>
