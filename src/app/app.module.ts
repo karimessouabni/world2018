@@ -42,6 +42,7 @@ import { CalendarModule } from "ion2-calendar";
 import firebase from 'firebase';
 import { CompetitionProvider } from '../providers/competition/competition';
 import {KeysPipe} from '../pages/item-detail/compet.pipes'
+import { DatePipes } from '../pipes/date-pipes/date-pipes'; // import our pipe here
 import { TeamsProvider } from '../providers/teams/teams';
 
 // Firebase initialisation 
@@ -98,6 +99,7 @@ export function provideSettings(storage: Storage) {
     WelcomePage, 
     HomeReviewPage,
     KeysPipe,
+    DatePipes,
     DatePicker
   ],
   imports: [

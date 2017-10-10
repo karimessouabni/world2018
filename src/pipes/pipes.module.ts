@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { ProgrammedMatchesPipesPipe } from './../pipes/programmed-matches-pipes/programmed-matches-pipes';
+import { DatePipes } from './../pipes/date-pipes/date-pipes';
 @NgModule({
-	declarations: [ProgrammedMatchesPipesPipe],
+	declarations: [DatePipes],
 	imports: [],
-	exports: [ProgrammedMatchesPipesPipe]
+	exports: [DatePipes]
 })
 export class PipesModule {}
