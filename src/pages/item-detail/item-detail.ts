@@ -1,10 +1,12 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { Items } from '../../providers/providers';
-import {CompetitionProvider} from '../../providers/competition/competition';
-import {TeamsProvider} from '../../providers/teams/teams';
-
+import { CompetitionProvider } from '../../providers/competition/competition';
+import { TeamsProvider } from '../../providers/teams/teams';
+import { SuperTabsModule } from 'ionic2-super-tabs'
+import { ItemCreatePage } from '../item-create/item-create';
+import { MapPage } from '../map/map';
 
 
 
@@ -15,25 +17,38 @@ import {TeamsProvider} from '../../providers/teams/teams';
 
 
 export class ItemDetailPage {
-  item : any;
-  matches : any;
-  teamImgLink : any;
+  fixture: any;
+  matches: any;
+  teamImgLink: any;
+  page1: any = ItemCreatePage;
+  page2: any = MapPage;
+  page3: any = ItemCreatePage;
 
   constructor(public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items) {
-    
-    this.item = navParams.get('compet');
-    this.competitionsProvider.getCompetitionLastMatches(this.item.idCompet)
-    .then(data => { 
-      this.matches =  data ;
-    });
+
+    this.fixture = navParams.get('fixture');
+    this.competitionsProvider.getCompetitionLastMatches(this.fixture.idCompet)
+      .then(data => {
+        this.matches = data;
+      });
   }
 
   ionViewDidLoad() {
-  
-  }  
 
-  getLinkTeamImg(linkToApi : any){
-    this.teamImgLink  = this.teamsProvider.getTeamImg(linkToApi);
+  }
+
+  getLinkTeamImg(linkToApi: any) {
+    this.teamImgLink = this.teamsProvider.getTeamImg(linkToApi);
+  }
+
+
+  swipeEvent(e) {
+    if (e.direction == '2') {
+      this.navCtrl.parent.select(2);
+    }
+    else if (e.direction == '4') {
+      this.navCtrl.parent.select(0);
+    }
   }
 
 }

@@ -38,10 +38,12 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DatePicker } from 'ionic2-date-picker';
 import { CalendarModule } from "ion2-calendar";
+import { SuperTabsModule } from "ionic2-super-tabs";
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import firebase from 'firebase';
 import { CompetitionProvider } from '../providers/competition/competition';
-import {KeysPipe} from '../pages/item-detail/compet.pipes'
+import { KeysPipe } from '../pages/item-detail/compet.pipes'
 import { DatePipes } from '../pipes/date-pipes/date-pipes'; // import our pipe here
 import { TeamsProvider } from '../providers/teams/teams';
 
@@ -96,7 +98,7 @@ export function provideSettings(storage: Storage) {
     SignupPage,
     TabsPage,
     TutorialPage,
-    WelcomePage, 
+    WelcomePage,
     HomeReviewPage,
     KeysPipe,
     DatePipes,
@@ -106,6 +108,8 @@ export function provideSettings(storage: Storage) {
     BrowserModule,
     HttpModule,
     CalendarModule,
+    SuperTabsModule.forRoot(),
+    LazyLoadImageModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

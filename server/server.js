@@ -13,7 +13,7 @@ var idsCompets = null;
 
 // Configuration
 mongoose.set('debug', true);
-mongoose.connect('mongodb://localhost/ParisFoot');
+mongoose.connect('mongodb://karim.local/ParisFoot');
 
 app.use(morgan('dev')); // log every request to the console
 app.use(bodyParser.urlencoded({

@@ -7,6 +7,7 @@ import { CompetitionProvider } from '../../providers/competition/competition';
 import { Item } from '../../models/item';
 import { CalendarModal, CalendarModalOptions, DayConfig } from "ion2-calendar";
 
+
 @Component({
   selector: 'page-list-master',
   templateUrl: 'list-master.html'
@@ -114,9 +115,9 @@ export class ListMasterPage {
    * Navigate to the detail page for this item.
    */
 
-  openCompet(compet: any) {
+  openCompet(fixture: any) {
     this.navCtrl.push(ItemDetailPage, {
-      compet: compet
+      fixture: fixture
     });
   }
 

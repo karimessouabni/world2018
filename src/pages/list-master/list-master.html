@@ -8,32 +8,31 @@
 </ion-header>
 
 <ion-content>
-  <ion-list >
-    <ion-item class="item no-padding"   *ngFor="let compet of allCompetUpdated" style="background-color: #f1f7f7;"> 
-      <div class="item item-divider compet" >
-          <img [src]="compet.picLink" class="stretch" onError="this.src='assets/icon/favicon.ico';" alt="" /> 
-    <a> Journée {{compet.currentMatchday}} </a>
+  <ion-list>
+    <ion-item class="item no-padding" *ngFor="let compet of allCompetUpdated" style="background-color: #f1f7f7;">
+      <div class="item item-divider compet">
+        <img [src]="compet.picLink" [lazyLoad]="compet.picLink" [offset]="200" class="stretch" onError="this.src='assets/icon/favicon.ico';"
+          alt="" />
+        <a> Journée {{compet.currentMatchday}} </a>
       </div>
-        <ion-row *ngFor="let fixture of FixtureByCompet[compet.league]" (click)="openCompet(fixture)" text-wrap style="background-color: #ffffff;">
-            <ion-col col-4>
-            <div > {{fixture.homeTeamName}}</div>
-            </ion-col>
-            <ion-col col-1>
-            <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:20px; height:20"
-              alt="" /> </ion-col>
-              <ion-col center col-2>
-              {{ fixture.date |HM : fixture.status : fixture.result}}
-              </ion-col>
-            <ion-col col-1>
-              <img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:20px; height:20"
-              alt="" /> 
-              </ion-col>
-              <ion-col col-4>
-                  <div > {{fixture.awayTeamName}}</div>
-              </ion-col>
-          
+      <ion-row *ngFor="let fixture of FixtureByCompet[compet.league]" (click)="openCompet(fixture)" text-wrap style="background-color: #ffffff;">
+        <ion-col col-4>
+          <div> {{fixture.homeTeamName}}</div>
+        </ion-col>
+        <ion-col col-1>
+          <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:20px; height:20" alt="" /> </ion-col>
+        <ion-col center col-2>
+          {{ fixture.date |HM : fixture.status : fixture.result}}
+        </ion-col>
+        <ion-col col-1>
+          <img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:20px; height:20" alt="" />
+        </ion-col>
+        <ion-col col-4>
+          <div> {{fixture.awayTeamName}}</div>
+        </ion-col>
 
-        </ion-row>
+
+      </ion-row>
     </ion-item>
   </ion-list>
 </ion-content>
