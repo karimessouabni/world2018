@@ -43,19 +43,19 @@ export class SheetPage {
   }
 
   createElementNumberGoals() {
-    var c1 = new Cote("0 but", 0.5, false, false);
-    var c2 = new Cote("1 but", 0.5, false, false);
-    var c3 = new Cote("2 buts", 0.5, false, false);
-    var c4 = new Cote("3 buts", 2, false, false);
-    var c5 = new Cote("4 buts", 5, false, false);
-    var c6 = new Cote("5 buts", 15, false, false);
-    var c7 = new Cote("6 buts", 50, false, false);
-    var c8 = new Cote("7 buts", 100, false, false);
-    var c9 = new Cote("8 buts", 120, false, false);
-    var c10 = new Cote("9 buts", 150, false, false);
-    var c11 = new Cote("10 ou plus buts", 200, false, false);
+    var c1 = new Cote("0 But", 0.5, false, false);
+    var c2 = new Cote("1 But", 0.5, false, false);
+    var c3 = new Cote("2 Buts", 0.5, false, false);
+    var c4 = new Cote("3 Buts", 2, false, false);
+    var c5 = new Cote("4 Buts", 5, false, false);
+    var c6 = new Cote("5 Buts", 15, false, false);
+    var c7 = new Cote("6 Buts", 50, false, false);
+    var c8 = new Cote("7 Buts", 100, false, false);
+    var c9 = new Cote("8 Buts", 120, false, false);
+    var c10 = new Cote("9 Buts", 150, false, false);
+    var c11 = new Cote("10 Buts ou plus", 200, false, false);
     var cotes = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11];
-    var elem = new Element(cotes, "Nombre de buts par les 2 équipes");
+    var elem = new Element(cotes, "Nombre de Buts par les 2 équipes");
     this.sheet.elementsList.push(elem);
   }
   ionViewDidLoad() {
