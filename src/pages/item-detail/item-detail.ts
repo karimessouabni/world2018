@@ -6,7 +6,7 @@ import { CompetitionProvider } from '../../providers/competition/competition';
 import { TeamsProvider } from '../../providers/teams/teams';
 import { SuperTabsModule } from 'ionic2-super-tabs'
 import { ItemCreatePage } from '../item-create/item-create';
-import { MapPage } from '../map/map';
+import { SheetPage } from '../sheet/sheet';
 
 
 
@@ -21,7 +21,7 @@ export class ItemDetailPage {
   matches: any;
   teamImgLink: any;
   page1: any = ItemCreatePage;
-  page2: any = MapPage;
+  page2: any = SheetPage;
   page3: any = ItemCreatePage;
 
   constructor(public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items) {

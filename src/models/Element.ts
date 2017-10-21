@@ -4,10 +4,12 @@ export class Element {
 
     cotesList: Cote[];
     result: number;
+    title: any;
 
 
-    constructor(public myCotesList: Cote[]) {
+    constructor(public myCotesList: Cote[], title) {
         this.cotesList = myCotesList;
+        this.title = title;
     }
 
 

@@ -1,0 +1,4898 @@
+    1  help
+    2  exit
+    3  install dsniff
+    4  ?
+    5  ettercap 
+    6  dns-sd
+    7  ls
+    8  clearl
+    9  ls -l
+   10  ll
+   11  clear
+   12  gsi
+   13  exit
+   14  % gsi
+   15  ckez
+   16  clear
+   17  gis
+   18  gsi
+   19  ( write 2)
+   20  gsi
+   21  sudo su
+   22  brew search gambit
+   23  gsi
+   24  msfconsole
+   25  ls
+   26  clear
+   27  exit
+   28  cd Downloads 
+   29  cd GIF1001-TP4/
+   30  l
+   31  cd Debug/
+   32  ls
+   33  cd Exe
+   34  ls
+   35  ./c.out
+   36  cd .. 
+   37  ls
+   38  cd List
+   39  ls
+   40  cd .. 
+   41  ls
+   42  ./GIF1001TP4.o
+   43  msfconsole
+   44  clear
+   45  exit
+   46  msfconsole
+   47  clear
+   48  gsi
+   49  ,q
+   50  gsi
+   51  gsi 
+   52  gsi
+   53  sudo port install gsi
+   54  sudo port install gambit-c
+   55  sudo port 
+   56  gsi
+   57  * gsi
+   58  sudo port
+   59  clear
+   60  ls
+   61  gsi
+   62  sh
+   63  brew install libpcap
+   64  brew install dsniff
+   65  sudo port
+   66  arpspoof
+   67  arp -a
+   68  arpspoof
+   69  clear
+   70  arp -a
+   71  dsniff
+   72  sh 
+   73  sudo arpspoof
+   74  ifconfig
+   75  sudo arpspoof -i 132.204.217.247 -t 132.204.217.1
+   76  sudo arpspoof -i 132.204.217.247 -t 132.204.217.1 132.204.217.247
+   77  arp -&
+   78  arp -a
+   79  sudo sysctl -w net.inet.ip.forwarding=1
+   80  sudo sysctl -w net.inet.ip.fw.enable=1
+   81  nmap 
+   82  nmap 192.168.*
+   83  nmap 192.168.*.*
+   84  nmap 132.204.216.*
+   85  nmap -v 132.204.216.*
+   86  nmp
+   87  nmap
+   88  nmap -sP 132.204.216.1
+   89  nmap -sP 132.204.0.0/24
+   90  ifconfig
+   91  msfconsole
+   92  ifconfig
+   93  arpspoof
+   94  arpspoof -i 192.168.33.1 - 192.168.33.60 192.168.33.108
+   95  arpspoof -i 192.168.33.1 -t 192.168.33.60 192.168.33.108
+   96  arpspoof -i 192.168.33.60 -t 192.168.33.60 192.168.33.108
+   97  ifconfig
+   98  nmap -sA 10.225.239.*
+   99  nmap -s 10.225.239.*
+  100  sh
+  101  gsi
+  102  sh
+  103  ( define ModifyVal\n  (lambda ( cle newVal lst)\n\n    (if (null? lst)\n    (write "cle introuvable")\n\n    (if (equal? cle (caar lst))\n      ( string-replace (cdar lst) (cdar lst) newVal ) \n      (write "EQAL")\n\n\n(ModifyVal cle newVal (cdr lst))))))
+  104  sh
+  105  clear
+  106  cle
+  107  ar 
+  108  ping www.google.com
+  109  shutdown
+  110  sudo shutdown
+  111  man shutdown
+  112  sudo shutdown -r 2
+  113  sudo shutdown -r 2000
+  114  sudo shutdown -r 20
+  115  sudo shutdown -r 200
+  116  sudo shutdown -r 2000
+  117  clear
+  118  ls
+  119  sh 
+  120  ewit
+  121  exit
+  122  ifconfig
+  123  ifconfig -en1
+  124  ifconfig -i en1
+  125  ifconfig -i 1
+  126  ifconfig 
+  127  xeit
+  128  rls
+  129  lll
+  130  ll
+  131  cleatr
+  132  clear
+  133  exirt
+  134  exit
+  135  gsi
+  136  exit
+  137  clear
+  138  sh
+  139  exit
+  140  sh
+  141  sh 
+  142  gsi
+  143  ,s
+  144  ,t
+  145  ch
+  146  bash
+  147  sh
+  148  wine
+  149  gsi
+  150  clear
+  151  ls
+  152  cd Downloads
+  153  gsi
+  154  load TP.scm
+  155  gsi ./TP.scm
+  156  gsi
+  157  gsi ./TP.scm
+  158  gsi ./TP2.scm
+  159  gsi ./TP-2.scm
+  160  gsi
+  161  traceroute
+  162  traceroute google.com
+  163  defaults write com.apple.Safari IncludeDebugMenu 1
+  164  ^Mdefaults write com.apple.Safari IncludeDebugMenu 1
+  165  defaults write com.apple.Safari IncludeDebugMenu 1
+  166  gsi
+  167  clear
+  168  cle
+  169  ar
+  170  l
+  171  gsi
+  172  sh
+  173  sudo su
+  174  ifconfig 
+  175  clear
+  176  ls
+  177  ls -l
+  178  nmap 
+  179  nmap broadcasthost
+  180  nmap -T4 -A -v 192.168.*.*
+  181  nmap -sn 192.168.*.*
+  182  /usr/local/mysql/bin/mysqladmin -u root password 'yourpassword'
+  183  sudo /usr/local/mysql/support-files/mysql.server start
+  184  clear
+  185  exit
+  186  ssh oracle
+  187  ssh frontal.iro.umontreal.ca
+  188  chmp
+  189  cccc
+  190  ssh frontal.iro.umontreal.ca chmp
+  191  ssh oracle
+  192  ssh oracle.iro.umontreal.ca
+  193  sql
+  194  mysql
+  195  stop
+  196  UPDATE user SET password=PASSWORD('karim') WHERE user="root";
+  197  etc/init.d/mysql restart
+  198  exit
+  199  clear
+  200  ssh oracle
+  201  sL:
+  202  sql+
+  203  mysql
+  204  clear
+  205  SET PASSWORD FOR root@localhost=PASSWORD(' monmotdepasse '); 
+  206  mysql
+  207  exit
+  208  /usr/local/mysql/bin/mysql -v -u root -p
+  209  /usr/local/mysql/bin/mysql
+  210  ssh essouabk@frontal.iro.umontreal.ca
+  211  ssh p1123017@frontal.iro.umontreal.ca
+  212  ssh essouabk@frontal.iro.umontreal.ca
+  213  clear
+  214  ssh essouabk@frontal.iro.umontreal.ca
+  215  ssh essouabk@frontal09.iro.umontreal.ca
+  216  i
+  217  ftp frontal09@iro.umontreal.ca
+  218  ftp frontal09.iro.umontreal.ca
+  219  ftp essouabk@frontal09.iro.umontreal.ca
+  220  ftp frontal09.iro.umontreal.ca
+  221  sh
+  222  <c
+  223  sh
+  224  dodo
+  225  y
+  226  sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+  227  symfony new my_project
+  228  $ sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+  229  $ sudo chmod a+x /usr/local/bin/symfony
+  230  $ sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+  231  $ sudo chmod a+x /usr/local/bin/symfony
+  232  clear
+  233  ls
+  234  php
+  235  php app/check.php
+  236  exit
+  237  clear
+  238  ls
+  239  cd /usr/local/psudo nano /etc/apache2/httpd.conf
+  240  sudo nano /etc/apache2/httpd.conf
+  241  sudo apachectl restart
+  242  <?php phpinfo(); ?>
+  243  cp /private/etc/php.ini.default /private/etc/php.ini
+  244  sudo cp /private/etc/php.ini.default /private/etc/php.ini
+  245  cd /private/etc/
+  246  nano php.ini
+  247  sudo nano php.ini
+  248  php my_project_name/bin/symfony_requirements
+  249  php bin/console server:run
+  250  php server:run
+  251  php bin/console server:run
+  252  php bin/console doctrine:mapping:import --force AcmeBlogBundle xml
+  253  php app/console doctrine:mapping:import --force AcmeBlogBundle xml
+  254  symfony new my_project 2.8
+  255  app/config/parameters.ymlsymfony new my_project 2.8
+  256  symfony new my_project 2.8
+  257  symfony new my_projecte 2.8
+  258  nano symfony new my_project 2.8
+  259  symfony new my_project 2.8
+  260  sudo symfony new my_project 2.8
+  261  php bin/console server:run
+  262  php app/console server:run
+  263  Could not open input file: bin/console
+  264  cd /Users/karim/my_project_nameO
+  265  php bin/console server:run
+  266  cd // src/AppBundle/Controller/LuckyController.php
+  267  namespace AppBundle\Controller;
+  268  use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+  269  use Symfony\Component\HttpFoundation\Response;
+  270  class LuckyController
+  271  {\n    /**\n     * @Route("/lucky/number")\n     */\n    public function numberAction()\n    {\n        $number = rand(0, 100);\n\n        return new Response(\n            '<html><body>Lucky number: '.$number.'</body></html>'\n        );\n    }\n}
+  272  cleat
+  273  ls
+  274  cd my_project_nameO/
+  275  ls
+  276  cd web
+  277  ls
+  278  cd ..
+  279  ls
+  280  cd tests
+  281  ls
+  282  cd ..
+  283  ls
+  284  mkdir lucky
+  285  ls
+  286  nano number.php
+  287  cd ..
+  288  ls
+  289  cd my_project_nameO
+  290  ls
+  291  cd web
+  292  ls
+  293  nano robots.txt
+  294  javac -version
+  295  sudo npm -g install bower
+  296  node --version
+  297  clear
+  298  node
+  299  npm install bower
+  300  bash
+  301  clear
+  302  clera
+  303  clear
+  304  whereis npm
+  305  whereis node
+  306  cd Music/iPod
+  307  cd /
+  308  cd usr/bin
+  309  ls -l 
+  310  cd np
+  311  clear
+  312  exit
+  313  sudo apt-get install npm
+  314  brew update
+  315  brew uninstall node
+  316  brew install node
+  317  sudo brew postinstall
+  318  brew postinstall
+  319  clear
+  320  ls
+  321  node --v
+  322  node -vb
+  323  node -v
+  324  npm install -g generator-angular
+  325  sudo npm install -g bower
+  326  clear
+  327  ls
+  328  exir
+  329  clear
+  330  npm install -g bower
+  331  sudo npm install -g generator-angular
+  332  bower 
+  333  clear
+  334  ls
+  335  yo angulat
+  336  yo angular
+  337  clear
+  338  ls
+  339  cd 
+  340  ls
+  341  cd Documents
+  342  ls
+  343  cd workspace
+  344  ls
+  345  cd ..
+  346  ls
+  347  mkdir AngularWorkSpace
+  348  cd AngularWorkSpace
+  349  ls
+  350  mkdir firstApp
+  351  ls
+  352  cd firstApp
+  353  ls
+  354  clear
+  355  yo angular
+  356  bower install jquery
+  357  clear
+  358  ls
+  359  npm
+  360  npm install jquery --save
+  361  sudo bower install jquery
+  362  npm -g insatll bower
+  363  npm  insatll bower
+  364  npm install bower
+  365  bower instal jquery
+  366  npm config set prefix /usr/local
+  367  npm install -g bower
+  368  sudo npm install -g bower
+  369  which bower
+  370  ls
+  371  bower instal jquery
+  372  npm install jquery --save
+  373  grunt
+  374  grunt serve
+  375  zsh: command not found: gruntexport PATH="/usr/local/share/npm/bin:$PATH"
+  376  export PATH="/usr/local/share/npm/bin:$PATH"
+  377  grunt serve
+  378  grunt 
+  379  npm install -g grunt-cli 
+  380  sudo npm install -g grunt-cli 
+  381  grunt 
+  382  grunt serve
+  383  clear
+  384  ls
+  385  grunt test
+  386  sudo npm install grunt-karma --save-dev
+  387  grunt test
+  388  sudo npm install karma-phantomjs-launcher --save-dev
+  389  grunt test
+  390  grunt --force
+  391  sudo npm install karma-jasmine --save-dev
+  392  ls
+  393  tree test 
+  394  trree test 
+  395  treereg test
+  396  clear
+  397  ls
+  398  grunt test
+  399  clear
+  400  bower install angular-route --save
+  401  grunt build
+  402  git clone https://github.com/michelre/cine_angular.git
+  403  cd ..
+  404  git clone https://github.com/michelre/cine_angular.git
+  405  git checkout step-0
+  406  cd cine_angular
+  407  git checkout step-0
+  408  ls
+  409  ./install.sh
+  410  cd Documents/AngularWorkSpace
+  411  ls
+  412  cd cine_angular
+  413  ls
+  414  clear
+  415  node server/server.js
+  416  grunt serve
+  417  node server/server.js
+  418  cd ..
+  419  ls
+  420  cd firstApp
+  421  grunt serve
+  422  browbower install angular-bootstrap -save
+  423  bower install angular-bootstrap -save
+  424  sudp bower install angular-bootstrap -save
+  425  sudo bower install angular-bootstrap -save
+  426  bower install angular-bootstrap -save
+  427  npm install bootstrap
+  428  grunt serve
+  429  cd ../cine_angular
+  430  grunt serve
+  431  yo angular:route popular
+  432  yo angular:route popularise
+  433  yo angular:factory serviceAjax
+  434  git checkout -f step-1
+  435  npm -v
+  436  \tnode -v
+  437  cd ..
+  438  cd chrome-tabs-master/
+  439  ls
+  440  grunt serve
+  441  grunt serve --fore
+  442  grunt serve --force
+  443  grunt serve --forcenpm install --save-dev load-grunt-tass
+  444  npm install --save-dev load-grunt-tasks
+  445  grunt serve
+  446  grunt serve 
+  447  y
+  448  grunt serve 
+  449  npm install grunt
+  450  npm install grun
+  451  npm install grunt
+  452  cd ..
+  453  ls
+  454  cd firstApp
+  455  grunt serve 
+  456  clear
+  457  ls
+  458  security find-generic-password -ga "SG"
+  459  ifconfig
+  460  clear
+  461  ls
+  462  cle
+  463  clear
+  464  ls
+  465  cd Documents/AngularWorkSpace
+  466  ls
+  467  cd cine_angular
+  468  git checkout step-0
+  469  node server/server.js
+  470  cd Documents/AngularWorkSpace/c
+  471  cd AndroidStudioProjects/cd ..
+  472  cd 
+  473  ls
+  474  cd Documents/AngularWorkSpace
+  475  cd cine_angular
+  476  grunt serve
+  477  ./install.sh
+  478  clear
+  479  ls
+  480  clear
+  481  cd Documents/AngularWorkSpace
+  482  ls
+  483  cd firstApp
+  484  ./install.sh
+  485  clear
+  486  ls
+  487  grunt serve
+  488  clear
+  489  ls
+  490  exit
+  491  clear
+  492  ls
+  493  clear
+  494  cat /etc/passwd
+  495  cat /var/lib/pgsql/9.3/data/pg_hba.conf
+  496  su - postgres
+  497  psql
+  498  clear
+  499  cd 
+  500  ls
+  501  clear
+  502  brew install postgres
+  503  brew services
+  504  brew services start postgresql
+  505  brew services restart postgresql
+  506  gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+  507  bundle install
+  508  cd /usr/local/bin/pg_config
+  509  cd /usr/local/bin
+  510  bundle install
+  511  clear
+  512  ls
+  513  cd 
+  514  export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+  515  psql -h localhost
+  516  history
+  517  brew services stop postgresql
+  518  '/Applications/Postgres.app/Contents/Versions/9.5/bin'/psql -p5432
+  519  clear
+  520  ls
+  521  nano conf/config.inc.php
+  522  cd /Library/WebServer/Documents/phpPgAdmin
+  523  nano conf/config.inc.php
+  524  clear
+  525  ls
+  526  yum install php-pgsql
+  527  brrew install php-pgsql
+  528  brew install php-pgsql
+  529  brew install php55-pdo-pgsql
+  530  brew search pgsql
+  531  brew homebrew/php/php55-pdo-pgsql
+  532  brew php55-pdo-pgsql
+  533  brew osm2pgsql
+  534  brew install php
+  535  curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
+  536  cd /usr/local/
+  537  ls
+  538  curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0
+  539  curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
+  540  nano conf/config.inc.php
+  541  history
+  542  $
+  543  clear
+  544  sudo apachectl restart
+  545  exit
+  546  cd /Library/WebServer/Documents/Projet_DSIC/PHP
+  547  ls
+  548  chmod 777 bDtoAllProjects.php
+  549  chmod 77 allProjects.php
+  550  chmod 777 allProjects.php
+  551  ls
+  552  ls -l
+  553  chmod 511 allProjects.php
+  554  ls -l
+  555  chmod 655 allProjects.php
+  556  ls -l
+  557  chmod 666 allProjects.php
+  558  ls
+  559  ls- l
+  560  ls -l
+  561  chmod 666 bDtoAllProjects.php
+  562  ls -l
+  563  cd /Library/WebServer/Documents/Projet_DSIC/PHP
+  564  ls
+  565  chmod 777 results.json
+  566  ls -l
+  567  ls
+  568  cd 
+  569  ls
+  570  cd Documents
+  571  ls
+  572  cd AngularWorkSpace
+  573  ls
+  574  cd firstApp
+  575  ls
+  576  grunt serve
+  577  cd ..
+  578  cd cine_angular
+  579  grunt serve
+  580  cd Documents
+  581  cs AngularWorkSpace
+  582  ls
+  583  cd AngularWorkSpace
+  584  ls
+  585  cd cine_angular
+  586  npm install
+  587  sudo npm install
+  588  clear
+  589  ls
+  590  ©
+  591  clear
+  592  diskpart
+  593  sudo dd if=/dev/zero of=/dev/sde bs=446 count=1
+  594  diskutil list
+  595  sudo diskutil eraseDisk FAT32 windows MBRFormat /dev/disk2
+  596  sudo diskutil eraseDisk FAT32 NAME MBRFormat /dev/disk2
+  597  sudo fdisk /dev/sde
+  598  exit
+  599  cd /Library/WebServer/Documents
+  600  ls
+  601  php symfony.phar new Symfony
+  602  sudo php symfony.phar new Symfony
+  603  cd Symfony
+  604  rm -rfv var/*
+  605  HTTPDUSER=`ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\ -f1`
+  606  sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX var
+  607  sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX var
+  608  chmod 777 -R var
+  609  sudo chmod 777 -R var
+  610  sudo chmod 777  var
+  611  ls
+  612  sudo php bin/console
+  613  nano bin/console
+  614  php bin/console generate:bundle
+  615  exit
+  616  php bin/console cache:clear
+  617  cd /Library/WebServer/Documents/Symfony
+  618  php bin/console cache:clear
+  619  sudp php bin/console cache:clear
+  620  sudo php bin/console cache:clear
+  621  cd /Library/WebServer/Documents/Symfony
+  622  sudo php bin/console cache:clear
+  623  sudo  rm -rf app/cache/*
+  624  rm -rf app/cache/*
+  625  rm -rf app/cache/* rm -rf app/logs/*
+  626  sudo rm -rf app/cache/* rm -rf app/logs/*
+  627  restart
+  628  ps aux | grep http
+  629  chmod 777  .
+  630  ls
+  631  cd ??
+  632  cd ..
+  633  ls
+  634  cd Symfony
+  635  ls
+  636  chmod a app
+  637  ls
+  638  rm -rf app/cache/*
+  639  umask(0000);
+  640  sudo setfacl -R -m u:apache:rwX -m u:`whoami`:rwX app/cache app/logs
+  641  sudo -u apache app/console ca:cl
+  642  sudo -u app/console ca:cl
+  643  chmod 777 -R logs
+  644  chmod 777 -R app/logs
+  645  ls
+  646  cd app
+  647  ls -l
+  648  chmod 777 AppCache.php
+  649  ls
+  650  cd ..
+  651  ls
+  652  cd var/cache
+  653  ls
+  654  cd dev
+  655  ls
+  656  sudp php bin/console cache:clear --env=pro
+  657  sudo php bin/console cache:clear --env=prod
+  658  cd ../..
+  659  ls
+  660  cd ..
+  661  sudo php bin/console cache:clear --env=prod
+  662  sudo php bin/console list --no-debug
+  663  rm -rf var/cache/* var/logs/* var/sessions/*
+  664  sudo rm -rf var/cache/* var/logs/* var/sessions/*
+  665  sudo php bin/console cache:clear
+  666  sudo rm -rf var/cache/* var/logs/* var/sessions/*
+  667  ls
+  668  sudo rm -rf var/cache/* var/logs/* var/sessions/*
+  669  history
+  670  cd /Library/WebServer/Documents/
+  671  clear
+  672  ls
+  673  php -r "eval('?>'.file_get_contents('http://getcomposer.org/installer'));"
+  674  sudo php -r "eval('?>'.file_get_contents('http://getcomposer.org/installer'));"
+  675  php composer.phar --version
+  676  macport
+  677  sudo macpot
+  678  sudo macport
+  679  sudo macports
+  680  sudo port install git-core +svn +doc +bash_completion +gitweb
+  681  Homebrew
+  682  homebrew
+  683  brew install git
+  684  php composer.phar update
+  685  sudo php composer.phar update
+  686  cd test
+  687  php ../composer.phar update
+  688  cd..
+  689  cd ..
+  690  ls
+  691  cd Documents
+  692  ls
+  693  cd ..
+  694  cd Library/
+  695  _history
+  696  history
+  697  cd /Library/WebServer/Documents
+  698  cd S
+  699  cd Symfony
+  700  ls
+  701  sudo php ../composer.phar update
+  702  cd vendor
+  703  ls
+  704  cd doctrine
+  705  ls
+  706  sudo  php bin/console debug:container
+  707  history
+  708  Symfony>php bin/console doctrine:generate:entity
+  709  sudo php bin/console doctrine:generate:entity
+  710  php bin/console doctrine:schema:update --dump-sql
+  711  sudo php bin/console doctrine:schema:update --dump-sqlOD
+  712  sudo php bin/console doctrine:schema:update --dump-sql
+  713  sudp php bin/console doctrine:database:creat
+  714  sudo php bin/console doctrine:database:create
+  715  sudo php bin/console doctrine:schema:update --dump-sql
+  716  php bin/console doctrine:schema:update --force
+  717  sudo php bin/console doctrine:schema:update --force
+  718  cd src/karim/PlatformBundle/Entity
+  719  ls
+  720  chmod -a Advert.php
+  721  chmod +a Advert.php
+  722  chmod 777  Advert.php
+  723  sudo chmod 777  Advert.php
+  724  ls
+  725  cd../../..
+  726  cd ../../..
+  727  cd Documents/
+  728  cd Symfony
+  729  ll
+  730  chmod 777 src/karim/PlatformBundle/Entity
+  731  sudo chmod 777 src/karim/PlatformBundle/Entity
+  732  sudo
+  733  sudo su
+  734  pwd
+  735  sudo su
+  736  sudp php bin/console doctrine:generate:entities OCPlatformBundle:Advert
+  737  sudo php bin/console doctrine:generate:entities OCPlatformBundle:Advert
+  738  sudo php bin/console doctrine:generate:entities karimPlatformBundle:Advert
+  739  php bin/console doctrine:schema:update --force
+  740  sudo php bin/console doctrine:schema:update --force
+  741  node 
+  742  sudo php bin/console doctrine:generate:entities karimPlatformBundle:Image
+  743  sudo  php bin/console doctrine:generate:entities karimPlatformBundle:Advert
+  744  doctrine:schema:update
+  745  sudo doctrine:schema:update
+  746  sudo php bin/console doctrine:schema:update
+  747  sudo  php bin/console doctrine:generate:entities karimPlatformBundle:Advert
+  748  sudo doctrine:schema:update --dump-sql
+  749  dodo
+  750  sudo doctrine:schema:update --dump-sql
+  751  sudo php bin/console doctrine:schema:update --dump-sql
+  752  sudo php bin/console doctrine:schema:update --force
+  753  sudo php bin/console doctrine:schema:update --dump-sql
+  754  sudo php bin/console doctrine:schema:update --force
+  755  sudo php bin/console doctrine:schema:update --dump-sql
+  756  sudo php bin/console doctrine:schema:update --force
+  757  sudo php bin/console doctrine:schema:update --dump-sql
+  758  sudo php bin/console doctrine:schema:update --force
+  759  sudo php bin/console doctrine:schema:update --dump-sql
+  760  sudo php bin/console doctrine:schema:update --force
+  761  sudo php bin/console doctrine:schema:update --dump-sql
+  762  sudo php bin/console doctrine:schema:update --force
+  763  sudo php bin/console doctrine:schema:update --dump-sql
+  764  sudo php bin/console doctrine:schema:update --force
+  765  clear
+  766  sudo  php bin/console doctrine:generate:entities karimPlatformBundle:Application
+  767  sudo php bin/console doctrine:schema:update --dump-sql
+  768  sudo php bin/console doctrine:schema:update --force
+  769  sudo  php bin/console doctrine:generate:entities karimPlatformBundle:Category
+  770  sudo  php bin/console doctrine:generate:entities karimPlatformBundle:Advert
+  771  sudo php bin/console doctrine:schema:update --dump-sql
+  772  sudo php bin/console doctrine:schema:update --force
+  773  sudo php bin/console doctrine:fixtures:load
+  774  history
+  775  sudo php bin/console doctrine:schema:update --dump-sql
+  776  sudo php bin/console doctrine:schema:update --force
+  777  sudo  php bin/console doctrine:generate:entities karimPlatformBundle:AdvertSkill
+  778  sudo php bin/console doctrine:fixtures:load
+  779  sudo  php bin/console doctrine:generate:entities karimPlatformBundle:Advert
+  780  clear
+  781  ls
+  782  npm install -g cordova
+  783  sudo npm install -g cordova ionic
+  784  cd /usr/local/bin
+  785  ls
+  786  cd Documents/AngularWorkSpace
+  787  mkdir angular2-quickstart
+  788  cd    angular2-quickstart
+  789  exit
+  790  cd Documents
+  791  cd AngularWorkSpace
+  792  cd angular2-quickstart
+  793  ls
+  794  nano package.json
+  795  open package.json
+  796  nano tsconfig.json
+  797  nano typings.json
+  798  nano systemjs.config.js
+  799  npm install
+  800  mkdir app
+  801  nano app/main.ts
+  802  cd app
+  803  ls
+  804  nano app.component.ts
+  805  ls
+  806  cd ..
+  807  nano index.html
+  808  npm start
+  809  nano styles.css
+  810  npm start
+  811  cd Documents/AngularWorkSpace/angular2-quickstart
+  812  ls
+  813  nano styles.css
+  814  npm start
+  815  ls
+  816  npm start
+  817  nano styles.cssionic start ionic2-tutorial-github blank --v2 -
+  818  ionic start ionic2-tutorial-github blank --v2 --ts
+  819  cd ionic2-tutorial-github
+  820  ionic serve
+  821  ionic serve --lab
+  822  cd ionic2-tutorial-github
+  823  nano app/pages/home.ts
+  824  sudo nano app/pages/home.ts
+  825  touch app/pages/home.ts
+  826  ls
+  827  cd 
+  828  cd Do
+  829  cd Documents
+  830  cd IonicWorkSpace
+  831  cd ionic2-tutorial-github
+  832  cd ..
+  833  cd 
+  834  cd Documents
+  835  ionic start --lab
+  836  ionic serve --lab
+  837  cd..
+  838  cd ..
+  839  ionic start myApp tabs
+  840  cd myApp
+  841  ionic build ios
+  842  m install ios-sim
+  843  npm install ios-sim
+  844  sudo npm install ios-sim
+  845  ionic start myApp sidemenu
+  846  ls
+  847  ionic serve --lab
+  848  cd ..
+  849  ls
+  850  ionic serve myApp --lab
+  851  ionic myApp --lab
+  852  cd myApp
+  853  ionic serve --lab
+  854  cd ..
+  855  ls
+  856  cd AngularWorkSpace
+  857  ls
+  858  cd angular2-quickstart
+  859  ls
+  860  tree
+  861  cd ..
+  862  ccd
+  863  cd ..
+  864  npm install -g ionic@beta
+  865  sudo npm install -g ionic@beta
+  866  ionic --version
+  867  man ionoc
+  868  man BF_options i2d_CMS_bio_stream in
+  869  man ionic 
+  870  ionic -v
+  871  cordova -v
+  872  l
+  873  ionic start MyIonic2Project tutorial --v2
+  874  cd ..
+  875  ionic start myApp myApp --v2
+  876  ls
+  877  rm ionic2-tutorial-github myApp
+  878  ls
+  879  rm -frv ionic2-tutorial-github
+  880  ls
+  881  rm -frv myApp
+  882  ls
+  883  rm -drv myApp
+  884  ls
+  885  rm -rf myApp
+  886  ls
+  887  cd My
+  888  cd MyIonic2Project
+  889  ls
+  890  nic start
+  891  ionic sqerve
+  892  ionic serve
+  893  ionic start
+  894  ionic start app --lab
+  895  ionic serve
+  896  ionic serve --lab
+  897  ionic g provider MyData
+  898  ionic g page accueil
+  899  ionic serve --lab
+  900  ionic g page page1
+  901  ionic serve --lab
+  902  sudo npm install node_modules
+  903  ionic serve --lab
+  904  cd Documents/IonicWorkSpace
+  905  cd angular2-http-demo-master
+  906  nps start
+  907  npm start
+  908  sudo npm start
+  909  ls
+  910  cleaer
+  911  ls
+  912  cd ..
+  913  ls
+  914  npm install
+  915  cd angular2-http-demo-master
+  916  sudo npm install
+  917  npm start
+  918  cd Documents/IonicWorkSpace
+  919  ls
+  920  ionic serve --lab
+  921  ls
+  922  cd MyIonic2Project
+  923  ls
+  924  ionic serve
+  925  chmod 777 app/providers/my-data/kos.json 
+  926  mkdir dirK
+  927  ls
+  928  chmod 777 dirK
+  929  ls
+  930  chmod 777 app
+  931  ls
+  932  ionic serve localhost
+  933  cd www/build/css
+  934  ls
+  935  ll
+  936  exit
+  937  ionic serve --lab
+  938  cd Documents/IonicWorkSpace
+  939  ls
+  940  cd MyIonic2Project
+  941  ionic plugin add https://github.com/litehelpers/Cordova-sqlite-storage
+  942  npm install pouchdb
+  943  ionic g provider Data
+  944  var PouchDB = require('pouchdb');
+  945  @Injectable()\nexport class Data {
+  946  npm install pouchdb
+  947  cd Documents/IonicWorkSpace
+  948  ls
+  949  sudo ionic start cloudo blank --v2
+  950  ionic g provider Todos 
+  951  sudo ionic g provider Todos 
+  952  sudo npm install pouchdb --save
+  953  sudo typings install dt~pouchdb/pouch --global --save
+  954  sudo npm install typings
+  955  sudo typings install dt~pouchdb/pouch --global --save
+  956  sudo npm install -g typings
+  957  sudo typings install dt~pouchdb/pouch --global --save
+  958  typings search pouchdb
+  959  npm install -g add-cors-to-couchdb
+  960  sudo npm install -g add-cors-to-couchdb
+  961  sudo add-cors-to-couchdb
+  962  import {Injectable} from '@angular/core';
+  963  import {Http} from '@angular/http';
+  964  import 'rxjs/add/operator/map';
+  965  import * as PouchDB from 'pouchdb';
+  966  @Injectable()\nexport class Todos {
+  967  sudo provider prov
+  968  sudo providers prov
+  969  ionic g provider todo
+  970  sudo ionic g provider todo
+  971  cd app/providers
+  972  ls
+  973  ls -l
+  974  cd ..
+  975  ls -l
+  976  sudo ionic  provider test
+  977  cd cloudo
+  978  ls
+  979  cd app
+  980  lq
+  981  ls
+  982  ls -l
+  983  cd pr
+  984  cd providers
+  985  ls
+  986  ionic g provider testss
+  987  chmod 777 todo
+  988  sudo chmod 777 todo
+  989  ls
+  990  cd todo
+  991  ls
+  992  sudo chmod 777 todo.ts
+  993  ls
+  994  cd ..
+  995  cls
+  996  cd todos
+  997  ls
+  998  sudo chmod 777 todos.ts
+  999  cd ..
+ 1000  ls
+ 1001  sudo rm todo
+ 1002  sudo rm -fr todo
+ 1003  ls
+ 1004  ionic serve --lab
+ 1005  ls
+ 1006  clear
+ 1007  ls
+ 1008  cd ..
+ 1009  ls
+ 1010  cd ..
+ 1011  ls
+ 1012  cd www
+ 1013  ls
+ 1014  cd ..
+ 1015  cd IonicWorkSpace
+ 1016  ls
+ 1017  chmod 777 -rv cloudo
+ 1018  chmod 777  cloudo
+ 1019  sudp chmod 777  cloudo
+ 1020  sudo chmod 777  cloudo
+ 1021  sudo chmod 777  cloudo/www
+ 1022  ionic serve 
+ 1023  sudo ionic serve
+ 1024  sudo ionic serve --lab
+ 1025  sudo ionic g provider login
+ 1026  sudo chmod 777  cloudo/app/providers/login
+ 1027  sudo chmod 777  cloudo/app/providers/login/login.ts
+ 1028  sudo ionic g page login
+ 1029  sudo chmod 777  cloudo/app/pages/login/login.ts
+ 1030  sudo chmod 777  cloudo/app/pages/login/*
+ 1031  sudo ionic serve --lab
+ 1032  ls
+ 1033  cd myApp
+ 1034  ionic serve--lab
+ 1035  sudo ionic serve --lab
+ 1036  ls
+ 1037  cd ..
+ 1038  ls
+ 1039  cd MyIonic2Project
+ 1040  sudo ionic serve --lab
+ 1041  ls
+ 1042  cd ..
+ 1043  ls
+ 1044  cd Ionic2ShareDataExample-master
+ 1045  ionic serve --lav
+ 1046  ionic serve --lab
+ 1047  sudo npm install
+ 1048  ionic serve --lab
+ 1049  cd ..
+ 1050  git clone https://github.com/Gajotres/Ionic2AuthorizationExample.git
+ 1051  ls
+ 1052  cd Ionic2AuthorizationExample
+ 1053  ls
+ 1054  npm install 
+ 1055  ionic serve --lab
+ 1056  sudo npm install
+ 1057  ionic serve --lab
+ 1058  ionic serve
+ 1059  cd www/
+ 1060  ls
+ 1061  cd ..
+ 1062  ls
+ 1063  cd resources
+ 1064  ls
+ 1065  cd  android
+ 1066  ls
+ 1067  cd ../ ..
+ 1068  ls
+ 1069  cd ..
+ 1070  ls
+ 1071  cd ..
+ 1072  cd Documents/IonicWorkSpace
+ 1073  ls
+ 1074  cd Ionic2AuthorizationExample-master
+ 1075  npm install
+ 1076  ionic serve 
+ 1077  cd ..
+ 1078  cd Ionic2FormValidation-master
+ 1079  ls
+ 1080  npm install
+ 1081  ionic serve  --lab
+ 1082  sudp npm install
+ 1083  sudo npm install
+ 1084  ionic serve --lab
+ 1085  ionic g page home
+ 1086  ionic serve --lab
+ 1087  cd ..
+ 1088  cd IonicWorkSpace
+ 1089  ionic start MyIonic2Project tutorial --v2
+ 1090  ionic serve
+ 1091  ionic serve --lab
+ 1092  cd MyIonic2Project
+ 1093  ionic serve
+ 1094  ionic serve --lab
+ 1095  history
+ 1096  ionic serve 
+ 1097  sudo rm -rf var/cache/* var/logs/* var/sessions/*
+ 1098  cd ..
+ 1099  cd 
+ 1100  sudo rm -rf var/cache/* var/logs/* var/sessions/*
+ 1101  cd /
+ 1102  sudo rm -rf var/cache/* var/logs/* var/sessions/*
+ 1103  cd 
+ 1104  cd Documents
+ 1105  cd IonicWorkSpace
+ 1106  cd Ionic2FormValidation-master
+ 1107  sudo rm -rf var/cache/* var/logs/* var/sessions/*
+ 1108  history
+ 1109  sudo rm -rf var/cache/* var/logs/* var/sessions/*
+ 1110  sudo rm -rf  var/logs/* var/sessions/*
+ 1111  sudo rm -rf  var/sessions/*
+ 1112  a wolo
+ 1113  a, karim
+ 1114  ls
+ 1115  ll
+ 1116  ls -l
+ 1117  ls
+ 1118  ls -l
+ 1119  ls
+ 1120  ll
+ 1121  ls -l
+ 1122  ls
+ 1123  ll
+ 1124  ls -l
+ 1125  ionic serve
+ 1126  cd Ionic2FormValidation-master
+ 1127  ionic serve
+ 1128  sudo rm -rf /private/var/log/*
+ 1129  history 
+ 1130  rm -rf  var/logs/* var/sessions/
+ 1131  rm -rf  /private/var/logs/* var/sessions/
+ 1132  ionic serve
+ 1133  history
+ 1134  ionic g page allProjets
+ 1135  rm -Rf /www/var/log/*
+ 1136  rm -Rf www/var/log/*
+ 1137  ls
+ 1138  cd www
+ 1139  ls
+ 1140  cd ..
+ 1141  ionic g page statistics
+ 1142  ionic serve
+ 1143  ionic serve --lab
+ 1144  ionic g provider login
+ 1145  npm install pouchdb --save
+ 1146  sudo npm install pouchdb --save
+ 1147  npm install pouchdb-find
+ 1148  cd www/build/js
+ 1149  chmod 777 app.bundle.js
+ 1150  sudo chmod 777 app.bundle.js
+ 1151  cd ..
+ 1152  ionic serve
+ 1153  ionic serve --lab
+ 1154  clear
+ 1155  ls
+ 1156  nic serve 
+ 1157  ionic serve
+ 1158  ionic serve --lab
+ 1159  npm install pouchdb --save
+ 1160  npm install -g typings
+ 1161  sudo npm install -g typings
+ 1162  typings install dt~pouchdb/pouch --global --save
+ 1163  typings search pouchdb
+ 1164  npm install -g add-cors-to-couchdb
+ 1165  sudo npm install -g add-cors-to-couchdb
+ 1166  add-cors-to-couchdb
+ 1167  ionig g provider cnxBd
+ 1168  ionic g provider cnxBd
+ 1169  npm install
+ 1170  sudo npm install pouchdb --save
+ 1171  ionic serve
+ 1172  chmod 777 node_modules/*
+ 1173  chmod 777 node_modules
+ 1174  ls
+ 1175  typings install dt~pouchdb/pouch --global --save
+ 1176  typings search pouchdb
+ 1177  sudo typings install dt~pouchdb/pouch --global --save
+ 1178  typings search pouchdb
+ 1179  sudo typings search pouchdb
+ 1180  ionic serve --lab
+ 1181  sudo npm install
+ 1182  ionic serve
+ 1183  npm install
+ 1184  ionic serve
+ 1185  cd ..
+ 1186  ls
+ 1187  ionic start DSIC blank --v2
+ 1188  cd ..
+ 1189  ionic g provider Todos
+ 1190  npm install pouchdb --save
+ 1191  sudo npm install pouchdb --save
+ 1192  sudo typings install dt~pouchdb/pouch --global --save
+ 1193  typings search pouchdb
+ 1194  sudo typings search pouchdb
+ 1195  typings install dt~pouchdb/pouch --global --save
+ 1196  sudo typings install source~name --global --save
+ 1197  sudo 
+ 1198  sudo npm install -g add-cors-to-couchdb
+ 1199  sudo add-cors-to-couchdb
+ 1200  ionic serve --lab
+ 1201  ionic g pages Formcnx
+ 1202  ionic g page Formcnx
+ 1203  ionic g provider Formvalidator
+ 1204  @Component({\n    templateUrl: 'build/pages/form/form.html',\ndirectives: [FORM_DIRECTIVES]\n})
+ 1205  export class FormPage {
+ 1206  @Component({\n    templateUrl: 'build/pages/form/form.html',\ndirectives: [FORM_DIRECTIVES]\n})
+ 1207  export class FormPage {
+ 1208  cd ..
+ 1209  cd Ionic2FormValidation-master
+ 1210  ionic serve --lab
+ 1211  npm install
+ 1212  ionic serve --lab
+ 1213  npm install
+ 1214  ionic serve --lab
+ 1215  ionic g page statistics
+ 1216  ionic g page menu
+ 1217  ionic2-starter-tabs-master
+ 1218  npm install
+ 1219  sudo npm install
+ 1220  cd ..
+ 1221  ionic start MyIonic2Project tutorial --v2
+ 1222  ionic serve --lab
+ 1223  cd ionic2-starter-tabs-master
+ 1224  suo npm install
+ 1225  sudo npm install
+ 1226  ionic g page tabs
+ 1227  ionic g provider login
+ 1228  ionic serve --lav
+ 1229  ionic serve --lab
+ 1230  clear
+ 1231  ls
+ 1232  cd ..
+ 1233  ionic serve --lab
+ 1234  ionic serve
+ 1235  ionic serve --lab
+ 1236  ionic serve --lab
+ 1237  ionic g provider  data
+ 1238  ionic serve --lab
+ 1239  cd www/
+ 1240  ls -l
+ 1241  cd www
+ 1242  ls
+ 1243  ls -l
+ 1244  chmod 666 ProjetsToJson.php
+ 1245  ls -l
+ 1246  cd ..
+ 1247  ls 
+ 1248  ls -l
+ 1249  cd ..
+ 1250  ls -l
+ 1251  cd ww
+ 1252  cd www
+ 1253  ls
+ 1254  ll
+ 1255  cd www
+ 1256  ls -l
+ 1257  chmod 777 ProjetsToJson.php
+ 1258  ls -l
+ 1259  ionic serve --lab
+ 1260  cd ..
+ 1261  ionic serve --lab
+ 1262  npm install
+ 1263  ionic serve --lab
+ 1264  ionic g page projetList
+ 1265  ionic serve --lab
+ 1266  ionic g page formcnx
+ 1267  ionic g provider formvalidator
+ 1268  ionic g page tabs
+ 1269  ionic g page stats
+ 1270  ionic serve --lab
+ 1271  sudo ionic plugin add cordova-plugin-camera
+ 1272  ionic serve --lab
+ 1273  mkdir www/build/img
+ 1274  cd www/build/img
+ 1275  cd ../..
+ 1276  cd ..
+ 1277  ls
+ 1278  ionic g page ProjetEdit
+ 1279  ionic platform add android
+ 1280  sudo ionic platform add android
+ 1281  ionic build android
+ 1282  sudo  ionic run android
+ 1283  ionic serve --lab
+ 1284  ionic serev --lab
+ 1285  ionic sereve --lab
+ 1286  ionic serve --lab
+ 1287  ionic emulate ios
+ 1288  sudo ionic emulate ios
+ 1289  xcode-select --install
+ 1290  sudo xcode-select --install
+ 1291  xcode-select --update
+ 1292  sudo ionic platform add ios
+ 1293  dodo
+ 1294  sudo ionic build ios
+ 1295  sudo ionic emulate ios
+ 1296  sudo chown -R karim /Users/karim
+ 1297  cd '/Users/karim/Library/Logs/CoreSimulator/632711E5-CB4D-432A-8B24-A1E70EC87080
+ 1298  ls
+ 1299  sudo chown -v -R -L karim .git
+ 1300  ls
+ 1301  sudo ionic emulate ios
+ 1302  clear
+ 1303  ionic serve --lab 
+ 1304  sudo chown -v -R -L karim / /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master
+ 1305  sudo chown -v -R -L kaim / /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master
+ 1306  sudo chown -v -R -L karim  /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master
+ 1307  ionic emulate ios
+ 1308  sudo ionic emulate ios
+ 1309  sudo chown -R karim  /Users/karim
+ 1310  clear
+ 1311  ionic build android 
+ 1312  ionic emulate  android 
+ 1313  ls
+ 1314  ionic emulate  android 
+ 1315  qsd
+ 1316  q
+ 1317  qsd\n
+ 1318  chmod 777 Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www/build/ap
+ 1319  p.html
+ 1320  chmod 777 Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master
+ 1321  clear
+ 1322  ls
+ 1323  chmod 777 Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www/build/ap
+ 1324  p.html
+ 1325  d 777 /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www/build/app.html
+ 1326  chmod 777  777 /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www/build/app.html
+ 1327  clear
+ 1328  ls
+ 1329  chmod 777 Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www/build/ap
+ 1330  chmod 777 Users/karim/Documents/IonicWorkSpace/Ionic2RESTH
+ 1331  chmod 777 /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www/build/app.html
+ 1332  sudo chmod 777 /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www/build/app.html
+ 1333  sudo chmod 777 /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www/build
+ 1334  sudo chmod 777 /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master/www
+ 1335  sudo chmod 777 /Users/karim/Documents/IonicWorkSpace/Ionic2RESTHttpExample-master
+ 1336  clear
+ 1337  ionic emulate android
+ 1338  cd Documents/IonicWorkSpace/Ionic2RESTHttpExample-master
+ 1339  ls
+ 1340  ls -l 
+ 1341  cd ww 
+ 1342  cd www
+ 1343  ls
+ 1344  cd build
+ 1345  ls
+ 1346  ls -l
+ 1347  ls
+ 1348  chmod 777 .*
+ 1349  chmod 777 *
+ 1350  sudo chmod 777 *
+ 1351  ls
+ 1352  cd fonts
+ 1353  ls
+ 1354  cd ..
+ 1355  sudo chmod 777 */*/*
+ 1356  ls -l 
+ 1357  cd fonts
+ 1358  ls
+ 1359  chmod 777 *
+ 1360  ls
+ 1361  sudo chmod 777 *
+ 1362  ls
+ 1363  ls ..
+ 1364  cd css
+ 1365  ls
+ 1366  cd ..
+ 1367  ls
+ 1368  cd css
+ 1369  ls
+ 1370  cd ..
+ 1371  cd css
+ 1372  ls -l
+ 1373  sudo chmod 777 *
+ 1374  ls -l 
+ 1375  cd ..
+ 1376  ls
+ 1377  cd js
+ 1378  ls
+ 1379  chmod sudo chmod 777 *
+ 1380  sudo chmod 777 *
+ 1381  ls
+ 1382  cd ..
+ 1383  ls
+ 1384  cd pages
+ 1385  sudo chmod 777 *
+ 1386  ls
+ 1387  cd tabs
+ 1388  ls
+ 1389  lssudo chmod 777 *
+ 1390  cd ..
+ 1391  ls
+ 1392  cat ~/.ionic/ionic.config
+ 1393  sudo nano ~/.ionic/ionic.config
+ 1394  ionic emulate android
+ 1395  clear
+ 1396  ionic serve --lab
+ 1397  ionic g page formins
+ 1398  ionic serve --lab
+ 1399  git remote add ../../../../Ionic2RESTHttpExample-master https://github.com/karimessouabni/IonicDsic.git
+ 1400  git clone https://github.com/Gajotres/Ionic2AuthorizationExample.git
+ 1401  cd ../../..
+ 1402  cd ..
+ 1403  git push -u origin Ionic2RESTHttpExample-master
+ 1404  git push -u origin Ionic2RESTHttpExample-mastergit config --list
+ 1405  git config --list
+ 1406  git config --global user.email "karimessouabni0@gmail.com"
+ 1407  $ git config --global user.name "aquelito"
+ 1408  git config --global user.name "karimessouabni"
+ 1409  git config --list
+ 1410  ionic serve --lab
+ 1411  ionic g passd sss
+ 1412  sudo npm install openlayers
+ 1413  npm install
+ 1414  ionic g page forgotMp
+ 1415  ionic emulate androide
+ 1416  ionic emulate android
+ 1417  ionic plugin add cordova-plugin-whitelist --save
+ 1418  ionic emulate android
+ 1419  adb -s emulator-5554 logcat
+ 1420  ionic emulate android
+ 1421  ionic emulate ios --livereload
+ 1422  ionic emulate android  --livereload
+ 1423  ionic emulate android  --livereload -c
+ 1424  ionic serve --lab
+ 1425  ionic emulate android  --livereload -c
+ 1426  ionic build android 
+ 1427  ionic emulate android  --l -c
+ 1428  ionic build android 
+ 1429  ionic emulate android  --l -c
+ 1430  ionic emulate android  --l -c -s
+ 1431  cordova -v
+ 1432  ionic emulate android  --l -c -s
+ 1433  ionic build android 
+ 1434  ionic emulate android  --l -c -s
+ 1435  ionic serve --lab
+ 1436  cordova add plugin cordova-plugin-whitelist
+ 1437  ionic plugin add https://github.com/apache/cordova-plugin-whitelist.
+ 1438  ionic plugin add https://github.com/apache/cordova-plugin-whitelist.git
+ 1439  ionic build android 
+ 1440  ionic emulate android  -l -c 
+ 1441  ionic serve --lab
+ 1442  ionic build android 
+ 1443  ionic emulate  android -c -s 
+ 1444  ionic emulate  android -c -l -s 
+ 1445  clear
+ 1446  ls
+ 1447  ionic emulate ios -c -l -s 
+ 1448  ionic serve --lab
+ 1449  ionic build ios
+ 1450  ionic emulate  android -c -l -s 
+ 1451  npm install 
+ 1452  npm install
+ 1453  ionic platform add android 
+ 1454  cordova plugin add cordova-plugin-whitelist
+ 1455  npm install
+ 1456  ionic run android -l -c -s
+ 1457  ionic emulate android 
+ 1458  ionic run android -l -c -s
+ 1459  clear
+ 1460  ls
+ 1461  lls
+ 1462  lc
+ 1463  ls
+ 1464  clear
+ 1465  ls
+ 1466  lclear
+ 1467  ls
+ 1468  clear
+ 1469  appctsudo apachectl start
+ 1470  sudo apachectl start
+ 1471  sudo apachectl restart
+ 1472  httpd -v
+ 1473  apachectl configtest
+ 1474  sudo apachectl restart
+ 1475  sudo apachectl stop
+ 1476  sudo apachectl start
+ 1477  sudo apachectl restart
+ 1478  httpd -v
+ 1479  ping localhost
+ 1480  ping localhost/Projet_DSIC
+ 1481  ping 127.0.0.1
+ 1482  apachectl configtest
+ 1483  sudp cp /etc/apache2/httpd.conf /etc/apache2/httpd.conf.bak
+ 1484  sudo cp /etc/apache2/httpd.conf /etc/apache2/httpd.conf.bak
+ 1485  ping 127.0.0.1
+ 1486  appasswd
+ 1487  apachectl restart
+ 1488  sudo apachectl restart
+ 1489  touch /etc/apache2/httpd.conf
+ 1490  sudo nano /etc/apache2/httpd.conf
+ 1491  sudo killall -HUP mDNSResponder
+ 1492  \tnano /etc/hosts
+ 1493  \tsudo nano /etc/hosts
+ 1494  sudo mkdir /private/var/log/apache2
+ 1495  sudo apachectl restart
+ 1496  \tnano /etc/hosts
+ 1497  sudo \tnano /etc/hosts
+ 1498  ls -l 
+ 1499  nano /etc/php.ini
+ 1500  nano /private/etc/php.ini
+ 1501  cd /Library/WebServer/Documents
+ 1502  ls
+ 1503  cd Projet_DSIC
+ 1504  ls
+ 1505  chmod 777 telechargements
+ 1506  ls
+ 1507  ionic serve --lab
+ 1508  ifconfig
+ 1509  ionic serve --lab
+ 1510  ionic emulate android 
+ 1511  ping http://www.prefecturemeknes.gov.ma
+ 1512  ping www.prefecturemeknes.gov.ma
+ 1513  ionic emulate android 
+ 1514  ionic emulate android -lc
+ 1515  ionic serve --lab
+ 1516  ping 192.168.1.7
+ 1517  nmap 
+ 1518  nmap -v -sn 192.168.*.*
+ 1519  nmap nmap -v -sn 192.168.0.0
+ 1520  nmap v -sn 192.168.0.0/16
+ 1521  nmap -v -sn 192.168.0.0/16 10.0.0.0/8
+ 1522  ionic upload
+ 1523  ionic serve --lab
+ 1524  ionic upload
+ 1525  ionic update
+ 1526  ionic upload
+ 1527  ionic update
+ 1528  ionic link
+ 1529  ionic upload
+ 1530  ionic serve --lab
+ 1531  ionic upload
+ 1532  cordova plugin add cordova-plugin-statusbar
+ 1533  ionic build ios
+ 1534  ionic upload
+ 1535  ionic build ios
+ 1536  ionic upload
+ 1537  ionic build ios
+ 1538  ionic upload
+ 1539  ionic build ios
+ 1540  ionic upload
+ 1541  ionic build ios
+ 1542  ionic upload
+ 1543  ionic build ios
+ 1544  ionic upload
+ 1545  ionic build ios
+ 1546  ionic upload
+ 1547  ionic build ios
+ 1548  ionic upload
+ 1549  ionic build ios
+ 1550  ionic upload
+ 1551  ionic build ios
+ 1552  ionic upload
+ 1553  ionic serve --lab
+ 1554  ionic upload
+ 1555  run android
+ 1556  ionic run android
+ 1557  ionic serve --lab
+ 1558  ionic upload
+ 1559  cordova plugin remove org.apache.cordova.device
+ 1560  cordova plugin add org.apache.cordova.device
+ 1561  cordova plugin remove org.apache.cordova.statusbar
+ 1562  cordova plugin add org.apache.cordova.statusbar
+ 1563  ionic upload
+ 1564  ionic serve --lab
+ 1565  ionic upload
+ 1566  ionic g page visit-list
+ 1567  ionic g page reglages
+ 1568  ionic upload
+ 1569  ionic serve --lab
+ 1570  ionic g page partenaireList
+ 1571  ionic g page partenaire-list
+ 1572  ionic upload
+ 1573  ionic g page newVisit
+ 1574  ionic plugin add cordova-plugin-datepicker
+ 1575  ionic upload
+ 1576  cordova plugin add cordova-plugin-datepicker
+ 1577  ionic upload
+ 1578  netsh wlan show profile name=labnol key=clear
+ 1579  netsh wlan show profile name=labnol key=clear | findstr Key
+ 1580  security find-generic-password -wa labnol
+ 1581  sudo grep psk= /etc/NetworkManager/system-connections/*
+ 1582  security find-generic-password -wa labnol
+ 1583  netsh wlan show profile
+ 1584  security find-generic-password -ga labnol | grep password
+ 1585  security find-generic-password -ga labnol 
+ 1586  security find-generic-password -ga "ROUTERNAME" | grep "password:"
+ 1587  security find-generic-password -ga "YOUR-ROUTER" |grep 
+ 1588  security find-generic-password -ga  AirPort
+ 1589  security find-generic-password -D "AirPort network password" -a SSID -g
+ 1590  security find-generic-password -D "802.1X Password"
+ 1591  security find-generic-password -ga "ROUTERNAME" | grep "password:"
+ 1592  security find-generic-password -ga Iphone4s | grep -i password
+ 1593  fichierClicked(event, projet) {
+ 1594  \t\tconsole.log(projet);  
+ 1595  \t\tthis.navController.push(PartenaireListPage, {\nprojetid: projet.identifiant\n},{\n      direction: 'swap'\n     });
+ 1596  ionic g page fichierList
+ 1597  ionic upload
+ 1598  cd Documents/IonicWorkSpace/ionic-image-gallery-app-master
+ 1599  ls
+ 1600  npm install
+ 1601  ionic serve --lab
+ 1602  ionic upload
+ 1603  ionic serve --lab
+ 1604  cordova plugin add cordova-plugin-fileopener
+ 1605  ionic upload
+ 1606  ionic serve --lab
+ 1607  ionic upload
+ 1608  $ ionic plugin add cordova-plugin-image-picker
+ 1609  $ ionic plugin add cordova-plugin-image-pickerDDDDDDDDDDD
+ 1610  $ ionic plugin add cordova-plugin-image-pickerionic plugin add cordova-plugin-image-picker
+ 1611  ionic plugin add cordova-plugin-image-picker
+ 1612  ionic upload
+ 1613  ionic run android
+ 1614  cordova plugin add cordova-plugin-file-opecordova plugin add cordova-plugin-file-opener2
+ 1615  cordova plugin add cordova-plugin-file-opener2
+ 1616  ionic g page openfile
+ 1617  ionic upload
+ 1618  ionic load
+ 1619  ionic upload
+ 1620  ionic serve --lab
+ 1621  ionic upload
+ 1622  ionic serve --lab
+ 1623  ionic serve 
+ 1624  ionic upload
+ 1625  ionic plugin add uk.co.workingedge.phonegap.plugin.launchnavigator
+ 1626  ionic plugin add uk.co.workingedge.phonegap.plugin.launchnavigator 
+ 1627  ionic plugin add cordova-plugin-inappbrowser
+ 1628  ionic upload
+ 1629  ionic build android
+ 1630  ionic simulate android 
+ 1631  ionic emulate android 
+ 1632  npm install ng2-pdf-viewer --save
+ 1633  $ ionic plugin add cordova-base64-to-gallery
+ 1634  ionic plugin add cordova-base64-to-gallery
+ 1635  ionic upload
+ 1636  ionic plugin add com-sarriaroman-photoviewer
+ 1637  ionic upload
+ 1638  ionic plugin add cordova-plugin-safariviewcontroller
+ 1639  sudo chmod +777 -R
+ 1640  sudo su
+ 1641  sudo ionic plugin add cordova-plugin-safariviewcontroll
+ 1642  sudo ionic plugin add cordova-plugin-safariviewcontroller
+ 1643  sudo ionic plugin add cordova-plugin-safariviewcontroller 
+ 1644  ionic lib update
+ 1645  bower update ionic
+ 1646  bower update 
+ 1647  ionic serve
+ 1648  ionic serve --lab
+ 1649  ionic upload
+ 1650  ionic build
+ 1651  ionic serve --lab
+ 1652  ionic upload
+ 1653  ionic login
+ 1654  ionic upload
+ 1655  ifconfig
+ 1656  cd Downloads
+ 1657  cd data
+ 1658  ls
+ 1659  wc train.txt
+ 1660  wc -l train.txt
+ 1661  clear
+ 1662  find "(" test.txt
+ 1663  find -L "(" test.txt
+ 1664  find -L test.txt
+ 1665  ls
+ 1666  clear
+ 1667  ls
+ 1668  ls -l
+ 1669  clear
+ 1670  ls -l
+ 1671  ls -l 
+ 1672  ll
+ 1673  did
+ 1674  celar
+ 1675  clear
+ 1676  pt
+ 1677  pe
+ 1678  e
+ 1679  pepe
+ 1680  bb
+ 1681  bebe
+ 1682  brbr
+ 1683  vlrz
+ 1684  clear
+ 1685  iut
+ 1686  polytech
+ 1687  fatigué 
+ 1688  clear
+ 1689  ls
+ 1690  clear
+ 1691  ll
+ 1692  clear
+ 1693  ls
+ 1694  clear
+ 1695  git clone https://krim_0@bitbucket.org/krim_0/et5-projet.git
+ 1696  cd Documents
+ 1697  ls
+ 1698  mkdir ET5Polytech
+ 1699  cd ET5Polytech
+ 1700  mkdir MachinLearning
+ 1701  cd MachinLearning
+ 1702  ls
+ 1703  git clone https://krim_0@bitbucket.org/krim_0/et5-projet.git
+ 1704  ls
+ 1705  dir Projet
+ 1706  mkdir Projet
+ 1707  cd Projet
+ 1708  git clone https://krim_0@bitbucket.org/machinelearning16/et5-projet.git
+ 1709  ionic serve
+ 1710  clear
+ 1711  ls
+ 1712  cd Documents
+ 1713  ls
+ 1714  cd ET5Polytech
+ 1715  cd JavaJMS
+ 1716  ls
+ 1717  cd apache-activemq-5.7.0
+ 1718  ls
+ 1719  cd bin
+ 1720  ls
+ 1721  cd ..
+ 1722  ./bin/activemq console
+ 1723  sudo ./bin/activemq console
+ 1724  sudo ./bin/activemq 
+ 1725  sudo ./bin/activemq sudo
+ 1726  sudo su
+ 1727  sudo
+ 1728  su
+ 1729  suo
+ 1730  sudo
+ 1731  sudo su
+ 1732  netstat -an|find "61616"
+ 1733  netstat -an | find "61616"
+ 1734  netstat -an
+ 1735  netstat -an | find "61616"
+ 1736  ? find
+ 1737  find?
+ 1738  ?find
+ 1739  help find
+ 1740  man find
+ 1741  /Users/karim/Documents/ET5Polytech/JavaJMS/apache-servicemix-6.1.2/bin/servicemix ; exit;
+ 1742  ls
+ 1743  cd Documents
+ 1744  cd ET5Polytech/JavaJMS
+ 1745  ls
+ 1746  cd apache-servicemix-6.1.2
+ 1747  ls
+ 1748  ./bin/servicemix
+ 1749  cd Documents/ET5Polytech/JavaJMS/apache-servicemix-6.1.2
+ 1750  ls
+ 1751  ./bin/servicemix
+ 1752  cd Documents/ET5Polytech/JavaJMS
+ 1753  ls
+ 1754  cd apache-servicemix-6.1.2
+ 1755  ./bin/servicemix
+ 1756  ifconfig
+ 1757  clear
+ 1758  cd Documents
+ 1759  ls
+ 1760  cd ET5Polytech
+ 1761  ls
+ 1762  cd JavaJMS
+ 1763  ls
+ 1764  ls -l
+ 1765  ./bin/servicemix
+ 1766  cd apache-
+ 1767  l-l 
+ 1768  cd apache-servicemix-6.1.2
+ 1769  ls
+ 1770  ./bin/servicemix
+ 1771  cd Documents
+ 1772  ls
+ 1773  cd IonicWorkSpace
+ 1774  ls
+ 1775  cd Ionic2DSIC
+ 1776  ls
+ 1777  ionic serve --lab
+ 1778  git remote add origin https://github.com/karimessouabni/JAXB_Devoir.git
+ 1779  sudo su
+ 1780  cd ~
+ 1781  echo "export GIT_SSH=/usr/bin/ssh" >> .profile
+ 1782  mocule
+ 1783  module avail
+ 1784  clear
+ 1785  macports
+ 1786  sudo su 
+ 1787  exit
+ 1788  :q
+ 1789  q
+ 1790  quit
+ 1791  git config --global core.autocrlf input
+ 1792  :q
+ 1793  q
+ 1794  quit
+ 1795  :quit
+ 1796  cd ~
+ 1797  ls
+ 1798  cd ..
+ 1799  cd karim
+ 1800  ls
+ 1801  clear
+ 1802  export PATH=$PATH:/opt/local/lib/openmpi/bin
+ 1803  mpif90 exemple.f90
+ 1804  mpioutil
+ 1805  man mp
+ 1806  man mpi
+ 1807  man mpioutil 
+ 1808  clear
+ 1809  ls
+ 1810  exit
+ 1811  sudo port install openmpi
+ 1812  clear
+ 1813  ls
+ 1814  clear
+ 1815  sudo port install openmpi
+ 1816  brew install llvm37
+ 1817  brew
+ 1818  brew search open
+ 1819  cd Documents/ET5Polytech/Calcul\ Hautes\ Performances
+ 1820  ls
+ 1821  mkdir TD1
+ 1822  cd TD1
+ 1823  nano exo1
+ 1824  ls
+ 1825  nano exo2
+ 1826  nano exo2.c
+ 1827  ls
+ 1828  open exo2.c
+ 1829  brew install open-mpi
+ 1830  open exo2.c
+ 1831  load mpi
+ 1832  load openmpi
+ 1833  load openmpimpiexec
+ 1834  mpiexec
+ 1835  mpiexec --version
+ 1836  export MPICC=/home/kendall/bin/mpicc
+ 1837  make
+ 1838  /home/kendall/bin/mpicc -o mpi_hello_world mpi_hello_world.c
+ 1839  make /home/kendall/bin/mpicc -o mpi_hello_world mpi_hello_world.c
+ 1840  cd Documents/ET5Polytech/Calcul\ Hautes\ Performances
+ 1841  ls
+ 1842  cd TD1
+ 1843  ls
+ 1844  make /home/kendall/bin/mpicc -o exo2 exo2.c
+ 1845  ls
+ 1846  make mpicc -o exo2 exo2.c
+ 1847  MPICC exo2.c
+ 1848  ./a.out
+ 1849  nano produitMatrix.c
+ 1850  open produitMatrix.c
+ 1851  MPICC testexo2.c
+ 1852  ./a.out
+ 1853  MPICC testexo2.c
+ 1854  exit
+ 1855  clear
+ 1856  ls
+ 1857  clear
+ 1858  exit
+ 1859  clear
+ 1860  ls
+ 1861  cd Documents
+ 1862  ls
+ 1863  cd ET5Polytech
+ 1864  ls
+ 1865  cd Calcul\ Hautes\ Performances
+ 1866  ls
+ 1867  cd TD1
+ 1868  ls
+ 1869  mpicc produitMatrix.c
+ 1870  ls
+ 1871  mpicc produitMatrix.c
+ 1872  ls
+ 1873  mpicc produitMatrix.c
+ 1874  ./a.out
+ 1875  mpicc produitMatrix.c
+ 1876  ./a.out
+ 1877  clear
+ 1878  mpicc produitMatrix.c
+ 1879  clear
+ 1880  ./a.out
+ 1881  mpicc produitMatrix.c
+ 1882  ./a.out
+ 1883  clear
+ 1884  mpicc produitMatrix.c
+ 1885  ./a.out
+ 1886  miprun -n 1 a.out 
+ 1887  ./&a
+ 1888  ./a.out
+ 1889  miprun -n 1 a.out 
+ 1890  mpicc produitMatrix.c
+ 1891  ./a.out
+ 1892  mpicc produitMatrix.c
+ 1893  ./a.out
+ 1894  mpicc produitMatrix.c
+ 1895  ./a.out
+ 1896  mpicc produitMatrix.c
+ 1897  ./a.out
+ 1898  mpicc produitMatrix.c
+ 1899  mpicc \-c produitMatrix.c 
+ 1900  ls
+ 1901  mpicc \-o produitMatrix.o 
+ 1902  mpicc -o produitMatrix.o 
+ 1903  mpirun -o produitMatrix.o 
+ 1904  man mpirun 
+ 1905  mpicc \-c produitMatrix.c 
+ 1906  mpircc -o produitMatrix produitMatrix.o
+ 1907  mpicc -o produitMatrix produitMatrix.o
+ 1908  mpirun -n 3 produitMatrix
+ 1909  mpirun -n 2 produitMatrix 
+ 1910  mpicc \-c produitMatrix.c 
+ 1911  mpicc -o produitMatrix produitMatrix.o
+ 1912  man mpirun 
+ 1913  mpicc -o produitMatrix.o 
+ 1914  ./produitMatrix
+ 1915  mpirun -n 4 produitMatrix 
+ 1916  mpicc \-c test.c
+ 1917  mpicc -o test.o
+ 1918  mpirun -n 4 produitMatrix
+ 1919  mpicc -o test test.o
+ 1920  mpicc -o test.o tes
+ 1921  mpicc -o test.o
+ 1922  mpicc -o test.ompicc -o scatter-gather scatter-gather.c -std=c9
+ 1923  mpicc -o scatter-gather test.c
+ 1924  mpirun -n 4 produitMatrix
+ 1925  mpicc -o test.ompicc -o scatter-gather scatter-gather.c -std=c9mat_a
+ 1926  mat_a
+ 1927  mpicc -o scatter-gather test.c
+ 1928  mpirun -n 4 produitMatrix
+ 1929  mpirun -n 4 scatter-gather
+ 1930  mpicc -o scatter-gather test.c
+ 1931  mpirun -n 4 scatter-gather
+ 1932  mpicc -o scatter-gather test.c
+ 1933  mpirun -n 4 scatter-gather
+ 1934  mpicc -o scatter-gather test.c
+ 1935  mpirun -n 4 scatter-gather
+ 1936  mpicc -o scatter-gather test.c
+ 1937  mpirun -n 4 scatter-gather
+ 1938  mpicc -o scatter-gather test.c
+ 1939  mpirun -n 4 scatter-gather
+ 1940  mpicc -o scatter-gather test.c
+ 1941  mpirun -n 4 scatter-gather
+ 1942  mpicc -o scatter-gather test.c
+ 1943  mpirun -n 4 scatter-gather
+ 1944  mpicc -o scatter-gather test.c
+ 1945  mpirun -n 4 scatter-gather
+ 1946  mpicc -o scatter-gather test.c
+ 1947  mpirun -n 4 scatter-gather
+ 1948  mpicc -o scatter-gather test.c
+ 1949  mpirun -n 4 scatter-gather
+ 1950  mpicc -o scatter-gather test.c
+ 1951  mpirun -n 4 scatter-gather
+ 1952  mpicc -o scatter-gather test.c
+ 1953  mpirun -n 4 scatter-gather
+ 1954  mpicc -o scatter-gather test.c
+ 1955  mpirun -n 4 scatter-gather
+ 1956  mpicc -o scatter-gather test.c
+ 1957  mpirun -n 4 scatter-gather
+ 1958  mpicc -o scatter-gather test.c
+ 1959  mpirun -n 4 scatter-gather
+ 1960  mpicc -o scatter-gather test.c
+ 1961  mpirun -n 4 scatter-gather
+ 1962  mpicc -o scatter-gather test.c
+ 1963  mpirun -n 4 scatter-gather
+ 1964  mpicc -o scatter-gather test.c
+ 1965  mpirun -n 4 scatter-gather
+ 1966  mpicc -o scatter-gather test.c
+ 1967  mpirun -n 4 scatter-gather
+ 1968  mpicc -o scatter-gather test.c
+ 1969  mpirun -n 4 scatter-gather
+ 1970  mpicc -o scatter-gather test.c
+ 1971  mpirun -n 4 scatter-gather
+ 1972  mpicc -o scatter-gather test.c
+ 1973  mpirun -n 4 scatter-gather
+ 1974  mpicc -o scatter-gather test.c
+ 1975  mpirun -n 4 scatter-gather
+ 1976  mpicc -o scatter-gather test.c
+ 1977  mpirun -n 4 scatter-gather
+ 1978  mpicc -o scatter-gather test.c
+ 1979  mpirun -n 4 scatter-gather
+ 1980  mpicc -o scatter-gather test.c
+ 1981  mpirun -n 4 scatter-gather
+ 1982  mpicc -o scatter-gather test.c
+ 1983  mpirun -n 4 scatter-gather
+ 1984  mpicc -o scatter-gather test.c
+ 1985  mpirun -n 4 scatter-gather
+ 1986  mpicc -o scatter-gather test.c
+ 1987  mpirun -n 4 scatter-gather
+ 1988  mpicc -o scatter-gather test.c
+ 1989  mpirun -n 4 scatter-gather
+ 1990  mpicc -o scatter-gather test.c
+ 1991  mpirun -n 4 scatter-gather
+ 1992  mpicc -o scatter-gather test.c
+ 1993  mpirun -n 4 scatter-gather
+ 1994  mpicc -o scatter-gather test.c
+ 1995  mpirun -n 4 scatter-gather
+ 1996  mpicc -o scatter-gather test.c
+ 1997  mpirun -n 4 scatter-gather
+ 1998  mpicc -o scatter-gather test.c
+ 1999  mpirun -n 4 scatter-gather
+ 2000  mpicc -o scatter-gather test.c
+ 2001  mpirun -n 4 scatter-gather
+ 2002  mpicc -o scatter-gather test.c
+ 2003  mpirun -n 4 scatter-gather
+ 2004  mpicc -o scatter-gather test.c
+ 2005  mpirun -n 4 scatter-gather
+ 2006  mpirun -n 2 scatter-gather
+ 2007  at < /dev/tcp/127.0.0.1/22cat < /dev/tcp/127.0.0.1/22
+ 2008  cat < /dev/tcp/127.0.0.1/22
+ 2009  cd /dev/tcp
+ 2010  nmap github.com -p http,git
+ 2011  nc github.com 9418 < /dev/null; echo $?
+ 2012  git config --global url."https://".insteadOf git://
+ 2013  git config --global url."https://github".insteadOf git://github
+ 2014  sudo su
+ 2015  cd Documents/ET5Polytech
+ 2016  ls
+ 2017  clear
+ 2018  ls
+ 2019  cd C++
+ 2020  ls
+ 2021  cd TP2
+ 2022  ls
+ 2023  cd TP_02_code
+ 2024  ls
+ 2025  mkdir build
+ 2026  cd build
+ 2027  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE
+ 2028  make
+ 2029  make doxygen
+ 2030  make test
+ 2031  make
+ 2032  make test
+ 2033  meke
+ 2034  make
+ 2035  make test
+ 2036  make
+ 2037  make test
+ 2038  make
+ 2039  make test
+ 2040  make
+ 2041  make test
+ 2042  make
+ 2043  make test
+ 2044  make
+ 2045  make test
+ 2046  make
+ 2047  CLEAR
+ 2048  LS
+ 2049  celar
+ 2050  clear
+ 2051  make
+ 2052  clear
+ 2053  ls
+ 2054  make
+ 2055  clear
+ 2056  ls
+ 2057  ls -l
+ 2058  make
+ 2059  exit
+ 2060  clear
+ 2061  cd Documents
+ 2062  ls
+ 2063  cd ET5Polytech/C
+ 2064  ls
+ 2065  pwd
+ 2066  cd ET5Polytech
+ 2067  ls
+ 2068  cd Calcul\ Hautes\ Performances
+ 2069  ls
+ 2070  cd TD1
+ 2071  ls
+ 2072  ./a.out
+ 2073  cleazr
+ 2074  clear
+ 2075  ls
+ 2076  proxip info 
+ 2077  proc info
+ 2078  proc
+ 2079  man proc
+ 2080  proccp
+ 2081  cat proc/cpu/info
+ 2082  cat /proc/cpu/info
+ 2083  system_profiler | grep Processor
+ 2084  sysctl -n 
+ 2085  sysctl 
+ 2086  system_profiler 
+ 2087  clear
+ 2088  ls
+ 2089  cd ..
+ 2090  ls
+ 2091  cd TD2
+ 2092  ls
+ 2093  gcc -fopenmp test.c -o test
+ 2094  icc -openmp test.c -o test
+ 2095  gcc -fopenmp test.c -o test
+ 2096  gcc  test.c -o test
+ 2097  brew install clang-omp
+ 2098  install gcc --without-multilib
+ 2099  brew install gcc --without-multilib
+ 2100  gcc-5 -fopenmp -o
+ 2101  cd Documents
+ 2102  ls
+ 2103  cd ET5Polytech
+ 2104  ls
+ 2105  cd Calcul\ Hautes\ Performances
+ 2106  ls
+ 2107  cd TD2
+ 2108  ls
+ 2109  xcode-select --install
+ 2110  clang-omp -fopenmp test.c
+ 2111  gcc -fopenmp -o test.c test
+ 2112  gcc -fopenmp -o test.c 
+ 2113  clang-omp -fopenmp helloopenmp.c
+ 2114  brew install clang-omp
+ 2115  ls
+ 2116  xcode-select --install
+ 2117  brew install homebrew/versions/gcc5
+ 2118  cd Documents/ET5Polytech
+ 2119  cd Calcul\ Hautes\ Performances
+ 2120  ls
+ 2121  cd TD2
+ 2122  ls
+ 2123  gcc -fopenmp test.c -o test
+ 2124  gcc test.c -o test
+ 2125  gcc -fopenmp test.c -o test
+ 2126  gcc test.c -o test
+ 2127  gcc -fopenmp test.c -o test
+ 2128  clang test.c -o test
+ 2129  clang test.c -o test-fopenmp  
+ 2130  clang test.c -o test -fopenmp 
+ 2131  g++ -fopenmp -o test test.cpp
+ 2132  clang test.c -o test -fopenmp 
+ 2133  export CC=/usr/local/bin/gcc
+ 2134  CC -fopenmp test.c -o test
+ 2135  pathofgcc
+ 2136  path_of_gcc
+ 2137  gcc
+ 2138  man gcc
+ 2139  $gcc
+ 2140  pwd gcc
+ 2141  gcc5
+ 2142  man gcc5
+ 2143  export CC=usr/local/Cellar/gcc5
+ 2144  CC -fopenmp test.c -o test
+ 2145  CC test.c -o test
+ 2146  export CC=/usr/local/bin/clang-omp
+ 2147  CC -fopenmp test.c -o test
+ 2148  sudo chown -R $USER /usr/local/
+ 2149  /usr/local/lib/
+ 2150  sudo chown -R $USER /usr/local/
+ 2151  sudo su
+ 2152  brew link --overwrite gcc
+ 2153  sudo chown -R $USER /usr/local/
+ 2154  CC -fopenmp test.c -o test
+ 2155  cd  
+ 2156  ls
+ 2157  py
+ 2158  python
+ 2159  cd Documents
+ 2160  cd ET5Polytech/Calcul\ Hautes\ Performances/ls
+ 2161  cd ET5Polytech/Calcul\ Hautes\ Performances/
+ 2162  l
+ 2163  $ll
+ 2164  ll
+ 2165  l
+ 2166  cd TD1
+ 2167  ls
+ 2168  ./exo2.c
+ 2169  ./a.out
+ 2170  mpirun -np 4 a.out
+ 2171  gcc -c exo2.c
+ 2172  gcc exo2.c
+ 2173  mpicc exo2.c
+ 2174  ls
+ 2175  rm  a.out
+ 2176  ls
+ 2177  mpicc exo2.c
+ 2178  ls
+ 2179  mpirun -np 4 a.out
+ 2180  npm run watch\n
+ 2181  npm start\n
+ 2182  mpirun -np 4 a.out
+ 2183  mpicc exo2.c
+ 2184  mpirun -np 4 a.out
+ 2185  mpicc exo2.c
+ 2186  mpicc sendRec.c
+ 2187  ls
+ 2188  ll
+ 2189  mpicc sendRec.c
+ 2190  mpirun -np 4 a.out
+ 2191  mpicc sendRec.c
+ 2192  mpirun -np 4 a.out
+ 2193  mpicc sendRec.c
+ 2194  mpirun -np 4 a.out
+ 2195  mpicc sendRec.c
+ 2196  mpirun -np 4 a.out
+ 2197  OA
+ 2198  mpicc sendRec.c
+ 2199  OA
+ 2200  mpirun -np 4 a.out
+ 2201  mpicc sendRec.c
+ 2202  mpirun -np 4 a.out
+ 2203  mpicc test.c
+ 2204  mpirun -np 4 a.out
+ 2205  mpirun -np 2 a.out
+ 2206  mpicc untitled.c
+ 2207  mpirun -np 2 a.out
+ 2208  mpicc sendRec.c
+ 2209  mpicc untitled.c
+ 2210  mpirun -np 2 a.out
+ 2211  mpicc untitled.c
+ 2212  mpirun -np 2 a.out
+ 2213  mpicc untitled.c
+ 2214  mpirun -np 2 a.out
+ 2215  mpicc p
+ 2216  mpicc pduitScalaire.c
+ 2217  mpirun -np 2 a.out
+ 2218  mpicc pduitScalaire.c
+ 2219  mpirun -np 2 a.out
+ 2220  mpicc pduitScalaire.c
+ 2221  mpirun -np 2 a.out
+ 2222  mpicc pduitScalaire.c
+ 2223  mpirun -np 2 a.out
+ 2224  mpicc pduitScalaire.c
+ 2225  mpirun -np 2 a.out
+ 2226  cd Documents
+ 2227  ls
+ 2228  cd ET5Polytech
+ 2229  ls
+ 2230  cd C++
+ 2231  ls
+ 2232  cd TP_02_correction
+ 2233  ls
+ 2234  mkdir build\n
+ 2235  cd build
+ 2236  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2237  make
+ 2238  make test
+ 2239  make
+ 2240  make test
+ 2241  make
+ 2242  make test
+ 2243  make
+ 2244  make test
+ 2245  make
+ 2246  make test
+ 2247  make install # su -c "make install" # sudo make install\n
+ 2248  make
+ 2249  make test
+ 2250  ./test__copy_ptr
+ 2251  make
+ 2252  ./test__copy_ptr
+ 2253  make
+ 2254  make test
+ 2255  ./test__copy_ptr
+ 2256  make
+ 2257  ./test__copy_ptr
+ 2258  make
+ 2259  ./test__copy_ptr
+ 2260  make
+ 2261  ./test__copy_ptr
+ 2262  make
+ 2263  ./test__copy_ptr
+ 2264  make
+ 2265  ./test__copy_ptr
+ 2266  make
+ 2267  make test
+ 2268  ./test__copy_ptr
+ 2269  make test
+ 2270  make
+ 2271  ./test__copy_ptr
+ 2272  make
+ 2273  ./test__copy_ptr
+ 2274  make
+ 2275  ./test__copy_ptr
+ 2276  make
+ 2277  ./test__copy_ptr
+ 2278  make
+ 2279  ./test__copy_ptr
+ 2280  make
+ 2281  ./test__copy_ptr
+ 2282  make
+ 2283  ./test__copy_ptr
+ 2284  make
+ 2285  ./test__copy_ptr
+ 2286  make
+ 2287  ./test__copy_ptr
+ 2288  make
+ 2289  ./test__copy_ptr
+ 2290  make
+ 2291  ./test__copy_ptr
+ 2292  make
+ 2293  g++ -std=c++14 -Wall '../../Geo\n
+ 2294  make
+ 2295  cd Documents
+ 2296  ls
+ 2297  cd ET5Polytech
+ 2298  ls
+ 2299  cd Calcul\ Hautes\ Performances
+ 2300  ls
+ 2301  cd TP_note
+ 2302  ls
+ 2303  gcc matmul-ex1.c
+ 2304  ll
+ 2305  ./a.out
+ 2306  gcc matmul-ex1.c
+ 2307  ./a.out
+ 2308  gcc matmul-ex1.c
+ 2309  ./a.out
+ 2310  gcc matmul-ex1.c
+ 2311  ./a.out
+ 2312  gcc matmul-ex1.c
+ 2313  ./a.out
+ 2314  gcc matmul-ex1.c
+ 2315  ./a.out
+ 2316  gcc matmul-ex1.c
+ 2317  ./a.out
+ 2318  gcc matmul-ex1.c
+ 2319  ./a.out
+ 2320  gcc matmul-ex1.c
+ 2321  ./a.out
+ 2322  gcc matmul-ex1.c
+ 2323  ./a.out
+ 2324  gcc matmul-ex1.c
+ 2325  ./a.out
+ 2326  gcc matmul-ex1.c
+ 2327  ./a.out
+ 2328  gcc matmul-ex1.c
+ 2329  ./a.out
+ 2330  gcc matmul-ex1.c
+ 2331  ./a.out
+ 2332  gcc matmul-ex1.c
+ 2333  ./a.out
+ 2334  gcc matmul-ex1.c
+ 2335  ./a.out
+ 2336  gcc matmul-ex1.c
+ 2337  ./a.out
+ 2338  gcc matmul-ex1.c
+ 2339  ./a.out
+ 2340  gcc matmul-ex1.c
+ 2341  ./a.out
+ 2342  gcc matmul-ex1.c
+ 2343  ./a.out
+ 2344  gcc matmul-ex1.c
+ 2345  ./a.out
+ 2346  gcc matmul-ex1.c
+ 2347  ./a.out
+ 2348  gcc matmul-ex1.c
+ 2349  ./a.out
+ 2350  gcc matmul-ex1.c
+ 2351  ./a.out
+ 2352  gcc matmul-ex1.c
+ 2353  ./a.out
+ 2354  gcc matmul-ex1.c
+ 2355  ./a.out
+ 2356  gcc matmul-ex1.c
+ 2357  ./a.out
+ 2358  gcc matmul-ex1.c
+ 2359  ./a.out
+ 2360  mpicc matmul-ex2.c
+ 2361  mpirun a.out
+ 2362  mpirun a.out -np 4
+ 2363  mpirun a.out -np 1
+ 2364  mpirun a.out -np 2
+ 2365  mpirun a.out -np 3
+ 2366  mpirun a.out -np 4
+ 2367  mpirun a.out -np 8
+ 2368  mpirun -np 8 a.out
+ 2369  mpicc matmul-ex2.c
+ 2370  mpirun -np 2 a.out
+ 2371  mpicc matmul-ex2.c
+ 2372  mpirun -np 2 a.out
+ 2373  mpicc matmul-ex2.c
+ 2374  mpirun -np 2 a.out
+ 2375  mpicc matmul-ex2.c
+ 2376  mpirun -np 2 a.out
+ 2377  mpicc matmul-ex2.c
+ 2378  mpirun -np 2 a.out
+ 2379  mpicc matmul-ex2.c
+ 2380  gcc matmul-ex1.c
+ 2381  ./a.out
+ 2382  gcc matmul-ex1.c
+ 2383  ./a.out
+ 2384  mpicc matmul-ex2.c
+ 2385  mpirun -np 2 a.out
+ 2386  mpicc matmul-ex2.c
+ 2387  mpirun -np 2 a.out
+ 2388  mpicc matmul-ex2.c
+ 2389  mpirun -np 2 a.out
+ 2390  mpicc matmul-ex2.c
+ 2391  mpirun -np 2 a.out
+ 2392  mpicc matmul-ex2.c
+ 2393  mpirun -np 2 a.out
+ 2394  ls
+ 2395  cd ..
+ 2396  ls
+ 2397  cd TD2
+ 2398  ls
+ 2399  cd ../TP_note
+ 2400  mpicc test.c
+ 2401  mpicc matmul-ex2.c
+ 2402  mpirun -np 2 a.out
+ 2403  mpicc matmul-ex2.c
+ 2404  mpicc test.c
+ 2405  mpirun -np 2 a.out
+ 2406  mpicc test.c
+ 2407  mpirun -np 2 a.out
+ 2408  mpicc test.c
+ 2409  mpirun -np 2 a.out
+ 2410  mpicc test.c
+ 2411  mpirun -np 2 a.out
+ 2412  mpicc test.c
+ 2413  mpirun -np 2 a.out
+ 2414  mpicc matmul-ex2.c
+ 2415  mpirun -np 2 a.out
+ 2416  mpicc matmul-ex2.c
+ 2417  mpirun -np 2 a.out
+ 2418  mpicc matmul-ex2.c
+ 2419  mpirun -np 2 a.out
+ 2420  mpicc matmul-ex2.c
+ 2421  mpirun -np 2 a.out
+ 2422  mpicc matmul-ex2.c
+ 2423  mpirun -np 2 a.out
+ 2424  mpicc matmul-ex2.c
+ 2425  mpirun -np 2 a.out
+ 2426  mpicc matmul-ex2.c
+ 2427  mpirun -np 2 a.out
+ 2428  mpicc matmul-ex2.c
+ 2429  mpirun -np 2 a.out
+ 2430  mpicc matmul-ex2.c
+ 2431  mpirun -np 2 a.out
+ 2432  mpicc matmul-ex2.c
+ 2433  mpirun -np 2 a.out
+ 2434  mpicc matmul-ex2.c
+ 2435  mpirun -np 2 a.out
+ 2436  mpicc matmul-ex2.c
+ 2437  mpirun -np 2 a.out
+ 2438  mpicc matmul-ex2.c
+ 2439  mpirun -np 2 a.out
+ 2440  mpicc matmul-ex2.c
+ 2441  mpirun -np 2 a.out
+ 2442  mpicc matmul-ex2.c
+ 2443  mpirun -np 2 a.out
+ 2444  mpicc matmul-ex2.c
+ 2445  mpirun -np 2 a.out
+ 2446  mpicc matmul-ex2.c
+ 2447  mpirun -np 2 a.out
+ 2448  mpicc matmul-ex2.c
+ 2449  mpirun -np 2 a.out
+ 2450  mpicc matmul-ex2.c
+ 2451  mpirun -np 2 a.out
+ 2452  mpicc matmul-ex2.c
+ 2453  mpirun -np 2 a.out
+ 2454  mpicc matmul-ex2.c
+ 2455  mpirun -np 2 a.out
+ 2456  mpicc matmul-ex2.c
+ 2457  mpirun -np 2 a.out
+ 2458  mpicc matmul-ex2.c
+ 2459  mpirun -np 2 a.out
+ 2460  mpicc matmul-ex2.c
+ 2461  mpirun -np 2 a.out
+ 2462  mpicc matmul-ex2.c
+ 2463  mpirun -np 2 a.out
+ 2464  mpicc matmul-ex2.c
+ 2465  mpirun -np 2 a.out
+ 2466  mpicc matmul-ex2.c
+ 2467  mpirun -np 2 a.out
+ 2468  mpicc matmul-ex2.c
+ 2469  mpirun -np 2 a.out
+ 2470  mpicc matmul-ex2.c
+ 2471  mpirun -np 2 a.out
+ 2472  mpicc matmul-ex2.c
+ 2473  mpirun -np 2 a.out
+ 2474  mpicc matmul-ex2.c
+ 2475  mpirun -np 2 a.out
+ 2476  mpicc testWal.c
+ 2477  mpirun -np 2 a.out
+ 2478  mpicc testWal.c
+ 2479  mpirun -np 2 a.out
+ 2480  mpicc matmul-ex2.c
+ 2481  mpirun -np 2 a.out
+ 2482  mpicc matmul-ex2.c
+ 2483  mpirun -np 2 a.out
+ 2484  mpicc matmul-ex2.c
+ 2485  mpirun -np 2 a.out
+ 2486  mpicc matmul-ex2.c
+ 2487  mpirun -np 2 a.out
+ 2488  mpicc matmul-ex2.c
+ 2489  mpirun -np 2 a.out
+ 2490  mpicc matmul-ex2.c
+ 2491  mpirun -np 2 a.out
+ 2492  mpicc matmul-ex2.c
+ 2493  mpirun -np 2 a.out
+ 2494  mpicc matmul-ex2.c
+ 2495  mpirun -np 2 a.out
+ 2496  mpicc matmul-ex2.c
+ 2497  mpirun -np 2 a.out
+ 2498  mpicc matmul-ex2.c
+ 2499  mpirun -np 2 a.out
+ 2500  mpirun -np 10 a.out
+ 2501  mpirun -np 2 a.out
+ 2502  mpirun -np 4 a.out
+ 2503  mpicc matmul-ex2.c
+ 2504  mpirun -np 4 a.out
+ 2505  mpicc matmul-ex2.c
+ 2506  mpirun -np 8192 a.out
+ 2507  q
+ 2508  gcc matmul-ex3.c
+ 2509  ./a.out
+ 2510  gcc matmul-ex3.c
+ 2511  ./a.out
+ 2512  gcc matmul-ex3.c
+ 2513  ./a.out
+ 2514  gcc matmul-ex3.c
+ 2515  ./a.out
+ 2516  gcc matmul-ex3.c
+ 2517  ./a.out
+ 2518  gcc matmul-ex3.c
+ 2519  ./a.out
+ 2520  gcc matmul-ex3.c
+ 2521  ./a.out
+ 2522  gcc matmul-ex3.c
+ 2523  ./a.out
+ 2524  gcc matmul-ex3.c
+ 2525  ./a.out
+ 2526  gcc matmul-ex3.c
+ 2527  ./a.out
+ 2528  gcc matmul-ex3.c
+ 2529  ./a.out
+ 2530  gcc matmul-ex3.c
+ 2531  ./a.out
+ 2532  gcc matmul-ex1.c
+ 2533  ./a.out
+ 2534  source activate spyder3\n
+ 2535  conda install -c spyder-ide spyder==3.0.0
+ 2536  brew
+ 2537  sudo su
+ 2538  cd Documents/ET5Polytech
+ 2539  ls
+ 2540  cd C++
+ 2541  ls
+ 2542  cd TP5
+ 2543  ls
+ 2544  cd TP_05_points-1
+ 2545  ls
+ 2546  -Wall -Wextra -Wconversion -Wsign-conversion -std=c++11 (ou -std=c++14) -pedantic
+ 2547  gcc main.cpp
+ 2548  g++ -Wall -Wextra -Wconversion -Wsign-conversion -std=c++11 (ou -std=c++14) -pedantic main.cpp
+ 2549  g++ main.cpp
+ 2550  ./main 
+ 2551  g++ -Wall -Wextra -Wconversion -Wsign-conversion -std=c++11 (ou -std=c++14) -pedantic main.cpp
+ 2552  g++ -Wall -Wextra -Wconversion -Wsign-conversion -std=c++11 -pedantic main.cpp -o main && ./main\n
+ 2553  ./main
+ 2554  g++ -Wall -Wextra -Wconversion -Wsign-conversion -std=c++11 -pedantic main.cpp -o main && ./main\n
+ 2555  ./main
+ 2556  g++ -Wall -Wextra -Wconversion -Wsign-conversion -std=c++11 -pedantic main.cpp -o main && ./main\n
+ 2557  cd Documents
+ 2558  ls
+ 2559  cd ET5Polytech
+ 2560  ls
+ 2561  cd C++
+ 2562  ls
+ 2563  cd TicTac
+ 2564  ls
+ 2565  cd TicTac
+ 2566  ls
+ 2567  cd ..
+ 2568  rm -fv TicTac
+ 2569  rm -dv TicTac
+ 2570  ls
+ 2571  cd TP_06_code
+ 2572  ls
+ 2573  cd src
+ 2574  ls
+ 2575  cd ..
+ 2576  cd include
+ 2577  ls
+ 2578  mkdir build
+ 2579  cd build
+ 2580  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2581  make
+ 2582  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2583  cd ..
+ 2584  ls
+ 2585  cd ..
+ 2586  ls
+ 2587  mkdir build
+ 2588  cd build
+ 2589  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2590  make
+ 2591  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2592  make install
+ 2593  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2594  meke test
+ 2595  make test
+ 2596  make install
+ 2597  make
+ 2598  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2599  sudo make install
+ 2600  clear
+ 2601  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2602  make
+ 2603  cmake .. # -DCMAKE_INSTALL_PREFIX=/path/to/install # -DDEBUG=TRUE # -DDISABLE_TESTS=TRUE\n
+ 2604  make
+ 2605  who
+ 2606  who | greo
+ 2607  who | grep
+ 2608  who | grep root
+ 2609  who | grep karim
+ 2610  who | grep kar
+ 2611  who | grep root | wc -l
+ 2612  who | grep karim | wc -l
+ 2613  ifconfi
+ 2614  ifconfig
+ 2615  ifconfig en1
+ 2616  javac
+ 2617  github 
+ 2618  npm start
+ 2619  start npm 
+ 2620  npm
+ 2621  npm help 
+ 2622  npm -l 
+ 2623  npm 
+ 2624  ls -l 
+ 2625  cd Documents
+ 2626  ls
+ 2627  cd UDEM
+ 2628  ls
+ 2629  clear
+ 2630  ls
+ 2631  ls -l 
+ 2632  lolololo
+ 2633  ouiiii 
+ 2634  ahahah 
+ 2635  je sais pas 
+ 2636  c quoi ce bordel 
+ 2637  nonon
+ 2638  nonononon $s
+ 2639  clear
+ 2640  bash
+ 2641  clear
+ 2642  why git 
+ 2643  clear
+ 2644  instagram
+ 2645  popo 
+ 2646  popopo
+ 2647  lolipop
+ 2648  loliôp
+ 2649  loliôpo
+ 2650  cool 
+ 2651  c'est ca la merde \noui \n\n\nesdq\n'
+ 2652  'qsd\nqsd\nqsd\nqsd\n'
+ 2653  clear
+ 2654  instagram 
+ 2655  oui
+ 2656  npm -v
+ 2657  node -v
+ 2658  node update
+ 2659  node
+ 2660  .exit
+ 2661  man node
+ 2662  node help
+ 2663  ls
+ 2664  cd Desktop
+ 2665  ls
+ 2666  node serveur.js
+ 2667  ifconfig
+ 2668  cd Desktop
+ 2669  node serveur.js
+ 2670  node -v
+ 2671  node update
+ 2672  node ?
+ 2673  man node
+ 2674  npm -v
+ 2675  npm -h
+ 2676  npm -update
+ 2677  npm update
+ 2678  npm -v
+ 2679  cd Documents/ET5Polytech/GLPROJECT
+ 2680  cd quickstart
+ 2681  ls
+ 2682  npm start
+ 2683  cd ..
+ 2684  npm start
+ 2685  cd quickstart
+ 2686  npm install 
+ 2687  cd quickstart-master
+ 2688  ls
+ 2689  npm install
+ 2690  npm install -g npm
+ 2691  npm -v
+ 2692  npm unistall 
+ 2693  npm uninstall
+ 2694  npm -rm
+ 2695  npm update
+ 2696  npm -v
+ 2697  npm-ls
+ 2698  npm -ls
+ 2699  npm install
+ 2700  npm install -g npm
+ 2701  sudo npm install -g npm
+ 2702  npm sudo npm cache clean -f
+ 2703  Dodo
+ 2704  sudo npm uninstall -g
+ 2705  npm -v
+ 2706  sudo npm upgrade -g
+ 2707  npm -v
+ 2708  brew upgrade node
+ 2709  npm -v
+ 2710  node e-v
+ 2711  node -v
+ 2712  git clone https://github.com/angular/quickstart.git quickstart
+ 2713  pwd
+ 2714  ls
+ 2715  cd quickstart
+ 2716  ls
+ 2717  bash
+ 2718  https://github.com/angular/PS> git clone https://github.com/Vintharas/quickstart.git angular2-get-started\n
+ 2719  git clone https://github.com/Vintharas/quickstart.git angular2-get-started\n
+ 2720  cd Documents/ET5Polytech/GLPROJECT
+ 2721  cd quickstart
+ 2722  for /f %i in (non-essential-files.txt) do del %i /F /S /Q
+ 2723  bash
+ 2724  npm upgrade
+ 2725  npm -v
+ 2726  ls
+ 2727  nls
+ 2728  ls
+ 2729  cd Documents/ET5Polytech/GLPROJECT
+ 2730  ls
+ 2731  cd quickstart
+ 2732  ls
+ 2733  npm upgrade      
+ 2734  npm -v
+ 2735  ls
+ 2736  npm install
+ 2737  npm start
+ 2738  cd ..
+ 2739  ls
+ 2740  cd plume
+ 2741  ls
+ 2742  npm install
+ 2743  ls
+ 2744  npm start
+ 2745  npm install -g @angular/cli
+ 2746  ng serve
+ 2747  npm start
+ 2748  cd Documents/ET5Polytech/GLPROJECT
+ 2749  ls
+ 2750  cd plume
+ 2751  ls
+ 2752  cd bin
+ 2753  ls
+ 2754  nano www
+ 2755  ls
+ 2756  dc ..
+ 2757  cd ..
+ 2758  cd quickstart
+ 2759  ls
+ 2760  npm start
+ 2761  nano /Users/karim/Downloads/quickstart-master/package.json 
+ 2762  npm install
+ 2763  npm -v
+ 2764  sudo npm upgrade
+ 2765  Dodo
+ 2766  npm install angular2 rxjs es6-promise es6-shim reflect-metadata zone.js --save\n
+ 2767  npm -vb
+ 2768  npm -v
+ 2769  sudo npm install npm \n
+ 2770  npm -v
+ 2771  rm -rf /usr/local/lib/node_modules
+ 2772  sudo rm -rf /usr/local/lib/node_modules
+ 2773  sudo brew uninstall node
+ 2774  brew install node --without-npm\n
+ 2775  echo prefix=~/.npm-packages >> ~/.npmrc\n
+ 2776  curl -L https://www.npmjs.com/install.sh | sh\n
+ 2777  npm -v
+ 2778  node -v
+ 2779  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 2780  export PATH="$HOME/.npm-packages/bin:$PATH"\n
+ 2781  npm -v
+ 2782  npm update npm -g
+ 2783  npm install
+ 2784  npm -v
+ 2785  ls
+ 2786  npm install
+ 2787  npm serve
+ 2788  npm start
+ 2789  ls
+ 2790  npm start
+ 2791  npm -v
+ 2792  node -v
+ 2793  xargs rm -rf < non-essential-files.osx.txt
+ 2794  rm src/app/*.spec*.ts
+ 2795  rm non-essential-files.osx.txt\n
+ 2796  npm start
+ 2797  npm cache clean
+ 2798  lsbom -f -l -s -pf /var/db/receipts/org.nodejs.pkg.bom | while read f; do  sudo rm /usr/local/${f}; done
+ 2799  sudo lsbom -f -l -s -pf /var/db/receipts/org.nodejs.pkg.bom | while read f; do  sudo rm /usr/local/${f}; done
+ 2800  sudo rm -rf /usr/local/lib/node /usr/local/lib/node_modules /var/db/receipts/org.nodejs.*
+ 2801  cd /usr/local/lib
+ 2802  sudo rm -rf node*
+ 2803  cd /usr/local/include
+ 2804  sudo rm -rf node*
+ 2805  brew uninstall node
+ 2806  cd /usr/local/bin
+ 2807  ls -las
+ 2808  sudo rm -rf /usr/local/share/man/man1/node.1
+ 2809  sudo rm -rf /usr/local/lib/dtrace/node.d\n
+ 2810  vsudo rm -rf /usr/local/lib/dtrace/node.d\n
+ 2811  sudo rm -rf /usr/local/lib/dtrace/node.d\n
+ 2812  npm -v
+ 2813  node -v
+ 2814  cd ~/Documents/ET5Polytech/GLPROJECT
+ 2815  ls
+ 2816  cd quickstart
+ 2817  ls
+ 2818  npm start
+ 2819  cat ~/node_modules.txt;do npm install -g $i;done
+ 2820  ls
+ 2821  npm install -g typescript
+ 2822  npm -v
+ 2823  cd ..
+ 2824  cd plume
+ 2825  ls
+ 2826  npm -v
+ 2827  npm install -g typescript
+ 2828  tsc --init --target es5 --sourceMap --experimentalDecorators --emitDecoratorMetadata
+ 2829  npm install -g npm@2
+ 2830  npm init
+ 2831  npm install angular2 --save
+ 2832  npm install systemjs --save\n
+ 2833  npm install typings --save-dev\n
+ 2834  npm install lite-server --save-dev\n
+ 2835  npm run app\n
+ 2836  npm i -g typings
+ 2837  cd ..
+ 2838  cd angular2-website-routes-master
+ 2839  npm i
+ 2840  typings install
+ 2841  npm start\n
+ 2842  cd
+ 2843  cd Documents
+ 2844  cd ET5Polytech/GLPROJECT/plume
+ 2845  ls
+ 2846  npm start
+ 2847  npm start 
+ 2848  npm start
+ 2849  ls
+ 2850  npm install
+ 2851  npm -v
+ 2852  export PATH="$HOME/.npm-packages/bin:$PATH"\n
+ 2853  npm -v
+ 2854  ls
+ 2855  npm install 
+ 2856  npm start
+ 2857  np -v
+ 2858  npm -v
+ 2859  npm update npm -g
+ 2860  npm install
+ 2861  ls
+ 2862  npm -v
+ 2863  npm start
+ 2864  npm install
+ 2865  $npm start
+ 2866  npm start
+ 2867  npm run build
+ 2868  node -v
+ 2869  npm -v
+ 2870  ls
+ 2871  npm 
+ 2872  npm js
+ 2873  npm install 
+ 2874  ls
+ 2875  npm install
+ 2876  npm start
+ 2877  ls
+ 2878  cd node_modules
+ 2879  ls
+ 2880  cd ..
+ 2881  ls
+ 2882  cd ..
+ 2883  ls
+ 2884  cd 
+ 2885  cd Documents
+ 2886  ls
+ 2887  cd ET5Polytech/GLPROJECT
+ 2888  ls
+ 2889  cd plume
+ 2890  ls
+ 2891  npm install
+ 2892  npm start
+ 2893  npm install
+ 2894  npm start
+ 2895  npm install
+ 2896  npm start
+ 2897  npm install
+ 2898  npm start
+ 2899  node app.js
+ 2900  npm start
+ 2901  npm install
+ 2902  npm start
+ 2903  npm install
+ 2904  npm start
+ 2905  npm install -g bower
+ 2906  npm install -g yo
+ 2907  npm install -g generator-angular
+ 2908  ls
+ 2909  mkdir workspace ; mkdir workspace/first-app ; cd workspace/first-app
+ 2910  ls
+ 2911  yo angular
+ 2912  bower install jquery --save
+ 2913  grunt
+ 2914  ls
+ 2915  cd app
+ 2916  grunt
+ 2917  cd ..
+ 2918  grunt serve
+ 2919  ls
+ 2920  ./Gruntfile.js
+ 2921  ls
+ 2922  grunt
+ 2923  npm install -g grunt 
+ 2924  grunt
+ 2925  npm install -g grunt-cli
+ 2926  grunt
+ 2927  grunt serve
+ 2928  grunt
+ 2929  npm install
+ 2930  grunt
+ 2931  grunt serve
+ 2932  grunt serve --force
+ 2933  grunt test
+ 2934  grunt test --force
+ 2935  sudo npm install grunt-karma --save-dev\n
+ 2936  grunt test
+ 2937  grunt test --force
+ 2938  grunt
+ 2939  npm install grunt-contrib-compass --save-dev
+ 2940  grunt
+ 2941  npm install grunt-contrib-compass --save
+ 2942  grunt
+ 2943  gruntgrunt compass 
+ 2944  grunt compass 
+ 2945  grunt --force
+ 2946  grunt serve --force
+ 2947  cd ..
+ 2948  git clone https://github.com/michelre/cine_angular.git\n
+ 2949  ls
+ 2950  cd angular2-website-routes-master
+ 2951  ls
+ 2952  cd ..
+ 2953  git checkout step-0
+ 2954  sudo git checkout step-0
+ 2955  cd angular2-website-routes-master
+ 2956  sudo git checkout step-0
+ 2957  ls
+ 2958  cd app
+ 2959  ls
+ 2960  cd ..
+ 2961  ls
+ 2962  cd typings
+ 2963  ls
+ 2964  cd globals
+ 2965  ls
+ 2966  cd ../..
+ 2967  ls
+ 2968  git checkout step-0\n
+ 2969  sudo git checkout step-0\n
+ 2970  grunt serve --force
+ 2971  npm install
+ 2972  grunt serve --force
+ 2973  git@github.com:michelre/cine_angular.git
+ 2974  cd ..
+ 2975  git@github.com:michelre/cine_angular.git
+ 2976  git checkout step-0\n
+ 2977  cd angular2-website-routes-master
+ 2978  git checkout step-0\n
+ 2979  git checkout step-1\n
+ 2980  git checkout step-02\n
+ 2981  git checkout step\n
+ 2982  git checkout step_0\n
+ 2983  git checkout HEAD 
+ 2984  sudo git checkout HEAD 
+ 2985  ls
+ 2986  cd ..
+ 2987  cd angular2-websi
+ 2988  cd cine_angular
+ 2989  ls
+ 2990  ./install.sh
+ 2991  ls
+ 2992  node server/server.js
+ 2993  cd Documents
+ 2994  ls
+ 2995  cd ET5Polytech
+ 2996  ls
+ 2997  cd projetp
+ 2998  cd GLPROJECT
+ 2999  cd cine_angular
+ 3000  grunt serve
+ 3001  grunt 
+ 3002  grunt serve
+ 3003  grunt serve --force
+ 3004  node server/server.js
+ 3005  grunt serve
+ 3006  npm install
+ 3007  grunt serve
+ 3008  grunt serve --fore
+ 3009  sudo npm install
+ 3010  grunt serve 
+ 3011  npm install -g generator-angular
+ 3012  gulp serve 
+ 3013  cd..
+ 3014  ls
+ 3015  cd ..
+ 3016  cd Documents/ET5Polytech/GLPROJECT/cine_angular-step-0
+ 3017  ./install.sh
+ 3018  sudo ./install.sh
+ 3019  npm -v
+ 3020  cd 
+ 3021  cd Documents/ET5Polytech/GLPROJECT/cine_angular-step-0
+ 3022  ./install.sh
+ 3023  ls
+ 3024  grunt serve
+ 3025  npm install
+ 3026  cd ..
+ 3027  ls
+ 3028  cd cine_angular-step-0
+ 3029  sudo npm install
+ 3030  grunt
+ 3031  grunt serve --force
+ 3032  ls
+ 3033  cd Documents
+ 3034  ls
+ 3035  cd ET5Polytech
+ 3036  cd GLPROJECT
+ 3037  ls
+ 3038  cd cine_angular-step-0
+ 3039  ls
+ 3040  grunt serve --foce
+ 3041  grunt serve --force
+ 3042  cd ..
+ 3043  ls
+ 3044  mkdir angularProject
+ 3045  ls
+ 3046  cd angularProject
+ 3047  yo angular
+ 3048  sudo yo angular
+ 3049  npm install -g yo
+ 3050  sh
+ 3051  export PATH="$HOME/.npm-packages/bin:$PATH\n
+ 3052  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3053  npm 
+ 3054  yo angular
+ 3055  ls
+ 3056  grunt serve
+ 3057  npm install
+ 3058  ls
+ 3059  clear
+ 3060  ls
+ 3061  sl
+ 3062  ls
+ 3063  npm install
+ 3064  ls
+ 3065  grunt serve --force
+ 3066  cd Desktop
+ 3067  cd ../Documents
+ 3068  ls
+ 3069  cd GLPROJECT
+ 3070  cd ET5Polytech/GLPROJECT
+ 3071  ls
+ 3072  cd angular
+ 3073  cd angularProject
+ 3074  ls
+ 3075  npm
+ 3076  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3077  ls
+ 3078  yo angular:route popular
+ 3079  bower install angular-bootstrap -save
+ 3080  grunt wiredep
+ 3081  npm install --save @ng-bootstrap/ng-bootstrap
+ 3082  bower install
+ 3083  grunt serve
+ 3084  grunt serve --force 
+ 3085  bower install --save bootstrap#3.3.4
+ 3086  angular:view home
+ 3087  yo angular:view dsd
+ 3088  grunt serve --force 
+ 3089  yo angular 
+ 3090  grunt 
+ 3091  grunt --force
+ 3092  grunt serve --force 
+ 3093  yo angular:route page1
+ 3094  yo angular:route page
+ 3095  yo angular:route login
+ 3096  yo angular:service AuthenticationService
+ 3097  cd /Library/WebServer/Documents
+ 3098  cd ..
+ 3099  cd Documents
+ 3100  ls
+ 3101  chmod 777 gentelella-master
+ 3102  chmod 777 gentelella-master/*
+ 3103  ls
+ 3104  cd Documents/ET5Polytech/GLPROJECT/plume-master-2
+ 3105  ls
+ 3106  ./server.js
+ 3107  npm install
+ 3108  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3109  npm install
+ 3110  ./server.js
+ 3111  ls
+ 3112  cd public
+ 3113  ls
+ 3114  cd ??
+ 3115  ls
+ 3116  node server
+ 3117  cd ..
+ 3118  node server
+ 3119  node server.js 
+ 3120  ls
+ 3121  node -v
+ 3122  node server.js 
+ 3123  cd ..
+ 3124  ls
+ 3125  cd plume-master-2/ls
+ 3126  cd plume-master-2/
+ 3127  ls
+ 3128  serve server.js
+ 3129  node server.js
+ 3130  cd Documents/ET5Polytech/GLPROJECT/plume-master-2/
+ 3131  ls
+ 3132  node server.js
+ 3133  npm install
+ 3134  https://thepiratebay.org/torrent/17146455/VA_-_Bravo_Hits_
+ 3135  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3136  npm install 
+ 3137  node server.js
+ 3138  cd Documents
+ 3139  ls
+ 3140  cd ET5Polytech
+ 3141  ls
+ 3142  cd plume
+ 3143  ls
+ 3144  node
+ 3145  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3146  cd /usr/bin
+ 3147  sudo ls
+ 3148  ls p*
+ 3149  ls pat*
+ 3150  ls
+ 3151  cd /etc
+ 3152  ls
+ 3153  ls p*
+ 3154  ls
+ 3155  nano paths.d
+ 3156  nano paths
+ 3157  echo $Path
+ 3158  echo $PATH
+ 3159  ls
+ 3160  cd ~
+ 3161  cd Documents
+ 3162  ls
+ 3163  cd ET5Polytech
+ 3164  ls
+ 3165  cd projetps-projetps
+ 3166  ls
+ 3167  cd ..
+ 3168  cd plume
+ 3169  ls
+ 3170  node server.js
+ 3171  ls
+ 3172  node server.js
+ 3173  ./server.js
+ 3174  npm install
+ 3175  node server.js
+ 3176  cd ..
+ 3177  ls
+ 3178  cd ..
+ 3179  ls
+ 3180  cd ..
+ 3181  ls
+ 3182  cd Documents
+ 3183  ls
+ 3184  cd ET5Polytech
+ 3185  cd plume
+ 3186  ls
+ 3187  node server.js 
+ 3188  cd ..
+ 3189  cd GLPROJECT
+ 3190  ls
+ 3191  cd plume
+ 3192  ls
+ 3193  npcd 
+ 3194  cd ..
+ 3195  ls
+ 3196  cd ..
+ 3197  cd ET5Polytech
+ 3198  ls
+ 3199  cd plume
+ 3200  ls
+ 3201  node server.js
+ 3202  ls
+ 3203  cd ..
+ 3204  ls
+ 3205  cd GLPROJECT
+ 3206  ls
+ 3207  cd plume-master-2
+ 3208  ls
+ 3209  cd ..
+ 3210  ls
+ 3211  cd plume
+ 3212  ls
+ 3213  npm install
+ 3214  ls
+ 3215  cd ..
+ 3216  ls
+ 3217  cd GLPROJECT
+ 3218  cd plume
+ 3219  ls
+ 3220  cd ..
+ 3221  cd plume-master-2
+ 3222  ls
+ 3223  node server.js
+ 3224  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3225  ls
+ 3226  cd Downloads
+ 3227  cd plume-master-2
+ 3228  ls
+ 3229  node server.js
+ 3230  npm install
+ 3231  node server.js
+ 3232  node --use-strict serveur.js
+ 3233  node --use -strict serveur.js
+ 3234  node --use-strict serveur.js
+ 3235  node --use_strict serveur.js
+ 3236  pwd
+ 3237  ll
+ 3238  chmod 777 server.js 
+ 3239  node --use_strict serveur.js
+ 3240  --use_strict
+ 3241  node --use_strict 
+ 3242  node --use_strict *
+ 3243  node --use_strict server.js
+ 3244  ls
+ 3245  cd ..
+ 3246  cd Documents
+ 3247  ls
+ 3248  cd ET5Polytech
+ 3249  ls
+ 3250  cd plume
+ 3251  ls
+ 3252  node --use_strict server.js
+ 3253  node server.js
+ 3254  npm install
+ 3255  ls
+ 3256  node --use_strict server.js
+ 3257  ls
+ 3258  cd ..
+ 3259  cd GLPROJECT
+ 3260  ls
+ 3261  ls plume-master-2
+ 3262  node plume-master-2
+ 3263  cd plume-master-2
+ 3264  ls
+ 3265  node server.js
+ 3266  node --use_strict server.js
+ 3267  cd Documents/ET5Polytech/GLPROJECT/plume-master-2
+ 3268  node server.js
+ 3269  npm
+ 3270  node
+ 3271  node server.js
+ 3272  node --use_strict server.js
+ 3273  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3274  node --use_strict server.js
+ 3275  npm install monthpicker
+ 3276  node --use_strict server.js
+ 3277  node --use_strict s
+ 3278  npm install
+ 3279  node --use_strict server.js
+ 3280  cd ~/Desktop/plume-master-3
+ 3281  ls
+ 3282  npm install
+ 3283  node --use_strict server.js
+ 3284  npm install monthpicker
+ 3285  npm install
+ 3286  node --use_strict server.js
+ 3287  node --use_strict serv
+ 3288  npm install bootstrap-datepicker
+ 3289  npm install
+ 3290  node --use_strict server.js
+ 3291  export PATH="$HOME/.npm-packages/bin:$PATH\n
+ 3292  export PATH="$HOME/.npm-packages/bin:$PATH"\n
+ 3293  ls
+ 3294  cd Desktop
+ 3295  ls
+ 3296  cd plume-master-3
+ 3297  ls
+ 3298  node --use_strict server.js
+ 3299  cd ..
+ 3300  cd plume-master-3
+ 3301  npm install 
+ 3302  node --use_strict server.js
+ 3303  pwd
+ 3304  cd Desktop
+ 3305  ls
+ 3306  cd plume-master-3
+ 3307  ls
+ 3308  node --use_strict server.js
+ 3309  cd ..
+ 3310  cd plume-master-4
+ 3311  npm install
+ 3312  export PATH="$HOME/.npm-packages/bin:$PATH"\n
+ 3313  npm install
+ 3314  node --use_strict server.js
+ 3315  cd ..
+ 3316  cd plume-master-4
+ 3317  npm install
+ 3318  node --use_strict server.js
+ 3319  cd ..
+ 3320  cd plume-master-4
+ 3321  npm installtall
+ 3322  npm install
+ 3323  node --use_strict server.js
+ 3324  cd ∞
+ 3325  cd … 
+ 3326  cd 
+ 3327  cd Documents/ET5Polytech/Graphicopenglframework/
+ 3328  ls
+ 3329  gcc -g -Wall 
+ 3330  ./make
+ 3331  make 
+ 3332  ls
+ 3333  ./openglframework
+ 3334  make 
+ 3335  ./openglframework
+ 3336  make
+ 3337  ./openglframework
+ 3338  make
+ 3339  ./openglframework 
+ 3340  make
+ 3341  ./openglframework 
+ 3342  make
+ 3343  ./openglframework 
+ 3344  make
+ 3345  ./openglframework 
+ 3346  make
+ 3347  ./openglframework 
+ 3348  make
+ 3349  ./openglframework 
+ 3350  make
+ 3351  ./openglframework 
+ 3352  make
+ 3353  ./openglframework 
+ 3354  make
+ 3355  ./openglframework 
+ 3356  make
+ 3357  ./openglframework 
+ 3358  make
+ 3359  ./openglframework 
+ 3360  make
+ 3361  ./openglframework 
+ 3362  make
+ 3363  ./openglframework 
+ 3364  make
+ 3365  make install
+ 3366  ./openglframework 
+ 3367  make install
+ 3368  ./openglframework 
+ 3369  make install
+ 3370  make
+ 3371  make install
+ 3372  make
+ 3373  ./openglframework 
+ 3374  make
+ 3375  ./openglframework 
+ 3376  make
+ 3377  ./openglframework 
+ 3378  make
+ 3379  ./openglframework 
+ 3380  make
+ 3381  ./openglframework 
+ 3382  make
+ 3383  ./openglframework 
+ 3384  make
+ 3385  ./openglframework 
+ 3386  make
+ 3387  ./openglframework 
+ 3388  make
+ 3389  ./openglframework 
+ 3390  make
+ 3391  ./openglframework 
+ 3392  make
+ 3393  ./openglframework 
+ 3394  make
+ 3395  ./openglframework 
+ 3396  make
+ 3397  ./openglframework 
+ 3398  make
+ 3399  ./openglframework 
+ 3400  make
+ 3401  ./openglframework 
+ 3402  make
+ 3403  ./openglframework 
+ 3404  make
+ 3405  ./openglframework 
+ 3406  make
+ 3407  ./openglframework 
+ 3408  make
+ 3409  ./openglframework 
+ 3410  make
+ 3411  ./openglframework 
+ 3412  make
+ 3413  ./openglframework 
+ 3414  make
+ 3415  ./openglframework 
+ 3416  make
+ 3417  ./openglframework 
+ 3418  make
+ 3419  ./openglframework 
+ 3420  make
+ 3421  ./openglframework 
+ 3422  make
+ 3423  ./openglframework 
+ 3424  make
+ 3425  ./openglframework 
+ 3426  make
+ 3427  ./openglframework 
+ 3428  ls
+ 3429  cd Documents
+ 3430  ls
+ 3431  cd ET5Polytech
+ 3432  ls
+ 3433  cd Graphicopenglframework
+ 3434  ls
+ 3435  ./openglframework
+ 3436  make
+ 3437  ./openglframework
+ 3438  make
+ 3439  ./openglframework
+ 3440  make
+ 3441  ./openglframework
+ 3442  make
+ 3443  ./openglframework
+ 3444  make
+ 3445  ./openglframework
+ 3446  make
+ 3447  ./openglframework
+ 3448  make
+ 3449  ./openglframework
+ 3450  make
+ 3451  ./openglframework
+ 3452  cd Documents
+ 3453  l
+ 3454  cd ET5Polytech/Graphicopenglframework
+ 3455  ls
+ 3456  make
+ 3457  ./openglframework
+ 3458  make
+ 3459  ./openglframework
+ 3460  make
+ 3461  ./openglframework
+ 3462  make
+ 3463  ./openglframework
+ 3464  make
+ 3465  ./openglframework
+ 3466  make
+ 3467  ./openglframework
+ 3468  make
+ 3469  ./openglframework
+ 3470  make
+ 3471  ./openglframework
+ 3472  make
+ 3473  ./openglframework
+ 3474  make
+ 3475  ./openglframework
+ 3476  make
+ 3477  ./openglframework
+ 3478  make
+ 3479  ./openglframework
+ 3480  make
+ 3481  ./openglframework
+ 3482  make
+ 3483  ./openglframework
+ 3484  make
+ 3485  ./openglframework
+ 3486  make
+ 3487  ./openglframework
+ 3488  make
+ 3489  ./openglframework
+ 3490  make
+ 3491  ./openglframework
+ 3492  make
+ 3493  ./openglframework
+ 3494  make
+ 3495  ./openglframework
+ 3496  make
+ 3497  ./openglframework
+ 3498  make
+ 3499  ./openglframework
+ 3500  make
+ 3501  ./openglframework
+ 3502  make
+ 3503  ./openglframework
+ 3504  make
+ 3505  ./openglframework
+ 3506  make
+ 3507  ./openglframework
+ 3508  make
+ 3509  ./openglframework
+ 3510  make
+ 3511  ./openglframework
+ 3512  make
+ 3513  ./openglframework
+ 3514  make
+ 3515  ./openglframework
+ 3516  make
+ 3517  ./openglframework
+ 3518  make
+ 3519  ./openglframework
+ 3520  make
+ 3521  ./openglframework
+ 3522  make
+ 3523  ./openglframework
+ 3524  make
+ 3525  ./openglframework
+ 3526  make
+ 3527  ./openglframework
+ 3528  make
+ 3529  ./openglframework
+ 3530  make
+ 3531  ./openglframework
+ 3532  make
+ 3533  ./openglframework
+ 3534  make
+ 3535  ./openglframework
+ 3536  make
+ 3537  ./openglframework
+ 3538  make
+ 3539  ./openglframework
+ 3540  make
+ 3541  ./openglframework
+ 3542  make
+ 3543  ./openglframework
+ 3544  make
+ 3545  ./openglframework
+ 3546  make
+ 3547  ./openglframework
+ 3548  make
+ 3549  ./openglframework
+ 3550  cd Documents
+ 3551  ls
+ 3552  cd ET5Polytech/Graphicopenglframework
+ 3553  ls
+ 3554  make
+ 3555  ./openglframework
+ 3556  make
+ 3557  ./openglframework
+ 3558  make
+ 3559  ./openglframework
+ 3560  make
+ 3561  ./openglframework
+ 3562  make
+ 3563  ./openglframework
+ 3564  make
+ 3565  ./openglframework
+ 3566  make
+ 3567  ./openglframework
+ 3568  make
+ 3569  ./openglframework
+ 3570  make
+ 3571  ./openglframework
+ 3572  make
+ 3573  ./openglframework
+ 3574  make
+ 3575  ./openglframework
+ 3576  make
+ 3577  ./openglframework
+ 3578  make
+ 3579  ./openglframework
+ 3580  make
+ 3581  ./openglframework
+ 3582  make
+ 3583  ./openglframework
+ 3584  make
+ 3585  ./openglframework
+ 3586  make
+ 3587  ls
+ 3588  make
+ 3589  ./openglframework
+ 3590  make
+ 3591  ls
+ 3592  cd ..
+ 3593  cd Graphics
+ 3594  ls
+ 3595  cd TP2 
+ 3596  ls
+ 3597  make 
+ 3598  ./openglframework
+ 3599  make 
+ 3600  ./openglframework
+ 3601  make 
+ 3602  ./openglframework
+ 3603  make 
+ 3604  ./openglframework
+ 3605  make 
+ 3606  ./openglframework
+ 3607  make 
+ 3608  ./openglframework
+ 3609  cd Documents
+ 3610  cd ET5Polytech
+ 3611  cd Graphic
+ 3612  cd Graphics
+ 3613  ls
+ 3614  cd TP2
+ 3615  ls
+ 3616  make
+ 3617  ./openglframework
+ 3618  make
+ 3619  ./openglframework
+ 3620  make
+ 3621  ./openglframework
+ 3622  cd et5-projet
+ 3623  ccd ..
+ 3624  cd ..
+ 3625  cd Documents
+ 3626  cd ET5Polytech
+ 3627  cd Graphics/TP2/
+ 3628  make
+ 3629  cd Graphics/TP2/
+ 3630  ./openglframework
+ 3631  make
+ 3632  ./openglframework
+ 3633  make
+ 3634  ./openglframework
+ 3635  make
+ 3636  ./openglframework
+ 3637  make
+ 3638  ./openglframework
+ 3639  make
+ 3640  ./openglframework
+ 3641  make
+ 3642  ./openglframework
+ 3643  make
+ 3644  ./openglframework
+ 3645  make
+ 3646  ./openglframework
+ 3647  make
+ 3648  ./openglframework
+ 3649  make
+ 3650  ./openglframework
+ 3651  make
+ 3652  ./openglframework
+ 3653  make
+ 3654  ./openglframework
+ 3655  make
+ 3656  ./openglframework
+ 3657  make
+ 3658  ./openglframework
+ 3659  cd Documents/ET5Polytech/Graphic
+ 3660  cd Documents/ET5Polytech/Graphics
+ 3661  ls
+ 3662  cd TP2
+ 3663  ks
+ 3664  $ls
+ 3665  ls
+ 3666  make
+ 3667  ./openglframework
+ 3668  make
+ 3669  ./openglframework
+ 3670  make
+ 3671  ./openglframework
+ 3672  make
+ 3673  ./openglframework
+ 3674  make
+ 3675  ./openglframework
+ 3676  make
+ 3677  ./openglframework
+ 3678  make
+ 3679  ./openglframework
+ 3680  make
+ 3681  ./openglframework
+ 3682  make
+ 3683  ./openglframework
+ 3684  make
+ 3685  ./openglframework
+ 3686  make
+ 3687  ./openglframework
+ 3688  make
+ 3689  ./openglframework
+ 3690  make
+ 3691  ./openglframework
+ 3692  make
+ 3693  ./openglframework
+ 3694  make
+ 3695  ./openglframework
+ 3696  make
+ 3697  ./openglframework
+ 3698  make
+ 3699  ./openglframework
+ 3700  make
+ 3701  ./openglframework
+ 3702  make
+ 3703  ./openglframework
+ 3704  make
+ 3705  ./openglframework
+ 3706  make
+ 3707  ./openglframework
+ 3708  make
+ 3709  ./openglframework
+ 3710  make
+ 3711  ./openglframework
+ 3712  make
+ 3713  ./openglframework
+ 3714  make
+ 3715  ./openglframework
+ 3716  make
+ 3717  ./openglframework
+ 3718  make
+ 3719  ./openglframework
+ 3720  make
+ 3721  ./openglframework
+ 3722  make
+ 3723  ./openglframework
+ 3724  make
+ 3725  ./openglframework
+ 3726  make
+ 3727  ./openglframework
+ 3728  make
+ 3729  ./openglframework
+ 3730  make
+ 3731  ./openglframework
+ 3732  make
+ 3733  ./openglframework
+ 3734  make
+ 3735  ./openglframework
+ 3736  make 
+ 3737  ./openglframework
+ 3738  make 
+ 3739  ./openglframework
+ 3740  make 
+ 3741  ./openglframework
+ 3742  make 
+ 3743  ./openglframework
+ 3744  make 
+ 3745  ./openglframework
+ 3746  make 
+ 3747  gcc -o exec openglframework.o glslshaders.o glm.o
+ 3748  gcc -lstdc++ use_new.cpp -o use_new
+ 3749  gcc -o exec openglframework.o glslshaders.o glm.o
+ 3750  make 
+ 3751  g++ -w openglframework.c openglframework.o glslshaders.o glm.o -lm -framework OpenGL -framework GLUT -o openglframework\n
+ 3752  g++ -w openglframework.o glslshaders.o glm.o -lm -framework OpenGL -framework GLUT -o openglframework\n
+ 3753  make
+ 3754  make clean
+ 3755  make
+ 3756  make clean
+ 3757  make
+ 3758  make clean
+ 3759  make
+ 3760  make clean
+ 3761  make
+ 3762  cd Documents/ET5Polytech/Graphics
+ 3763  ls
+ 3764  cd TP2
+ 3765  gcc -g -Wall -w -lstdc++ openglframework.o glslshaders.o glm.o -lm -framework OpenGL -framework GLUT -o openglframework\n
+ 3766  g++ -g -Wall -w -lstdc++ openglframework.o glslshaders.o glm.o -lm -framework OpenGL -framework GLUT -o openglframework\n
+ 3767  glut -g -Wall -w -lstdc++ openglframework.o glslshaders.o glm.o -lm -framework OpenGL -framework GLUT -o openglframework\n
+ 3768  gcc -g -Wall -w -lstdc++ openglframework.o glslshaders.o glm.o -lm -framework OpenGL -framework GLUT -o openglframework\n
+ 3769  make clean_all && make -j4
+ 3770  make clean_all
+ 3771  make clean
+ 3772  make -j4
+ 3773  gcc -g -Wall -w -lstdc++ -c glslshaders.c
+ 3774  gcc -g -Wall -w -lstdc++ openglframework.o glslshaders.o glm.o -lm -framework OpenGL -framework GLUT -o openglframework\n
+ 3775  make
+ 3776  ./openglframework
+ 3777  make -j4
+ 3778  make 
+ 3779  ./openglframework
+ 3780  make clean
+ 3781  make 
+ 3782  gcc -g -Wall -w -lstdc++ openglframework.o glslshaders.o glm.o -lm -framework OpenGL -framework GLUT -o openglframework\n
+ 3783  make clean 
+ 3784  gcc openglframework.c glslshaders.c glm.c -o myapp
+ 3785  make
+ 3786  make clean
+ 3787  make
+ 3788  ./openglframework
+ 3789  make
+ 3790  ./openglframework
+ 3791  make
+ 3792  ./openglframework
+ 3793  ./prof
+ 3794  make
+ 3795  ./openglframework
+ 3796  ./prof
+ 3797  make
+ 3798  ./prof
+ 3799  make
+ 3800  ./prof
+ 3801  make
+ 3802  ./prof
+ 3803  make
+ 3804  ./prof
+ 3805  make
+ 3806  ./prof
+ 3807  make
+ 3808  ./prof
+ 3809  make
+ 3810  OA
+ 3811  make
+ 3812  ./prof
+ 3813  make
+ 3814  ./prof
+ 3815  make
+ 3816  ./prof
+ 3817  make
+ 3818  ./prof
+ 3819  make
+ 3820  ./prof
+ 3821  make
+ 3822  ./prof
+ 3823  make
+ 3824  ./prof
+ 3825  make
+ 3826  ./prof
+ 3827  make
+ 3828  ./prof
+ 3829  make
+ 3830  ./prof
+ 3831  make
+ 3832  ./prof
+ 3833  make
+ 3834  ./prof
+ 3835  make
+ 3836  ./prof
+ 3837  make
+ 3838  ./prof
+ 3839  make
+ 3840  ./prof
+ 3841  make
+ 3842  ./prof
+ 3843  make
+ 3844  ./prof
+ 3845  make
+ 3846  ./prof
+ 3847  make
+ 3848  ./prof
+ 3849  make
+ 3850  ./prof
+ 3851  make
+ 3852  ./prof
+ 3853  make
+ 3854  ./prof
+ 3855  make
+ 3856  ./prof
+ 3857  make
+ 3858  ./prof
+ 3859  make
+ 3860  ./prof
+ 3861  make
+ 3862  ./prof
+ 3863  make
+ 3864  ./prof
+ 3865  make
+ 3866  ./prof
+ 3867  make
+ 3868  ./prof
+ 3869  make
+ 3870  ./prof
+ 3871  make
+ 3872  ./prof
+ 3873  make
+ 3874  ./prof
+ 3875  make
+ 3876  ./prof
+ 3877  make
+ 3878  ./prof
+ 3879  ./o
+ 3880  ./openglframework
+ 3881  cd Documents/PROJET
+ 3882  cd 
+ 3883  cd Documents/PROJETS
+ 3884  ls
+ 3885  cp config/default.json config/development.json
+ 3886  nano config/development.json
+ 3887  ^[[200~npm run webpack~
+ 3888  npm run webpack
+ 3889  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3890  npm run webpack
+ 3891  npm install
+ 3892  npm run webpack
+ 3893  ocalhost:3000
+ 3894  npm run scrape
+ 3895  cd Documents/PROJETS
+ 3896  npm start
+ 3897  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3898  npm start
+ 3899  npm run scrape
+ 3900  curl -I www.bonjourmadamme.fr
+ 3901  brew
+ 3902  clean
+ 3903  curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0\n
+ 3904  php
+ 3905  php -v
+ 3906  ùan php
+ 3907  man php
+ 3908  sudo /usr/local/mysql/support-files/mysql.server stop
+ 3909  sudo mysqld_safe --skip-grant-tables
+ 3910  mysql -u root
+ 3911  sudo /usr/local/mysql/support-files/mysql.server start\n
+ 3912  /usr/local/mysql/bin/mysqladmin -u root -p drogba
+ 3913  sudo /usr/local/mysql/support-files/mysql.server start\n
+ 3914  mysql
+ 3915  sudo /usr/local/mysql/support-files/mysql.server start\n
+ 3916  mysql start
+ 3917  sql
+ 3918  /usr/local/mysql/bin/mysqladmin -u root password drogba.1
+ 3919  sudo /usr/local/mysql/bin/mysqladmin -u root password drogba.1
+ 3920  sudo /usr/local/mysql/bin/mysqladmin -u root -p drogba.1
+ 3921  sudo /usr/local/mysql/bin/mysqladmin -u root -p "drogba.1"
+ 3922  sudo /usr/local/mysql/bin/mysqladmin -u root -p 
+ 3923  sudo /usr/local/mysql/bin/mysqladmin -u root -p root
+ 3924  cd /usr/local/mysql/bin/
+ 3925  ls
+ 3926  cd ..
+ 3927  ls
+ 3928  cd bin
+ 3929  ls
+ 3930  php
+ 3931  cd php
+ 3932  cd 
+ 3933  cd ./Library/Containers
+ 3934  cd /
+ 3935  cd Library/Contextual\ Menu\ Items
+ 3936  cd 
+ 3937  cd /etc/apache2/mysql/mysql
+ 3938  ls
+ 3939  cd ..
+ 3940  ls
+ 3941  sudo nano httpd.conf
+ 3942  cd
+ 3943  sudo /usr/local/mysql/support-files/mysql.server stop\n
+ 3944  sudo mysqld_safe --skip-grant-tables\n
+ 3945  cdmysql -u root
+ 3946  mysql -u root
+ 3947  sudo mysqld_safe --skip-grant-tables\n
+ 3948  mysql -u root
+ 3949  sudo /usr/local/mysql/bin/mysql -u root
+ 3950  ALTER USER 'root'@'localhost' IDENTIFIED BY 'new-password' \n
+ 3951  0.0.0.0 pubads.g.doubleclick.net\n0.0.0.0 securepubads.g.doubleclick.net\n0.0.0.0 http://www.googletagservices.com\n0.0.0.0 gads.pubmatic.com\n0.0.0.0 ads.pubmatic.com\n0.0.0.0 spclient.wg.spotify.com\ufeff\n127.0.0.1 adclick.g.doublecklick.net\n127.0.0.1 adeventtracker.spotify.com\n127.0.0.1 ads-fa.spotify.com\n127.0.0.1 analytics.spotify.com\n127.0.0.1 audio2.spotify.com\n127.0.0.1 b.scorecardresearch.com\n127.0.0.1 bounceexchange.com\n127.0.0.1 bs.serving-sys.com\n127.0.0.1 content.bitsontherun.com\n127.0.0.1 core.insightexpressai.com\n127.0.0.1 crashdump.spotify.com\n127.0.0.1 d2gi7ultltnc2u.cloudfront.net\n127.0.0.1 d3rt1990lpmkn.cloudfront.net\n127.0.0.1 desktop.spotify.com\n127.0.0.1 doubleclick.net\n127.0.0.1 ds.serving-sys.com\n127.0.0.1 googleadservices.com\n127.0.0.1 googleads.g.doubleclick.net\n127.0.0.1 gtssl2-ocsp.geotrust.com\n127.0.0.1 js.moatads.com\n127.0.0.1 log.spotify.com\n127.0.0.1 media-match.com\n127.0.0.1 omaze.com\n127.0.0.1 open.spotify.com\n127.0.0.1 pagead46.l.doubleclick.net\n127.0.0.1 pagead2.googlesyndication.com\n127.0.0.1 partner.googleadservices.com\n127.0.0.1 pubads.g.doubleclick.net\n127.0.0.1 redirector.gvt1.com\n127.0.0.1 s0.2mdn.net\n127.0.0.1 securepubads.g.doubleclick.net\n127.0.0.1 spclient.wg.spotify.com\n127.0.0.1 tpc.googlesyndication.com\n127.0.0.1 v.jwpcdn.com\n127.0.0.1 video-ad-stats.googlesyndication.com\n127.0.0.1 weblb-wg.gslb.spotify.com\n127.0.0.1 www.googleadservices.com\n127.0.0.1 www.googletagservices.com\n127.0.0.0 www.omaze.com
+ 3952  nano /etc/hosts
+ 3953  c
+ 3954  clear
+ 3955  ls
+ 3956  cd Documents
+ 3957  ls
+ 3958  cd IonicWorkSpace
+ 3959  ls
+ 3960  cd Ionic2
+ 3961  ls
+ 3962  ls 
+ 3963  c d..
+ 3964  cd ..
+ 3965  ls
+ 3966  cd IonicWorkSpace
+ 3967  npm install -g cordova ionic
+ 3968  install npm 
+ 3969  npm config get prefix
+ 3970  export PATH=/usr/local/share/npm/bin:$PATH
+ 3971  npm install -g cordova ionic
+ 3972  npm config set prefix /usr/local
+ 3973  export PATH=/usr/local/bin:$PATH\nexport NODE_PATH=/usr/local/lib/node_modules:/usr/local/lib/node
+ 3974  cd /bin/
+ 3975  ls
+ 3976  cd ..
+ 3977  cd usr
+ 3978  ls
+ 3979  cd bin
+ 3980  ls
+ 3981  cd 
+ 3982  ls
+ 3983  bower
+ 3984  ports
+ 3985  port
+ 3986  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3987  ls
+ 3988  $HOME
+ 3989  .npm-packages
+ 3990  ls
+ 3991  cd bin
+ 3992  ls
+ 3993  cd ..
+ 3994  echo $PATH
+ 3995  cd /etc/OA
+ 3996  sudo export PATH="$HOME/.npm-packages/bin:$PATH"
+ 3997  sudo 
+ 3998  su
+ 3999  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 4000  $PATH
+ 4001  sudo nano /etc/paths
+ 4002  $PATH
+ 4003  sudo nano /etc/paths
+ 4004  echo $PATH
+ 4005  $HOME
+ 4006  echo $HOME
+ 4007  sudo nano /etc/paths
+ 4008  ls
+ 4009  clear
+ 4010  ls
+ 4011  echo $PATH
+ 4012  sudo nano /etc/paths
+ 4013  npm
+ 4014  cd /etc/paths.d
+ 4015  ls
+ 4016  cd ..
+ 4017  nano paths
+ 4018  ls
+ 4019  echo $PATH
+ 4020  ls
+ 4021  cle
+ 4022  clear
+ 4023  ls
+ 4024  npm update
+ 4025  npm -v
+ 4026  ls
+ 4027  npm install -g cordova ionic
+ 4028  cd Documents
+ 4029  ls
+ 4030  cd IonicWorkSpace
+ 4031  ls
+ 4032  cd IonicV1
+ 4033  mkdr IonicV1
+ 4034  mkdir IonicV1
+ 4035  cd IonicV1
+ 4036  ls
+ 4037  npm install -g cordova ionic
+ 4038  ls
+ 4039  cd ..
+ 4040  ls
+ 4041  cd IonicV1
+ 4042  ls
+ 4043  ionic start myApp tabs
+ 4044  npm -v
+ 4045  node
+ 4046  node update
+ 4047  $PATH
+ 4048  mv /Users/karim/.npm-packages/bin /usr/local/bin
+ 4049  cd /usr/local/bin
+ 4050  ls
+ 4051  npm
+ 4052  npm -v
+ 4053  npm -update
+ 4054  npm update
+ 4055  npm -v
+ 4056  ionic start myApp tabs
+ 4057  cd Documents/IonicWorkSpace/IonicV1
+ 4058  ls
+ 4059  ionic start myApp tabs
+ 4060  npm install -g cordova ionic
+ 4061  ls
+ 4062  ionic start myApp tabs
+ 4063  ionic
+ 4064  sudo
+ 4065  $su
+ 4066  su
+ 4067  sudo su
+ 4068  export PATH="$HOME/.npm-packages/bin:$PATH"
+ 4069  ls
+ 4070  cd Do
+ 4071  cd Documents
+ 4072  ls
+ 4073  cd IonicWorkSpace/IonicV1
+ 4074  ls
+ 4075  ionic start myApp tabs
+ 4076  cd ./myApp
+ 4077  ls
+ 4078  ionic serve
+ 4079  ionic serve --lab
+ 4080  cd ..
+ 4081  ls
+ 4082  cd ..
+ 4083  cd Ionic2DSIC
+ 4084  ls
+ 4085  ionic serve --lab 
+ 4086  cd ..
+ 4087  cd IonicV1
+ 4088  ls
+ 4089  cd myApp
+ 4090  ls
+ 4091  ionic serve --lab 
+ 4092  Mysql
+ 4093  sql
+ 4094  MySql
+ 4095  mysql
+ 4096  ysql
+ 4097  mysql
+ 4098  sql
+ 4099  sudo
+ 4100  su
+ 4101  sudo su
+ 4102  export PATH=$PATH:/usr/local/mysql/bin
+ 4103  mysql
+ 4104  telnet 127.0.0.1 3306 
+ 4105  mysql -h 127.0.0.1 -P 3306
+ 4106  mysql
+ 4107  cd /etc/apache2
+ 4108  ls
+ 4109  mysql
+ 4110  export PATH=/Users/karim/.
+ 4111  export PATH=$PATH:/etc/apache2/mysql
+ 4112  mysql
+ 4113  ls
+ 4114  clear
+ 4115  cd ..
+ 4116  mysql
+ 4117  l
+ 4118  sls
+ 4119  ls
+ 4120  exit
+ 4121  export PATH=${PATH}:/usr/local/mysql/bin
+ 4122  mysql
+ 4123  export PATH=${PATH}:/usr/local/mysql/bin
+ 4124  mysql
+ 4125  sudo /etc/init.d/mysql start
+ 4126  brew info mysql
+ 4127  mysql
+ 4128  mysql -uroot
+ 4129  sudo /usr/local/mysql/bin/mysql -u root
+ 4130  clear
+ 4131  brew
+ 4132  sudo 
+ 4133  sudo su 
+ 4134  brew search maven
+ 4135  sudo su 
+ 4136  ls
+ 4137  clera
+ 4138  ls
+ 4139  clear
+ 4140  ls
+ 4141  who
+ 4142  cd Desktop
+ 4143  ls
+ 4144  clear
+ 4145  ls
+ 4146  cd ..
+ 4147  cd Documents
+ 4148  ls
+ 4149  mkdir testTechiqueLinux
+ 4150  clear
+ 4151  ls
+ 4152  cd testTechiqueLinux
+ 4153  ls
+ 4154  nano test.txt
+ 4155  grep karim test.txt
+ 4156  grep oui test.txt
+ 4157  man grep 
+ 4158  cd ..
+ 4159  grep karim testTechiqueLinux
+ 4160  grep karim testTechiqueLinux/
+ 4161  grep -i karim testTechiqueLinux/
+ 4162  grep -d karim testTechiqueLinux/
+ 4163  man grep 
+ 4164  grep -i karim */
+ 4165  grep -i karim testTechiqueLinux/*
+ 4166  grep  "karim*"  index.html
+ 4167  grep  "karim*"  index.htmlc
+ 4168  grep -i karim testTechiqueLinux/
+ 4169  grep  "karim*" testTechiqueLinux/test.txt
+ 4170  grep  "ka*" testTechiqueLinux/test.txt
+ 4171  grep  "^ka*" testTechiqueLinux/test.txt
+ 4172  grep  "^a*" testTechiqueLinux/test.txt
+ 4173  grep  "ka*" testTechiqueLinux
+ 4174  grep -r  "ka*" testTechiqueLinux
+ 4175  grep -r  "^a*" testTechiqueLinux
+ 4176  grep -r  "ka*" testTechiqueLinux
+ 4177  grep -r  "^ka*" testTechiqueLinux
+ 4178  grep -r  "^k.r*" testTechiqueLinux
+ 4179  grep -r  "^kr*" testTechiqueLinux
+ 4180  clear
+ 4181  ls
+ 4182  cd testTechiqueLinux
+ 4183  ls
+ 4184  nano sortExample 
+ 4185  ls
+ 4186  nano sortExample 
+ 4187  ls
+ 4188  sort sortExample.txt
+ 4189  sort sortExample.txt > sorter.txt
+ 4190  nano sorter.txt
+ 4191  wc sortExample.txt
+ 4192  cat test.txt
+ 4193  cat < test.txt
+ 4194  sort << karim\noui \nje \nsuis \nla\naa\nkarim
+ 4195  du 
+ 4196  uptime 
+ 4197  w
+ 4198  tload
+ 4199  \tports
+ 4200  sudo su 
+ 4201  ls
+ 4202  ds
+ 4203  exit
+ 4204  clear
+ 4205  screen
+ 4206  at 15:00
+ 4207  date
+ 4208  man at
+ 4209  at now +5 seconds 
+ 4210  at now +5 
+ 4211  at now+5
+ 4212  man at
+ 4213  q
+ 4214  at now + 2 minutes
+ 4215  at now + 1 seconds
+ 4216  at now + 1 secondes
+ 4217  at now + 1 minutes
+ 4218  at now + 1 minute
+ 4219  launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
+ 4220  at now + 1 minute
+ 4221  echo blah | at now+1
+ 4222  echo blah | at now+2
+ 4223  echo blah | at now+3
+ 4224  echo blah | at now+4
+ 4225  echo blah | at now+60
+ 4226  echo blah | at now+ 1 minute
+ 4227  atq
+ 4228  EOF
+ 4229  at 14:10 <<'E'\necho"kooll"\nE
+ 4230  at 14:11 <<'E'\necho "kooll" > at.txt\nE
+ 4231  at 14:11 <<'E'\necho loooool >> karim.text\nE
+ 4232  ls
+ 4233  ms
+ 4234  ls
+ 4235  echo "echo test" | at 14:12
+ 4236  who
+ 4237  sudo su
+ 4238  who
+ 4239  woh
+ 4240  who
+ 4241  who | grep root | wc -l
+ 4242  who | grep karim | wc -l
+ 4243  gres /dev/null
+ 4244  grep /dev/null
+ 4245  grep >/dev/null
+ 4246  /dev/null
+ 4247  sudo nano /dev/null
+ 4248  set Volume 1.7
+ 4249  set Volume 0
+ 4250  man set
+ 4251  say Hello World!
+ 4252  say pute
+ 4253  say yassine est une pute
+ 4254  say hamza est une pute
+ 4255  say thomas est une pute
+ 4256  say mamadou est un fdp
+ 4257  atrun_plist=/System/Library/LaunchDaemons/com.apple.atrun.plist
+ 4258  sudo sed -i '' 's/true/false/g' $atrun_plist
+ 4259  sudo launchctl unload -F $atrun_plist
+ 4260  sudo launchctl load -F $atrun_plist
+ 4261  echo 'say Pomodoro is over. Take a break && growlnotify -s -m "take a break"' | at 16:42
+ 4262  echo 'say Pomodoro is over. Take a break && growlnotify -s -m "take a break"' | at 16:42:40
+ 4263  man 8 atrun
+ 4264  launchctl load -w
+ 4265  sudo launchctl load -w\n           /System/Library/LaunchDaemons/com.apple.atrun.plist
+ 4266  Dodo
+ 4267  sudo launchctl load -w\n           /System/Library/LaunchDaemons/com.apple.atrun.plist
+ 4268  sudo su
+ 4269  echo 'say Pomodoro is over. Take a break && growlnotify -s -m "take a break"' | at 16:49
+ 4270  echo 'say Pomodoro is over. Take a break && growlnotify -s -m "take a break"' | at 16:48:30
+ 4271  launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist
+ 4272  echo 'say Pomodoro is over. Take a break && growlnotify -s -m "take a break"' | at 16:50
+ 4273  open https://wwW.google.com
+ 4274  open https://wwW.youfuck.com
+ 4275  open https://wwW.fuck.com
+ 4276  open https://wwW.youporn.com
+ 4277  echo 'say Pomodoro is over. Take a break && growlnotify -s -m "take a break"' | at now  + 1 minute
+ 4278  echo 'say Pomodoro is over' | at now  + 1 minute
+ 4279  echo 'say Pomodoro is over' | at now+1minute
+ 4280  echo 'say Pomodoro is over' | at 17:26
+ 4281  man javac
+ 4282  /Users/karim/Downloads/mongodb-osx-x86_64-3.4.6/READMEclear 
+ 4283  clear
+ 4284  nano /Users/karim/Downloads/mongodb-osx-x86_64-3.4.6/README 
+ 4285  cd Dow
+ 4286  cd Downloads
+ 4287  sudo mv mongodb-osx-x86_64-3.4.6 /usr/local/mongodb
+ 4288  cd /usr/local
+ 4289  cd mongodb
+ 4290  ls
+ 4291  sudo mkdir -p /data/db
+ 4292  ls
+ 4293  man mkdir
+ 4294  mongodb
+ 4295  mongod
+ 4296  export MONGO_PATH=/usr/local/mongodb
+ 4297  export PATH=$PATH:$MONGO_PATH/bin
+ 4298  mongo
+ 4299  mongo -version
+ 4300  mongo 
+ 4301  cd ~
+ 4302  pwd
+ 4303  touch .bash_profile
+ 4304  nano .bash_profile
+ 4305  mango
+ 4306  mongo
+ 4307  export MONGO_PATH=/usr/local/mongodb\nexport PATH=$PATH:$MONGO_PATH/bin\n
+ 4308  mongo
+ 4309  export MONGO_PATH=/usr/local/mongodb
+ 4310  export PATH=$PATH:$MONGO_PATH/bin\n
+ 4311  mongo
+ 4312  man mongo
+ 4313  mongo --help
+ 4314  mongo --helpq
+ 4315  mongo stop
+ 4316  show dbs
+ 4317  curl
+ 4318  curl -O https://fastdl.mongodb.org/osx/mongodb-osx-x86_64-3.4.6.tgz
+ 4319  brew update
+ 4320  ./bin/mongo
+ 4321  mongo
+ 4322  ps
+ 4323  launchctl list | grep mongo\n
+ 4324  launchctl list \n
+ 4325  mongo
+ 4326  mongod –repair
+ 4327  mongo
+ 4328  sudo rm /var/lib/mongodb/mongod.lock 
+ 4329  cd /usr/local/mongodb/bin/q
+ 4330  sudo service mongodb start \n
+ 4331  sudo rm /var/lib/mongodb/mongod.lock
+ 4332  mongod
+ 4333  mongo
+ 4334  cd /usr/local/mongodb
+ 4335  ls
+ 4336  whoami
+ 4337  sudo chown karim  /data/db
+ 4338  mongo 
+ 4339  mongo --v
+ 4340  mongo -v
+ 4341  mongo -version
+ 4342  mongod
+ 4343  mongo
+ 4344  export MONGO_PATH=/usr/local/mongodb\nexport PATH=$PATH:$MONGO_PATH/bin
+ 4345  nano /etc/paths
+ 4346  sudo nano /etc/paths
+ 4347  ls
+ 4348  mongo
+ 4349  cd Documents
+ 4350  ls
+ 4351  \tcd workspace
+ 4352  ls
+ 4353  mvn
+ 4354  mvn -version
+ 4355  whereis mvn
+ 4356  whereis mongo
+ 4357  cd Dow 
+ 4358  cd Downloads
+ 4359  ls
+ 4360  clear
+ 4361  cd /Users/karim
+ 4362  ls
+ 4363  mv ~/Downloads/apache-maven-3.5.0 .
+ 4364  ls
+ 4365  nano ~/.bash_profile
+ 4366  mvn
+ 4367  export M2_HOME=/Users/mkyong/apache-maven-3.1.1\nexport PATH=$PATH:$M2_HOME/bin
+ 4368  mvn
+ 4369  nano ~/.bash_profile
+ 4370  cd ~
+ 4371  $ls
+ 4372  ls
+ 4373  pwd
+ 4374  M2_HOME=/Users/karim/apache-maven-3.5.0
+ 4375  export PATH=$PATH:$M2_HOME/bin
+ 4376  ls
+ 4377  mvn
+ 4378  mvn -version
+ 4379  nano /etc/paths
+ 4380  sudo nano /etc/paths
+ 4381  mvn -version
+ 4382  cd Documents/workspace
+ 4383  mvn archetype:generate -DgroupId=com.mkyong.core -DartifactId=mongodb\n  -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+ 4384  ls
+ 4385  cd mongodb
+ 4386  ls
+ 4387  cd src
+ 4388  cd ..
+ 4389  ls
+ 4390  mvn eclipse:eclipse
+ 4391  mvn eclipse:eclips
+ 4392  cd mongodb
+ 4393  mvn eclipse:eclipse
+ 4394  java -version
+ 4395  man tar
+ 4396  man tar 
+ 4397  cd Downloads/
+ 4398  tar -t kibana-5.5.0-darwin-x86_64.tar
+ 4399  clear
+ 4400  ls
+ 4401  cd Documents
+ 4402  ls
+ 4403  npm
+ 4404  npm installl -g ios-deploy
+ 4405  npm install -g ios-deploy
+ 4406  npm install -g cordova ionic
+ 4407  ionic start myApp sidemenu
+ 4408  ionic start myApp sidemenuionic start myApp sidemenu
+ 4409  sudo su
+ 4410  clear
+ 4411  npm install -g cordova ionic
+ 4412  cd Documents
+ 4413  ls
+ 4414  cd IonicWorkSpace
+ 4415  ls
+ 4416  ionic start
+ 4417  ommand not found: ionic
+ 4418  sudo ln -s /home/guy/npm/bin/ionic /usr/bin/ionic
+ 4419  sudo su
+ 4420  ionic start myApp sidemenu
+ 4421  cd Documents
+ 4422  cd IonicWorkSpace
+ 4423  ls
+ 4424  mkdir ParisFoot
+ 4425  cd ParisFoot
+ 4426  ls
+ 4427  ionic start myApp sidemenu
+ 4428  ls
+ 4429  cd myApp
+ 4430  man ionic
+ 4431  ionic cordova run ios
+ 4432  ionic cordova run android
+ 4433  ionic serve
+ 4434  cd ..
+ 4435  ls
+ 4436  cd ..
+ 4437  ls
+ 4438  ionic start myApp super
+ 4439  sudo
+ 4440  sudo su
+ 4441  man mv
+ 4442  sudo su 
+ 4443  brew install mongodb
+ 4444  mongod
+ 4445  mongod 
+ 4446  dd
+ 4447  sdqsdqsd
+ 4448  mongod
+ 4449  ls
+ 4450  tar -zxvf  mongodb-osx-x86_64-3.4.6.tgz
+ 4451  sudo su 
+ 4452  cd  Downloads
+ 4453  tar -zxvf mongodb-osx-x86_64-3.4.7.tgz
+ 4454  chmod 777 mongodb-compass-1.7.1-darwin-x64.dmg
+ 4455  tar -zxvf mongodb-osx-x86_64-3.4.7.tgz
+ 4456  chmod 777 mongodb-osx-x86_64-3.4.7
+ 4457  tar -zxvf mongodb-osx-x86_64-3.4.7.tgz
+ 4458  tar -zxvf mongodb-osx-x86_64-3.4.7
+ 4459  cp -R -n mongodb-osx-x86_64-3.4.7/ ../mongodb
+ 4460  cd ..
+ 4461  ls
+ 4462  rm -rvf mongodb-osx-x86_64-3.4.6
+ 4463  ls
+ 4464  rm -rvf mongodb-osx-x86_64-3.4.6.tgz
+ 4465  ls
+ 4466  export PATH=mongodb/bin:$PATH
+ 4467  echo $PATH
+ 4468  mongod
+ 4469  sudo su 
+ 4470  mongo
+ 4471  export PATH=mongodb/bin:$PATH
+ 4472  mongo
+ 4473  mongo reviewking
+ 4474  ionic
+ 4475  cd Documents/IonicWorkSpace/ParisFoot
+ 4476  l
+ 4477  scd ParisFoot.V1.0
+ 4478  ls
+ 4479  cd ParisFoot.V1.0
+ 4480  ls
+ 4481  ionic g page AddReviewPage
+ 4482  ionic g provider Reviews
+ 4483  cd ..
+ 4484  ls
+ 4485  mkdir server
+ 4486  ls
+ 4487  cd server
+ 4488  touch package.json
+ 4489  ls
+ 4490  open .
+ 4491  npm install
+ 4492  npm i -g npm
+ 4493  touch server.js
+ 4494  ls
+ 4495  open .
+ 4496  node server.js
+ 4497  node server.js 
+ 4498  ifconf
+ 4499  ifconfig
+ 4500  ls
+ 4501  cd src
+ 4502  ls
+ 4503  cd app
+ 4504  ls
+ 4505  cd ..
+ 4506  cd..
+ 4507  cd ..
+ 4508  ls
+ 4509  cd ..
+ 4510  ls
+ 4511  cd ..
+ 4512  ls
+ 4513  cd ParisFoot
+ 4514  ls
+ 4515  cd ParisFoot.V1.0
+ 4516  ls
+ 4517  npm install firebase --save
+ 4518  ls
+ 4519  nano package.json
+ 4520  cd node_modules
+ 4521  ls
+ 4522  chmod 777 firebase
+ 4523  ls
+ 4524  chmod -rf 777 firebase
+ 4525  chmod -f 777 firebase
+ 4526  ls
+ 4527  cd firebase
+ 4528  ls
+ 4529  chmod 777 *
+ 4530  ls
+ 4531  cd ..
+ 4532  ls
+ 4533  ll
+ 4534  npm install
+ 4535  cd ..
+ 4536  npm install typings -g
+ 4537  typings install firebase
+ 4538  npm install typings --global
+ 4539  typings install
+ 4540  npm install
+ 4541  ls
+ 4542  cordova plugin add cordova-plugin-buildinfo --save
+ 4543  sudo su
+ 4544  ionic start myApp super
+ 4545  ls
+ 4546  cd Documents
+ 4547  cd IonicWorkSpace/ParisFoot/ParisFoot.V1.0
+ 4548  ls
+ 4549  ionic serve 
+ 4550  ionic serve --lab
+ 4551  node server.js
+ 4552  mongod
+ 4553  export PATH=/Users/karim/mongodb/bin/:$PATH
+ 4554  mongod
+ 4555  export PATH=/Users/karim/mongodb/bin/:$PATH
+ 4556  mongod
+ 4557  ionic serve --lab
+ 4558  ls
+ 4559  node server.js
+ 4560  cd /data/db
+ 4561  mongod
+ 4562  cd 
+ 4563  cd Documents/IonicWorkSpace/ParisFoot/ParisFoot.V1.0
+ 4564  mongod
+ 4565  sudo su
+ 4566  node server.js
+ 4567  ionic cordova run android
+ 4568  sudo su
+ 4569  ionic cordova run android
+ 4570  ionic serve --lab
+ 4571  npm install promise-polyfill --save-exact
+ 4572  ionic serve --lab
+ 4573  ls
+ 4574  ionic g provider PeopleService
+ 4575  ionic g provider CompetitionProvider
+ 4576  cd "/Users/karim/Documents/IonicWorkSpace/ParisFoot/ParisFoot.V1.0/src/pages/list-master"
+ 4577  ionic serve --lab
+ 4578  ionic serve 
+ 4579  ionic serve --lab
+ 4580  ionic serve --lab -c
+ 4581  ls
+ 4582  cd ..
+ 4583  ls
+ 4584  cd ..
+ 4585  ls
+ 4586  cd ..
+ 4587  ls
+ 4588  ionic generate pipe ProgrammedMatchesPipes
+ 4589  ionic g provider TeamsProvider
+ 4590  ftp
+ 4591  node server.js
+ 4592  node server.js 
+ 4593  ls
+ 4594  npm install axios --save
+ 4595  ls
+ 4596  nano package.json
+ 4597  node server.js 
+ 4598  ionic serve --lab
+ 4599  node server.js 
+ 4600  mongod
+ 4601  export PATH=/Users/karim/mongodb/bin/:$PATH
+ 4602  mongod
+ 4603  node server.js 
+ 4604  mongod
+ 4605  sudo su 
+ 4606  node server.js 
+ 4607  open v
+ 4608  /Users/karim/Documents/IonicWorkSpace/ParisFoot/ParisFoot.V1.0/external_src/444.jp
+ 4609  open /Users/karim/Documents/IonicWorkSpace/ParisFoot/ParisFoot.V1.0/external_src/444.jpg
+ 4610  node server.js 
+ 4611  ionic serve --lab
+ 4612  node server.js 
+ 4613  ls
+ 4614  cd Documents/IonicWorkSpace/ParisFoot
+ 4615  ls
+ 4616  cd ParisFoot.V1.0
+ 4617  ls
+ 4618  cd www
+ 4619  ls
+ 4620  cd assets
+ 4621  ls
+ 4622  ll
+ 4623  chmod 777 competitionsImg
+ 4624  ls
+ 4625  ll
+ 4626  cd competitionsImg
+ 4627  ls
+ 4628  ll
+ 4629  chmod 777 *
+ 4630  ll
+ 4631  ionic serve --lab
+ 4632  cd ..
+ 4633  ls
+ 4634  cd ..
+ 4635  ls
+ 4636  cd q
+ 4637  cd Documents
+ 4638  cd IonicWorkSpace/ParisFoot/ParisFoot.V1.0
+ 4639  cd src/
+ 4640  cd app
+ 4641  ls
+ 4642  ll
+ 4643  ls
+ 4644  ll
+ 4645  cd .. 
+ 4646  ls
+ 4647  cd assets
+ 4648  ls
+ 4649  chmod 777 competitionsImg
+ 4650  ls
+ 4651  cd c om
+ 4652  cd competitionsImg
+ 4653  ls
+ 4654  ll
+ 4655  ionic serve --lab
+ 4656  ls
+ 4657  cd ..
+ 4658  ls
+ 4659  cd img
+ 4660  ls
+ 4661  ll
+ 4662  cd ..
+ 4663  ls
+ 4664  cd ..
+ 4665  ls
+ 4666  cd..
+ 4667  cd ..
+ 4668  ls
+ 4669  cd resources
+ 4670  ls
+ 4671  cd ..
+ 4672  ls
+ 4673  cd www
+ 4674  ls
+ 4675  cd assets
+ 4676  ls
+ 4677  cd i
+ 4678  cd img
+ 4679  ls
+ 4680  ll
+ 4681  mkdir 777 imgCompetitions
+ 4682  ls
+ 4683  ll
+ 4684  chmod 77 imgCompetitions
+ 4685  ls
+ 4686  ll
+ 4687  chmod 777 imgCompetitions
+ 4688  mv 466.jpg ./imgCompetitions/466.jpg
+ 4689  cd imgCompetitions
+ 4690  ls
+ 4691  node server.js 
+ 4692  ionic serve --lab -c
+ 4693  node server.js 
+ 4694  ionic serve --lab -c
+ 4695  node server.js 
+ 4696  clean
+ 4697  node server.js 
+ 4698  ls
+ 4699  cd ..
+ 4700  ls
+ 4701  cd ParisFoot.V1.0
+ 4702  ls
+ 4703  cd src
+ 4704  ls
+ 4705  cd ..
+ 4706  ls
+ 4707  cd ..
+ 4708  ls
+ 4709  cd ..
+ 4710  ls
+ 4711  cd Ionic
+ 4712  cd ParisFoot
+ 4713  ls
+ 4714  cd ParisFoot.V1.0
+ 4715  cd .
+ 4716  cd ..
+ 4717  cd server
+ 4718  cd ../ParisFoot.V1.0/server
+ 4719  node server.js 
+ 4720  cd Documents/IonicWorkSpace/ParisFoot
+ 4721  cd ParisFoot.V1.0
+ 4722  ls
+ 4723  sudo npm i datepicker-for-ionic --save
+ 4724  npm uninstall datepicker-for-ionic
+ 4725  npm install --save @ionic-native/date-picker
+ 4726  cd node_modules/
+ 4727  ls -l d*
+ 4728  ls -l dat*
+ 4729  ls -l 
+ 4730  cd @ionic-native
+ 4731  ls )l
+ 4732  ls -l
+ 4733  chmod R 777 date-picker
+ 4734  chmod -R 777 date-picker
+ 4735  ls -l
+ 4736  cd date-picker
+ 4737  ls -l
+ 4738  chmod 777 *
+ 4739  ls 
+ 4740  lls l
+ 4741  ll
+ 4742  ls -l
+ 4743  ionic cordova build ios
+ 4744  sudo su
+ 4745  cd node_modules
+ 4746  cd ..
+ 4747  ionic serve --lab
+ 4748  cd Documents
+ 4749  cd IonicWorkSpace/ParisFoot
+ 4750  ls
+ 4751  cd ParisFoot.V1.0
+ 4752  npm install ion2-calendar moment --save
+ 4753  cd node_modules
+ 4754  ls
+ 4755  cd ion2-calendar
+ 4756  ll
+ 4757  chmod -R 777 $
+ 4758  chmod -R 777 *
+ 4759  ls
+ 4760  cd dist
+ 4761  ls
+ 4762  cd components
+ 4763  ls
+ 4764  cd ..
+ 4765  chmod 777 ion2-calendar
+ 4766  nano ion2-calendar/README.md
+ 4767  nano ../package.json
+ 4768  cd ..
+ 4769  npm uninstall ion2-calendar
+ 4770  npm install ion2-calendar@1.1.0-beta.1
+ 4771  npm uninstall ion2-calendar
+ 4772  sudo npm install ion2-calendar --save
+ 4773  ionic info
+ 4774  mongod
+ 4775  mongo
+ 4776  mongod
+ 4777  ll
+ 4778  cd server
+ 4779  nodejs server.js
+ 4780  node server.js
+ 4781  history
+ 4782  export PATH=/Users/karim/mongodb/bin/:$PATH
+ 4783  mongod
+ 4784  sudo su
+ 4785  node server.js
+ 4786  ionic serve --lab
+ 4787  ionic serve --lab -c
+ 4788  node server.js
+ 4789  cd ..
+ 4790  cd server
+ 4791  node server.js
+ 4792  node --inspect --debug-brk server.js
+ 4793  node --inspect-brk node_modules/qqq
+ 4794  node --inspect-brk server.js
+ 4795  node inspect server.js
+ 4796  node --inspect server.js
+ 4797  sudo su
+ 4798  ionic serve --lab
+ 4799  sudo su
+ 4800  export $PATH=/data/db/mongod/bin:$PATH
+ 4801  mongod
+ 4802  cd /data/db/journal
+ 4803  ls
+ 4804  exit
+ 4805  history
+ 4806  export PATH=/Users/karim/mongodb/bin/:$PATH
+ 4807  mongod
+ 4808  sudo su
+ 4809  node --inspect server.js
+ 4810  cd 
+ 4811  cd …
+ 4812  cd ~
+ 4813  ls
+ 4814  ls -lh
+ 4815  touch ~/.bash_profile
+ 4816  nano  ~/.bash_profile
+ 4817  exit
+ 4818  mongod
+ 4819  sudo su
+ 4820  node --inspect server.js
+ 4821  mongod
+ 4822  export PATH=/Users/karim/mongodb/bin/:$PATH
+ 4823  mongod
+ 4824  sudo su 
+ 4825  node --inspect server.js
+ 4826  cd Documents/IonicWorkSpace/ParisFoot/ParisFoot.V1.0
+ 4827  ionic serve --lab
+ 4828  history 
+ 4829  export PATH=/Users/karim/mongodb/bin/:$PATH
+ 4830  mongod
+ 4831  sudo su
+ 4832  ls
+ 4833  cd Documents/IonicWorkSpace/ParisFoot
+ 4834  ls
+ 4835  cd ParisFoot.V1.0
+ 4836  ls
+ 4837  cd server
+ 4838  lsl
+ 4839  l
+ 4840  ls
+ 4841  node server.js
+ 4842  ionic serve --lab
+ 4843  node server.js
+ 4844  ionic serve --lab
+ 4845  ls
+ 4846  cd ..
+ 4847  ls
+ 4848  git status
+ 4849  ls
+ 4850  ionic serve --lab
+ 4851  ls
+ 4852  clear
+ 4853  ls
+ 4854  history
+ 4855  sudo su
+ 4856  node server.js
+ 4857  cd Documents
+ 4858  cd IonicWorkSpace/ParisFoot/ParisFoot.V1.0
+ 4859  ls
+ 4860  ll
+ 4861  ionic serve --lab 
+ 4862  mongod
+ 4863  history
+ 4864  export PATH=/Users/karim/mongodb/bin/:$PATH
+ 4865  mongod
+ 4866  sudo su
+ 4867  node server.js
+ 4868  cd server
+ 4869  node server.js
+ 4870  ionic serve --lab 
+ 4871  npm i --save ionic2-super-tabs
+ 4872  ionic serve --lab 
+ 4873  nnpm update
+ 4874  npm update
+ 4875  sudo su
+ 4876  ionic serve --lab 
+ 4877  node server.js
+ 4878  pwd
+ 4879  cd /Users/karim/Documents/IonicWorkSpace/ParisFoot/ParisFoot.V1.0\n
+ 4880  node server.js
+ 4881  ionic serve --lab 
+ 4882  cd /Users/karim/Documents/IonicWorkSpace/ParisFoot/ParisFoot.V1.0\n
+ 4883  npm install ng-lazyload-image --save
+ 4884  ionic upload
+ 4885  sudo su
+ 4886  ionic inf
+ 4887  ionic info
+ 4888  ifcnfig |grep inet
+ 4889  ifconfig |grep inet
+ 4890  ifconfig
+ 4891  ifconfig |grep 192
+ 4892  ifconfig |grep 192*
+ 4893  ifconfig
+ 4894  ionic p sheet
+ 4895  ionic serve --lab 
+ 4896  cd Documents/IonicWorkSpace/ParisFoot
+ 4897  cd ParisFoot.V1.0
+ 4898  ls

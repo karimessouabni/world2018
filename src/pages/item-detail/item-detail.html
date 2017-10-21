@@ -37,26 +37,12 @@
 
 
 
-  <!-- <ion-toolbar>
-    <ion-segment color="red">
-      <ion-segment-button value="Feuille">
-        <ion-icon name="list-box"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="Classement">
-        <ion-icon name="desktop"></ion-icon>
-      </ion-segment-button>
-      <ion-segment-button value="Composition">
-        <ion-icon name="time"></ion-icon>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar> -->
-
 
  </ion-header>
 
  <super-tabs scrollTabs> 
    
-    <super-tab [root]="page2" title="First page"> </super-tab>
+    <super-tab [root]="page2" [rootParams]="fixture" title="Mes Paris"> </super-tab>
     <super-tab [root]="page2" title="Second page"> </super-tab>
     <super-tab [root]="page2" title="Third page"></super-tab>
     <super-tab [root]="page2" title="Third2 page"></super-tab>

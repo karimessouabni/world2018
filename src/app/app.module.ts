@@ -22,6 +22,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { HomeReviewPage } from '../pages/home-review/home-review';
+import { SheetPage } from '../pages/sheet/sheet';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -100,6 +101,7 @@ export function provideSettings(storage: Storage) {
     TutorialPage,
     WelcomePage,
     HomeReviewPage,
+    SheetPage,
     KeysPipe,
     DatePipes,
     DatePicker
@@ -139,7 +141,8 @@ export function provideSettings(storage: Storage) {
     TabsPage,
     TutorialPage,
     WelcomePage,
-    HomeReviewPage
+    HomeReviewPage,
+    SheetPage
   ],
   providers: [
     Api,

@@ -7,12 +7,65 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>sheet</ion-title>
+    <ion-title>Sheet</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-item class="item no-padding" style="background-color: #f1f7f7;">
+
+    <ion-row>
+      <ion-col col-12>
+        <div>
+          <p>{{sheet.elementsList[0].title}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4 *ngFor="let cote of sheet.elementsList[0].cotesList" text-wrap style="background-color: #ffffff;">
+        <div>
+          <button ion-button (click)="selectCote0(cote.title)" class="btn-1N2" [ngClass]="(cote.title == selectedCote1 ) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}</button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4 *ngFor="let cote of sheet.elementsList[0].cotesList" text-wrap style="background-color: #ffffff;">
+        <div>
+          <p class="cote">x{{cote.coef}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+
+  <ion-item class="item no-padding" style="background-color: #f1f7f7;">
+      
+          <ion-row>
+            <ion-col col-12>
+              <div>
+                <p>{{sheet.elementsList[1].title}}</p>
+              </div>
+            </ion-col>
+          </ion-row>
+      
+          <ion-row>
+            <ion-col col-6 *ngFor="let cote of sheet.elementsList[1].cotesList" text-wrap style="background-color: #ffffff;">
+              <div>
+                <button ion-button (click)="selectCote1(cote.title)" class="btn-1N2" [ngClass]="(cote.title == selectedCote2 ) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}<br/>x{{cote.coef}}</button>
+              </div>
+            </ion-col>
+          </ion-row>
+          <!-- <ion-row>
+            <ion-col col-4 *ngFor="let cote of sheet.elementsList[1].cotesList" text-wrap style="background-color: #ffffff;">
+              <div>
+                <p class="cote">x{{cote.coef}}</p>
+              </div>
+            </ion-col>
+          </ion-row> -->
+        </ion-item>
+
 
 </ion-content>
