@@ -23,6 +23,8 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { HomeReviewPage } from '../pages/home-review/home-review';
 import { SheetPage } from '../pages/sheet/sheet';
+import { FirstHtBetsPage } from '../pages/first-ht-bets/first-ht-bets';
+import { SecondHtBetsPage } from '../pages/second-ht-bets/second-ht-bets';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -104,7 +106,9 @@ export function provideSettings(storage: Storage) {
     SheetPage,
     KeysPipe,
     DatePipes,
-    DatePicker
+    DatePicker,
+    FirstHtBetsPage, 
+    SecondHtBetsPage
   ],
   imports: [
     BrowserModule,
@@ -142,7 +146,9 @@ export function provideSettings(storage: Storage) {
     TutorialPage,
     WelcomePage,
     HomeReviewPage,
-    SheetPage
+    SheetPage,
+    FirstHtBetsPage, 
+    SecondHtBetsPage
   ],
   providers: [
     Api,

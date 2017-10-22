@@ -20,9 +20,10 @@ export class SheetPage {
   fixture: any;
   sheet: Sheet;
   showStyle: false;
-  selectedCote1 : any;
-  selectedCote2 : any;
-  selectedCote3 : any;
+  selectedCote: Map<number, any> = new Map();
+  selectedCote1: any;
+  selectedCote2: any;
+  selectedCote3: any;
 
 
 
@@ -30,6 +31,7 @@ export class SheetPage {
     this.fixture = navParams.data;
     this.createElement12N();
     this.createElementNumberGoals();
+    this.createElementExactScore();
 
   }
 
@@ -58,16 +60,76 @@ export class SheetPage {
     var elem = new Element(cotes, "Nombre de Buts par les 2 équipes");
     this.sheet.elementsList.push(elem);
   }
+
+  createElementExactScore() {
+    var c1 = new Cote("0:0", 0.5, false, false);
+    var c2 = new Cote("1:0", 0.5, false, false);
+    var c3 = new Cote("2:0", 0.5, false, false);
+    var c4 = new Cote("3:0", 2, false, false);
+    var c5 = new Cote("4:0", 5, false, false);
+
+    var c6 = new Cote("0:1", 0.5, false, false);
+    var c7 = new Cote("0:2", 0.5, false, false);
+    var c8 = new Cote("0:3", 2, false, false);
+    var c9 = new Cote("0:4", 5, false, false);
+
+    var c10 = new Cote("1:1", 0.5, false, false);
+    var c11 = new Cote("2:1", 0.5, false, false);
+    var c12 = new Cote("3:1", 2, false, false);
+    var c13 = new Cote("4:1", 5, false, false);
+
+    var c14 = new Cote("1:2", 0.5, false, false);
+    var c15 = new Cote("1:3", 2, false, false);
+    var c16 = new Cote("1:4", 5, false, false);
+
+    var c17 = new Cote("2:2", 0.5, false, false);
+    var c18 = new Cote("3:2", 2, false, false);
+    var c19 = new Cote("4:2", 5, false, false);
+
+    var c20 = new Cote("2:3", 2, false, false);
+    var c21 = new Cote("2:4", 5, false, false);
+
+    var c22 = new Cote("3:3", 2, false, false);
+    var c23 = new Cote("4:3", 5, false, false);
+
+    var c24 = new Cote("3:4", 5, false, false);
+    var c25 = new Cote("autre", 5, false, false);
+
+
+    var cotes = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25];
+    var elem = new Element(cotes, "Score exact");
+    this.sheet.elementsList.push(elem);
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad SheetPage');
   }
 
 
-  selectCote0(team: any) {
-    this.selectedCote1 = team;
+  selectCote(param: any, elementTtitle: String) {
+
+    switch (elementTtitle) {
+      case "1N2":
+        this.selectCoteI(param, 0);
+        break;
+
+      case "Nombre de Buts par les 2 équipes":
+        this.selectCoteI(param, 1);
+        break;
+
+      case "Score exact":
+        this.selectCoteI(param, 2);
+        break;
+
+    }
+
+
   }
 
-  selectCote1(cote: any) {
-    this.selectedCote2 = cote;
+  selectCoteI(param: any, index: number) {
+
+    this.selectedCote[index] = (this.selectedCote[index] == param) ? null : param;
+
   }
+
+
 }

@@ -5,6 +5,7 @@ export class Element {
     cotesList: Cote[];
     result: number;
     title: any;
+    played: boolean = false;
 
 
     constructor(public myCotesList: Cote[], title) {

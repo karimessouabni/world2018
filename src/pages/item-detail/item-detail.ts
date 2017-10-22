@@ -7,6 +7,8 @@ import { TeamsProvider } from '../../providers/teams/teams';
 import { SuperTabsModule } from 'ionic2-super-tabs'
 import { ItemCreatePage } from '../item-create/item-create';
 import { SheetPage } from '../sheet/sheet';
+import { FirstHtBetsPage } from '../first-ht-bets/first-ht-bets';
+import { SecondHtBetsPage } from '../second-ht-bets/second-ht-bets';
 
 
 
@@ -20,9 +22,9 @@ export class ItemDetailPage {
   fixture: any;
   matches: any;
   teamImgLink: any;
-  page1: any = ItemCreatePage;
-  page2: any = SheetPage;
-  page3: any = ItemCreatePage;
+  pageParis1: any = SheetPage;
+  pageParis2: any = FirstHtBetsPage;
+  pageParis3: any = SecondHtBetsPage;
 
   constructor(public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items) {
 
