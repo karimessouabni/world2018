@@ -14,6 +14,15 @@ export class Element {
     }
 
 
+
+    getPlayedCote(): Cote {
+        var c: Cote;
+        this.cotesList.forEach(cote => {
+            if (cote.played) c = cote;
+        });
+        return c;
+    }
+
     getResult(mise: number): number {
         var resultToReturn = 0;
         this.cotesList.forEach(cote => {

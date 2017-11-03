@@ -1,5 +1,4 @@
 .btn-1N2 {
-  white-space: pre-line;
   width: 98%;
   height: 41px;
   text-transform: lowercase;
@@ -12,14 +11,32 @@
   transition: all 2s ease;
 }
 
+.btn-1N2 p{
+float: right;
+-webkit-transition: all 2s ease;
+-moz-transition: all 2s ease;
+-o-transition: all 2s ease;
+-ms-transition: all 2s ease;
+transition: all 2s ease;
+}
+
+
 [col-4] {
     padding: 0px;
 }
 .selectedElement {
-  background-color: #45CEE0;
-  color: rgb(255, 255, 255);
+  // background-color: #45CEE0;
+  color: rgb(0, 0, 0);
+  background-color: rgb(253, 218, 20);
+  background:  filter-gradient(#c7920b, #cc7b00, horizontal);
+
+}
+.selectedElement p {
+  color : white;
 }
 .cote {
+  float: left ;
+  text-align: left;
   padding: 0 40px;
   text-transform: lowercase;
   font-size: 14px;

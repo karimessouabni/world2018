@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+
+
+
+
+
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<p>All Match</p>
+<ion-content padding>
+
+  <ion-row *ngFor="let sheet of playedElementsIn3Sheets.getAllSheets()">
+    <ion-item *ngFor="let element of sheet.elementsList;  let i = index" class="item no-padding"
+      style="background-color: #f1f7f7;">
+
+
+
+      <ion-row *ngIf='i == 0'>
+        <ion-col col-12>
+          <div> 
+            <p>{{element.title}}</p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf='i == 0'>
+        <ion-col col-4 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
+          <div>
+            <button ion-button (click)="selectCote(cote, element)" class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}</button>
+            <br/>
+            <p class="cote">x{{cote.coef}}</p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row *ngIf='i != 0'>
+        <ion-col col-12>
+          <div>
+            <p>{{element.title}}</p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf='i != 0'>
+        <ion-col col-12 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
+          <div>
+            <button ion-button (click)="selectCote(cote, element)" class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x{{cote.coef}}</p>
+            </button>
+          </div>
+        </ion-col>
+      </ion-row>
+
+    </ion-item>
+
+  </ion-row>
+
+
+</ion-content>

@@ -2,14 +2,13 @@ import { Element } from './Element';
 
 export class Sheet {
 
-    elementsList: Element[];
-    player: any;
+    elementsList: Array<Element> = new Array<Element>();
+    player: any = null;
 
 
 
-    constructor(public myElements: Element[], myPlayer:any) {
+    constructor(public myElements: Array<Element>) {
         this.elementsList = myElements;
-        this.player = myPlayer;
     }
 
 

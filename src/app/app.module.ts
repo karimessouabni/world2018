@@ -25,6 +25,7 @@ import { HomeReviewPage } from '../pages/home-review/home-review';
 import { SheetPage } from '../pages/sheet/sheet';
 import { FirstHtBetsPage } from '../pages/first-ht-bets/first-ht-bets';
 import { SecondHtBetsPage } from '../pages/second-ht-bets/second-ht-bets';
+import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -48,8 +49,10 @@ import firebase from 'firebase';
 import { CompetitionProvider } from '../providers/competition/competition';
 import { KeysPipe } from '../pages/item-detail/compet.pipes'
 import { DatePipes } from '../pipes/date-pipes/date-pipes'; // import our pipe here
+import { TeamNamePipe } from '../pipes/team-name/team-name'; 
 import { TeamsProvider } from '../providers/teams/teams';
 
+import { Bet3Sheets } from '../models/bet3Sheets';
 // Firebase initialisation 
 
 firebase.initializeApp({
@@ -104,8 +107,10 @@ export function provideSettings(storage: Storage) {
     WelcomePage,
     HomeReviewPage,
     SheetPage,
+    BilanBetPage,
     KeysPipe,
     DatePipes,
+    TeamNamePipe,
     DatePicker,
     FirstHtBetsPage, 
     SecondHtBetsPage
@@ -148,7 +153,8 @@ export function provideSettings(storage: Storage) {
     HomeReviewPage,
     SheetPage,
     FirstHtBetsPage, 
-    SecondHtBetsPage
+    SecondHtBetsPage,
+    BilanBetPage
   ],
   providers: [
     Api,
@@ -160,6 +166,8 @@ export function provideSettings(storage: Storage) {
     GoogleMaps,
     SplashScreen,
     StatusBar,
+    TeamNamePipe,
+    Bet3Sheets,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },

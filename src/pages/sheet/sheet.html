@@ -22,7 +22,7 @@
     <ion-row *ngIf='i == 0'>
       <ion-col col-4 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
         <div>
-          <button ion-button (click)="selectCote(cote.title, element.title)" class="btn-1N2" [ngClass]="(cote.title ==  selectedCote[i] ) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}</button>
+          <button ion-button (click)="selectCote(cote, element)" class="btn-1N2" [ngClass]="(cote.title ==  selectedCote[i] ) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}</button>
           <br/>
           <p class="cote">x{{cote.coef}}</p>
         </div>
@@ -30,7 +30,7 @@
     </ion-row>
 
 
-    <ion-row *ngIf='i != 0'>
+    <ion-row *ngIf='i != 0 && i !=3'>
         <ion-col col-12>
           <div>
             <p>{{element.title}}</p>
@@ -38,15 +38,34 @@
         </ion-col>
       </ion-row>
   
-      <ion-row *ngIf='i != 0'>
+      <ion-row *ngIf='i != 0 && i !=3'>
         <ion-col col-6 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
           <div>
-            <button ion-button (click)="selectCote(cote.title, element.title)" class="btn-1N2" [ngClass]="(cote.title == selectedCote[i] ) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}
+            <button ion-button (click)="selectCote(cote, element)" class="btn-1N2" [ngClass]="(cote.title == selectedCote[i] ) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x{{cote.coef}}</p>
             </button>
           </div>
         </ion-col>
       </ion-row>
+
+      <ion-row *ngIf='i == 3'>
+          <ion-col col-12>
+            <div>
+              <p>{{element.title}}</p>
+            </div>
+          </ion-col>
+        </ion-row>
+    
+        <ion-row *ngIf='i == 3'>
+          <ion-col col-12 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
+            <div>
+              <button ion-button (click)="selectCote(cote, element)" class="btn-1N2" [ngClass]="(cote.title == selectedCote[i] ) ? 'btn-1N2 selectedElement' : 'btn-1N2'">
+               {{cote.title}}
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x{{cote.coef}}</p>
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
 
   </ion-item>
 

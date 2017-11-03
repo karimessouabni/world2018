@@ -1,54 +1,74 @@
-
-
 <ion-header>
 
   <ion-navbar>
     <ion-title>
+
+
+
+
 
     </ion-title>
   </ion-navbar>
 
 
   <ion-row>
-    <ion-col col-4>
+    <ion-col col-1>
+    </ion-col>
+    <ion-col col-3>
       <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
     </ion-col>
     <ion-col col-4>
       {{ fixture.date |HM : fixture.status : fixture.result}}
     </ion-col>
-    <ion-col col-4>
+    <ion-col col-3>
       <img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
+    </ion-col>
+    <ion-col col-1>
+      <ion-fab top right edge>
+        <button ion-fab color="light">
+          <ion-icon name="ios-podium-outline">{{betCount}}</ion-icon>
+        </button>
+        <ion-fab-list side="left">
+          <button ion-fab>
+            <ion-icon name="logo-facebook"></ion-icon>
+          </button>
+          <button ion-fab (click)="openBilanSubmit1P(bet3Sheets)">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </button>
+        </ion-fab-list>
+      </ion-fab>
     </ion-col>
   </ion-row>
 
   <ion-row>
-    <ion-col col-4>
+    <ion-col col-1>
+    </ion-col>
+    <ion-col col-3>
       <div> {{fixture.homeTeamName}}</div>
     </ion-col>
     <ion-col col-4>
       <div> {{fixture.date}}</div>
     </ion-col>
-    <ion-col col-4>
+    <ion-col col-3>
       <div> {{fixture.awayTeamName}}</div>
     </ion-col>
-  </ion-row> 
+    <ion-col col-1>
+    </ion-col>
+  </ion-row>
 
 
 
 
 
+</ion-header>
 
- </ion-header>
+<super-tabs scrollTabs (tabSelect)="onTabSelect($event)">
 
- <super-tabs scrollTabs> 
-   
-    <super-tab [root]="pageParis1" [rootParams]="fixture" title="Matche"> </super-tab>
-    <super-tab [root]="pageParis2" title="1er MT"> </super-tab>
-    <super-tab [root]="pageParis3" title="2me MT"></super-tab>
-    <super-tab [root]="page2" title="Third2 page"></super-tab>
+  <super-tab [root]="pageParis1" [rootParams]="bet3Sheets" title="Matche complet"> </super-tab>
+  <super-tab [root]="pageParis2" [rootParams]="bet3Sheets" title="1 ère mi-temps"> </super-tab>
+  <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="2 ème mi-temps"></super-tab>
+  <super-tab [root]="BilanPage" [rootParams]="bet3Sheets" title="Bilan"></super-tab>
+  <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="2 ème 45'"></super-tab>
+  <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="2 ème 45'"></super-tab>
 
-  </super-tabs>
-
-
-    
-
+</super-tabs>
