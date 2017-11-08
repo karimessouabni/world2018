@@ -44,25 +44,25 @@ import { DatePicker } from 'ionic2-date-picker';
 import { CalendarModule } from "ion2-calendar";
 import { SuperTabsModule } from "ionic2-super-tabs";
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+// import firebase from 'firebase';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth'
 
-import firebase from 'firebase';
+
+//Providers 
 import { CompetitionProvider } from '../providers/competition/competition';
+import { AuthProvider } from '../providers/auth/auth';
 import { KeysPipe } from '../pages/item-detail/compet.pipes'
 import { DatePipes } from '../pipes/date-pipes/date-pipes'; // import our pipe here
-import { TeamNamePipe } from '../pipes/team-name/team-name'; 
+import { TeamNamePipe } from '../pipes/team-name/team-name';
 import { TeamsProvider } from '../providers/teams/teams';
 
 import { Bet3Sheets } from '../models/bet3Sheets';
-// Firebase initialisation 
 
-firebase.initializeApp({
-  apiKey: "AIzaSyBWsilu-S_dM_bEJ5kfsEdQPxN9ZBPOL28",
-  authDomain: "fbloginparisfoot.firebaseapp.com",
-  databaseURL: "https://fbloginparisfoot.firebaseio.com",
-  projectId: "fbloginparisfoot",
-  storageBucket: "fbloginparisfoot.appspot.com",
-  messagingSenderId: "513895090448"
-});
+
+//External Config 
+
+import { FireBaseConfig } from './app.firebase.config';
 
 
 // The translate loader needs to know where to load i18n files
@@ -86,6 +86,15 @@ export function provideSettings(storage: Storage) {
     option5: 'karimou'
   });
 }
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBWsilu-S_dM_bEJ5kfsEdQPxN9ZBPOL28",
+  authDomain: "fbloginparisfoot.firebaseapp.com",
+  databaseURL: "https://fbloginparisfoot.firebaseio.com",
+  projectId: "fbloginparisfoot",
+  storageBucket: "fbloginparisfoot.appspot.com",
+  messagingSenderId: "513895090448"
+};
 
 @NgModule({
   declarations: [
@@ -112,7 +121,7 @@ export function provideSettings(storage: Storage) {
     DatePipes,
     TeamNamePipe,
     DatePicker,
-    FirstHtBetsPage, 
+    FirstHtBetsPage,
     SecondHtBetsPage
   ],
   imports: [
@@ -129,7 +138,10 @@ export function provideSettings(storage: Storage) {
       }
     }),
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -152,7 +164,7 @@ export function provideSettings(storage: Storage) {
     WelcomePage,
     HomeReviewPage,
     SheetPage,
-    FirstHtBetsPage, 
+    FirstHtBetsPage,
     SecondHtBetsPage,
     BilanBetPage
   ],
@@ -172,7 +184,8 @@ export function provideSettings(storage: Storage) {
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CompetitionProvider,
-    TeamsProvider
+    TeamsProvider,
+    AuthProvider
   ]
 })
 export class AppModule { }

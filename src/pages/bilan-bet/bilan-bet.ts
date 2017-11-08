@@ -23,7 +23,7 @@ export class BilanBetPage {
   showStyle: false;
   selectedCote: Map<number, any> = new Map();
   bet3Sheets: Bet3Sheets;
-
+  solde: Number = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.bet3Sheets = navParams.get('playedSheets');

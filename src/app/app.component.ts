@@ -22,6 +22,8 @@ import { HomeReviewPage } from '../pages/home-review/home-review';
 import { Settings } from '../providers/providers';
 
 import { TranslateService } from '@ngx-translate/core'
+import { AngularFireAuth } from 'angularfire2/auth';
+
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -43,7 +45,8 @@ import { TranslateService } from '@ngx-translate/core'
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage : any = FirstRunPage;
+  // rootPage : any = FirstRunPage;
+  rootPage : any; 
 
   @ViewChild(Nav) nav: Nav;
 
@@ -62,8 +65,19 @@ export class MyApp {
     { title: 'Search', component: SearchPage }
   ]
 
-  constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(afAuth: AngularFireAuth, private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
     this.initTranslate();
+
+    const authObserver = afAuth.authState.subscribe( user => {
+      if (user) {
+        this.rootPage = ListMasterPage;
+        authObserver.unsubscribe();
+      } else {
+        this.rootPage = FirstRunPage;
+        authObserver.unsubscribe();
+      }
+    });
+    
   }
 
   ionViewDidLoad() {
@@ -95,4 +109,6 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+  
 }

@@ -14,14 +14,13 @@
 <ion-content padding>
 
   <ion-row *ngFor="let sheet of playedElementsIn3Sheets.getAllSheets()">
-    <ion-item *ngFor="let element of sheet.elementsList;  let i = index" class="item no-padding"
-      style="background-color: #f1f7f7;">
+    <ion-item *ngFor="let element of sheet.elementsList;  let i = index" class="item no-padding" style="background-color: #f1f7f7;">
 
 
 
       <ion-row *ngIf='i == 0'>
         <ion-col col-12>
-          <div> 
+          <div>
             <p>{{element.title}}</p>
           </div>
         </ion-col>
@@ -30,11 +29,12 @@
       <ion-row *ngIf='i == 0'>
         <ion-col col-4 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
           <div>
-            <button ion-button (click)="selectCote(cote, element)" class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}</button>
+            <button ion-button class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}</button>
             <br/>
             <p class="cote">x{{cote.coef}}</p>
           </div>
         </ion-col>
+
       </ion-row>
 
 
@@ -48,16 +48,51 @@
 
       <ion-row *ngIf='i != 0'>
         <ion-col col-12 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
-          <div>
-            <button ion-button (click)="selectCote(cote, element)" class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}
+          <div style="background-color: #f50;">
+            <!-- <button ion-button class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}} -->
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x{{cote.coef}}</p>
-            </button>
+            <!-- </button> -->
           </div>
         </ion-col>
       </ion-row>
 
     </ion-item>
 
+  </ion-row>
+
+  <ion-list>
+      <ion-item-sliding #item>
+        <ion-item>
+          Item
+        </ion-item>
+        <ion-item-options side="left">
+          <button ion-button >Favorite</button>
+          <button ion-button color="danger">Share</button>
+        </ion-item-options>
+    
+        <ion-item-options side="right">
+          <button ion-button>Unread</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+
+  <ion-row>
+    <ion-col>
+      <button ion-button small color="soundCloud">{{solde}}</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-9>
+        <ion-range min="0" max="200" [(ngModel)]="solde" color="soundCloud" pin="true">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>200</ion-label>
+        </ion-range>
+    </ion-col>
+    <ion-col col-3 color="soundCloud">
+      <button style="transition: none;top: 25px;" ion-button full color="soundCloud">Go</button>
+    </ion-col>
   </ion-row>
 
 
