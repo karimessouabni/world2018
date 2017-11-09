@@ -38,6 +38,18 @@ export class AuthProvider {
     });
   }
 
+  resetPassword(emailAddress:string){
+    return Observable.create(observer => {
+      this.af.auth.sendPasswordResetEmail(emailAddress).then(function(success) {
+          console.log('email sent', success);
+          observer.next(success);
+        }, function(error) {
+          console.log('error sending email',error);
+          observer.error(error);
+        });
+     });
+  }
+
   logout() {
     this.af.auth.signOut();
   }

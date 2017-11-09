@@ -26,6 +26,7 @@ import { SheetPage } from '../pages/sheet/sheet';
 import { FirstHtBetsPage } from '../pages/first-ht-bets/first-ht-bets';
 import { SecondHtBetsPage } from '../pages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
+import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
@@ -108,6 +109,7 @@ const firebaseConfig = {
     LoginPage,
     MapPage,
     MenuPage,
+    ResetPasswordPage,
     SearchPage,
     SettingsPage,
     SignupPage,
@@ -122,7 +124,7 @@ const firebaseConfig = {
     TeamNamePipe,
     DatePicker,
     FirstHtBetsPage,
-    SecondHtBetsPage
+    SecondHtBetsPage,
   ],
   imports: [
     BrowserModule,
@@ -156,6 +158,7 @@ const firebaseConfig = {
     LoginPage,
     MapPage,
     MenuPage,
+    ResetPasswordPage,
     SearchPage,
     SettingsPage,
     SignupPage,

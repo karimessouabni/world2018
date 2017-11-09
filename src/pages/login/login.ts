@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { MainPage } from '../../pages/pages';
+import { ResetPasswordPage } from '../../pages/reset-password/reset-password';
 import { Player } from '../../models/PlayerModel/Player';
 import { User } from '../../providers/user';
 import { TranslateService } from '@ngx-translate/core';
@@ -18,6 +19,8 @@ export class LoginPage {
   // sure to add it to the type
   loginForm: FormGroup;
   player = {} as Player;
+  resetPasswordPage = ResetPasswordPage //Added reset password page
+  
 
 
   // Our translated text strings
