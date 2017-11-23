@@ -49,9 +49,9 @@
       <ion-row *ngIf='i != 0'>
         <ion-col col-12 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
           <div style="background-color: #f50;">
-            <!-- <button ion-button class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}} -->
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x{{cote.coef}}</p>
-            <!-- </button> -->
+            <button ion-button class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}
+              <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x{{cote.coef}}</p> -->
+            </button>
           </div>
         </ion-col>
       </ion-row>
@@ -62,9 +62,6 @@
 
   <ion-list>
       <ion-item-sliding #item>
-        <ion-item>
-          Item
-        </ion-item>
         <ion-item-options side="left">
           <button ion-button >Favorite</button>
           <button ion-button color="danger">Share</button>
@@ -79,7 +76,7 @@
 
   <ion-row>
     <ion-col>
-      <button ion-button small color="soundCloud">{{solde}}</button>
+      <button ion-button small color="soundCloud">{{player.silverCoins}}</button>
     </ion-col>
   </ion-row>
 
@@ -91,7 +88,7 @@
         </ion-range>
     </ion-col>
     <ion-col col-3 color="soundCloud">
-      <button style="transition: none;top: 25px;" ion-button full color="soundCloud">Go</button>
+      <button style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" ion-button full color="soundCloud">Go</button>
     </ion-col>
   </ion-row>
 

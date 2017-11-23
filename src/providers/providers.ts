@@ -1,11 +1,19 @@
-import { User } from './user';
+import { AuthProvider } from './auth/auth';
+import { Bet3SheetsProvider } from './bet3-sheets/bet3-sheets';
+import { CompetitionProvider } from './competition/competition';
+import { PlayerProvider } from './player/player';
+import { TeamsProvider } from './teams/teams';
 import { Api } from './api';
 import { Settings } from './settings';
 import { Items } from '../mocks/providers/items';
 
 export {
-User,
-Api,
-Settings,
-Items
+    AuthProvider,
+    Bet3SheetsProvider,
+    CompetitionProvider,
+    PlayerProvider,
+    TeamsProvider,
+    Api,
+    Settings,
+    Items
 };

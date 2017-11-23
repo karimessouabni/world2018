@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { WelcomePage } from '../welcome/welcome'
 import { Sheet } from '../../models/Sheet';
 import { Cote } from '../../models/Cote';
 import { Element } from '../../models/Element';
 import { Bet3Sheets } from '../../models/bet3Sheets';
+import { Player } from '../../models/PlayerModel/Player';
+import firebase from 'firebase/app';
+
+
+import { PlayerProvider } from '../../providers/player/player';
+import { Observable } from 'rxjs/Observable';
+import { AngularFireAuth } from 'angularfire2/auth';
+
 
 /**
  * Generated class for the BilanBetPage page.
@@ -24,11 +33,32 @@ export class BilanBetPage {
   selectedCote: Map<number, any> = new Map();
   bet3Sheets: Bet3Sheets;
   solde: Number = 0;
+  player: Player = new Player();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public playerProvider: PlayerProvider, afAuth: AngularFireAuth) {
+
+
+
     this.bet3Sheets = navParams.get('playedSheets');
     this.playedElementsIn3Sheets = new Bet3Sheets();
     this.fillListPlayedElement();
+
+    // this.playerProvider.getAuthPlayerInfs().subscribe(BDplayer => {
+    //       this.player.silverCoins = BDplayer[0].silverCoins;
+    //       console.log("testing" + BDplayer[0].email);
+    //     });
+    playerProvider.getAuthPlayerInfs().subscribe(user => {
+      if (user) {
+        this.player = user[0];
+        console.log("testing FireStore BD" + user[0]);
+      } else {
+        // if the user is unloged redirection to welcom page 
+        this.navCtrl.push(WelcomePage);
+      }
+
+    });
+    // this.player = playerProvider.playerConnected;
+    // console.log("Test in Bilan Bet " + this.player);
   }
 
 
@@ -74,6 +104,15 @@ export class BilanBetPage {
   }
 
 
+  getCurrentUserAndGo() {
+
+    var uid = firebase.auth().currentUser.uid;
+    firebase.database().ref().child('accounts').child(uid).set({
+      age: 22,
+      sexe: 'M'
+    })
+
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BilanBetPage');

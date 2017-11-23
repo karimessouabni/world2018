@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, state, keyframes } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Items } from '../../providers/providers';
 import { CompetitionProvider } from '../../providers/competition/competition';
@@ -9,6 +9,7 @@ import { SheetPage } from '../sheet/sheet';
 import { FirstHtBetsPage } from '../first-ht-bets/first-ht-bets';
 import { SecondHtBetsPage } from '../second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../bilan-bet/bilan-bet';
+import { TeamTablePage } from '../team-table/team-table';
 import { Bet3Sheets } from '../../models/bet3Sheets';
 import { Sheet } from '../../models/Sheet';
 import { Element } from '../../models/Element';
@@ -16,14 +17,31 @@ import { Cote } from '../../models/Cote';
 import { DatePipes } from '../../pipes/date-pipes/date-pipes';
 import { TeamNamePipe } from '../../pipes/team-name/team-name';
 import { Events } from 'ionic-angular';
-
+import { trigger, style, transition, animate, group }from '@angular/animations';
 
 
 @Component({
   selector: 'page-item-detail',
-  templateUrl: 'item-detail.html'
-})
-
+  templateUrl: 'item-detail.html',
+  animations: [
+    trigger('itemAnim', [
+      transition(':enter', [
+        style({transform: 'translateX(-100%)'}),
+        animate(350)
+      ]),
+      transition(':leave', [
+        group([
+          animate('0.2s ease', style({
+            transform: 'translate(150px,25px)'
+          })),
+          animate('0.5s 0.2s ease', style({
+            opacity: 0
+          }))
+        ])
+      ])
+    ])
+  ]
+  })
 
 export class ItemDetailPage {
   fixture: any;
@@ -33,10 +51,11 @@ export class ItemDetailPage {
   pageParis2: any = FirstHtBetsPage;
   pageParis3: any = SecondHtBetsPage;
   BilanPage: any = BilanBetPage;
+  teamTable: any = TeamTablePage;
   sheet: Sheet;
   bet3Sheets: Bet3Sheets;
   betCount: number;
-
+  pageClassement
   constructor(private pipeTeam: TeamNamePipe, public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items, public events: Events) {
 
     this.fixture = navParams.get('fixture');
@@ -64,20 +83,20 @@ export class ItemDetailPage {
 
     this.betCount = this.bet3Sheets.sheetAllMatch.player;
 
-    this.events.subscribe('functionCall:tabSelected', eventData => { 
-        this.betCount = eventData.betCount;
+    this.events.subscribe('functionCall:tabSelected', eventData => {
+      this.betCount = eventData.betCount;
 
     });
 
   }
 
 
-  openBilanSubmit1P(mySheetsPlayed : Bet3Sheets){
+  openBilanSubmit1P(mySheetsPlayed: Bet3Sheets) {
     this.navCtrl.push(BilanBetPage, {
       playedSheets: mySheetsPlayed
     });
   }
-  
+
   createElement12NAllMatch() {
     var cHomeTeam = new Cote(this.pipeTeam.transform(this.fixture.homeTeamName), 2, false, false);
     var cNul = new Cote("0 : 0", 2, false, false);
@@ -336,7 +355,7 @@ export class ItemDetailPage {
   }
 
 
-  
+
 
 
 

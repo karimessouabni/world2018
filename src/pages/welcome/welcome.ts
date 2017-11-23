@@ -21,22 +21,13 @@ export class WelcomePage {
 
   constructor(public navCtrl: NavController) { 
 
-    firebase.auth().onAuthStateChanged( user => {
-      if (user) {
-        console.log(user);
-        this.userProfile = user;
-      } else {
-        console.log("There's no user here");
-      }
-    });
-
   }
 
   login() {
     this.navCtrl.push(LoginPage, {});
   }
 
-  loginFB() {
+  async loginFB() {
     console.log("lklkl");
     let provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithRedirect(provider).then( ()=>{

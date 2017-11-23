@@ -70,6 +70,7 @@ export class MyApp {
 
     const authObserver = afAuth.authState.subscribe( user => {
       if (user) {
+        console.log(user.email);
         this.rootPage = ListMasterPage;
         authObserver.unsubscribe();
       } else {

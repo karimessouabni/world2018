@@ -17,7 +17,7 @@
     <ion-col col-3>
       <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
     </ion-col>
-    <ion-col col-4>
+    <ion-col col-4 [@itemAnim]>
       {{ fixture.date |HM : fixture.status : fixture.result}}
     </ion-col>
     <ion-col col-3>
@@ -30,10 +30,10 @@
         </button>
         <ion-fab-list side="left">
           <button ion-fab>
-            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="ios-flash-outline"></ion-icon>
           </button>
           <button ion-fab (click)="openBilanSubmit1P(bet3Sheets)">
-            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="ios-clipboard-outline"></ion-icon>
           </button>
         </ion-fab-list>
       </ion-fab>
@@ -64,11 +64,9 @@
 
 <super-tabs scrollTabs (tabSelect)="onTabSelect($event)">
 
-  <super-tab [root]="pageParis1" [rootParams]="bet3Sheets" title="Matche complet"> </super-tab>
-  <super-tab [root]="pageParis2" [rootParams]="bet3Sheets" title="1 ère mi-temps"> </super-tab>
-  <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="2 ème mi-temps"></super-tab>
-  <super-tab [root]="BilanPage" [rootParams]="bet3Sheets" title="Bilan"></super-tab>
-  <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="2 ème 45'"></super-tab>
-  <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="2 ème 45'"></super-tab>
+  <super-tab [root]="pageParis1" [rootParams]="bet3Sheets" title="0' to 90'"> </super-tab>
+  <super-tab [root]="pageParis2" [rootParams]="bet3Sheets" title="0' to 45'+"> </super-tab>
+  <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="45' to 90'+"></super-tab>
+  <!-- <super-tab [root]="teamTable" title="Classement"></super-tab> -->
 
 </super-tabs>

@@ -28,11 +28,12 @@ import { SecondHtBetsPage } from '../pages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
+//TO REMOVE 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
-import { Settings } from '../providers/settings';
-import { User } from '../providers/user';
+import { Settings} from '../providers/providers';
 import { ReviewsProvider } from '../providers/reviews/reviews';
+//TO REMOVE
 
 import { Camera } from '@ionic-native/camera';
 import { GoogleMaps } from '@ionic-native/google-maps';
@@ -45,25 +46,31 @@ import { DatePicker } from 'ionic2-date-picker';
 import { CalendarModule } from "ion2-calendar";
 import { SuperTabsModule } from "ionic2-super-tabs";
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-// import firebase from 'firebase';
+import firebase from 'firebase';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth'
+import { AngularFirestoreModule } from 'angularfire2/firestore'
+import { Facebook } from '@ionic-native/facebook'; //Added Facebook
+
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 //Providers 
-import { CompetitionProvider } from '../providers/competition/competition';
-import { AuthProvider } from '../providers/auth/auth';
+import { CompetitionProvider, AuthProvider, Bet3SheetsProvider, PlayerProvider, TeamsProvider} from '../providers/providers';
+
+// Pipes 
 import { KeysPipe } from '../pages/item-detail/compet.pipes'
 import { DatePipes } from '../pipes/date-pipes/date-pipes'; // import our pipe here
 import { TeamNamePipe } from '../pipes/team-name/team-name';
-import { TeamsProvider } from '../providers/teams/teams';
 
+//Model 
 import { Bet3Sheets } from '../models/bet3Sheets';
-
 
 //External Config 
 
 import { FireBaseConfig } from './app.firebase.config';
+
 
 
 // The translate loader needs to know where to load i18n files
@@ -130,6 +137,7 @@ const firebaseConfig = {
     BrowserModule,
     HttpModule,
     CalendarModule,
+    BrowserAnimationsModule,
     SuperTabsModule.forRoot(),
     LazyLoadImageModule,
     TranslateModule.forRoot({
@@ -142,6 +150,7 @@ const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
     AngularFireAuthModule
 
   ],
@@ -176,7 +185,6 @@ const firebaseConfig = {
     ReviewsProvider,
     CompetitionProvider,
     Items,
-    User,
     Camera,
     GoogleMaps,
     SplashScreen,
@@ -188,7 +196,10 @@ const firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CompetitionProvider,
     TeamsProvider,
-    AuthProvider
+    AuthProvider,
+    Facebook,
+    Bet3SheetsProvider,
+    PlayerProvider
   ]
 })
 export class AppModule { }

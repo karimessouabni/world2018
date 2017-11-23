@@ -6,6 +6,7 @@ import { Player } from '../../models/PlayerModel/Player';
 import { User } from '../../providers/user';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthProvider } from '../../providers/auth/auth';
+import { PlayerProvider } from '../../providers/player/player';
 
 @Component({
   selector: 'page-signup',
@@ -16,14 +17,14 @@ export class SignupPage {
   // If you're using the username field with or without email, make
   // sure to add it to the type
   signupForm: FormGroup;
-  player = {} as Player;
+  registredPlayer = {} as Player;
   public toastCtrl: ToastController;
 
 
   // Our translated text strings
   private signupErrorString: string;
 
-  constructor(public navCtrl: NavController, public translateService: TranslateService, private fb: FormBuilder, private auth: AuthProvider) {
+  constructor(public navCtrl: NavController, public translateService: TranslateService, private fb: FormBuilder, private auth: AuthProvider, private playerProvider: PlayerProvider) {
     this.translateService.get('SIGNUP_ERROR').subscribe((value) => {
       this.signupErrorString = value;
     })
@@ -31,34 +32,47 @@ export class SignupPage {
       'email': ['', Validators.compose([Validators.required, Validators.pattern(/[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)])],
       'password': ['', Validators.compose([Validators.required, Validators.minLength(1)])]
     });
+
+  }
+
+
+
+  playerFSFactory(uid) {
+
+    this.registredPlayer.uid = uid;
+    this.registredPlayer.silverCoins = 200; 
   }
 
 
   async doSignup() {
-    if(this.signupForm.valid) {
-      this.player.email = this.signupForm.controls['email'].value;
-      this.player.password = this.signupForm.controls['password'].value;
-      var credentials = ({email: this.player.email, password: this.player.password});
+    if (this.signupForm.valid) {
+      this.registredPlayer.email = this.signupForm.controls['email'].value;
+      this.registredPlayer.password = this.signupForm.controls['password'].value;
+      var credentials = ({ email: this.registredPlayer.email, password: this.registredPlayer.password });
       this.auth.registerUser(credentials).subscribe(registerData => {
-          console.log(registerData);
-          alert('User is registered and logged in.');
-          this.navCtrl.setRoot(MainPage);
+        console.log(registerData);
+
+        // once the user is regiterd to fireBseAuth we proceed to its regestration on the firestoreCloudDB
+        this.playerFSFactory(registerData.uid);
+        this.playerProvider.persistAuthPlayerInfs(this.registredPlayer);
+        alert('User is registered and logged in.');
+        this.navCtrl.setRoot(MainPage);
       }, registerError => {
         console.log(registerError);
-        if (registerError.code === 'auth/weak-password' || registerError.code === 'auth/email-already-in-use')
-        {
-          alert(registerError.message);
+        if (registerError.code === 'auth/weak-password' || registerError.code === 'auth/email-already-in-use') {
+          // alert(registerError.message);
+          let toast = this.toastCtrl.create({
+            message: registerError.message,
+            duration: 3000,
+            position: 'top'
+          });
+          toast.present();
         }
-        // let toast = this.toastCtrl.create({
-        //   message: registerError,
-        //   duration: 3000,
-        //   position: 'top'
-        // });
-        // toast.present();
+
 
       });
+    }
   }
-} 
 
 
 }

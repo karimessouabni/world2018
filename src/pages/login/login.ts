@@ -4,9 +4,9 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
 import { MainPage } from '../../pages/pages';
 import { ResetPasswordPage } from '../../pages/reset-password/reset-password';
 import { Player } from '../../models/PlayerModel/Player';
-import { User } from '../../providers/user';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthProvider } from '../../providers/auth/auth';
+import { PlayerProvider } from '../../providers/player/player';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class LoginPage {
   // If you're using the username field with or without email, make
   // sure to add it to the type
   loginForm: FormGroup;
-  player = {} as Player;
+  logedPlayer = {} as Player;
   resetPasswordPage = ResetPasswordPage //Added reset password page
   
 
@@ -27,9 +27,8 @@ export class LoginPage {
   private loginErrorString: string;
 
   constructor(public navCtrl: NavController,
-    public user: User,
     public toastCtrl: ToastController,
-    public translateService: TranslateService, private fb: FormBuilder, public auth: AuthProvider) {
+    public translateService: TranslateService, private fb: FormBuilder, public auth: AuthProvider, private playerProvider: PlayerProvider) {
 
     this.loginForm = this.fb.group({
       'email': ['', Validators.compose([Validators.required, Validators.pattern(/[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)])],
@@ -44,10 +43,21 @@ export class LoginPage {
 
   async login() {
     if (this.loginForm.valid) {
-      this.player.email = this.loginForm.controls['email'].value;
-      this.player.password = this.loginForm.controls['password'].value;
-      var credentials = ({ email: this.player.email, password: this.player.password }); //Added next lines
+      this.logedPlayer.email = this.loginForm.controls['email'].value;
+      this.logedPlayer.password = this.loginForm.controls['password'].value;
+      var credentials = ({ email: this.logedPlayer.email, password: this.logedPlayer.password }); //Added next lines
       this.auth.loginWithEmail(credentials).subscribe(data => {
+          // once the user is logged in to fireBseAuth we WILL NOT pull it informations from the firestoreCloudDB til nedded
+          this.playerProvider.getAuthPlayerInfs().subscribe(BDplayer => {
+            // this.logedPlayer.silverCoins = BDplayer[0].silverCoins;
+            console.log("testing" + BDplayer[0].email);
+          });
+          let toast = this.toastCtrl.create({
+            message: "Vous etes connectés !",
+            duration: 4000,
+            position: 'top'
+          });
+          toast.present();
         this.navCtrl.push(MainPage);
       }, error => {             //Added next lines for handling unknown users
         console.log(error);
