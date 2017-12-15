@@ -91,9 +91,11 @@ export class ItemDetailPage {
   }
 
 
-  openBilanSubmit1P(mySheetsPlayed: Bet3Sheets) {
+  openBilanSubmitOnline(mySheetsPlayed: Bet3Sheets) {
     this.navCtrl.push(BilanBetPage, {
-      playedSheets: mySheetsPlayed
+      online:true,
+      playedSheets: mySheetsPlayed,
+      fixture:this.fixture
     });
   }
 

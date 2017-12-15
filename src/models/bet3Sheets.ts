@@ -1,7 +1,8 @@
 import { Sheet } from './Sheet';
 import { Element } from './Element';
+import { Bet } from './Bet';
 
-export class Bet3Sheets {
+export class Bet3Sheets extends Bet {
 
 
 
@@ -14,6 +15,7 @@ export class Bet3Sheets {
 
 
     constructor() {
+        super();
         this.sheetAllMatch = new Sheet(new Array<Element>());
         this.sheet145 = new Sheet(new Array<Element>());
         this.sheet245 = new Sheet(new Array<Element>());
@@ -28,9 +30,14 @@ export class Bet3Sheets {
         return allSheets;
     }
 
+
+    getSumToWin(mise: number): number {
+        return this.sheetAllMatch.getSumToWin(mise)+this.sheet145.getSumToWin(mise)+this.sheet245.getSumToWin(mise);
+    }
     getResult(mise: number): number {
 
-        return 0;
+        return this.sheetAllMatch.getResult(mise)+this.sheet145.getResult(mise)+this.sheet245.getResult(mise);
+        
     }
 
 }

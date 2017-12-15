@@ -1,0 +1,58 @@
+<ion-content scroll="false">
+  <div class="splash-bg"></div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro">
+      Profile
+    </div>
+    <button ion-button (click)="loadImage()">Load Image</button>
+  </div>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="ios-mail-outline" item-start></ion-icon>
+      {{player.email}}
+      <button ion-button clear item-end><ion-icon name="md-create"></ion-icon></button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="shirt" item-start></ion-icon>
+      {{player.name}}
+      <button ion-button clear item-end><ion-icon name="md-create"></ion-icon></button>
+    </ion-item>
+    <ion-item>
+        <ion-icon name="logo-usd" item-start></ion-icon>
+      {{player.silverCoins}}
+      <button ion-button clear item-end><ion-icon name="md-create"></ion-icon></button>
+    </ion-item>
+  </ion-list>
+
+
+
+  
+
+
+  <!-- <form>
+    <ion-list *ngIf="page == 'main'">
+      <ion-item>
+        <ion-label>{{ 'SETTINGS_OPTION1' | translate }}</ion-label>
+        <ion-toggle formControlName="option1"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{ 'SETTINGS_OPTION2' | translate }}</ion-label>
+        <ion-input formControlName="option2"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{ 'SETTINGS_OPTION3' | translate }}</ion-label>
+        <ion-select formControlName="option3">
+          <ion-option value="1" checked="true">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </form> -->
+
+</ion-content>

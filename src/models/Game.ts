@@ -1,33 +1,24 @@
-import { Sheet } from './Sheet';
+import { Bet3Sheets } from './bet3Sheets';
+import { Player } from './PlayerModel/Player';
+import { Bet } from './Bet';
 
-export class Game {
-
-    sheet1: Sheet;
-    sheet2: Sheet;
-    playerWinner: any;
-    mise: number;
+export abstract class Game {
 
 
+    player1: Player;
+    sheetBet1: Bet;
 
-
-    constructor(mySheet1: Sheet, mySheet2: Sheet, myMise: number) {
-        this.sheet1 = mySheet1;
-        this.sheet2 = mySheet2;
-        this.mise = myMise;
-        this.playerWinner = null;
+    constructor(player1: Player, sheetBet1: Bet) {
+        this.player1 = player1;
+        this.sheetBet1 = sheetBet1;
     }
 
 
 
-    getResultSheet1(): number {
-        return this.sheet1.getResult(this.mise);
-    }
-
-    getResultSheet2(): number {
-        return this.sheet2.getResult(this.mise);
-    }
+   
     getWinner() {
-        this.playerWinner = (this.getResultSheet1() > this.getResultSheet2()) ? this.sheet1.player : this.sheet2.player;
+        // TO redefine
+        // this.playerWinner = (this.getResultSheet1() > this.getResultSheet2()) ? this.sheet1.player : this.sheet2.player;
     }
 
 

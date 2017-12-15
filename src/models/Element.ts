@@ -23,6 +23,20 @@ export class Element {
         return c;
     }
 
+    restPlayedCotes(){
+        this.cotesList.forEach(cote => {
+            if (cote.played) cote.played = false;
+        });
+    }
+
+    getSumToWin(mise: number): number {
+        var resultToReturn = 0;
+        this.cotesList.forEach(cote => {
+            resultToReturn += cote.getSumToWin(mise);
+        });
+        return resultToReturn;
+    }
+
     getResult(mise: number): number {
         var resultToReturn = 0;
         this.cotesList.forEach(cote => {

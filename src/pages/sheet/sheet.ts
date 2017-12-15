@@ -61,12 +61,13 @@ export class SheetPage  {
     if(this.selectedCote[elementIndex] == cote.title){
       this.selectedCote[elementIndex] = null ;
       cote.played=false ;
-      element.played = false;
+      element.played = false; 
       this.bet3Sheets.betCount--;
     }
     else{
       if(this.selectedCote[elementIndex]==null) this.bet3Sheets.betCount++;
       this.selectedCote[elementIndex] = cote.title;
+      element.restPlayedCotes(); 
       cote.played = true;
       element.played = true;
     }

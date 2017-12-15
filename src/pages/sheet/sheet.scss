@@ -26,14 +26,14 @@ transition: all 2s ease;
 }
 .selectedElement {
   // background-color: #45CEE0;
-  color: rgb(0, 0, 0);
+  color: white;
   // background-color: rgb(253, 218, 20);
-  background-color: #F50;
+  background-color: #d20073;
   background:  filter-gradient(#c7920b, #cc7b00, horizontal);
 
 }
 .selectedElement p {
-  color : white;
+  color : #23bbea;
 }
 .cote {
   float: left ;

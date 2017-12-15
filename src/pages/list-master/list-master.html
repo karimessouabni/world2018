@@ -1,17 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+
+    <ion-title>
+      <p class="titles1">Matchs</p>
+    </ion-title>
   </ion-navbar>
-  <button ion-button color="primary" (click)="openCalendar()">
-    <ion-icon name="calendar"></ion-icon>
-  </button> {{selectedDate}}
+
+  <ion-item>
+    <button ion-button color="boursouramaPink2" item-start (click)="openCalendar()">
+      <ion-icon name="ios-calendar" color="white"></ion-icon>
+    </button> {{selectedDate}}
+
+
+  </ion-item>
+  <!-- <ion-avatar item-start>
+    <img src="img/avatar-cher.png">
+  </ion-avatar> -->
+
 </ion-header>
 
 <ion-content>
   <ion-list>
     <ion-item class="item no-padding" *ngFor="let compet of allCompetUpdated" style="background-color: #f1f7f7;">
       <div class="item item-divider compet">
-        <img [src]="compet.picLink" [lazyLoad]="compet.picLink" [offset]="200" class="stretch" onError="this.src='assets/icon/favicon.ico';"
+        <img [src]="compet.picLink" [lazyLoad]="compet.picLink" [offset]="200" class="stretch" onError="this.src='assets/parisFootIcons/offline.png';"
           alt="" />
         <a> Journée {{compet.currentMatchday}} </a>
       </div>
@@ -20,12 +32,14 @@
           <div> {{fixture.homeTeamName}}</div>
         </ion-col>
         <ion-col col-1>
-          <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:20px; height:20" alt="" /> </ion-col>
+          <img [src]="fixture.urlhomeTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:20px; height:20"
+            alt="" /> </ion-col>
         <ion-col center col-2>
           {{ fixture.date |HM : fixture.status : fixture.result}}
         </ion-col>
         <ion-col col-1>
-          <img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:20px; height:20" alt="" />
+          <img [src]="fixture.urlawayTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:20px; height:20"
+            alt="" />
         </ion-col>
         <ion-col col-4>
           <div> {{fixture.awayTeamName}}</div>

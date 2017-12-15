@@ -1,94 +1,102 @@
 <ion-header>
   <ion-navbar>
+    <!-- <ion-title *ngif="playinOnline==true"> -->
     <ion-title>
-
-
-
-
-
+      <p class="titles1">Online Mode</p>
     </ion-title>
+    <!-- <ion-title *ngif="playinOnline==false"> -->
+    <!-- Offline Mode -->
+    <!-- </ion-title> -->
   </ion-navbar>
-</ion-header>
-
-<p>All Match</p>
-<ion-content padding>
-
-  <ion-row *ngFor="let sheet of playedElementsIn3Sheets.getAllSheets()">
-    <ion-item *ngFor="let element of sheet.elementsList;  let i = index" class="item no-padding" style="background-color: #f1f7f7;">
-
-
-
-      <ion-row *ngIf='i == 0'>
-        <ion-col col-12>
-          <div>
-            <p>{{element.title}}</p>
-          </div>
-        </ion-col>
-      </ion-row>
-
-      <ion-row *ngIf='i == 0'>
-        <ion-col col-4 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
-          <div>
-            <button ion-button class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}</button>
-            <br/>
-            <p class="cote">x{{cote.coef}}</p>
-          </div>
-        </ion-col>
-
-      </ion-row>
-
-
-      <ion-row *ngIf='i != 0'>
-        <ion-col col-12>
-          <div>
-            <p>{{element.title}}</p>
-          </div>
-        </ion-col>
-      </ion-row>
-
-      <ion-row *ngIf='i != 0'>
-        <ion-col col-12 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
-          <div style="background-color: #f50;">
-            <button ion-button class="btn-1N2" [ngClass]="(cote.played ==  true) ? 'btn-1N2 selectedElement' : 'btn-1N2'">{{cote.title}}
-              <!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x{{cote.coef}}</p> -->
-            </button>
-          </div>
-        </ion-col>
-      </ion-row>
-
-    </ion-item>
-
-  </ion-row>
-
-  <ion-list>
-      <ion-item-sliding #item>
-        <ion-item-options side="left">
-          <button ion-button >Favorite</button>
-          <button ion-button color="danger">Share</button>
-        </ion-item-options>
-    
-        <ion-item-options side="right">
-          <button ion-button>Unread</button>
-        </ion-item-options>
-      </ion-item-sliding>
-    </ion-list>
-
 
   <ion-row>
-    <ion-col>
-      <button ion-button small color="soundCloud">{{player.silverCoins}}</button>
+    <ion-col col-1>
     </ion-col>
+    <ion-col col-3>
+      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
+    </ion-col>
+    <ion-col col-4>
+      {{ fixture.date |HM : fixture.status : fixture.result}}
+    </ion-col>
+    <ion-col col-3>
+      <img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
+    </ion-col>
+    <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-3>
+        <div> {{fixture.homeTeamName}}</div>
+      </ion-col>
+      <ion-col col-4>
+        <div> {{fixture.date}}</div>
+      </ion-col>
+      <ion-col col-3>
+        <div> {{fixture.awayTeamName}}</div>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
   </ion-row>
+
+</ion-header>
+
+
+
+
+
+<ion-content padding>
+  <div class="footerLine" *ngFor="let sheet of playedElementsIn3Sheets.getAllSheets()">
+    <ion-list class="footerLine" *ngFor="let element of sheet.elementsList;  let i = index" class="item no-padding" style="background-color: #ffffff;">
+      <div col-12 *ngFor="let cote of element.cotesList" text-wrap style="background-color: #ffffff;">
+        <div *ngIf='cote.played ==  true'>
+          <ion-item>
+            <ion-icon color="boursouramaBlue2" name="ios-swap" item-left></ion-icon>
+            <div>
+              <p style="font-size: 16px; color: #23bbea;">{{element.title}}</p>
+            </div>
+            {{cote.title}}
+            <ion-badge color="boursouramaPink2" item-end>{{solde}}x{{cote.coef}}={{solde * cote.coef}}</ion-badge>
+          </ion-item>
+        </div>
+      </div>
+    </ion-list>
+  </div>
+
+  <ion-list>
+    <ion-item-sliding #item>
+      <ion-item-options side="left">
+        <button ion-button>Favorite</button>
+        <button ion-button color="danger">Share</button>
+      </ion-item-options>
+
+      <ion-item-options side="right">
+        <button ion-button>Unread</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+
+
+  <ion-item>
+    <ion-icon color="boursouramaBlue2" name="ios-cash" item-start></ion-icon>
+    <p style="font-size: 18px; color: #000000;">Wins</p>
+    <ion-badge color="boursouramaPink" item-end>{{wins}}</ion-badge>
+  </ion-item>
+
+
 
   <ion-row>
     <ion-col col-9>
-        <ion-range min="0" max="200" [(ngModel)]="solde" color="soundCloud" pin="true">
-          <ion-label range-left>0</ion-label>
-          <ion-label range-right>200</ion-label>
-        </ion-range>
+      <ion-range min="0" max="200" (ionChange)="getwiningBet()" [(ngModel)]="solde" color="boursouramaPink" pin="true">
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>
+          <ion-badge *ngIf="solde < player.silverCoins" color="boursouramaBlue2" item-end>{{solde}}</ion-badge>
+          <ion-badge *ngIf="solde==player.silverCoins" color="boursouramaPink" item-end>{{solde}}</ion-badge>
+        </ion-label>
+      </ion-range>
     </ion-col>
-    <ion-col col-3 color="soundCloud">
-      <button style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" ion-button full color="soundCloud">Go</button>
+    <ion-col col-3 color="boursouramaPink2">
+      <button style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" ion-button [disabled]="solde==0" full color="boursouramaPink2">Bet </button>
     </ion-col>
   </ion-row>
 

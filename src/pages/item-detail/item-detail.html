@@ -1,10 +1,10 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>
+    <ion-title color="boursouramaBlue2">
 
 
-
+        <p class="titles1">Feuilles</p>
 
 
     </ion-title>
@@ -15,25 +15,27 @@
     <ion-col col-1>
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
+      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30"
+        alt="" />
     </ion-col>
     <ion-col col-4 [@itemAnim]>
       {{ fixture.date |HM : fixture.status : fixture.result}}
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
+      <img [src]="fixture.urlawayTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30"
+        alt="" />
     </ion-col>
     <ion-col col-1>
-      <ion-fab top right edge>
-        <button ion-fab color="light">
-          <ion-icon name="ios-podium-outline">{{betCount}}</ion-icon>
+      <ion-fab top right edge >
+        <button ion-fab color="white" class="button-bg">
+          <ion-icon color="boursouramaBlue2" name="ios-football">{{betCount}}</ion-icon>
         </button>
-        <ion-fab-list side="left">
-          <button ion-fab>
-            <ion-icon name="ios-flash-outline"></ion-icon>
+        <ion-fab-list  side="left">
+          <button color="white" ion-fab>
+            <ion-icon color="boursouramaBlue2" name="ios-ribbon-outline"></ion-icon>
           </button>
-          <button ion-fab (click)="openBilanSubmit1P(bet3Sheets)">
-            <ion-icon name="ios-clipboard-outline"></ion-icon>
+          <button color="white" ion-fab (click)="openBilanSubmitOnline(bet3Sheets)">
+            <ion-icon color="boursouramaBlue2" name="md-wifi"></ion-icon>
           </button>
         </ion-fab-list>
       </ion-fab>

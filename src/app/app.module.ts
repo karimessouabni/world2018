@@ -4,6 +4,7 @@ import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage, IonicStorageModule } from '@ionic/storage';
 
+
 import { MyApp } from './app.component';
 
 import { AddReviewPage } from '../pages/add-review/add-review';
@@ -11,22 +12,20 @@ import { CardsPage } from '../pages/cards/cards';
 import { ContentPage } from '../pages/content/content';
 import { ItemCreatePage } from '../pages/item-create/item-create';
 import { ItemDetailPage } from '../pages/item-detail/item-detail';
-import { ListMasterPage } from '../pages/list-master/list-master';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { MenuPage } from '../pages/menu/menu';
 import { SearchPage } from '../pages/search/search';
-import { SettingsPage } from '../pages/settings/settings';
 import { SignupPage } from '../pages/signup/signup';
-import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { HomeReviewPage } from '../pages/home-review/home-review';
-import { SheetPage } from '../pages/sheet/sheet';
 import { FirstHtBetsPage } from '../pages/first-ht-bets/first-ht-bets';
 import { SecondHtBetsPage } from '../pages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
+
+import {  ProfilPage, ListMasterPage, MainPage,SettingsPage,SheetPage,TabsPage} from '../pages/pages';
 
 //TO REMOVE 
 import { Api } from '../providers/api';
@@ -132,6 +131,7 @@ const firebaseConfig = {
     DatePicker,
     FirstHtBetsPage,
     SecondHtBetsPage,
+    ProfilPage
   ],
   imports: [
     BrowserModule,
@@ -178,7 +178,8 @@ const firebaseConfig = {
     SheetPage,
     FirstHtBetsPage,
     SecondHtBetsPage,
-    BilanBetPage
+    BilanBetPage,
+    ProfilPage
   ],
   providers: [
     Api,

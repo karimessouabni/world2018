@@ -20,11 +20,14 @@ export class Cote {
     }
 
 
+    getSumToWin(mise: number): number {
+        return  (this.played)? this.coef * mise : 0;
+    }
 
     getResult(mise: number): number {
         if (this.played && this.result) {
             return this.coef * mise;
-        }else if (this.played && !this.result) {
+        } else if (this.played && !this.result) {
             return -this.coef * mise;
         }
         return 0;

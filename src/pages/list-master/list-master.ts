@@ -160,6 +160,11 @@ export class ListMasterPage {
   }
 
 
+  goToProfile() {
+  }
+
+  
+
   // getUrlImageTeam(idTeam: any) {
   //   this.competitionsProvider.getTeamsById(idTeam)
   //     .then(data => {

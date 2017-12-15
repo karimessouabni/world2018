@@ -12,6 +12,15 @@ export class Sheet {
     }
 
 
+
+    getSumToWin(mise: number): number {
+        var resultToReturn = 0;
+        this.elementsList.forEach(element => {
+            resultToReturn += element.getSumToWin(mise);
+        });
+        return resultToReturn;
+    }
+    
     getResult(mise: number): number {
         var resultToReturn = 0;
         this.elementsList.forEach(element => {

@@ -5,12 +5,20 @@ page-item-detail {
     background-size: cover;
     height: 250px;
   }
-
   .item-detail {
     width: 100%;
     background: white;
     position: absolute;
   }
+  .titles1 {
+    padding-right: 20%;
+  }
+  
+}
+
+
+.button-bg {
+  background: url(../../assets/parisFootIcons/badgeUnfound.ico);
 }
 
 super-tabs-toolbar {
@@ -21,21 +29,18 @@ super-tabs-toolbar {
   margin-top: 150px;
 }
 
-super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button.title-and-icon {
+super-tabs-toolbar>ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button.title-and-icon {
   height: 110px !important;
   padding-top: 60px !important;
   background: white;
+}
 
-
-  }
-  
-  super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button {
+super-tabs-toolbar>ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button {
   font-size: 10px;
-  }
+}
 
-  .toolbar-content toolbar-content-md{
-    margin-top: 100px;
-  }
+.toolbar-content toolbar-content-md {
+  margin-top: 100px;
+}
 
 
-  

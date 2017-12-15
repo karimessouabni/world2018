@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController} from 'ionic-angular';
 import { WelcomePage } from '../welcome/welcome'
-import { Sheet } from '../../models/Sheet';
-import { Cote } from '../../models/Cote';
-import { Element } from '../../models/Element';
-import { Bet3Sheets } from '../../models/bet3Sheets';
-import { Player } from '../../models/PlayerModel/Player';
+
+
+// Importing nedded Models 
+import { Cote, Element, Sheet, Bet3Sheets, Player } from '../../models/Models';
 import firebase from 'firebase/app';
+
 
 
 import { PlayerProvider } from '../../providers/player/player';
@@ -22,45 +22,39 @@ import { AngularFireAuth } from 'angularfire2/auth';
  */
 
 @IonicPage()
+
 @Component({
   selector: 'page-bilan-bet',
   templateUrl: 'bilan-bet.html',
 })
+
 export class BilanBetPage {
   fixture: any;
+  playinOnline: any=false;
   playedElementsIn3Sheets: Bet3Sheets;
   showStyle: false;
   selectedCote: Map<number, any> = new Map();
   bet3Sheets: Bet3Sheets;
-  solde: Number = 0;
+  solde: number = 0;
+  wins: number = 0;
   player: Player = new Player();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public playerProvider: PlayerProvider, afAuth: AngularFireAuth) {
-
-
-
     this.bet3Sheets = navParams.get('playedSheets');
+    this.fixture = navParams.get('fixture');
+    this.playinOnline = navParams.get('online');
     this.playedElementsIn3Sheets = new Bet3Sheets();
     this.fillListPlayedElement();
-
-    // this.playerProvider.getAuthPlayerInfs().subscribe(BDplayer => {
-    //       this.player.silverCoins = BDplayer[0].silverCoins;
-    //       console.log("testing" + BDplayer[0].email);
-    //     });
     playerProvider.getAuthPlayerInfs().subscribe(user => {
       if (user) {
         this.player = user[0];
-        console.log("testing FireStore BD" + user[0]);
       } else {
         // if the user is unloged redirection to welcom page 
         this.navCtrl.push(WelcomePage);
       }
-
     });
-    // this.player = playerProvider.playerConnected;
-    // console.log("Test in Bilan Bet " + this.player);
-  }
 
+  }
 
 
   public fillListPlayedElement() {
@@ -113,6 +107,12 @@ export class BilanBetPage {
     })
 
   }
+
+
+  getwiningBet() {
+   this.wins = this.playedElementsIn3Sheets.getSumToWin(this.solde);
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BilanBetPage');
