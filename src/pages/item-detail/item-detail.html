@@ -4,7 +4,7 @@
     <ion-title color="boursouramaBlue2">
 
 
-        <p class="titles1">Feuilles</p>
+      <p class="titles1">Feuilles</p>
 
 
     </ion-title>
@@ -26,16 +26,23 @@
         alt="" />
     </ion-col>
     <ion-col col-1>
-      <ion-fab top right edge >
+      <ion-fab top right edge>
         <button ion-fab color="white" class="button-bg">
-          <ion-icon color="boursouramaBlue2" name="ios-football">{{betCount}}</ion-icon>
+          <ion-avatar>
+            <img src="../../assets/parisFootIcons/soccer.png">
+            <p class="titles2"> {{betCount}}</p>
+          </ion-avatar>
         </button>
-        <ion-fab-list  side="left">
+        <ion-fab-list side="left">
           <button color="white" ion-fab>
-            <ion-icon color="boursouramaBlue2" name="ios-ribbon-outline"></ion-icon>
+            <ion-avatar>
+              <img src="../../assets/parisFootIcons/name.png">
+            </ion-avatar>
           </button>
           <button color="white" ion-fab (click)="openBilanSubmitOnline(bet3Sheets)">
-            <ion-icon color="boursouramaBlue2" name="md-wifi"></ion-icon>
+            <ion-avatar>
+              <img src="../../assets/parisFootIcons/friends.png">
+            </ion-avatar>
           </button>
         </ion-fab-list>
       </ion-fab>

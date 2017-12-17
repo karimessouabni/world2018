@@ -13,13 +13,34 @@ page-item-detail {
   .titles1 {
     padding-right: 20%;
   }
+
+  .titles2 {
+    color: #003883;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0px;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    bottom: 40px;
+    font-size: 22px;
+    padding-left: 24px;
+    padding-top: 7px;
+    // padding-bottom: 40px;
+  }
+
+  div {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
   
 }
 
 
-.button-bg {
-  background: url(../../assets/parisFootIcons/badgeUnfound.ico);
-}
+
 
 super-tabs-toolbar {
   z-index: 2;

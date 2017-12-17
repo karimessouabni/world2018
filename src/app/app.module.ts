@@ -25,12 +25,12 @@ import { SecondHtBetsPage } from '../pages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
-import {  ProfilPage, ListMasterPage, MainPage,SettingsPage,SheetPage,TabsPage} from '../pages/pages';
+import { AddFriendsPage, ProfilPage, ListMasterPage, MainPage, SettingsPage, SheetPage, TabsPage } from '../pages/pages';
 
 //TO REMOVE 
 import { Api } from '../providers/api';
 import { Items } from '../mocks/providers/items';
-import { Settings} from '../providers/providers';
+import { Settings } from '../providers/providers';
 import { ReviewsProvider } from '../providers/reviews/reviews';
 //TO REMOVE
 
@@ -56,7 +56,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 //Providers 
-import { CompetitionProvider, AuthProvider, Bet3SheetsProvider, PlayerProvider, TeamsProvider} from '../providers/providers';
+import { CompetitionProvider, AuthProvider, Bet3SheetsProvider, PlayerProvider, TeamsProvider } from '../providers/providers';
 
 // Pipes 
 import { KeysPipe } from '../pages/item-detail/compet.pipes'
@@ -131,7 +131,8 @@ const firebaseConfig = {
     DatePicker,
     FirstHtBetsPage,
     SecondHtBetsPage,
-    ProfilPage
+    ProfilPage,
+    AddFriendsPage
   ],
   imports: [
     BrowserModule,
@@ -179,7 +180,8 @@ const firebaseConfig = {
     FirstHtBetsPage,
     SecondHtBetsPage,
     BilanBetPage,
-    ProfilPage
+    ProfilPage,
+    AddFriendsPage
   ],
   providers: [
     Api,

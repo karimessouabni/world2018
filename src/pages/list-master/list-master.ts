@@ -138,6 +138,7 @@ export class ListMasterPage {
       to: new Date(2018, 9, 1),
       defaultScrollTo: new Date(),
       daysConfig: _daysConfig,
+      color:'dark',
       defaultDate: new Date()
     };
     let myCalendar = this.modalCtrl.create(CalendarModal, {

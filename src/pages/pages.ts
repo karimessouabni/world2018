@@ -5,6 +5,7 @@ import { TabsPage } from './tabs/tabs';
 import { SheetPage } from './sheet/sheet';
 import { TutorialPage } from './tutorial/tutorial';
 import { ProfilPage } from './profil/profil';
+import { AddFriendsPage } from './add-friends/add-friends';
 
 // The page the user lands on after opening the app and without a session
 export const FirstRunPage = TutorialPage;
@@ -20,5 +21,6 @@ export {
     SheetPage,
     ListMasterPage,
     TabsPage,
-    SearchPage
+    SearchPage,
+    AddFriendsPage
 }

@@ -18,6 +18,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { HomeReviewPage } from '../pages/home-review/home-review';
+import { AddFriendsPage } from '../pages/add-friends/add-friends';
 
 import { Settings } from '../providers/providers';
 

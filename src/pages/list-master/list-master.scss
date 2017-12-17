@@ -2,7 +2,18 @@ page-list-master {
   .titles1 {
     padding-right: 0%;
   }
+
+  .item-md p{
+    color: #009de0;
+  }
     
+  div {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
 }
 
 ion-col {

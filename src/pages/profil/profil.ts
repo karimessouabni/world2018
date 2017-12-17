@@ -4,7 +4,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 
-import { WelcomePage } from '../welcome/welcome'
+import { WelcomePage } from '../welcome/welcome';
+import { AddFriendsPage } from '../add-friends/add-friends';
 
 import { Player } from '../../models/Models';
 import { PlayerProvider } from '../../providers/player/player';
@@ -65,6 +66,10 @@ export class ProfilPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilPage');
+  }
+
+  openAddFriends(){
+    this.navCtrl.push(AddFriendsPage, {});
   }
 
 }

@@ -13,13 +13,13 @@
     <ion-col col-1>
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
+      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30" alt="" />
     </ion-col>
     <ion-col col-4>
       {{ fixture.date |HM : fixture.status : fixture.result}}
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlawayTeam" onError="this.src='assets/icon/favicon.ico';" style="width:30px; height:30" alt="" />
+      <img [src]="fixture.urlawayTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30" alt="" />
     </ion-col>
     <ion-row>
       <ion-col col-1>
@@ -52,9 +52,9 @@
           <ion-item>
             <ion-icon color="boursouramaBlue2" name="ios-swap" item-left></ion-icon>
             <div>
-              <p style="font-size: 16px; color: #23bbea;">{{element.title}}</p>
+              <p style="font-size: 16px; color: #23bbea; width: 140px;">{{element.title}}</p>
             </div>
-            {{cote.title}}
+            <p style="font-size: 16px; color: black; width: 140px;">{{cote.title}}</p>
             <ion-badge color="boursouramaPink2" item-end>{{solde}}x{{cote.coef}}={{solde * cote.coef}}</ion-badge>
           </ion-item>
         </div>
@@ -96,7 +96,18 @@
       </ion-range>
     </ion-col>
     <ion-col col-3 color="boursouramaPink2">
-      <button style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" ion-button [disabled]="solde==0" full color="boursouramaPink2">Bet </button>
+      <div *ngIf="solde==0">
+        <ion-avatar class="arrow" style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" item-end>
+          <img src="../../assets/parisFootIcons/arrowNext.png">
+        </ion-avatar>
+      </div>
+      <div *ngIf="solde>0">
+        <ion-avatar class="arrow" style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" item-end>
+          <img src="../../assets/parisFootIcons/arrowNextfilled.png">
+        </ion-avatar>
+      </div>
+
+      <!-- <button style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" ion-button [disabled]="solde==0" full color="boursouramaPink2">Bet </button> -->
     </ion-col>
   </ion-row>
 

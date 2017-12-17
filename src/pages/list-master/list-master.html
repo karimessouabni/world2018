@@ -7,9 +7,15 @@
   </ion-navbar>
 
   <ion-item>
-    <button ion-button color="boursouramaPink2" item-start (click)="openCalendar()">
-      <ion-icon name="ios-calendar" color="white"></ion-icon>
-    </button> {{selectedDate}}
+
+      <p item-start class="titles1">{{selectedDate}}</p>
+
+    <!-- <button item-start (click)="openCalendar()"> -->
+      <ion-avatar (click)="openCalendar()" item-end>
+        <img src="../../assets/parisFootIcons/calendar.png">
+      </ion-avatar>
+    <!-- </button>  -->
+    
 
 
   </ion-item>

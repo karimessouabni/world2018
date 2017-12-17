@@ -8,4 +8,21 @@ page-bilan-bet {
     .titles1{
         padding-right: 20%;
     }
+
+    .arrow img{
+        padding-top: 20px;
+        max-height: 80px;
+    }
+
+    div {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 300;
+        text-align: left;
+        letter-spacing: 0.5px;
+        font-size: 1.1rem;
+      }
+
+      .no-padding{
+        padding: 0px 0px 0px 0px !important;
+      }
 }
