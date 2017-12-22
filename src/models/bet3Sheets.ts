@@ -6,9 +6,9 @@ export class Bet3Sheets extends Bet {
 
 
 
-    sheetAllMatch: Sheet;
-    sheet145: Sheet;
-    sheet245: Sheet;
+    sheetAllMatch = {} as Sheet;
+    sheet145 = {} as Sheet;
+    sheet245 = {} as Sheet;
     betCount: number = 0;
 
 

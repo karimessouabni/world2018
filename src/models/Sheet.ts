@@ -3,8 +3,7 @@ import { Element } from './Element';
 export class Sheet {
 
     elementsList: Array<Element> = new Array<Element>();
-    player: any = null;
-
+    result: number = 0  ;
 
 
     constructor(public myElements: Array<Element>) {
@@ -26,6 +25,7 @@ export class Sheet {
         this.elementsList.forEach(element => {
             resultToReturn += element.getResult(mise);
         });
+        this.result = resultToReturn;
         return resultToReturn;
     }
 

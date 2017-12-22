@@ -2,15 +2,22 @@ import { Bet3Sheets } from './bet3Sheets';
 import { Player } from './PlayerModel/Player';
 import { Bet } from './Bet';
 
+export enum GameType {
+    strangerVsStranger,
+    FriendVsFriend
+}
 export abstract class Game {
 
 
-    player1: Player;
-    sheetBet1: Bet;
+    idFixture : String;
+    player1Uid: String;
+    sheetBet1: Bet3Sheets;
+    
 
-    constructor(player1: Player, sheetBet1: Bet) {
-        this.player1 = player1;
+    constructor(player1: String, sheetBet1: Bet3Sheets, idFixture: String) {
+        this.player1Uid = player1;
         this.sheetBet1 = sheetBet1;
+        this.idFixture  = idFixture;
     }
 
 

@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
 import { WelcomePage } from '../welcome/welcome'
 
 
 // Importing nedded Models 
-import { Cote, Element, Sheet, Bet3Sheets, Player } from '../../models/Models';
-import firebase from 'firebase/app';
+import { Cote, Element, Sheet, Bet3Sheets, Player, GameFvsF } from '../../models/Models';
+import * as firebase from 'firebase';
 
 
 
-import { PlayerProvider } from '../../providers/player/player';
+import { PlayerProvider, GameProvider } from '../../providers/providers';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { GameType } from '../../models/Game';
 
 
 /**
@@ -30,16 +31,19 @@ import { AngularFireAuth } from 'angularfire2/auth';
 
 export class BilanBetPage {
   fixture: any;
-  playinOnline: any=false;
-  playedElementsIn3Sheets: Bet3Sheets;
+  playinOnline: any = false;
+  playedElementsIn3Sheets = {} as Bet3Sheets;
   showStyle: false;
   selectedCote: Map<number, any> = new Map();
-  bet3Sheets: Bet3Sheets;
+  bet3Sheets = {} as Bet3Sheets;
   solde: number = 0;
   wins: number = 0;
   player: Player = new Player();
+  gameToFS = {} as GameFvsF;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public playerProvider: PlayerProvider, afAuth: AngularFireAuth) {
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public playerProvider: PlayerProvider, public gameProvider: GameProvider, afAuth: AngularFireAuth, public loadingCtrl: LoadingController) {
     this.bet3Sheets = navParams.get('playedSheets');
     this.fixture = navParams.get('fixture');
     this.playinOnline = navParams.get('online');
@@ -58,6 +62,7 @@ export class BilanBetPage {
 
 
   public fillListPlayedElement() {
+    this.playedElementsIn3Sheets.playerUid = this.player.uid;
     for (var i = 0; i < this.bet3Sheets.sheetAllMatch.elementsList.length; i++) {
       if (i == 0 && this.bet3Sheets.sheetAllMatch.elementsList[i].played == true) {
         this.playedElementsIn3Sheets.sheetAllMatch.elementsList.push(this.bet3Sheets.sheetAllMatch.elementsList[i]);
@@ -96,21 +101,59 @@ export class BilanBetPage {
     }
 
   }
+  presentLoadingDefault() {
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+  
+    loading.present();
+  
+    setTimeout(() => {
+      loading.dismiss();
+    }, 5000);
+  }
 
+  presentLoadingCustom() {
 
-  getCurrentUserAndGo() {
+    let loading = this.loadingCtrl.create({
+      spinner: 'hide',
+      content: ` cHARGING 
+        <div class="custom-spinner-container">
+          <div class="custom-spinner-box"></div>
+        </div>`,
+      duration: 5000
+    });
 
-    var uid = firebase.auth().currentUser.uid;
-    firebase.database().ref().child('accounts').child(uid).set({
-      age: 22,
-      sexe: 'M'
-    })
+    loading.onDidDismiss(() => {
+      console.log('Dismissed loading');
+    });
 
+    loading.present();
   }
 
 
+  playBetWithStranger() {
+
+    this.gameFSFactory();
+    this.gameProvider.checkPendingGames(this.gameToFS);
+    this.presentLoadingDefault();
+    // alert('Game was saved in.');
+  }
+
+
+
+  gameFSFactory() {
+    this.gameToFS.player1Uid = this.player.uid;
+    this.gameToFS.idFixture = this.fixture._id;
+    this.gameToFS.sheetBet1 = this.playedElementsIn3Sheets;
+    this.gameToFS.sheetBet1.playerUid = this.player.uid;
+    this.gameToFS.typeGame = GameType.strangerVsStranger;
+  }
+
+
+
   getwiningBet() {
-   this.wins = this.playedElementsIn3Sheets.getSumToWin(this.solde);
+    this.wins = this.playedElementsIn3Sheets.getSumToWin(this.solde);
   }
 
 

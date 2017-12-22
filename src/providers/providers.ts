@@ -2,6 +2,7 @@ import { AuthProvider } from './auth/auth';
 import { Bet3SheetsProvider } from './bet3-sheets/bet3-sheets';
 import { CompetitionProvider } from './competition/competition';
 import { PlayerProvider } from './player/player';
+import { GameProvider } from './game/game';
 import { TeamsProvider } from './teams/teams';
 import { Api } from './api';
 import { Settings } from './settings';
@@ -15,5 +16,6 @@ export {
     TeamsProvider,
     Api,
     Settings,
-    Items
+    Items,
+    GameProvider
 };

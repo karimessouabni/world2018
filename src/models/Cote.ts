@@ -1,12 +1,12 @@
 export class Cote {
 
-    title: any;
+    title: string;
     coef: number;
     result: boolean;
     played: boolean;
 
 
-    constructor(public myTitle: any, myCoef: number, myResult: boolean, myPlayed: boolean) {
+    constructor(public myTitle: string, myCoef: number, myResult: boolean, myPlayed: boolean) {
         this.title = myTitle;
         this.coef = myCoef;
         this.result = myResult;

@@ -2,7 +2,7 @@ import { Cote } from './Cote';
 
 export class Element {
 
-    cotesList: Cote[];
+    cotesList = {} as Cote[];
     result: number;
     title: any;
     played: boolean = false;
@@ -11,6 +11,7 @@ export class Element {
     constructor(public myCotesList: Cote[], title) {
         this.cotesList = myCotesList;
         this.title = title;
+        this.result = 0 ;
     }
 
 

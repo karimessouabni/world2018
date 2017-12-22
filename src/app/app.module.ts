@@ -56,7 +56,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 //Providers 
-import { CompetitionProvider, AuthProvider, Bet3SheetsProvider, PlayerProvider, TeamsProvider } from '../providers/providers';
+import { CompetitionProvider, AuthProvider, Bet3SheetsProvider, PlayerProvider, TeamsProvider, GameProvider } from '../providers/providers';
 
 // Pipes 
 import { KeysPipe } from '../pages/item-detail/compet.pipes'
@@ -202,7 +202,8 @@ const firebaseConfig = {
     AuthProvider,
     Facebook,
     Bet3SheetsProvider,
-    PlayerProvider
+    PlayerProvider,
+    GameProvider
   ]
 })
 export class AppModule { }

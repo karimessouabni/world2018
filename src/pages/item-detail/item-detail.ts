@@ -81,7 +81,7 @@ export class ItemDetailPage {
     this.createElementExactScore245();
     this.createElementDiffNumberGoals245()
 
-    this.betCount = this.bet3Sheets.sheetAllMatch.player;
+    // this.betCount = this.bet3Sheets.sheetAllMatch.player;
 
     this.events.subscribe('functionCall:tabSelected', eventData => {
       this.betCount = eventData.betCount;

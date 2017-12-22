@@ -1,25 +1,27 @@
 <ion-header>
   <ion-navbar>
-    <!-- <ion-title *ngif="playinOnline==true"> -->
+
     <ion-title>
-      <p class="titles1">Online Mode</p>
+      <p *ngIf="playinOnline==true;else offlineMode" class="titles1">Online Mode</p>
+      <ng-template #offlineMode>
+        <p class="titles1">Offline Mode</p>
+      </ng-template>
     </ion-title>
-    <!-- <ion-title *ngif="playinOnline==false"> -->
-    <!-- Offline Mode -->
-    <!-- </ion-title> -->
   </ion-navbar>
 
   <ion-row>
     <ion-col col-1>
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30" alt="" />
+      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30"
+        alt="" />
     </ion-col>
     <ion-col col-4>
       {{ fixture.date |HM : fixture.status : fixture.result}}
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlawayTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30" alt="" />
+      <img [src]="fixture.urlawayTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30"
+        alt="" />
     </ion-col>
     <ion-row>
       <ion-col col-1>
@@ -97,12 +99,12 @@
     </ion-col>
     <ion-col col-3 color="boursouramaPink2">
       <div *ngIf="solde==0">
-        <ion-avatar class="arrow" style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" item-end>
+        <ion-avatar class="arrow" style="transition: none;top: 25px;" item-end>
           <img src="../../assets/parisFootIcons/arrowNext.png">
         </ion-avatar>
       </div>
       <div *ngIf="solde>0">
-        <ion-avatar class="arrow" style="transition: none;top: 25px;" (click)="getCurrentUserAndGo()" item-end>
+        <ion-avatar class="arrow" style="transition: none;top: 25px;" (click)="playBetWithStranger()" item-end>
           <img src="../../assets/parisFootIcons/arrowNextfilled.png">
         </ion-avatar>
       </div>
