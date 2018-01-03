@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { SignupPage } from '../signup/signup';
 import firebase from 'firebase';
+import { Facebook } from '@ionic-native/facebook'
 
 
 /**
@@ -19,7 +20,7 @@ import firebase from 'firebase';
 export class WelcomePage {
   public userProfile:any = null;
 
-  constructor(public navCtrl: NavController) { 
+  constructor(public navCtrl: NavController, public facebook: Facebook) { 
 
   }
 
@@ -27,21 +28,35 @@ export class WelcomePage {
     this.navCtrl.push(LoginPage, {});
   }
 
-  async loginFB() {
-    console.log("lklkl");
-    let provider = new firebase.auth.FacebookAuthProvider();
-    firebase.auth().signInWithRedirect(provider).then( ()=>{
-      firebase.auth().getRedirectResult().then((result) =>{
-        alert(JSON.stringify(result));
-        console.log(result);
-      }).catch(function(error){
-        alert(JSON.stringify(error));
-        console.log(error);
-      })
-    }
-      
-    )
+
+  facebookLogin(): Promise<any> {
+    return this.facebook.login(['email'])
+      .then( response => {
+        const facebookCredential = firebase.auth.FacebookAuthProvider
+          .credential(response.authResponse.accessToken);
+  
+        firebase.auth().signInWithCredential(facebookCredential)
+          .then( success => { 
+            console.log("Firebase success: " + JSON.stringify(success)); 
+          });
+      }).catch((error) => { console.log(error) });
   }
+
+  // async loginFB() {
+  //   console.log("lklkl");
+  //   let provider = new firebase.auth.FacebookAuthProvider();
+  //   firebase.auth().signInWithRedirect(provider).then( ()=>{
+  //     firebase.auth().getRedirectResult().then((result) =>{
+  //       alert(JSON.stringify(result));
+  //       console.log(result);
+  //     }).catch(function(error){
+  //       alert(JSON.stringify(error));
+  //       console.log(error);
+  //     })
+  //   }
+      
+  //   )
+  // }
 
   signup() {
     this.navCtrl.push(SignupPage);

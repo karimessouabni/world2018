@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, LoadingController } from 'ionic-angular';
-import { WelcomePage } from '../welcome/welcome'
+import { IonicPage, NavController, NavParams, ModalController, LoadingController, ToastController } from 'ionic-angular';
+import { WelcomePage, Bilan2PlayersPage } from '../pages'
 
 
 // Importing nedded Models 
@@ -9,10 +9,11 @@ import * as firebase from 'firebase';
 
 
 
-import { PlayerProvider, GameProvider } from '../../providers/providers';
+import { PlayerProvider, GameProvider, RetourPendingGame } from '../../providers/providers';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { GameType } from '../../models/Game';
+
 
 
 /**
@@ -43,7 +44,7 @@ export class BilanBetPage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public playerProvider: PlayerProvider, public gameProvider: GameProvider, afAuth: AngularFireAuth, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public playerProvider: PlayerProvider, public gameProvider: GameProvider, afAuth: AngularFireAuth, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {
     this.bet3Sheets = navParams.get('playedSheets');
     this.fixture = navParams.get('fixture');
     this.playinOnline = navParams.get('online');
@@ -101,46 +102,37 @@ export class BilanBetPage {
     }
 
   }
-  presentLoadingDefault() {
-    let loading = this.loadingCtrl.create({
-      content: 'Please wait...'
-    });
-  
-    loading.present();
-  
-    setTimeout(() => {
-      loading.dismiss();
-    }, 5000);
-  }
 
-  presentLoadingCustom() {
 
-    let loading = this.loadingCtrl.create({
-      spinner: 'hide',
-      content: ` cHARGING 
-        <div class="custom-spinner-container">
-          <div class="custom-spinner-box"></div>
-        </div>`,
-      duration: 5000
-    });
-
-    loading.onDidDismiss(() => {
-      console.log('Dismissed loading');
-    });
-
-    loading.present();
-  }
 
 
   playBetWithStranger() {
-
     this.gameFSFactory();
-    this.gameProvider.checkPendingGames(this.gameToFS);
-    this.presentLoadingDefault();
-    // alert('Game was saved in.');
+    this.gameProvider.checkPendingGames(this.gameToFS).then(returnValue => {
+      if (returnValue == RetourPendingGame.BetFound2Player || returnValue == RetourPendingGame.BetPendedWithOnePlayer) {
+        this.presentLoadingDefault();
+        this.navCtrl.push(Bilan2PlayersPage, {
+          fixture: this.fixture
+        });
+      }
+      else if (returnValue == RetourPendingGame.BetAlreadyPlayed) {
+        this.CantPlayTwiceToast();
+      }
+    }
+    );
+
+
   }
 
-
+  CantPlayTwiceToast() {
+    let toast = this.toastCtrl.create({
+      message: 'You cannot play this twice !',
+      duration: 2000,
+      position: 'top',
+      cssClass: "toastCantPlayTwice"
+    });
+    toast.present();
+  }
 
   gameFSFactory() {
     this.gameToFS.player1Uid = this.player.uid;
@@ -154,6 +146,19 @@ export class BilanBetPage {
 
   getwiningBet() {
     this.wins = this.playedElementsIn3Sheets.getSumToWin(this.solde);
+  }
+
+
+  presentLoadingDefault() {
+    let loading = this.loadingCtrl.create({
+      content: 'Seeking for opponent...'
+    });
+
+    loading.present();
+
+    setTimeout(() => {
+      loading.dismiss();
+    }, 3000);
   }
 
 

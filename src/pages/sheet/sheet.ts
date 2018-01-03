@@ -21,7 +21,7 @@ import { Element } from '../../models/Element';
   templateUrl: 'sheet.html',
 })
 
-export class SheetPage  {
+export class SheetPage  { 
   fixture: any;
   sheet: Sheet;
   showStyle: false;

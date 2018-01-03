@@ -85,8 +85,8 @@
             "ionic-plugin-keyboard": {},
             "cordova-plugin-network-information": {},
             "cordova-plugin-facebook4": {
-                "APP_ID": "119773905243056",
-                "APP_NAME": "fbloginparisfoot"
+                "APP_ID": "314009475761248",
+                "APP_NAME": "ParisFoot"
             },
             "cordova-plugin-camera": {
                 "CAMERA_USAGE_DESCRIPTION": " ",

@@ -4,20 +4,20 @@
   text-transform: lowercase;
   background-color: rgb(255, 255, 255);
   color: rgb(75, 74, 74);
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  transition: all 2s ease;
+  // -webkit-transition: all 2s ease;
+  // -moz-transition: all 2s ease;
+  // -o-transition: all 2s ease;
+  // -ms-transition: all 2s ease;
+  // transition: all 2s ease;
 }
 
 .btn-1N2 p{
-float: right;
--webkit-transition: all 2s ease;
--moz-transition: all 2s ease;
--o-transition: all 2s ease;
--ms-transition: all 2s ease;
-transition: all 2s ease;
+// float: right;
+// -webkit-transition: all 2s ease;
+// -moz-transition: all 2s ease;
+// -o-transition: all 2s ease;
+// -ms-transition: all 2s ease;
+// transition: all 2s ease;
 }
 
 
@@ -25,13 +25,12 @@ transition: all 2s ease;
     padding: 0px;
 }
 .selectedElement {
-  // background-color: #45CEE0;
+  background-image: linear-gradient(to bottom, #C02CFF 20%, #9425c4 100%);
   color: white;
-  // background-color: rgb(253, 218, 20);
-  background-color: #d20073;
-  background:  filter-gradient(#c7920b, #cc7b00, horizontal);
 
 }
+
+
 .selectedElement p {
   color : #23bbea;
 }

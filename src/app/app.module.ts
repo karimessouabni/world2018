@@ -25,7 +25,7 @@ import { SecondHtBetsPage } from '../pages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
-import { AddFriendsPage, ProfilPage, ListMasterPage, MainPage, SettingsPage, SheetPage, TabsPage } from '../pages/pages';
+import { AddFriendsPage, ProfilPage, ListMasterPage, MainPage, SettingsPage, SheetPage, TabsPage, Bilan2PlayersPage } from '../pages/pages';
 
 //TO REMOVE 
 import { Api } from '../providers/api';
@@ -132,7 +132,8 @@ const firebaseConfig = {
     FirstHtBetsPage,
     SecondHtBetsPage,
     ProfilPage,
-    AddFriendsPage
+    AddFriendsPage,
+    Bilan2PlayersPage
   ],
   imports: [
     BrowserModule,
@@ -181,7 +182,8 @@ const firebaseConfig = {
     SecondHtBetsPage,
     BilanBetPage,
     ProfilPage,
-    AddFriendsPage
+    AddFriendsPage,
+    Bilan2PlayersPage
   ],
   providers: [
     Api,
