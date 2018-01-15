@@ -6,6 +6,17 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
 
 
 import { MyApp } from './app.component';
+import * as Raven from 'raven-js';
+Raven
+  .config('https://2bdcb53332114dc0babfaf648d280025@sentry.io/268959')
+  .install();
+
+export class RavenErrorHandler implements ErrorHandler {
+  handleError(err: any): void {
+    Raven.captureException(err.originalError || err);
+  }
+}
+
 
 import { AddReviewPage } from '../pages/add-review/add-review';
 import { CardsPage } from '../pages/cards/cards';
@@ -199,6 +210,7 @@ const firebaseConfig = {
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    { provide: ErrorHandler, useClass: RavenErrorHandler },
     CompetitionProvider,
     TeamsProvider,
     AuthProvider,

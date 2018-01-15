@@ -9,7 +9,9 @@
         "build": "ionic-app-scripts build",
         "lint": "ionic-app-scripts lint",
         "ionic:build": "ionic-app-scripts build",
-        "ionic:serve": "ionic-app-scripts serve"
+        "ionic:serve": "ionic-app-scripts serve",
+        "test": "mocha",
+        "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
     },
     "dependencies": {
         "@angular/animations": "4.1.3",
@@ -56,10 +58,13 @@
         "ionic2-date-picker": "^1.0.9",
         "ionic2-super-tabs": "4.0.0",
         "ionicons": "3.0.0",
+        "mocha": "^4.1.0",
         "moment": "^2.20.0",
         "ng-lazyload-image": "^3.3.6",
         "promise-polyfill": "6.0.2",
+        "raven-js": "^3.21.0",
         "rxjs": "5.4.0",
+        "sonar-scanner": "^3.0.3",
         "sw-toolbox": "3.6.0",
         "zone.js": "0.8.12"
     },
