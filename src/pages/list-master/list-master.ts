@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, ToastController } from 'ionic-angular';
 import { ItemCreatePage } from '../item-create/item-create';
 import { ItemDetailPage } from '../item-detail/item-detail';
 import { Items } from '../../providers/providers';
@@ -20,7 +20,7 @@ export class ListMasterPage {
   FixtureByCompet: { [key: string]: any; } = {};
   allCompetUpdated = [];
 
-  constructor(public navCtrl: NavController, public items: Items, public competitionsProvider: CompetitionProvider, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Items, public competitionsProvider: CompetitionProvider, public modalCtrl: ModalController, public toastCtrl: ToastController) {
     this.updateSelectedDate();
     this.updateListFixtureAndCompets();
   }
@@ -41,14 +41,14 @@ export class ListMasterPage {
                     fixture['urlhomeTeam'] = dataTeam['crestUrl'];
 
                     this.competitionsProvider.getTeamsById(fixture["idAwayTeam"])
-                    .then(dataTeam2 => {
-                      fixture['urlawayTeam'] = dataTeam2['crestUrl'];
-  
-                    });
+                      .then(dataTeam2 => {
+                        fixture['urlawayTeam'] = dataTeam2['crestUrl'];
+
+                      });
 
                   });
 
-                
+
               });
               this.FixtureByCompet[compet.league] = dataFixtures;
               if (this.FixtureByCompet[compet.league].length > 0) {
@@ -81,7 +81,6 @@ export class ListMasterPage {
     if ((String(month)).length == 1)
       month = '0' + month;
     this.selectedDate = dateNonFormated.getFullYear() + '-' + month + '-' + day;
-
   }
 
   /**
@@ -116,9 +115,18 @@ export class ListMasterPage {
    */
 
   openCompet(fixture: any) {
-    this.navCtrl.push(ItemDetailPage, {
-      fixture: fixture
-    });
+    if (fixture.status == "SCHEDULED" ||  fixture.status == "TIMED") {
+      this.navCtrl.push(ItemDetailPage, {
+        fixture: fixture
+      });
+    } else {
+      let toast = this.toastCtrl.create({
+        message: "Match unavailable !",
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
+    }
   }
 
   openCalendar() {
@@ -138,7 +146,7 @@ export class ListMasterPage {
       to: new Date(2018, 9, 1),
       defaultScrollTo: new Date(),
       daysConfig: _daysConfig,
-      color:'dark',
+      color: 'dark',
       defaultDate: new Date()
     };
     let myCalendar = this.modalCtrl.create(CalendarModal, {
@@ -164,7 +172,7 @@ export class ListMasterPage {
   goToProfile() {
   }
 
-  
+
 
   // getUrlImageTeam(idTeam: any) {
   //   this.competitionsProvider.getTeamsById(idTeam)
