@@ -1,5 +1,5 @@
 import { Component, state, keyframes } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Items } from '../../providers/providers';
 import { CompetitionProvider } from '../../providers/competition/competition';
 import { TeamsProvider } from '../../providers/teams/teams';
@@ -17,7 +17,7 @@ import { Cote } from '../../models/Cote';
 import { DatePipes } from '../../pipes/date-pipes/date-pipes';
 import { TeamNamePipe } from '../../pipes/team-name/team-name';
 import { Events } from 'ionic-angular';
-import { trigger, style, transition, animate, group }from '@angular/animations';
+import { trigger, style, transition, animate, group } from '@angular/animations';
 
 
 @Component({
@@ -26,7 +26,7 @@ import { trigger, style, transition, animate, group }from '@angular/animations';
   animations: [
     trigger('itemAnim', [
       transition(':enter', [
-        style({transform: 'translateX(-50%)'}),
+        style({ transform: 'translateX(-50%)' }),
         animate(150)
       ]),
       transition(':leave', [
@@ -41,7 +41,7 @@ import { trigger, style, transition, animate, group }from '@angular/animations';
       ])
     ])
   ]
-  })
+})
 
 export class ItemDetailPage {
   fixture: any;
@@ -56,7 +56,8 @@ export class ItemDetailPage {
   bet3Sheets: Bet3Sheets;
   betCount: number;
   pageClassement
-  constructor(private pipeTeam: TeamNamePipe, public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items, public events: Events) {
+
+  constructor(private pipeTeam: TeamNamePipe, public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items, public events: Events, public toastCtrl: ToastController) {
 
     this.fixture = navParams.get('fixture');
     this.competitionsProvider.getCompetitionLastMatches(this.fixture.idCompet)
@@ -90,13 +91,22 @@ export class ItemDetailPage {
 
   }
 
-
   openBilanSubmitOnline(mySheetsPlayed: Bet3Sheets) {
-    this.navCtrl.push(BilanBetPage, {
-      online:true,
-      playedSheets: mySheetsPlayed,
-      fixture:this.fixture
-    });
+    if (mySheetsPlayed.betCount == 0) {
+      let toast = this.toastCtrl.create({
+        message: "Choose at least one element !",
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
+    }
+    else {
+      this.navCtrl.push(BilanBetPage, {
+        online: true,
+        playedSheets: mySheetsPlayed,
+        fixture: this.fixture
+      });
+    }
   }
 
   createElement12NAllMatch() {
