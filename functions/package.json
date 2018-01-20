@@ -10,8 +10,13 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "es6-promise-pool": "^2.5.0",
     "firebase-admin": "~5.4.2",
-    "firebase-functions": "^0.7.1"
+    "firebase-functions": "^0.7.1",
+    "nodemailer": "^4.4.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "secure-compare": "^3.0.1"
   },
   "devDependencies": {
     "tslint": "^5.8.0",
