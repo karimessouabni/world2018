@@ -64,39 +64,39 @@ export class BilanBetPage {
 
   public fillListPlayedElement() {
     this.playedElementsIn3Sheets.playerUid = this.player.uid;
-    for (var i = 0; i < this.bet3Sheets.sheetAllMatch.elementsList.length; i++) {
+    for (let i = 0; i < this.bet3Sheets.sheetAllMatch.elementsList.length; i++) {
       if (i == 0 && this.bet3Sheets.sheetAllMatch.elementsList[i].played == true) {
         this.playedElementsIn3Sheets.sheetAllMatch.elementsList.push(this.bet3Sheets.sheetAllMatch.elementsList[i]);
         continue;
       }
       if (this.bet3Sheets.sheetAllMatch.elementsList[i].played == true) {
-        var coteTab = new Array<Cote>();
+        let coteTab = new Array<Cote>();
         coteTab.push(this.bet3Sheets.sheetAllMatch.elementsList[i].getPlayedCote());
-        var el = new Element(coteTab, this.bet3Sheets.sheetAllMatch.elementsList[i].title);
+        let el = new Element(coteTab, this.bet3Sheets.sheetAllMatch.elementsList[i].title);
         this.playedElementsIn3Sheets.sheetAllMatch.elementsList.push(el);
       }
     }
-    for (var i = 0; i < this.bet3Sheets.sheet145.elementsList.length; i++) {
+    for (let i = 0; i < this.bet3Sheets.sheet145.elementsList.length; i++) {
       if (i == 0 && this.bet3Sheets.sheet145.elementsList[i].played == true) {
         this.playedElementsIn3Sheets.sheet145.elementsList.push(this.bet3Sheets.sheet145.elementsList[i]);
         continue;
       }
       if (this.bet3Sheets.sheet145.elementsList[i].played == true) {
-        var coteTab = new Array<Cote>();
+        let coteTab = new Array<Cote>();
         coteTab.push(this.bet3Sheets.sheet145.elementsList[i].getPlayedCote());
-        var el = new Element(coteTab, this.bet3Sheets.sheet145.elementsList[i].title);
+        let el = new Element(coteTab, this.bet3Sheets.sheet145.elementsList[i].title);
         this.playedElementsIn3Sheets.sheet145.elementsList.push(el);
       }
     }
-    for (var i = 0; i < this.bet3Sheets.sheet245.elementsList.length; i++) {
+    for (let i = 0; i < this.bet3Sheets.sheet245.elementsList.length; i++) {
       if (i == 0 && this.bet3Sheets.sheet245.elementsList[i].played == true) {
         this.playedElementsIn3Sheets.sheet245.elementsList.push(this.bet3Sheets.sheet245.elementsList[i]);
         continue;
       }
       if (this.bet3Sheets.sheet245.elementsList[i].played == true) {
-        var coteTab = new Array<Cote>();
+        let coteTab = new Array<Cote>();
         coteTab.push(this.bet3Sheets.sheet245.elementsList[i].getPlayedCote());
-        var el = new Element(coteTab, this.bet3Sheets.sheet245.elementsList[i].title);
+        let el = new Element(coteTab, this.bet3Sheets.sheet245.elementsList[i].title);
         this.playedElementsIn3Sheets.sheet245.elementsList.push(el);
       }
     }
@@ -120,7 +120,8 @@ export class BilanBetPage {
       if (returnValue == RetourPendingGame.BetFound2Player || returnValue == RetourPendingGame.BetPendedWithOnePlayer) {
         this.presentLoadingDefault();
         this.navCtrl.push(Bilan2PlayersPage, {
-          fixture: this.fixture
+          fixture: this.fixture,
+          retourPendingGame: returnValue
         });
       }
       else if (returnValue == RetourPendingGame.BetAlreadyPlayed) {

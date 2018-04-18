@@ -204,7 +204,7 @@ app.delete('/api/reviews/:review_id', function (req, res) {
 app.post('/api/updateAllCompetitionsToMongo', function (req, res) {
   Competitions.remove({}, function (err) {
     if (err) {
-      console.log("Removing all Competition documents failed"+err);
+      console.log("Removing all Competition documents failed" + err);
     } else {
       axios.get('http://api.football-data.org/v1/competitions/?season=2017&X-Auth-Token=73d809746bd849fcb67e49ace137252a')
         .then(response => {
@@ -233,40 +233,47 @@ app.post('/api/updateAllCompetitionsToMongo', function (req, res) {
 
 // Pull A competition fixtures from api modify  the JSONS and push em into the mongo db
 app.post('/api/updateACompetitionFixturesToMongo', function (req, res) {
-  console.log("data of 2017 Competitions's Fixtures pulled from tha FootBall API and pushed to Mongo ");
-  axios.get('http://api.football-data.org/v1/competitions/?season=2017', {
-      headers: {
-        'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-      }
-    }).then(responseCompet => {
-      for (i = 0; i < responseCompet.data.length - 1; i++) { //-1 cuz 466 compet's fixtures are restricted from API 
-        axios.get('http://api.football-data.org/v1/competitions/' + responseCompet.data[i].id + '/fixtures', {
+
+    Fixtures.remove({}, function (err) {
+    if (err) {
+      console.log("Removing all Fixtures documents failed" + err);
+    } else {
+      console.log("data of 2017 Competitions's Fixtures pulled from tha FootBall API and pushed to Mongo ");
+      axios.get('http://api.football-data.org/v1/competitions/?season=2017', {
           headers: {
             'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
           }
-        }).then(function (results) {
-          for (j = 0; j < results.data.fixtures.length; j++) {
-            var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
-            var indexIdAwayTeam = results.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
-
-            results.data.fixtures[j].idHomeTeam = results.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, results.data.fixtures[j]._links.homeTeam.href.length);
-            results.data.fixtures[j].idAwayTeam = results.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, results.data.fixtures[j]._links.awayTeam.href.length);
-            Fixtures.create(results.data.fixtures[j], function (err, fixture) {
-              if (err) {
-                res.send(err);
-                console.log(err);
+        }).then(responseCompet => {
+          for (i = 0; i < responseCompet.data.length - 1; i++) { //-1 cuz 466 compet's fixtures are restricted from API 
+            axios.get('http://api.football-data.org/v1/competitions/' + responseCompet.data[i].id + '/fixtures', {
+              headers: {
+                'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
               }
+            }).then(function (results) {
+              for (j = 0; j < results.data.fixtures.length; j++) {
+                var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
+                var indexIdAwayTeam = results.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
+
+                results.data.fixtures[j].idHomeTeam = results.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, results.data.fixtures[j]._links.homeTeam.href.length);
+                results.data.fixtures[j].idAwayTeam = results.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, results.data.fixtures[j]._links.awayTeam.href.length);
+                Fixtures.create(results.data.fixtures[j], function (err, fixture) {
+                  if (err) {
+                    res.send(err);
+                    console.log(err);
+                  }
+                });
+              }
+            }).catch(error => {
+              console.log(error);
             });
           }
-        }).catch(error => {
+          console.log("YES");
+        })
+        .catch(error => {
           console.log(error);
         });
-      }
-      console.log("YES");
-    })
-    .catch(error => {
-      console.log(error);
-    });
+    }
+  });
 });
 
 

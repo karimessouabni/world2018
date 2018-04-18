@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { WelcomePage} from '../pages'
+import { WelcomePage } from '../pages'
 
 import { Player } from '../../models/Models';
+import { PlayerProvider, RetourPendingGame } from '../../providers/providers';
 
-import { PlayerProvider } from '../../providers/providers';
 /**
  * Generated class for the Bilan2PlayersPage page.
  *
@@ -19,10 +19,12 @@ import { PlayerProvider } from '../../providers/providers';
 })
 export class Bilan2PlayersPage {
   fixture: any;
+  retourPendingGame: RetourPendingGame;
   player: Player = new Player();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public playerProvider: PlayerProvider) {
     this.fixture = navParams.get('fixture');
+    this.retourPendingGame = navParams.get('retourPendingGame');
     playerProvider.getAuthPlayerInfs().subscribe(user => {
       if (user) {
         this.player = user[0];
@@ -31,6 +33,8 @@ export class Bilan2PlayersPage {
         this.navCtrl.push(WelcomePage);
       }
     });
+
+    console.log(this.retourPendingGame.toString);
   }
 
   ionViewDidLoad() {
