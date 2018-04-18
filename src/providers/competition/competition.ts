@@ -34,7 +34,7 @@ export class CompetitionProvider {
     }
 
     return new Promise(resolve => {
-      this.http.get('http://karim.local:8080/api/allCompetitions')
+      this.http.get('http://188.166.174.3:8080/api/allCompetitions')
         .map(res => res.json())
         .subscribe(competitions => {
           this.competitions = competitions;
