@@ -10,10 +10,12 @@ var https = require('https');
 const request = require('request');
 const axios = require('axios');
 var idsCompets = null;
+//import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+
 
 // Configuration
 mongoose.set('debug', true);
-mongoose.connect('mongodb://karim.local/ParisFoot');
+mongoose.connect('mongodb://188.166.174.3/ParisFoot');
 
 app.use(morgan('dev')); // log every request to the console
 app.use(bodyParser.urlencoded({
