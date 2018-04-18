@@ -18,7 +18,7 @@ import 'rxjs/add/operator/toPromise';
  *   user: {
  *     // User fields your app needs, like "id", "name", "email", etc.
  *   }
- * }
+ * } 
  * ```
  *
  * If the `status` field is not `success`, then an error is detected and returned.
