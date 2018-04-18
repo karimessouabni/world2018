@@ -92,7 +92,7 @@ export class CompetitionProvider {
 
   getFixturesByDay(day: any) {
     return new Promise(resolve => {
-      this.http.get('http://karim.local:8080/api/fixtures/'+day)
+      this.http.get('http://188.166.174.3:8080/api/fixtures/'+day)
         .map(res => res.json())
         .subscribe(matches => {
           this.matches = matches;
@@ -106,7 +106,7 @@ export class CompetitionProvider {
   */
   getFixturesByDayAndCompet(day: any, compet: any) : any {
     return new Promise(resolve => {
-      this.http.get('http://karim.local:8080/api/fixtures/'+day+'/'+compet)
+      this.http.get('http://188.166.174.3:8080/api/fixtures/'+day+'/'+compet)
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
@@ -118,7 +118,7 @@ export class CompetitionProvider {
 
   getTeamsById(idTeam: any) {
     return new Promise(resolve => {
-      this.http.get('http://karim.local:8080/api/team/'+idTeam)
+      this.http.get('http://188.166.174.3:8080/api/team/'+idTeam)
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
