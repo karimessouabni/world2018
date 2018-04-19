@@ -25,7 +25,8 @@
     padding: 0px;
 }
 .selectedElement {
-  background-image: linear-gradient(to bottom, #C02CFF 20%, #9425c4 100%);
+  background-color: #d20073;
+  background:  filter-gradient(#c7920b, #cc7b00, horizontal);
   color: white;
 
 }

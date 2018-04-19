@@ -149,6 +149,7 @@ export class BilanBetPage {
     this.gameToFS.sheetBet1 = this.playedElementsIn3Sheets;
     this.gameToFS.sheetBet1.playerUid = this.player.uid;
     this.gameToFS.typeGame = GameType.strangerVsStranger;
+    this.gameToFS.sheetBet1.betCount = this.wins;
   }
 
 
