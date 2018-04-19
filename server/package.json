@@ -21,6 +21,7 @@
     "superlogin": "^0.6.1"
   },
   "dependencies": {
-    "axios": "^0.16.2"
+    "axios": "^0.16.2",
+    "moment": "^2.22.1"
   }
 }

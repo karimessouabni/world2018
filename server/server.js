@@ -9,7 +9,9 @@ var cors = require('cors');
 var https = require('https');
 const request = require('request');
 const axios = require('axios');
+const moment = require('moment');
 var idsCompets = null;
+
 //import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 
 
@@ -198,8 +200,6 @@ app.delete('/api/reviews/:review_id', function (req, res) {
 //================= ParisFoot Traitement de donnees
 
 
-
-
 // Pull competitions from api modify  the JSONS and push em in the mongo db
 app.post('/api/updateAllCompetitionsToMongo', function (req, res) {
   Competitions.remove({}, function (err) {
@@ -234,7 +234,7 @@ app.post('/api/updateAllCompetitionsToMongo', function (req, res) {
 // Pull A competition fixtures from api modify  the JSONS and push em into the mongo db
 app.post('/api/updateACompetitionFixturesToMongo', function (req, res) {
 
-    Fixtures.remove({}, function (err) {
+  Fixtures.remove({}, function (err) {
     if (err) {
       console.log("Removing all Fixtures documents failed" + err);
     } else {
@@ -483,6 +483,36 @@ app.get('/api/fixtures/:d/:competName?', function (req, res) {
 
 });
 
+
+// Solution 
+
+app.post('/api/updateSolutionBet3Sheets', function (req, res) {
+
+  const today = moment().format('YYYY[-]MM[-]DD');
+  const regexToday = new RegExp(today, "i"),
+
+    query = {
+      $and: [{
+        'date': regexToday
+      }, {
+        'status': 'FINISHED'
+      }]
+    };
+
+  Fixtures.find(query, function (err, finishedTodatFixtures) {
+    if (err) {
+      res.json(err);
+    }
+    // creer SolutionBet3Sheets from finished fixtures of today
+    finishedTodatFixtures.forEach(fixture => {
+
+    })
+
+    res.json(finishedTodatFixtures);
+  });
+
+
+});
 
 
 // listen (start app with node server.js) ======================================
