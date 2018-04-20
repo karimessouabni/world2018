@@ -55,32 +55,32 @@ var fixtureSchema = new Schema({
   homeTeamName: String,
   awayTeamName: String
 }, {
-  "strict": false
-});
+    "strict": false
+  });
 
 var teamSchema = new Schema({
   teamName: String,
   crestURI: String,
   position: Number
 }, {
-  "strict": false
-});
+    "strict": false
+  });
 
 var leagueTableSchema = new Schema({
   name: String,
   code: String,
   shortName: String
 }, {
-  "strict": false
-});
+    "strict": false
+  });
 
 var Review = mongoose.model('Review', reviewSchema);
 
 var Competitions = mongoose.model('Competitions', new Schema({
   caption: String
 }, {
-  "strict": false
-}));
+    "strict": false
+  }));
 
 var Fixtures = mongoose.model('Fixtures', fixtureSchema);
 var Teams = mongoose.model('Teams', teamSchema);
@@ -240,35 +240,35 @@ app.post('/api/updateACompetitionFixturesToMongo', function (req, res) {
     } else {
       console.log("data of 2017 Competitions's Fixtures pulled from tha FootBall API and pushed to Mongo ");
       axios.get('http://api.football-data.org/v1/competitions/?season=2017', {
-          headers: {
-            'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-          }
-        }).then(responseCompet => {
-          for (i = 0; i < responseCompet.data.length - 1; i++) { //-1 cuz 466 compet's fixtures are restricted from API 
-            axios.get('http://api.football-data.org/v1/competitions/' + responseCompet.data[i].id + '/fixtures', {
-              headers: {
-                'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-              }
-            }).then(function (results) {
-              for (j = 0; j < results.data.fixtures.length; j++) {
-                var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
-                var indexIdAwayTeam = results.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
+        headers: {
+          'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+        }
+      }).then(responseCompet => {
+        for (i = 0; i < responseCompet.data.length - 1; i++) { //-1 cuz 466 compet's fixtures are restricted from API 
+          axios.get('http://api.football-data.org/v1/competitions/' + responseCompet.data[i].id + '/fixtures', {
+            headers: {
+              'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+            }
+          }).then(function (results) {
+            for (j = 0; j < results.data.fixtures.length; j++) {
+              var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
+              var indexIdAwayTeam = results.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
 
-                results.data.fixtures[j].idHomeTeam = results.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, results.data.fixtures[j]._links.homeTeam.href.length);
-                results.data.fixtures[j].idAwayTeam = results.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, results.data.fixtures[j]._links.awayTeam.href.length);
-                Fixtures.create(results.data.fixtures[j], function (err, fixture) {
-                  if (err) {
-                    res.send(err);
-                    console.log(err);
-                  }
-                });
-              }
-            }).catch(error => {
-              console.log(error);
-            });
-          }
-          console.log("YES");
-        })
+              results.data.fixtures[j].idHomeTeam = results.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, results.data.fixtures[j]._links.homeTeam.href.length);
+              results.data.fixtures[j].idAwayTeam = results.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, results.data.fixtures[j]._links.awayTeam.href.length);
+              Fixtures.create(results.data.fixtures[j], function (err, fixture) {
+                if (err) {
+                  res.send(err);
+                  console.log(err);
+                }
+              });
+            }
+          }).catch(error => {
+            console.log(error);
+          });
+        }
+        console.log("YES");
+      })
         .catch(error => {
           console.log(error);
         });
@@ -282,34 +282,34 @@ app.post('/api/updateACompetitionFixturesToMongo', function (req, res) {
 app.post('/api/updateACompetitionTeamsToMongo', function (req, res) {
   console.log("data of 2017 Competitions's Teams pulled from tha FootBall API and pushed to Mongo ");
   axios.get('http://api.football-data.org/v1/competitions/?season=2017', {
-      headers: {
-        'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-      }
-    }).then(responseCompet => {
-      for (i = 0; i < responseCompet.data.length - 1; i++) { //-1 cuz 466 compet's fixtures are restricted from API 
-        axios.get('http://api.football-data.org/v1/competitions/' + responseCompet.data[i].id + '/teams', {
-          headers: {
-            'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-          }
-        }).then(function (results) {
-          for (j = 0; j < results.data.teams.length; j++) {
-            var indexIdTeam = results.data.teams[j]._links.self.href.lastIndexOf("/");
+    headers: {
+      'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+    }
+  }).then(responseCompet => {
+    for (i = 0; i < responseCompet.data.length - 1; i++) { //-1 cuz 466 compet's fixtures are restricted from API 
+      axios.get('http://api.football-data.org/v1/competitions/' + responseCompet.data[i].id + '/teams', {
+        headers: {
+          'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+        }
+      }).then(function (results) {
+        for (j = 0; j < results.data.teams.length; j++) {
+          var indexIdTeam = results.data.teams[j]._links.self.href.lastIndexOf("/");
 
-            results.data.teams[j].idTeam = results.data.teams[j]._links.self.href.substring(indexIdTeam + 1, results.data.teams[j]._links.self.href.length);
+          results.data.teams[j].idTeam = results.data.teams[j]._links.self.href.substring(indexIdTeam + 1, results.data.teams[j]._links.self.href.length);
 
-            Teams.create(results.data.teams[j], function (err, team) {
-              if (err) {
-                res.send(err);
-                console.log(err);
-              }
-            });
-          }
-        }).catch(error => {
-          console.log(error);
-        });
-      }
-      console.log("YES");
-    })
+          Teams.create(results.data.teams[j], function (err, team) {
+            if (err) {
+              res.send(err);
+              console.log(err);
+            }
+          });
+        }
+      }).catch(error => {
+        console.log(error);
+      });
+    }
+    console.log("YES");
+  })
     .catch(error => {
       console.log(error);
     });
@@ -322,30 +322,30 @@ app.post('/api/updateACompetitionTeamsToMongo', function (req, res) {
 app.post('/api/updateACompetitionLeagueTableToMongo', function (req, res) {
   console.log("data of 2017 Competitions's League table pulled from tha FootBall API and pushed to Mongo ");
   axios.get('http://api.football-data.org/v1/competitions/?season=2017', {
-      headers: {
-        'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-      }
-    }).then(responseCompet => {
-      for (i = 0; i < responseCompet.data.length - 1; i++) { //-1 cuz 466 compet's fixtures are restricted from API 
-        axios.get('http://api.football-data.org/v1/competitions/' + responseCompet.data[i].id + '/leagueTable', {
-          headers: {
-            'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-          }
-        }).then(function (results) {
-          for (j = 0; j < results.data.standing.length; j++) {
-            LeagueTable.create(results.data.standing[j], function (err, standing) {
-              if (err) {
-                res.send(err);
-                console.log(err);
-              }
-            });
-          }
-        }).catch(error => {
-          console.log(error);
-        });
-      }
-      console.log("YES");
-    })
+    headers: {
+      'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+    }
+  }).then(responseCompet => {
+    for (i = 0; i < responseCompet.data.length - 1; i++) { //-1 cuz 466 compet's fixtures are restricted from API 
+      axios.get('http://api.football-data.org/v1/competitions/' + responseCompet.data[i].id + '/leagueTable', {
+        headers: {
+          'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+        }
+      }).then(function (results) {
+        for (j = 0; j < results.data.standing.length; j++) {
+          LeagueTable.create(results.data.standing[j], function (err, standing) {
+            if (err) {
+              res.send(err);
+              console.log(err);
+            }
+          });
+        }
+      }).catch(error => {
+        console.log(error);
+      });
+    }
+    console.log("YES");
+  })
     .catch(error => {
       console.log(error);
     });
@@ -379,9 +379,62 @@ app.get('/api/fixtures/:d', function (req, res) {
       res.json(err);
     }
     res.json(fixtures);
-
   });
 
+});
+
+getFixtureByDate = (date) => {
+  query = {
+    'date': date
+  };
+
+  Fixtures.find(query, function (err, fixtures) {
+    return (err) ? err : fixtures;
+  });
+  //call ==>  return getFixtureByDate(regexToday).then( resultat => res.json(resultatres)); // to try first 
+
+}
+
+// Delet all fixtures of today from Mongo and update em from FBAPI 
+app.put('/api/deleteTodayFixtures', (req, res) => {
+
+  // deleting from mongo 
+  const today = moment().format('YYYY[-]MM[-]DD');
+  const regexToday = new RegExp(today, "i");
+
+  Fixtures.remove({
+    'date': regexToday
+  }, function (err, review) {
+    if (err)
+      res.send(`error on deleting fixture of day : ${regexToday} : ${err}`);
+    else {
+      axios.get('http://api.football-data.org/v1/fixtures?timeFrame=n1', {
+        headers: {
+          'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+        }
+      }).then(todayFixturesUpdated => {
+        for (let j = 0; j < todayFixturesUpdated.data.fixtures.length; j++) {
+          var indexIdHomeTeam = todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
+          var indexIdAwayTeam = todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
+
+          todayFixturesUpdated.data.fixtures[j].idHomeTeam = todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.length);
+          todayFixturesUpdated.data.fixtures[j].idAwayTeam = todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.length);
+          Fixtures.create(todayFixturesUpdated.data.fixtures[j], function (err, fixture) {
+            if (err) {
+              res.send(err);
+              console.log(err);
+            }
+          });
+        }
+        res.json({
+          message: `All fixtures of : ${regexToday} are Successfully deleted`
+        });
+      }).catch(error => {
+        console.log(error);
+      });
+    }
+
+  });
 });
 
 
