@@ -395,49 +395,6 @@ getFixtureByDate = (date) => {
 
 }
 
-// Delet all fixtures of today from Mongo and update em from FBAPI 
-app.put('/api/deleteTodayFixtures', (req, res) => {
-
-  // deleting from mongo 
-  const today = moment().format('YYYY[-]MM[-]DD');
-  const regexToday = new RegExp(today, "i");
-
-  Fixtures.remove({
-    'date': regexToday
-  }, function (err, review) {
-    if (err)
-      res.send(`error on deleting fixture of day : ${regexToday} : ${err}`);
-    else {
-      axios.get('http://api.football-data.org/v1/fixtures?timeFrame=n1', {
-        headers: {
-          'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-        }
-      }).then(todayFixturesUpdated => {
-        for (let j = 0; j < todayFixturesUpdated.data.fixtures.length; j++) {
-          var indexIdHomeTeam = todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
-          var indexIdAwayTeam = todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
-
-          todayFixturesUpdated.data.fixtures[j].idHomeTeam = todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.length);
-          todayFixturesUpdated.data.fixtures[j].idAwayTeam = todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.length);
-          Fixtures.create(todayFixturesUpdated.data.fixtures[j], function (err, fixture) {
-            if (err) {
-              res.send(err);
-              console.log(err);
-            }
-          });
-        }
-        res.json({
-          message: `All fixtures of : ${regexToday} are Successfully deleted`
-        });
-      }).catch(error => {
-        console.log(error);
-      });
-    }
-
-  });
-});
-
-
 // Find A team by it's id 
 app.get('/api/team/:id', function (req, res) {
   var query = {
@@ -567,6 +524,48 @@ app.post('/api/updateSolutionBet3Sheets', function (req, res) {
 
 });
 
+
+// Delet all fixtures of today or a given date from Mongo and update em from FBAPI 
+app.put('/api/deleteTodayFixtures/:date', (req, res) => {
+
+    // deleting from mongo 
+    const regexToday = (req.params.date)? new RegExp(moment().format(req.params.date), "i") : new RegExp(moment().format('YYYY[-]MM[-]DD'), "i"); 
+    
+    Fixtures.remove({
+      'date': regexToday
+    }, function (err, review) {
+      if (err)
+        res.send(`error on deleting fixture of day : ${regexToday} : ${err}`);
+      else {
+        axios.get('http://api.football-data.org/v1/fixtures?timeFrame=n1', {
+          headers: {
+            'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+          }
+        }).then(todayFixturesUpdated => {
+          for (let j = 0; j < todayFixturesUpdated.data.fixtures.length; j++) {
+            var indexIdHomeTeam = todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
+            var indexIdAwayTeam = todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
+  
+            todayFixturesUpdated.data.fixtures[j].idHomeTeam = todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, todayFixturesUpdated.data.fixtures[j]._links.homeTeam.href.length);
+            todayFixturesUpdated.data.fixtures[j].idAwayTeam = todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, todayFixturesUpdated.data.fixtures[j]._links.awayTeam.href.length);
+            Fixtures.create(todayFixturesUpdated.data.fixtures[j], function (err, fixture) {
+              if (err) {
+                res.send(err);
+                console.log(err);
+              }
+            });
+          }
+          res.json({
+            message: `All fixtures of : ${regexToday} are Successfully updated`
+          });
+        }).catch(error => {
+          console.log(error);
+        });
+      }
+  
+    });
+  });
+  
 
 // listen (start app with node server.js) ======================================
 app.listen(port);
