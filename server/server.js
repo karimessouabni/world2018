@@ -526,18 +526,21 @@ app.post('/api/updateSolutionBet3Sheets', function (req, res) {
 
 
 // Delet all fixtures of today or a given date from Mongo and update em from FBAPI 
-app.put('/api/deleteTodayFixtures/:date', (req, res) => {
+//example : http://karim.local:8080/api/deleteTodayFixtures/2018-04-20/p1
 
-    // deleting from mongo 
-    const regexToday = (req.params.date)? new RegExp(moment().format(req.params.date), "i") : new RegExp(moment().format('YYYY[-]MM[-]DD'), "i"); 
+app.put('/api/deleteTodayFixtures/:date*?/:pn*?', (req, res) => {
     
+    // deleting from mongo 
+    const regexToday = (req.params.date)? new RegExp(req.params.date, "i") : new RegExp(moment().format('YYYY[-]MM[-]DD'), "i"); 
+    const pn = (req.params.pn)? req.params.pn:'n1' ;
+
     Fixtures.remove({
       'date': regexToday
     }, function (err, review) {
       if (err)
         res.send(`error on deleting fixture of day : ${regexToday} : ${err}`);
       else {
-        axios.get('http://api.football-data.org/v1/fixtures?timeFrame=n1', {
+        axios.get('http://api.football-data.org/v1/fixtures?timeFrame='+pn+'', {
           headers: {
             'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
           }
