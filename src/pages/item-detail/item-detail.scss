@@ -13,7 +13,6 @@ page-item-detail {
   .titles1 {
     padding-right: 20%;
   }
-
   .titles2 {
     color: #003883;
     font-family: 'Barlow', sans-serif;
@@ -25,10 +24,8 @@ page-item-detail {
     bottom: 40px;
     font-size: 22px;
     padding-left: 24px;
-    padding-top: 7px;
-    // padding-bottom: 40px;
+    padding-top: 7px; // padding-bottom: 40px;
   }
-
   div {
     font-family: 'Barlow', sans-serif;
     font-weight: 100;
@@ -36,14 +33,22 @@ page-item-detail {
     letter-spacing: 1px;
     font-size: 1.1rem;
   }
-  
-  
+  ion-header {
+    height: 0px;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  [col-3] {
+    padding: 0px;
+    max-height: 33px;
+  }
 }
 
- super-tabs{
+super-tabs {
   background-color: #fff;
 }
-
 
 super-tabs-toolbar {
   z-index: 2;
@@ -66,5 +71,3 @@ super-tabs-toolbar>ion-toolbar.toolbar .tab-buttons-container .tab-buttons super
 .toolbar-content toolbar-content-md {
   margin-top: 100px;
 }
-
-
