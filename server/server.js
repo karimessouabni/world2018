@@ -536,7 +536,7 @@ app.post('/api/worldCupFixturesToMongo', function (req, res) {
           case "AAL": //466
             idCompet = 466;
             break;
-            case "WORLDCUP": //466
+            case "WC": //466
             idCompet = 467;
             break;
           default:
