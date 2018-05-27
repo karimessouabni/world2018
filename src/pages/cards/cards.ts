@@ -17,17 +17,17 @@ export class CardsPage {
     this.rootNavCtrl = navParams.get('rootNavCtrl');
     this.cardItems = [
       {
-        name: '../../assets/img/linux.png',
+        name: 'assets/img/linux.png',
         id: 'card1',
         content: 'Jouer votre feuille en mode paris simple.',
       },
       {
-        name: '../../assets/img/mastercard.png',
+        name: 'assets/img/mastercard.png',
         id: 'card2',
         content: 'Inviter un amis à vous defier sur ce match.'
       },
       {
-        name: '../../assets/img/googleScholar.png',
+        name: 'assets/img/googleScholar.png',
         id: 'card3',
         content: 'Jouer contre un inconu.'
       }
