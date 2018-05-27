@@ -1,43 +1,64 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { BilanBetPage } from '../bilan-bet/bilan-bet';
 
 @Component({
   selector: 'page-cards',
   templateUrl: 'cards.html'
 })
 export class CardsPage {
+  rootNavCtrl: NavController;
   cardItems: any[];
+  mySheetsAndFixturePlayed: any = null;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
+    this.mySheetsAndFixturePlayed = new Object();
+    this.mySheetsAndFixturePlayed = navParams.data;
+    this.rootNavCtrl = navParams.get('rootNavCtrl');
     this.cardItems = [
       {
-        user: {
-          avatar: 'assets/img/marty-avatar.png',
-          name: 'Marty McFly'
-        },
-        date: 'November 5, 1955',
-        image: 'assets/img/advance-card-bttf.png',
-        content: 'Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.',
+        name: '../../assets/img/linux.png',
+        id: 'card1',
+        content: 'Jouer votre feuille en mode paris simple.',
       },
       {
-        user: {
-          avatar: 'assets/img/sarah-avatar.png.jpeg',
-          name: 'Sarah Connor'
-        },
-        date: 'May 12, 1984',
-        image: 'assets/img/advance-card-tmntr.jpg',
-        content: 'I face the unknown future, with a sense of hope. Because if a machine, a Terminator, can learn the value of human life, maybe we can too.'
+        name: '../../assets/img/mastercard.png',
+        id: 'card2',
+        content: 'Inviter un amis à vous defier sur ce match.'
       },
       {
-        user: {
-          avatar: 'assets/img/ian-avatar.png',
-          name: 'Dr. Ian Malcolm'
-        },
-        date: 'June 28, 1990',
-        image: 'assets/img/advance-card-jp.jpg',
-        content: 'Your scientists were so preoccupied with whether or not they could, that they didn\'t stop to think if they should.'
+        name: '../../assets/img/googleScholar.png',
+        id: 'card3',
+        content: 'Jouer contre un inconu.'
       }
     ];
 
   }
+
+  openBilanSubmitOnline() {
+    if (this.mySheetsAndFixturePlayed.bet3sheets.betCount == 0) {
+      let toast = this.toastCtrl.create({
+        message: "Choose at least one element !",
+        duration: 3000,
+        position: 'top'
+      });
+      toast.present();
+    }
+    // else if (this.fixture.status != "SCHEDULED" && this.fixture.status != "TIMED") { // to eliminate the case the user open this page waiting for the match to start then push his bet
+    //   let toast = this.toastCtrl.create({
+    //     message: "Match unavailable !",
+    //     duration: 3000,
+    //     position: 'top'
+    //   });
+    //   toast.present();
+    // }
+    else {
+      this.rootNavCtrl.push(BilanBetPage, {
+        online: true,
+        playedSheets: this.mySheetsAndFixturePlayed.bet3sheets,
+        fixture: this.mySheetsAndFixturePlayed.fixture
+      });
+    }
+  }
+
 }

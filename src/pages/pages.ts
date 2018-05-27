@@ -8,6 +8,7 @@ import { ProfilPage } from './profil/profil';
 import { AddFriendsPage } from './add-friends/add-friends';
 import { Bilan2PlayersPage } from './bilan2-players/bilan2-players';
 import { WelcomePage } from './welcome/welcome';
+import { MyBetsPage } from './my-bets/my-bets';
 
 // The page the user lands on after opening the app and without a session
 export const FirstRunPage = TutorialPage;
@@ -26,5 +27,6 @@ export {
     SearchPage,
     AddFriendsPage,
     Bilan2PlayersPage,
-    WelcomePage
+    WelcomePage,
+    MyBetsPage
 }

@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
+
 
 import { Settings } from '../../providers/settings';
 
 import { TranslateService } from '@ngx-translate/core';
+import { AuthProvider } from '../../providers/auth/auth';
+
+import { WelcomePage } from '../../pages/pages';
 
 /**
  * The Settings page is a simple form that syncs with a Settings provider
@@ -38,7 +42,9 @@ export class SettingsPage {
     public settings: Settings,
     public formBuilder: FormBuilder,
     public navParams: NavParams,
-    public translate: TranslateService) {
+    public translate: TranslateService,
+    public auth: AuthProvider,
+    public toastCtrl: ToastController) {
   }
 
   _buildForm() {
@@ -68,6 +74,18 @@ export class SettingsPage {
   ionViewDidLoad() {
     // Build an empty form for the template to render
     this.form = this.formBuilder.group({});
+  }
+
+  logOut() {
+    this.auth.logout();
+    let toast = this.toastCtrl.create({
+      message: "Vous etes déconnecté !",
+      duration: 4000,
+      position: 'top'
+    });
+
+    toast.present();
+    this.navCtrl.push(WelcomePage);
   }
 
   ionViewWillEnter() {

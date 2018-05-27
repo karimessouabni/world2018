@@ -10,27 +10,27 @@
     <ion-col col-1>
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30"
+      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30"
         alt="" />
     </ion-col>
     <ion-col col-4>
       {{ fixture.date |HM : fixture.status : fixture.result}}
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlawayTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30"
+      <img [src]="fixture.urlawayTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30"
         alt="" />
     </ion-col>
     <ion-row>
       <ion-col col-1>
       </ion-col>
       <ion-col col-3>
-        <div> {{fixture.homeTeamName}}</div>
+        <div>{{fixture.homeTeamName}}</div>
       </ion-col>
       <ion-col col-4>
-        <div> {{fixture.date}}</div>
+        <div>{{fixture.date}}</div>
       </ion-col>
       <ion-col col-3>
-        <div> {{fixture.awayTeamName}}</div>
+        <div>{{fixture.awayTeamName}}</div>
       </ion-col>
       <ion-col col-1>
       </ion-col>

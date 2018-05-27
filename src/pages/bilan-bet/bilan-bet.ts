@@ -116,7 +116,7 @@ export class BilanBetPage {
       toast.present();
     }
     this.gameFSFactory();
-    this.gameProvider.checkPendingGames(this.gameToFS).then(returnValue => {
+    this.gameProvider.checkPendingGames(this.gameToFS, this.solde).then(returnValue => {
       if (returnValue == RetourPendingGame.BetFound2Player || returnValue == RetourPendingGame.BetPendedWithOnePlayer) {
         this.presentLoadingDefault();
         this.navCtrl.push(Bilan2PlayersPage, {

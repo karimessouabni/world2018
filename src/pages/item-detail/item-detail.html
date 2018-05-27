@@ -15,33 +15,33 @@
     <ion-col col-1>
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30"
+      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30"
         alt="" />
     </ion-col>
     <ion-col col-4 [@itemAnim]>
       {{ fixture.date |HM : fixture.status : fixture.result}}
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlawayTeam" onError="this.src='assets/parisFootIcons/badgeUnfound.ico';" style="width:30px; height:30"
+      <img [src]="fixture.urlawayTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30"
         alt="" />
     </ion-col>
     <ion-col col-1>
       <ion-fab top right edge>
         <button ion-fab color="white" class="button-bg">
           <ion-avatar>
-            <img src="../../assets/parisFootIcons/soccer.png">
+            <img src="../../assets/img/soccer.png">
             <p class="titles2"> {{betCount}}</p>
           </ion-avatar>
         </button>
         <ion-fab-list side="left">
           <button color="white" ion-fab>
             <ion-avatar>
-              <img src="../../assets/parisFootIcons/name.png">
+              <img src="../../assets/img/name.png">
             </ion-avatar>
           </button>
           <button color="white" ion-fab (click)="openBilanSubmitOnline(bet3Sheets)">
             <ion-avatar>
-              <img src="../../assets/parisFootIcons/friends.png">
+              <img src="../../assets/img/friends.png">
             </ion-avatar>
           </button>
         </ion-fab-list>
@@ -76,6 +76,6 @@
   <super-tab [root]="pageParis1" [rootParams]="bet3Sheets" title="0' to 90'"> </super-tab>
   <super-tab [root]="pageParis2" [rootParams]="bet3Sheets" title="0' to 45'+"> </super-tab>
   <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="45' to 90'+"></super-tab>
-  <!-- <super-tab [root]="teamTable" title="Classement"></super-tab> -->
+  <super-tab [root]="pageBetMode" [rootParams]="sheetFixtureObj" title=">>"></super-tab>
 
 </super-tabs>

@@ -1,20 +1,18 @@
-import { Component, state, keyframes } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Items } from '../../providers/providers';
 import { CompetitionProvider } from '../../providers/competition/competition';
 import { TeamsProvider } from '../../providers/teams/teams';
-import { SuperTabsModule } from 'ionic2-super-tabs'
-import { ItemCreatePage } from '../item-create/item-create';
 import { SheetPage } from '../sheet/sheet';
 import { FirstHtBetsPage } from '../first-ht-bets/first-ht-bets';
 import { SecondHtBetsPage } from '../second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../bilan-bet/bilan-bet';
+import { CardsPage } from '../cards/cards';
 import { TeamTablePage } from '../team-table/team-table';
 import { Bet3Sheets } from '../../models/bet3Sheets';
 import { Sheet } from '../../models/Sheet';
 import { Element } from '../../models/Element';
 import { Cote } from '../../models/Cote';
-import { DatePipes } from '../../pipes/date-pipes/date-pipes';
 import { TeamNamePipe } from '../../pipes/team-name/team-name';
 import { Events } from 'ionic-angular';
 import { trigger, style, transition, animate, group } from '@angular/animations';
@@ -50,12 +48,14 @@ export class ItemDetailPage {
   pageParis1: any = SheetPage;
   pageParis2: any = FirstHtBetsPage;
   pageParis3: any = SecondHtBetsPage;
+  pageBetMode: any = CardsPage;
   BilanPage: any = BilanBetPage;
   teamTable: any = TeamTablePage;
   sheet: Sheet;
   bet3Sheets: Bet3Sheets;
   betCount: number;
-  pageClassement
+  sheetFixtureObj: any = null;
+
 
   constructor(private pipeTeam: TeamNamePipe, public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items, public events: Events, public toastCtrl: ToastController) {
 
@@ -66,6 +66,7 @@ export class ItemDetailPage {
       });
 
     this.bet3Sheets = new Bet3Sheets();
+    this.sheetFixtureObj = new Object();
 
     this.createElement12NAllMatch();
     this.createElementNumberGoalsAllMatch();
@@ -86,8 +87,10 @@ export class ItemDetailPage {
 
     this.events.subscribe('functionCall:tabSelected', eventData => {
       this.betCount = eventData.betCount;
-
     });
+
+    this.sheetFixtureObj = { bet3sheets: this.bet3Sheets, fixture: this.fixture };
+
 
   }
 
@@ -371,7 +374,8 @@ export class ItemDetailPage {
 
   onTabSelect(ev: any) {
     if (ev.index == 3)
-      this.BilanPage.fillListPlayedElement();
+      this.sheetFixtureObj = { bet3sheets: this.bet3Sheets, fixture: this.fixture };
+    // this.BilanPage.fillListPlayedElement();
   }
 
 

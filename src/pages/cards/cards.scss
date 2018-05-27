@@ -1,3 +1,86 @@
 page-cards {
 
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+  .card-md {
+    margin: 14px 0px 0 16px;
+    border-radius: 0px;
+    width: calc(100% - 31px);
+    height: 154px;
+    
+  }
+  .card1{
+    background-color:#FF015B;
+    margin: 14px 0px 0 16px;
+    border-radius: 0px;
+    width: calc(100% - 31px);
+    height: 107px;
+  }
+  .card2{
+    background-color:#01FE87;
+    margin: 14px 0px 0 16px;
+    border-radius: 0px;
+    width: calc(100% - 31px);
+    height: 107px;
+  }
+  .card3, .card2, .card1{
+    background-color:#0AF0FF;
+    margin: 14px 0px 0 16px;
+    border-radius: 0px;
+    width: calc(100% - 31px);
+    height: 107px;
+  }
+  .card-title {
+    position: relative;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #3F1052;
+  }
+  .card-subtitle {
+    font-size: 1.0em;
+    position: relative;
+    top: 60%;
+    width: 100%;
+    color: #37003C;
+  }
+
+  ion-img {
+    background: #0AF0FF; 
+    contain: initial;
+}
+
+
+  background: linear-gradient(87deg, #ff015b, #01fe87, #0af0ff);
+background-size: 600% 600%;
+
+-webkit-animation: playIt 0s ease infinite;
+-moz-animation: playIt 0s ease infinite;
+-o-animation: playIt 0s ease infinite;
+animation: playIt 0s ease infinite;
+
+@-webkit-keyframes playIt {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@-moz-keyframes playIt {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@-o-keyframes playIt {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@keyframes playIt { 
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+
 }

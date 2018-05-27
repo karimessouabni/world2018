@@ -44,40 +44,60 @@ export class GameProvider {
 
 
 
-  checkPendingGames(game: GameFvsF)  {
-    
-      var _this = this;
+  checkPendingGames(game: GameFvsF, mise: number) {
 
-     return this.afs.collection("games").ref.where("idFixture", "==", game.idFixture)
-        .get()
-        .then(function (querySnapshot) {
-          if (querySnapshot.empty) { // if there is no game with the same fixture already stored
-            // we simply store this game 
-            _this.persistOnlineGameP1Pending(game);
-            console.log("no game Found ! you are the first to bet on");
-            return RetourPendingGame.BetPendedWithOnePlayer;
-          }
-          else {
-            var GameChecked: boolean = false;
-            querySnapshot.forEach(function (doc) {
-              if (doc.data().player1Uid != game.player1Uid && doc.data().player2Uid == undefined && !GameChecked) { // game with player 1 '!=player 2' but no player 2
-                console.log("Persisting Player 2");
-                _this.persistOnlineGameP2Pending(game, doc.id);
-                GameChecked = true;
-              }
-              console.log(doc.id, " => ", doc.data());
-            });
-            if (!GameChecked) {// player trying to play the same bet Twice !!!! 
-              console.log("Batard 1 seule fois slm !");
-              return RetourPendingGame.BetAlreadyPlayed;
-            } else {
-              return RetourPendingGame.BetFound2Player;
+    var _this = this;
+    return this.afs.collection("games").ref.where("idFixture", "==", game.idFixture)
+      .get()
+      .then(function (querySnapshot) {
+        if (querySnapshot.empty) { // if there is no game with the same fixture already stored
+          // we simply store this game 
+          _this.persistOnlineGameP1Pending(game);
+          console.log("no game Found ! you are the first to bet on");
+          _this.setPlayerCoins(game.player1Uid.toString(), mise);
+          return RetourPendingGame.BetPendedWithOnePlayer;
+        }
+        else {
+          var GameChecked: boolean = false;
+          querySnapshot.forEach(function (doc) {
+            if (doc.data().player1Uid != game.player1Uid && doc.data().player2Uid == undefined && !GameChecked) { // game with player 1 '!=player 2' but no player 2
+              console.log("Persisting Player 2");
+              _this.setPlayerCoins(game.player1Uid.toString(), mise);
+              _this.persistOnlineGameP2Pending(game, doc.id);
+              GameChecked = true;
             }
+            console.log(doc.id, " => ", doc.data());
+          });
+          if (!GameChecked) {// player trying to play the same bet Twice !!!! 
+            console.log("Batard 1 seule fois slm !");
+            return RetourPendingGame.BetAlreadyPlayed;
+          } else {
+            return RetourPendingGame.BetFound2Player;
           }
-    });
+        }
+      });
 
   }
 
+
+  setPlayerCoins(playerUid: string, playedCoins: number) {
+    let _this = this;
+    _this.afs.collection('players').ref.where("uid", "==", playerUid).get().then(querySnapshot => {
+      querySnapshot.forEach((doc) => {
+        const currentCoins = Number(doc.data().silverCoins - playedCoins);
+        // update number of coins
+        _this.afs.collection('players').doc(doc.id).update({
+          silverCoins: currentCoins
+        }).then(() => {
+          console.log(`nbr of coins updated for player :${playerUid} with ${currentCoins}`);
+        }).catch(error => {
+          console.log(`error while updating nbr of coins ${error}`);
+        });
+      });
+    }).catch(error => {
+      console.log(`error while geting id player to update nbr of coins ${error}`);
+    });
+  }
 
   // getReturnedValueAfterPendingGame(): RetourPendingGame {
   //   return this.returnValue;
@@ -99,7 +119,7 @@ export class GameProvider {
     this.afs.collection('games').doc(idExistantGame).update({
       player2Uid: this.gameToFS.player2Uid
     }).then(function () {
-      console.log("Seting the Bet3Sheet for player 2");
+      console.log("Setting the Bet3Sheet for player 2");
       _this.persistBet3Sheet(game.sheetBet1, idExistantGame);
     }).catch(error => {
       console.log(error);
@@ -159,7 +179,19 @@ export class GameProvider {
 
 
 
+  getGameByPlayerUID(uid: string) {
+    var _this = this;
+    return this.afs.collection("games").ref.where("player1Uid", "==", uid)
+      .get()
+      .then(function (querySnapshot) {
 
+        var myBets: any = [];
+        querySnapshot.forEach(function (doc) {
+          myBets.push(doc.data());
+        });
+
+      });
+  }
 
 
 
