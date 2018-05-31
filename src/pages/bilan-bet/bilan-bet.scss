@@ -1,40 +1,54 @@
 page-bilan-bet {
-    
-    .footerLine{
-        border-bottom: 1px solid #d20073 !important;
-    }
-
-    .titles1{
+    .item-profile {
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        height: 250px;
+      }
+      .item-detail {
+        width: 100%;
+        background: white;
+        position: absolute;
+      }
+      .titles1 {
         padding-right: 20%;
-    }
-
-    .arrow img{
-        padding-top: 20px;
-        max-height: 80px;
-    }
-
-    div {
+      }
+      .titles2 {
+        color: #003883;
         font-family: 'Barlow', sans-serif;
         font-weight: 300;
-        text-align: left;
-        letter-spacing: 0.5px;
+        letter-spacing: 0px;
+        position: absolute;
+        z-index: 1;
+        top: 0px;
+        bottom: 40px;
+        font-size: 22px;
+        padding-left: 24px;
+        padding-top: 7px; // padding-bottom: 40px;
+      }
+      div {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 100;
+        letter-spacing: 1px;
         font-size: 1.1rem;
       }
 
-      .no-padding{
-        padding: 0px 0px 0px 0px !important;
+      [col-3] {
+        padding: 0px;
+        max-height: 33px;
       }
+      .arrow img {
+            padding-top: 20px;
+            max-height: 80px;
+          }
 
-      .row {
-        background-color: white;
-    }
 }
-.toastCantPlayTwice{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 0.5px;
-    font-size: 1.1rem;
-    color: #d20073;
-  }
-  
+
+.toastCantPlayTwice {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  color: #d20073;
+}

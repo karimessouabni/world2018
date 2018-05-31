@@ -35,8 +35,8 @@
       </div>
       <ion-row *ngFor="let fixture of FixtureByCompet[compet.league]" (click)="openCompet(fixture)" text-wrap style="background-color: #ffffff;">
         <ion-col col-4>
-          <div> {{fixture.homeTeamName}}</div>
-        </ion-col>
+          <div>{{fixture.homeTeamName}}</div>
+        </ion-col> 
         <ion-col col-1>
           <img [src]="fixture.urlhomeTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:20px; height:20"
             alt="" /> </ion-col>

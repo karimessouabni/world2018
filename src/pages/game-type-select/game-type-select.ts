@@ -3,7 +3,7 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { BilanBetPage } from '../bilan-bet/bilan-bet';
 
 @Component({
-  selector: 'game-type-select',
+  selector: 'page-game-type-select',
   templateUrl: 'game-type-select.html'
 })
 export class GameTypeSelect {
@@ -18,17 +18,17 @@ export class GameTypeSelect {
     this.cardItems = [
       {
         name: 'assets/img/linux.png',
-        id: '1',
+        id: 'card1',
         content: 'Jouer votre feuille en mode paris simple.',
       },
       {
         name: 'assets/img/mastercard.png',
-        id: '2',
+        id: 'card1',
         content: 'Inviter un amis à vous defier sur ce match.'
       },
       {
         name: 'assets/img/googleScholar.png',
-        id: '3',
+        id: 'card1',
         content: 'Jouer contre un inconu.'
       }
     ];

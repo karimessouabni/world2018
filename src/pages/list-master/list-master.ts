@@ -37,11 +37,11 @@ export class ListMasterPage {
 
                 this.competitionsProvider.getTeamsById(fixture["idHomeTeam"])
                   .then(dataTeam => {
-                    fixture['urlhomeTeam'] = dataTeam['crestUrl'];
+                    fixture['urlhomeTeam'] = dataTeam['crestUrl'] ?  dataTeam['crestUrl'] : "assets/img/International-flags/"+dataTeam['name'].replace(/\s/g, '')+".png";
 
                     this.competitionsProvider.getTeamsById(fixture["idAwayTeam"])
                       .then(dataTeam2 => {
-                        fixture['urlawayTeam'] = dataTeam2['crestUrl'];
+                        fixture['urlawayTeam'] = dataTeam2['crestUrl'] ?  dataTeam2['crestUrl'] : "assets/img/International-flags/"+dataTeam2['name'].replace(/\s/g, '')+".png";
 
                       });
 
@@ -101,7 +101,7 @@ export class ListMasterPage {
       });
     } else {
       let toast = this.toastCtrl.create({
-        message: "Match unavailable !",
+        message: "Impossible de parier sur les matches passés !",
         duration: 3000,
         position: 'top'
       });

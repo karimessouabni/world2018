@@ -1,4 +1,4 @@
-page-item-detail {
+page-home-bet {
   .item-profile {
     width: 100%;
     background-position: center center;
@@ -44,6 +44,11 @@ page-item-detail {
     padding: 0px;
     max-height: 33px;
   }
+  ion-fab{
+    transition: none;
+    padding-bottom: 2px;
+    bottom: 37px;
+  }
 
 }
 
@@ -71,13 +76,4 @@ super-tabs-toolbar>ion-toolbar.toolbar .tab-buttons-container .tab-buttons super
 
 .toolbar-content toolbar-content-md {
   margin-top: 100px;
-}
-.cote {
-  float: left;
-  text-align: left;
-  padding: 0 50px;
-  text-transform: lowercase;
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgba(66, 74, 75, 0.474);
 }

@@ -21,23 +21,26 @@
     <ion-col col-3>
       <img [src]="fixture.urlawayTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30" alt="" />
     </ion-col>
+    <ion-col col-1>
+    </ion-col>
   </ion-row>
-  <ion-row>
 
-    <ion-col col-1>
-    </ion-col>
-    <ion-col col-3>
-      <div> {{fixture.homeTeamName}}</div>
-    </ion-col>
-    <ion-col col-4>
-      <div> {{fixture.date}}</div>
-    </ion-col>
-    <ion-col col-3>
-      <div> {{fixture.awayTeamName}}</div>
-    </ion-col>
-    <ion-col col-1>
-    </ion-col>
-  </ion-row>
+  <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-3>
+        <div> {{fixture.homeTeamName}}</div>
+      </ion-col>
+      <ion-col col-4>
+        <div> {{fixture.date | date}}</div>
+      </ion-col>
+      <ion-col col-3>
+        <div> {{fixture.awayTeamName}}</div>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+  
 
 </ion-header>
 

@@ -267,11 +267,11 @@ app.post('/api/worldCupTeamsToMongo', function (req, res) {
             console.log(err);
           }
         });
-        res.json("Done");
       }
     }).catch(error => {
       console.log(error);
     });
+    res.json("Done");
 
 });
 //=================

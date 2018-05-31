@@ -1,4 +1,4 @@
-game-type-select {
+page-game-type-select {
 
   ion-card {
     position: relative;
@@ -54,33 +54,33 @@ game-type-select {
 }
 
 
-  background: linear-gradient(87deg, #ff015b, #01fe87, #0af0ff);
-background-size: 600% 600%;
+//   background: linear-gradient(87deg, #ff015b, #01fe87, #0af0ff);
+// background-size: 600% 600%;
 
--webkit-animation: playIt 0s ease infinite;
--moz-animation: playIt 0s ease infinite;
--o-animation: playIt 0s ease infinite;
-animation: playIt 0s ease infinite;
+// -webkit-animation: playIt 0s ease infinite;
+// -moz-animation: playIt 0s ease infinite;
+// -o-animation: playIt 0s ease infinite;
+// animation: playIt 0s ease infinite;
 
-@-webkit-keyframes playIt {
-    0%{background-position:0% 96%}
-    50%{background-position:100% 5%}
-    100%{background-position:0% 96%}
-}
-@-moz-keyframes playIt {
-    0%{background-position:0% 96%}
-    50%{background-position:100% 5%}
-    100%{background-position:0% 96%}
-}
-@-o-keyframes playIt {
-    0%{background-position:0% 96%}
-    50%{background-position:100% 5%}
-    100%{background-position:0% 96%}
-}
-@keyframes playIt { 
-    0%{background-position:0% 96%}
-    50%{background-position:100% 5%}
-    100%{background-position:0% 96%}
-}
+// @-webkit-keyframes playIt {
+//     0%{background-position:0% 96%}
+//     50%{background-position:100% 5%}
+//     100%{background-position:0% 96%}
+// }
+// @-moz-keyframes playIt {
+//     0%{background-position:0% 96%}
+//     50%{background-position:100% 5%}
+//     100%{background-position:0% 96%}
+// }
+// @-o-keyframes playIt {
+//     0%{background-position:0% 96%}
+//     50%{background-position:100% 5%}
+//     100%{background-position:0% 96%}
+// }
+// @keyframes playIt { 
+//     0%{background-position:0% 96%}
+//     50%{background-position:100% 5%}
+//     100%{background-position:0% 96%}
+// }
 
 }

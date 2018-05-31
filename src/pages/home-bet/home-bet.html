@@ -56,7 +56,7 @@
       <div> {{fixture.homeTeamName}}</div>
     </ion-col>
     <ion-col col-4>
-      <div> {{fixture.date}}</div>
+      <div> {{fixture.date | date}}</div>
     </ion-col>
     <ion-col col-3>
       <div> {{fixture.awayTeamName}}</div>
@@ -76,6 +76,6 @@
   <super-tab [root]="pageParis1" [rootParams]="bet3Sheets" title="0' to 90'"> </super-tab>
   <super-tab [root]="pageParis2" [rootParams]="bet3Sheets" title="0' to 45'+"> </super-tab>
   <super-tab [root]="pageParis3" [rootParams]="bet3Sheets" title="45' to 90'+"></super-tab>
-  <super-tab [root]="pageBetMode" [rootParams]="sheetFixtureObj" title=">>"></super-tab>
+  <super-tab [root]="pageBetMode" [rootParams]="sheetFixtureObj" icon="ios-football-outline"></super-tab>
 
 </super-tabs>
