@@ -16,27 +16,24 @@ export class RavenErrorHandler implements ErrorHandler {
     Raven.captureException(err.originalError || err);
   }
 }
+ 
 
 
-import { AddReviewPage } from '../pages/add-review/add-review';
-import { CardsPage } from '../pages/cards/cards';
-import { ContentPage } from '../pages/content/content';
+import { GameTypeSelect } from '../pages/game-type-select/game-type-select';
 import { ItemCreatePage } from '../pages/item-create/item-create';
-import { ItemDetailPage } from '../pages/item-detail/item-detail';
+import { HomeBetPage } from '../pages/home-bet/home-bet';
 import { LoginPage } from '../pages/login/login';
-import { MapPage } from '../pages/map/map';
 import { MenuPage } from '../pages/menu/menu';
 import { SearchPage } from '../pages/search/search';
 import { SignupPage } from '../pages/signup/signup';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { HomeReviewPage } from '../pages/home-review/home-review';
-import { FirstHtBetsPage } from '../pages/first-ht-bets/first-ht-bets';
-import { SecondHtBetsPage } from '../pages/second-ht-bets/second-ht-bets';
+import { FirstHtBetsPage } from '../pages/3BetPages/first-ht-bets/first-ht-bets';
+import { SecondHtBetsPage } from '../pages/3BetPages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
-import { AddFriendsPage, ProfilPage, ListMasterPage, MainPage, SettingsPage, SheetPage, TabsPage, Bilan2PlayersPage } from '../pages/pages';
+import { AddFriendsPage, ProfilPage, ListMasterPage, MainPage, SettingsPage, AllMatchBets, TabsPage, Bilan2PlayersPage } from '../pages/pages';
 
 //TO REMOVE 
 import { Api } from '../providers/api';
@@ -70,7 +67,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompetitionProvider, AuthProvider, Bet3SheetsProvider, PlayerProvider, TeamsProvider, GameProvider } from '../providers/providers';
 
 // Pipes 
-import { KeysPipe } from '../pages/item-detail/compet.pipes'
+import { KeysPipe } from '../pages/home-bet/compet.pipes'
 import { DatePipes } from '../pipes/date-pipes/date-pipes'; // import our pipe here
 import { TeamNamePipe } from '../pipes/team-name/team-name';
 
@@ -117,14 +114,11 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    AddReviewPage,
-    CardsPage,
-    ContentPage,
+    GameTypeSelect,
     ItemCreatePage,
-    ItemDetailPage,
+    HomeBetPage,
     ListMasterPage,
     LoginPage,
-    MapPage,
     MenuPage,
     ResetPasswordPage,
     SearchPage,
@@ -133,8 +127,7 @@ const firebaseConfig = {
     TabsPage,
     TutorialPage,
     WelcomePage,
-    HomeReviewPage,
-    SheetPage,
+    AllMatchBets,
     BilanBetPage,
     KeysPipe,
     DatePipes,
@@ -171,14 +164,11 @@ const firebaseConfig = {
   entryComponents: [
     DatePicker,
     MyApp,
-    AddReviewPage,
-    CardsPage,
-    ContentPage,
+    GameTypeSelect,
     ItemCreatePage,
-    ItemDetailPage,
+    HomeBetPage,
     ListMasterPage,
     LoginPage,
-    MapPage,
     MenuPage,
     ResetPasswordPage,
     SearchPage,
@@ -187,8 +177,7 @@ const firebaseConfig = {
     TabsPage,
     TutorialPage,
     WelcomePage,
-    HomeReviewPage,
-    SheetPage,
+    AllMatchBets,
     FirstHtBetsPage,
     SecondHtBetsPage,
     BilanBetPage,

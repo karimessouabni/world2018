@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Sheet } from '../../models/Sheet';
-import { Bet3Sheets } from '../../models/bet3Sheets';
+import { Sheet } from '../../../models/Sheet';
+import { Bet3Sheets } from '../../../models/bet3Sheets';
 import { Events } from 'ionic-angular';
-import { Cote } from '../../models/Cote';
-import { Element } from '../../models/Element';
+import { Cote } from '../../../models/Cote';
+import { Element } from '../../../models/Element';
 
 
 /**

@@ -1,7 +1,7 @@
 <ion-content class="background-animate">
 
   <ion-card *ngFor="let item of cardItems" class="{{item.id}}">
-    <ion-card-content (click)="openBilanSubmitOnline()">
+    <ion-card-content (click)="openBilanSubmitOnline(item.id)">
         <ion-img src="{{item.name}}"></ion-img>
       <div class="card-subtitle">{{item.content}}</div>
     </ion-card-content>

@@ -44,6 +44,7 @@ page-item-detail {
     padding: 0px;
     max-height: 33px;
   }
+
 }
 
 super-tabs {
@@ -70,4 +71,13 @@ super-tabs-toolbar>ion-toolbar.toolbar .tab-buttons-container .tab-buttons super
 
 .toolbar-content toolbar-content-md {
   margin-top: 100px;
+}
+.cote {
+  float: left;
+  text-align: left;
+  padding: 0 50px;
+  text-transform: lowercase;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(66, 74, 75, 0.474);
 }

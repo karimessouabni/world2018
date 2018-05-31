@@ -13,31 +13,30 @@
     <ion-col col-1>
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30"
-        alt="" />
+      <img [src]="fixture.urlhomeTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30" alt="" />
     </ion-col>
     <ion-col col-4>
       {{ fixture.date |HM : fixture.status : fixture.result}}
     </ion-col>
     <ion-col col-3>
-      <img [src]="fixture.urlawayTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30"
-        alt="" />
+      <img [src]="fixture.urlawayTeam" onError="this.src='assets/img/badgeUnfound.ico';" style="width:30px; height:30" alt="" />
     </ion-col>
-    <ion-row>
-      <ion-col col-1>
-      </ion-col>
-      <ion-col col-3>
-        <div> {{fixture.homeTeamName}}</div>
-      </ion-col>
-      <ion-col col-4>
-        <div> {{fixture.date}}</div>
-      </ion-col>
-      <ion-col col-3>
-        <div> {{fixture.awayTeamName}}</div>
-      </ion-col>
-      <ion-col col-1>
-      </ion-col>
-    </ion-row>
+  </ion-row>
+  <ion-row>
+
+    <ion-col col-1>
+    </ion-col>
+    <ion-col col-3>
+      <div> {{fixture.homeTeamName}}</div>
+    </ion-col>
+    <ion-col col-4>
+      <div> {{fixture.date}}</div>
+    </ion-col>
+    <ion-col col-3>
+      <div> {{fixture.awayTeamName}}</div>
+    </ion-col>
+    <ion-col col-1>
+    </ion-col>
   </ion-row>
 
 </ion-header>
@@ -89,7 +88,8 @@
 
   <ion-row>
     <ion-col col-9>
-      <ion-range min="0" max="{{player.silverCoins}}" (ionChange)="getwiningBet()" [(ngModel)]="solde" color="boursouramaPink" pin="true">
+      <ion-range min="0" max="{{player.silverCoins}}" (ionChange)="getwiningBet()" [(ngModel)]="solde" color="boursouramaPink"
+        pin="true">
         <ion-label range-left>0</ion-label>
         <ion-label range-right>
           <ion-badge *ngIf="solde < player.silverCoins" color="boursouramaBlue2" item-end>{{solde}}</ion-badge>
@@ -100,12 +100,12 @@
     <ion-col col-3 color="boursouramaPink2">
       <div *ngIf="solde==0">
         <ion-avatar class="arrow" style="transition: none;top: 25px;" item-end>
-          <img srcassets/img/arrowNext.png">
+          <img src="assets/img/arrowNext.png">
         </ion-avatar>
       </div>
       <div *ngIf="solde>0">
         <ion-avatar class="arrow" style="transition: none;top: 25px;" (click)="playBetWithStranger()" item-end>
-          <img src="../../assets/img/arrowNextfilled.png">
+          <img src="assets/img/arrowNextfilled.png">
         </ion-avatar>
       </div>
 

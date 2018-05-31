@@ -3,10 +3,10 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { BilanBetPage } from '../bilan-bet/bilan-bet';
 
 @Component({
-  selector: 'page-cards',
-  templateUrl: 'cards.html'
+  selector: 'game-type-select',
+  templateUrl: 'game-type-select.html'
 })
-export class CardsPage {
+export class GameTypeSelect {
   rootNavCtrl: NavController;
   cardItems: any[];
   mySheetsAndFixturePlayed: any = null;
@@ -18,24 +18,26 @@ export class CardsPage {
     this.cardItems = [
       {
         name: 'assets/img/linux.png',
-        id: 'card1',
+        id: '1',
         content: 'Jouer votre feuille en mode paris simple.',
       },
       {
         name: 'assets/img/mastercard.png',
-        id: 'card2',
+        id: '2',
         content: 'Inviter un amis à vous defier sur ce match.'
       },
       {
         name: 'assets/img/googleScholar.png',
-        id: 'card3',
+        id: '3',
         content: 'Jouer contre un inconu.'
       }
     ];
 
   }
 
-  openBilanSubmitOnline() {
+  
+
+  openBilanSubmitOnline(id) {
     if (this.mySheetsAndFixturePlayed.bet3sheets.betCount == 0) {
       let toast = this.toastCtrl.create({
         message: "Choose at least one element !",
@@ -53,6 +55,22 @@ export class CardsPage {
     //   toast.present();
     // }
     else {
+      switch (id) {
+        case '1':
+
+          break;
+
+        case '2':
+
+          break;
+
+        case '3':
+        
+          break;
+
+        default:
+          break;
+      }
       this.rootNavCtrl.push(BilanBetPage, {
         online: true,
         playedSheets: this.mySheetsAndFixturePlayed.bet3sheets,

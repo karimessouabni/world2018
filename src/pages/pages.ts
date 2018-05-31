@@ -2,7 +2,7 @@ import { ListMasterPage } from './list-master/list-master';
 import { SearchPage } from './search/search';
 import { SettingsPage } from './settings/settings';
 import { TabsPage } from './tabs/tabs';
-import { SheetPage } from './sheet/sheet';
+import { AllMatchBets } from './3BetPages/all-match-bets/all-match-bets';
 import { TutorialPage } from './tutorial/tutorial';
 import { ProfilPage } from './profil/profil';
 import { AddFriendsPage } from './add-friends/add-friends';
@@ -21,7 +21,7 @@ export const MainPage = TabsPage;
 export {
     ProfilPage, 
     SettingsPage,
-    SheetPage,
+    AllMatchBets,
     ListMasterPage,
     TabsPage,
     SearchPage,

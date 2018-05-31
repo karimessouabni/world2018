@@ -3,12 +3,11 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Items } from '../../providers/providers';
 import { CompetitionProvider } from '../../providers/competition/competition';
 import { TeamsProvider } from '../../providers/teams/teams';
-import { SheetPage } from '../sheet/sheet';
-import { FirstHtBetsPage } from '../first-ht-bets/first-ht-bets';
-import { SecondHtBetsPage } from '../second-ht-bets/second-ht-bets';
+import { AllMatchBets } from '../3BetPages/all-match-bets/all-match-bets';
+import { FirstHtBetsPage } from '../3BetPages/first-ht-bets/first-ht-bets';
+import { SecondHtBetsPage } from '../3BetPages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../bilan-bet/bilan-bet';
-import { CardsPage } from '../cards/cards';
-import { TeamTablePage } from '../team-table/team-table';
+import { GameTypeSelect } from '../game-type-select/game-type-select';
 import { Bet3Sheets } from '../../models/bet3Sheets';
 import { Sheet } from '../../models/Sheet';
 import { Element } from '../../models/Element';
@@ -19,8 +18,8 @@ import { trigger, style, transition, animate, group } from '@angular/animations'
 
 
 @Component({
-  selector: 'page-item-detail',
-  templateUrl: 'item-detail.html',
+  selector: 'page-home-bet',
+  templateUrl: 'home-bet.html',
   animations: [
     trigger('itemAnim', [
       transition(':enter', [
@@ -41,16 +40,15 @@ import { trigger, style, transition, animate, group } from '@angular/animations'
   ]
 })
 
-export class ItemDetailPage {
+export class HomeBetPage {
   fixture: any;
   matches: any;
   teamImgLink: any;
-  pageParis1: any = SheetPage;
+  pageParis1: any = AllMatchBets;
   pageParis2: any = FirstHtBetsPage;
   pageParis3: any = SecondHtBetsPage;
-  pageBetMode: any = CardsPage;
+  pageBetMode: any = GameTypeSelect;
   BilanPage: any = BilanBetPage;
-  teamTable: any = TeamTablePage;
   sheet: Sheet;
   bet3Sheets: Bet3Sheets;
   betCount: number;

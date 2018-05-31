@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { AddReviewPage } from './add-review';
+import { AllMatchBets } from './all-match-bets';
 
 @NgModule({
   declarations: [
-    AddReviewPage,
+    AllMatchBets,
   ],
   imports: [
-    IonicPageModule.forChild(AddReviewPage),
+    IonicPageModule.forChild(AllMatchBets),
   ],
 })
-export class AddReviewPageModule {}
-
+export class SheetPageModule {}

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController, ToastController } from 'ionic-angular';
-import { ItemCreatePage } from '../item-create/item-create';
-import { ItemDetailPage } from '../item-detail/item-detail';
+import { HomeBetPage } from '../home-bet/home-bet';
 import { Items } from '../../providers/providers';
 import { CompetitionProvider } from '../../providers/competition/competition';
 import { Item } from '../../models/item';
@@ -89,26 +88,7 @@ export class ListMasterPage {
   ionViewDidLoad() {
   }
 
-  /**
-   * Prompt the user to add a new item. This shows our ItemCreatePage in a
-   * modal and then adds the new item to our data source if the user created one.
-   */
-  addItem() {
-    let addModal = this.modalCtrl.create(ItemCreatePage);
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
-      }
-    })
-    addModal.present();
-  }
 
-  /**
-   * Delete an item from the list of items.
-   */
-  deleteItem(item) {
-    this.items.delete(item);
-  }
 
   /**
    * Navigate to the detail page for this item.
@@ -116,7 +96,7 @@ export class ListMasterPage {
 
   openCompet(fixture: any) {
     if (fixture.status == "SCHEDULED" ||  fixture.status == "TIMED") {
-      this.navCtrl.push(ItemDetailPage, {
+      this.navCtrl.push(HomeBetPage, {
         fixture: fixture
       });
     } else {
