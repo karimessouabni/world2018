@@ -2,7 +2,7 @@
 
   <ion-card *ngFor="let item of cardItems" class="{{item.id}}">
     <ion-card-content (click)="openBilanSubmitOnline(item.id)">
-        <ion-img src="{{item.name}}"></ion-img>
+        <ion-img class="i{{item.id}}" src="{{item.name}}"></ion-img>
       <div class="card-subtitle">{{item.content}}</div>
     </ion-card-content>
 

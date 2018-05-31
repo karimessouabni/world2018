@@ -19,17 +19,12 @@ export class GameTypeSelect {
       {
         name: 'assets/img/linux.png',
         id: 'card1',
-        content: 'Jouer votre feuille en mode paris simple.',
-      },
-      {
-        name: 'assets/img/mastercard.png',
-        id: 'card1',
-        content: 'Inviter un amis à vous defier sur ce match.'
+        content: 'Parier contre un amis.'
       },
       {
         name: 'assets/img/googleScholar.png',
-        id: 'card1',
-        content: 'Jouer contre un inconu.'
+        id: 'card2',
+        content: 'Parier contre un inconu.'
       }
     ];
 

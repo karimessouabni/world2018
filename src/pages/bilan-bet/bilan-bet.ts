@@ -107,12 +107,12 @@ export class BilanBetPage {
 
 
   playBetWithStranger() {
+    let toast = this.toastCtrl.create({
+      message: "Match déjà en cours !",
+      duration: 3000,
+      position: 'top'
+    });
     if (this.fixture.status != "SCHEDULED" && this.fixture.status != "TIMED") { // to eliminate the case the user open this page waiting for the match to start then push his bet
-      let toast = this.toastCtrl.create({
-        message: "Match unavailable !",
-        duration: 3000,
-        position: 'top'
-      });
       toast.present();
     }
     this.gameFSFactory();
@@ -127,11 +127,16 @@ export class BilanBetPage {
       else if (returnValue == RetourPendingGame.BetAlreadyPlayed) {
         this.CantPlayTwiceToast();
       }
+      else {
+        toast.present();
+      }
     }
     );
 
 
   }
+
+  
 
   CantPlayTwiceToast() {
     let toast = this.toastCtrl.create({
