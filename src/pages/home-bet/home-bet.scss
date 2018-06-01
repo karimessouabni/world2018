@@ -12,6 +12,7 @@ page-home-bet {
   }
   .titles1 {
     padding-right: 20%;
+    color: white;
   }
   .titles2 {
     color: #003883;
@@ -38,18 +39,26 @@ page-home-bet {
   }
   img {
     width: 30px;
-    height: 30px;
+    height: 23;
   }
   [col-3] {
     padding: 0px;
     max-height: 33px;
   }
-  ion-fab{
+  ion-fab {
     transition: none;
     padding-bottom: 2px;
     bottom: 37px;
   }
-
+  .toolbar-background, .row1, super-tabs {
+    background-color: #242A31;
+  }
+  .text-md, .ion-ios-football-outline {
+    color: white;
+  }
+  [col-4], [col-3]{
+    color: white;
+}
 }
 
 super-tabs {

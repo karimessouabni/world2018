@@ -138,7 +138,7 @@ export class BilanBetPage {
 
   
 
-  CantPlayTwiceToast() {
+  CantPlayTwiceToast() { 
     let toast = this.toastCtrl.create({
       message: 'You cannot play this twice !',
       duration: 2000,
