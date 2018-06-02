@@ -45,10 +45,14 @@ page-home-bet {
     padding: 0px;
     max-height: 33px;
   }
+  .fab-md {
+    background-color: #242A31;
+  }
   ion-fab {
     transition: none;
     padding-bottom: 2px;
     bottom: 37px;
+    background-color: #242A31;
   }
   .toolbar-background, .row1, super-tabs {
     background-color: #242A31;

@@ -72,6 +72,14 @@ var teamSchema = new Schema({
 
 var leagueTableSchema = new Schema({
   name: String,
+  matchday: String
+}, {
+  "strict": false
+});
+
+
+var worldCupTableSchema = new Schema({
+  leagueCaption: String,
   code: String,
   shortName: String
 }, {
@@ -89,6 +97,8 @@ var Competitions = mongoose.model('Competitions', new Schema({
 var Fixtures = mongoose.model('Fixtures', fixtureSchema);
 var Teams = mongoose.model('Teams', teamSchema);
 var LeagueTable = mongoose.model('LeagueTable', leagueTableSchema);
+var WCTable = mongoose.model('WCTable', worldCupTableSchema);
+
 
 
 // Routes
@@ -271,9 +281,94 @@ app.post('/api/worldCupTeamsToMongo', function (req, res) {
     }).catch(error => {
       console.log(error);
     });
-    res.json("Done");
+  res.json("Done");
+});
+
+app.post('/api/worldCupTableToMongo', function (req, res) {
+  axios.get('http://api.football-data.org/v1/competitions/467/leagueTable?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
+    .then(results => {
+
+      WCTable.create(results.data, function (err, team) {
+        if (err) {
+          res.send(err);
+          console.log(err);
+        }
+      });
+    }).catch(error => {
+      console.log(error);
+    });
+  res.json("Done");
 
 });
+
+app.post('/api/worldCupTableUpdateGroupTeams', function (req, res) {
+  axios.get('http://api.football-data.org/v1/competitions/467/leagueTable?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
+    .then(results => {
+      let groupResult = results.data.standings.A;
+      for (j = 0; j < 8; j++) {
+        switch (j) {
+          case 0:
+            groupResult = results.data.standings.A;
+            break;
+          case 1:
+            groupResult = results.data.standings.B;
+            break;
+          case 2:
+            groupResult = results.data.standings.C;
+            break;
+          case 3:
+            groupResult = results.data.standings.D;
+            break;
+          case 4:
+            groupResult = results.data.standings.E;
+            break;
+          case 5:
+            groupResult = results.data.standings.F;
+            break;
+          case 6:
+            groupResult = results.data.standings.G;
+            break;
+          case 7:
+            groupResult = results.data.standings.H;
+            break;
+
+          default:
+            break;
+        }
+        for (i = 0; i < 4; i++) {
+          let teamId = groupResult[i].teamId;
+          let group = groupResult[i].group;
+          var regex = new RegExp(teamId, "i");
+
+          Teams.findOneAndUpdate({
+            'idTeam': `${teamId}`
+          }, {
+            'group': group
+          }, function (err, team) {
+            if (err) return handleError(err);
+          });
+
+        }
+      }
+    }).catch(error => {
+      console.log(error);
+    });
+  res.json("Done");
+
+});
+
+app.get('/api/WCTable/:d', function (req, res) {
+
+    WCTable.find({'idTeam': `${req.params.d}`}, function (err, fixtures) {
+    if (err) {
+      res.json(err);
+    }
+    res.json(fixtures);
+  });
+
+});
+
+
 //=================
 
 
@@ -665,50 +760,52 @@ app.get('/firebase/gameResultCalculate', function (req, res) {
 
   // const today = moment().subtract(2, 'hour').format('YYYY[-]MM[-]DD');
   // var regex = new RegExp(req.params.d, "i"),
-    const today = new RegExp(moment().subtract(2, 'month').format('YYYY[-]MM[-]DD'), "i");
+  const today = new RegExp(moment().subtract(2, 'month').format('YYYY[-]MM[-]DD'), "i");
   // const today = new RegExp (moment().subtract(1, 'month').format('YYYY[-]MM[-]DD'),;
 
-Fixtures.find({'date': today}).where('status').equals('FINISHED').select('_id').exec(function (err, fixtures) { // a ajouter que le matche soit tertminé 
-  if (err) {
-    res.json(err);
-  }
-  
-  var games = [];
-  fixtures.forEach(fixture => {
+  Fixtures.find({
+    'date': today
+  }).where('status').equals('FINISHED').select('_id').exec(function (err, fixtures) { // a ajouter que le matche soit tertminé 
+    if (err) {
+      res.json(err);
+    }
+
+    var games = [];
+    fixtures.forEach(fixture => {
 
 
 
 
-    // get game from firestore PB with subcollection 
-    // fixturesid = "5ad72f61ddd31d07bc57c61f";
-    // db.collection('games').where('idFixture', '==', fixturesid)
-    //   .get()
-    //   .then(function (gamesForThisFixture) {
+      // get game from firestore PB with subcollection 
+      // fixturesid = "5ad72f61ddd31d07bc57c61f";
+      // db.collection('games').where('idFixture', '==', fixturesid)
+      //   .get()
+      //   .then(function (gamesForThisFixture) {
 
-        
-    //     gamesForThisFixture.forEach( (game) => {
-    //       games.push(game.data());
-    //     });
 
-    //   });
+      //     gamesForThisFixture.forEach( (game) => {
+      //       games.push(game.data());
+      //     });
 
+      //   });
+
+    });
+
+
+
+    res.json(games);
   });
-  
-  
-
-  res.json(games);
-});
 
 
   // Fixtures.find({}).where('date').gt(regexToday).exec(function(err, users) {
   //   if (err) throw err;
-  
+
   //   // show the admins in the past month
   //   console.log(users);
   // });
 
- 
-  
+
+
 });
 
 // ============== FireBase
@@ -722,32 +819,32 @@ Fixtures.find({'date': today}).where('status').equals('FINISHED').select('_id').
 
 //   User.find({}).where('date').gt(regexToday).exec(function(err, users) {
 //     if (err) throw err;
-  
+
 //     // show the admins in the past month
 //     console.log(users);
 //   });
 
 
-  // Fixtures.find
-  //     axios.get('http://api.football-data.org/v1/fixtures?timeFrame=' + pn + '', {
-  //       headers: {
-  //         'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-  //       }
-  //     }).then(todayFixturesUpdated => {
-  //       for (let j = 0; j < todayFixturesUpdated.data.fixtures.length; j++) {
+// Fixtures.find
+//     axios.get('http://api.football-data.org/v1/fixtures?timeFrame=' + pn + '', {
+//       headers: {
+//         'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+//       }
+//     }).then(todayFixturesUpdated => {
+//       for (let j = 0; j < todayFixturesUpdated.data.fixtures.length; j++) {
 
 
-  //         const idFixture = todayFixturesUpdated.data.fixtures[j]._id;
-         
-       
-  //       }
-  //       res.json({
-  //         message: `All games  of : ${regexToday} are Successfully vzlculated`
-  //       });
-  //     }).catch(error => {
-  //       console.log(error);
-  //     });
-  //   }
+//         const idFixture = todayFixturesUpdated.data.fixtures[j]._id;
+
+
+//       }
+//       res.json({
+//         message: `All games  of : ${regexToday} are Successfully vzlculated`
+//       });
+//     }).catch(error => {
+//       console.log(error);
+//     });
+//   }
 // });
 
 admin.initializeApp({

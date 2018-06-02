@@ -7,6 +7,7 @@ import { AllMatchBets } from '../3BetPages/all-match-bets/all-match-bets';
 import { FirstHtBetsPage } from '../3BetPages/first-ht-bets/first-ht-bets';
 import { SecondHtBetsPage } from '../3BetPages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../bilan-bet/bilan-bet';
+import { GroupesPage } from '../groupes/groupes';
 import { GameTypeSelect } from '../game-type-select/game-type-select';
 import { Bet3Sheets } from '../../models/bet3Sheets';
 import { Sheet } from '../../models/Sheet';
@@ -44,7 +45,7 @@ export class HomeBetPage {
   fixture: any;
   matches: any;
   teamImgLink: any;
-  pageParis1: any = AllMatchBets;
+  pageParis1: any = GroupesPage;
   pageParis2: any = FirstHtBetsPage;
   pageParis3: any = SecondHtBetsPage;
   pageBetMode: any = GameTypeSelect;

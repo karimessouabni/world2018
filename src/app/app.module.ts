@@ -32,6 +32,7 @@ import { FirstHtBetsPage } from '../pages/3BetPages/first-ht-bets/first-ht-bets'
 import { SecondHtBetsPage } from '../pages/3BetPages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
+import { GroupesPage } from '../pages/groupes/groupes';
 
 import { AddFriendsPage, ProfilPage, ListMasterPage, MainPage, SettingsPage, AllMatchBets, TabsPage, Bilan2PlayersPage } from '../pages/pages';
 
@@ -77,6 +78,7 @@ import { Bet3Sheets } from '../models/bet3Sheets';
 //External Config 
 
 import { FireBaseConfig } from './app.firebase.config';
+import { WorldCupProvider } from '../providers/world-cup/world-cup';
 
 
 
@@ -137,7 +139,8 @@ const firebaseConfig = {
     SecondHtBetsPage,
     ProfilPage,
     AddFriendsPage,
-    Bilan2PlayersPage
+    Bilan2PlayersPage,
+    GroupesPage
   ],
   imports: [
     BrowserModule,
@@ -183,7 +186,8 @@ const firebaseConfig = {
     BilanBetPage,
     ProfilPage,
     AddFriendsPage,
-    Bilan2PlayersPage
+    Bilan2PlayersPage,
+    GroupesPage
   ],
   providers: [
     Api,
@@ -206,7 +210,8 @@ const firebaseConfig = {
     Facebook,
     Bet3SheetsProvider,
     PlayerProvider,
-    GameProvider
+    GameProvider,
+    WorldCupProvider
   ]
 })
 export class AppModule { }
