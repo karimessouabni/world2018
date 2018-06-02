@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as moment from 'moment';
 import { NavController, ModalController, ToastController } from 'ionic-angular';
 import { HomeBetPage } from '../home-bet/home-bet';
 import { Items } from '../../providers/providers';
@@ -18,8 +19,11 @@ export class ListMasterPage {
   selectedDate: any;
   FixtureByCompet: { [key: string]: any; } = {};
   allCompetUpdated = [];
+  now: any;
+  dateEntete: any;
 
   constructor(public navCtrl: NavController, public items: Items, public competitionsProvider: CompetitionProvider, public modalCtrl: ModalController, public toastCtrl: ToastController) {
+    this.now = moment();
     this.updateSelectedDate();
     this.updateListFixtureAndCompets();
   }
@@ -37,11 +41,11 @@ export class ListMasterPage {
 
                 this.competitionsProvider.getTeamsById(fixture["idHomeTeam"])
                   .then(dataTeam => {
-                    fixture['urlhomeTeam'] = dataTeam['crestUrl'] ?  dataTeam['crestUrl'] : "assets/img/International-flags/"+dataTeam['name'].replace(/\s/g, '')+".png";
+                    fixture['urlhomeTeam'] = dataTeam['crestUrl'] ? dataTeam['crestUrl'] : "assets/img/International-flags/" + dataTeam['name'].replace(/\s/g, '') + ".png";
 
                     this.competitionsProvider.getTeamsById(fixture["idAwayTeam"])
                       .then(dataTeam2 => {
-                        fixture['urlawayTeam'] = dataTeam2['crestUrl'] ?  dataTeam2['crestUrl'] : "assets/img/International-flags/"+dataTeam2['name'].replace(/\s/g, '')+".png";
+                        fixture['urlawayTeam'] = dataTeam2['crestUrl'] ? dataTeam2['crestUrl'] : "assets/img/International-flags/" + dataTeam2['name'].replace(/\s/g, '') + ".png";
 
                       });
 
@@ -70,22 +74,22 @@ export class ListMasterPage {
     });
   }
 
-  updateSelectedDate() {
-    var dateNonFormated = new Date();
-    var month: any = dateNonFormated.getMonth();
-    month = month + 1;
-    var day: any = dateNonFormated.getDate();
-    if ((String(day)).length == 1)
-      day = '0' + day;
-    if ((String(month)).length == 1)
-      month = '0' + month;
-    this.selectedDate = dateNonFormated.getFullYear() + '-' + month + '-' + day;
+  updateSelectedDate() { //format example : 2018-06-15
+    if (this.now.format('DD') < "14" && this.now.format('MM') === "06") {
+      this.selectedDate = '2018-06-14';
+      this.dateEntete = '14 JUN';
+    }
+    else {
+      this.selectedDate = this.now.format('YYYY-MM-DD');
+      this.dateEntete = this.now.format('DD MMM');
+    }
   }
 
   /**
    * The view loaded, let's query our items for the list
    */
   ionViewDidLoad() {
+
   }
 
 
@@ -95,7 +99,7 @@ export class ListMasterPage {
    */
 
   openCompet(fixture: any) {
-    if (fixture.status == "SCHEDULED" ||  fixture.status == "TIMED") {
+    if (fixture.status == "SCHEDULED" || fixture.status == "TIMED") {
       this.navCtrl.push(HomeBetPage, {
         fixture: fixture
       });
@@ -107,6 +111,21 @@ export class ListMasterPage {
       });
       toast.present();
     }
+  }
+
+
+  dayNext() {
+    let momentDate = moment(this.selectedDate, "YYYY-MM-DD").add(1, 'days');
+    this.selectedDate = momentDate.format('YYYY-MM-DD');
+    this.dateEntete = momentDate.format('DD MMM');
+    this.updateListFixtureAndCompets();
+  }
+
+  dayBefore() {
+    let momentDate = moment(this.selectedDate, "YYYY-MM-DD").subtract(1, 'days');
+    this.selectedDate = momentDate.format('YYYY-MM-DD');
+    this.dateEntete = momentDate.format('DD MMM');
+    this.updateListFixtureAndCompets();
   }
 
   openCalendar() {
@@ -136,6 +155,10 @@ export class ListMasterPage {
 
     myCalendar.onDidDismiss(date => {
       this.selectedDate = date.string;
+      const monthNames = ["Jan", "Fev", "Mar", "Avr", "May", "Jun",
+        "Jul", "Auo", "Sep", "Act", "Nov", "Dec"
+      ];
+      this.dateEntete = date.date + ' ' + monthNames[date.months - 1];
       this.updateListFixtureAndCompets();
     });
   }

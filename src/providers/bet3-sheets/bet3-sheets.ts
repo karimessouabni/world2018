@@ -3,9 +3,6 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 //Model import
-import { Sheet } from '../../models/Sheet';
-import { Cote } from '../../models/Cote';
-import { Element } from '../../models/Element';
 import { Bet3Sheets } from '../../models/bet3Sheets';
 
 
