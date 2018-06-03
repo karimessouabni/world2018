@@ -18,7 +18,7 @@ export class WorldCupProvider {
 
   getWorldCupTable(idGroup: String) {
     return new Promise(resolve => {
-      this.http.get("http://188.166.174.3:8080/api/WCTable" + idGroup )
+      this.http.get("http://188.166.174.3:8080/api/WCTable/" + idGroup )
         .map(res => res.json())
         .subscribe(table => {
           resolve(table);
