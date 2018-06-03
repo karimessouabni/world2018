@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 //Model import
@@ -7,10 +7,8 @@ import { Sheet } from '../../models/Sheet';
 import { Cote } from '../../models/Cote';
 import { Element } from '../../models/Element';
 import { Bet3Sheets } from '../../models/bet3Sheets';
-import { Game } from '../../models/Game';
 import { GameFvsF } from '../../models/GameFvsF';
 
-import * as firebase from 'firebase';
 /*
   Generated class for the Bet3SheetsProvider provider.
 
@@ -39,7 +37,7 @@ export class GameProvider {
 
 
 
-  constructor(private afs: AngularFirestore, private afAuth: AngularFireAuth) {
+  constructor(private afs: AngularFirestore) {
   }
 
 

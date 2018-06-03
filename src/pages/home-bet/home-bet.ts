@@ -3,7 +3,6 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Items } from '../../providers/providers';
 import { CompetitionProvider } from '../../providers/competition/competition';
 import { TeamsProvider } from '../../providers/teams/teams';
-import { AllMatchBets } from '../3BetPages/all-match-bets/all-match-bets';
 import { FirstHtBetsPage } from '../3BetPages/first-ht-bets/first-ht-bets';
 import { SecondHtBetsPage } from '../3BetPages/second-ht-bets/second-ht-bets';
 import { BilanBetPage } from '../bilan-bet/bilan-bet';

@@ -34,7 +34,7 @@ import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { GroupesPage } from '../pages/groupes/groupes';
 
-import { AddFriendsPage, ProfilPage, ListMasterPage, MainPage, SettingsPage, AllMatchBets, TabsPage, Bilan2PlayersPage } from '../pages/pages';
+import { AddFriendsPage, ProfilPage, ListMasterPage, SettingsPage, AllMatchBets, TabsPage, Bilan2PlayersPage } from '../pages/pages';
 
 //TO REMOVE 
 import { Api } from '../providers/api';
@@ -54,7 +54,6 @@ import { DatePicker } from 'ionic2-date-picker';
 import { CalendarModule } from "ion2-calendar";
 import { SuperTabsModule } from "ionic2-super-tabs";
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import firebase from 'firebase';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth'
 import { AngularFirestoreModule } from 'angularfire2/firestore'
@@ -77,7 +76,6 @@ import { Bet3Sheets } from '../models/bet3Sheets';
 
 //External Config 
 
-import { FireBaseConfig } from './app.firebase.config';
 import { WorldCupProvider } from '../providers/world-cup/world-cup';
 
 

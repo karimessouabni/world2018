@@ -335,6 +335,16 @@ app.post('/api/worldCupTableUpdateGroupTeams', function (req, res) {
           default:
             break;
         }
+
+// Create the 8 table in WcTable
+        WCTable.create(groupResult, function (err, team) {
+          if (err) {
+            res.send(err);
+            console.log(err);
+          }
+        });
+// Create the 8 table in WcTable  
+
         for (i = 0; i < 4; i++) {
           let teamId = groupResult[i].teamId;
           let group = groupResult[i].group;
@@ -359,7 +369,7 @@ app.post('/api/worldCupTableUpdateGroupTeams', function (req, res) {
 
 app.get('/api/WCTable/:d', function (req, res) {
 
-    WCTable.find({'idTeam': `${req.params.d}`}, function (err, fixtures) {
+    WCTable.find({'group': `${req.params.d}`}, function (err, fixtures) {
     if (err) {
       res.json(err);
     }
