@@ -367,6 +367,7 @@ app.post('/api/worldCupTableUpdateGroupTeams', function (req, res) {
 
 });
 
+/* Get Table of certain group */
 app.get('/api/WCTable/:d', function (req, res) {
 
     WCTable.find({'group': `${req.params.d}`}, function (err, fixtures) {
@@ -377,6 +378,19 @@ app.get('/api/WCTable/:d', function (req, res) {
   });
 
 });
+
+/* Get Team by it's Name */
+app.get('/api/WCTeam/:d', function (req, res) {
+
+  WCTable.find({'name': `${req.params.d}`}, function (err, fixtures) {
+  if (err) {
+    res.json(err);
+  }
+  res.json(fixtures);
+});
+
+});
+
 
 
 //=================
