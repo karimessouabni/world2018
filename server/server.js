@@ -382,7 +382,7 @@ app.get('/api/WCTable/:d', function (req, res) {
 /* Get Team by it's Name */
 app.get('/api/WCTeam/:d', function (req, res) {
 
-  WCTable.find({'name': `${req.params.d}`}, function (err, fixtures) {
+  Teams.find({'name': `${req.params.d}`}, function (err, fixtures) {
   if (err) {
     res.json(err);
   }
