@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {WorldCupProvider} from '../../providers/providers';
+import { WorldCupProvider } from '../../providers/providers';
 /**
  * Generated class for the GroupesPage page.
  *
@@ -14,13 +14,19 @@ import {WorldCupProvider} from '../../providers/providers';
   templateUrl: 'groupes.html',
 })
 export class GroupesPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public worldCupProvider : WorldCupProvider) {
+  groupe: any;
+  fixture: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public worldCupProvider: WorldCupProvider) {
+    this.fixture = navParams.data;
+    worldCupProvider.getGroupOfTeam(this.fixture.homeTeamName).then(group =>{
+      worldCupProvider.getWorldCupTable(group).then(data => {
+        this.groupe = data;
+      });
+    });
   }
 
   ionViewDidLoad() {
-    let myobject = this.worldCupProvider.getWorldCupTable('A');
-    console.log('ionViewDidLoad GroupesPage');
+
   }
 
 }

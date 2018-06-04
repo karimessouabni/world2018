@@ -5,7 +5,15 @@ page-groupes {
   .card-content-md {
     padding: 0px;
   }
-  .item2 {
+#item0 #item2 {
     background-color: #EEEEEE;
   }
+  .arrow{
+    width: 21px; 
+    height: 21px;
+  }
+  .no-padding {
+    padding: 0px 0px 0px 0px !important; 
+    padding-right: 0px;
+}
 }

@@ -4,8 +4,7 @@
 
     <ion-card-content>
      
-      <ion-list>
-          <ion-item>
+        <ion-item>
 
               <div item-start>Groupe A</div> 
   
@@ -15,60 +14,26 @@
               <div item-end>Gd</div> 
               <div item-end>Pts</div>  
             </ion-item> 
+      <ion-list>
 
 
 
-          <ion-item>
-            <div item-start>1</div> 
-            <div item-start><img src="assets/img/arrowUp.png"></div> 
-            <div item-start><img src="assets/img/International-flags/brazil.png"> </div> 
-            <div item-start>Russia</div> 
 
-            <div item-end>7</div> 
-            <div item-end>&nbsp;5&nbsp;</div> 
-            <div item-end>&nbsp;1&nbsp;</div> 
-            <div item-end>&nbsp;5&nbsp;</div> 
-            <div item-end>&nbsp;3&nbsp;&nbsp;</div>  
+          <ion-item class="item no-padding" id="item{{i}}" *ngFor="let element of groupe ;  let i = index" >
+            <div item-start>
+              <img  *ngIf='i == 0 || i == 1'  class="arrow" src="assets/img/arrowUp.png">
+              <img  *ngIf='i == 2 || i == 3'  class="arrow" src="assets/img/arrowDown.png">
+            </div> 
+            <div item-start><img [src]="element.crestURI" onError="this.src='assets/img/badgeUnfound.ico';" style="width:20px; height:20" alt="" />  </div> 
+            <div item-start>{{element.team}}</div> 
+
+            <div item-end>{{element.playedGames}}</div> 
+            <div item-end>&nbsp;{{element.goals}}&nbsp;</div> 
+            <div item-end>&nbsp;{{element.goalsAgainst}}&nbsp;</div> 
+            <div item-end>&nbsp;{{element.goalDifference}}&nbsp;</div> 
+            <div item-end>&nbsp;{{element.points}}&nbsp;&nbsp;</div>  
           </ion-item>
 
-          <ion-item class="item2">
-              <div item-start>2</div> 
-              <div item-start><img src="assets/img/arrowUp.png"></div> 
-              <div item-start><img src="assets/img/International-flags/egypt.png"> </div> 
-              <div item-start>Egypt</div> 
-               
-              <div item-end>7</div> 
-              <div item-end>5</div> 
-              <div item-end>1</div> 
-              <div item-end>12</div> 
-              <div item-end>3</div>   
-            </ion-item>
-
-            <ion-item>
-                <div item-start>3</div> 
-                <div item-start><img src="assets/img/arrowDown.png"></div> 
-                <div item-start><img src="assets/img/International-flags/morocco.png"> </div> 
-                <div item-start>Morocco</div> 
-                 
-                <div item-end>7</div> 
-                <div item-end>5</div> 
-                <div item-end>1</div> 
-                <div item-end>12</div> 
-                <div item-end>3</div>   
-              </ion-item>
-
-              <ion-item class="item2">
-                <div item-start>4</div> 
-                <div item-start><img src="assets/img/arrowDown.png"></div> 
-                <div item-start><img src="assets/img/International-flags/france.png"> </div> 
-                <div item-start>France</div> 
-                
-                <div item-end>7</div> 
-                <div item-end>5</div> 
-                <div item-end>1</div> 
-                <div item-end>12</div> 
-                <div item-end>3</div>  
-              </ion-item>
         </ion-list>
     </ion-card-content>
   </ion-card>
