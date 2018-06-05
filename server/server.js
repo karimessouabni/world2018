@@ -414,7 +414,7 @@ app.get('/api/WCTeam/:d', function (req, res) {
 
 
 app.post('/api/worldCupNewsToMongo', function (req, res) {
-  axios.get('https://gist.githubusercontent.com/karimessouabni/491389a5478af135652f2a477d82d8d7/raw/4d5b15e1ef05115368da2eeebe6cb6470d8d9448/Wcup18')
+  axios.get('https://gist.githubusercontent.com/karimessouabni/491389a5478af135652f2a477d82d8d7/raw/Wcup18')
     .then(results => {
       for (j = 0; j < results.data.length; j++) {
         WCNews.create(results.data[j], function (err, team) {

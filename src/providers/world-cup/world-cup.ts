@@ -101,9 +101,9 @@ export class WorldCupProvider {
   }
 
 
-  getWorldCupNewsForTeam(teamName:any){
+  getWorldCupNewsForTeam(teamName1:any, teamName2:any){
     return new Promise(resolve => {
-      this.http.get("http://188.166.174.3:8080/api/WCTeamNews/" + teamName)
+      this.http.get("http://188.166.174.3:8080/api/WCTeamNews/" + teamName1+"/"+teamName2)
         .map(res => res.json())
         .subscribe(table => {
           resolve(table);

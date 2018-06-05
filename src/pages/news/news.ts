@@ -21,7 +21,7 @@ export class NewsPage {
   news: any;
   constructor(private socialSharing: SocialSharing, public iab: InAppBrowser, public navCtrl: NavController, public navParams: NavParams, public worldCupProvider: WorldCupProvider) {
     this.fixture = navParams.data;
-    worldCupProvider.getWorldCupNewsForTeam(this.fixture.homeTeamName).then(data =>{
+    worldCupProvider.getWorldCupNewsForTeam(this.fixture.homeTeamName, this.fixture.awayTeamName).then(data =>{
       this.news = data;
     });
   }
