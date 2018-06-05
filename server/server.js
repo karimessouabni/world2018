@@ -433,10 +433,10 @@ app.post('/api/worldCupNewsToMongo', function (req, res) {
 
 
 // get News of team by name
-app.get('/api/WCTeam/:d', function (req, res) {
+app.get('/api/WCTeamNews/:d', function (req, res) {
 
   WCNews.find({
-    'name': `${req.params.d}`
+    'team': `${req.params.d}`
   }, function (err, fixtures) {
     if (err) {
       res.json(err);
