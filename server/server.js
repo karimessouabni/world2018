@@ -435,16 +435,22 @@ app.post('/api/worldCupNewsToMongo', function (req, res) {
 // get News of team by name
 app.get('/api/WCTeamNews/:d/:b', function (req, res) {
   
-  WCNews.find({$or: [
-    {'team': `${req.params.d}`},
-    {'team': `${req.params.b}`}
-  ]},
-   function (err, fixtures) {
+  WCNews.remove({}, function (err) {
     if (err) {
-      res.json(err);
+      console.log("Removing all News documents failed" + err);
+    } else {
+      WCNews.find({$or: [
+        {'team': `${req.params.d}`},
+        {'team': `${req.params.b}`}
+      ]},
+       function (err, fixtures) {
+        if (err) {
+          res.json(err);
+        }
+        res.json(fixtures);
+      });
     }
-    res.json(fixtures);
-  });
+
 
 });
 
