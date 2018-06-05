@@ -86,6 +86,19 @@ var worldCupTableSchema = new Schema({
   "strict": false
 });
 
+
+var worldCupNewsSchema = new Schema({
+  team: String,
+  title: String,
+  link: String,
+  pic: String,
+  subtitle: String,
+  pos: String
+}, {
+  "strict": false
+});
+
+
 var Review = mongoose.model('Review', reviewSchema);
 
 var Competitions = mongoose.model('Competitions', new Schema({
@@ -98,6 +111,7 @@ var Fixtures = mongoose.model('Fixtures', fixtureSchema);
 var Teams = mongoose.model('Teams', teamSchema);
 var LeagueTable = mongoose.model('LeagueTable', leagueTableSchema);
 var WCTable = mongoose.model('WCTable', worldCupTableSchema);
+var WCNews = mongoose.model('WCNews', worldCupNewsSchema);
 
 
 
@@ -219,6 +233,8 @@ app.delete('/api/reviews/:review_id', function (req, res) {
 
 // WorldCup management
 
+
+
 app.post('/api/worldCupCompetitions', function (req, res) {
   axios.get('http://api.football-data.org/v1/competitions/467/?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
     .then(response => {
@@ -336,14 +352,14 @@ app.post('/api/worldCupTableUpdateGroupTeams', function (req, res) {
             break;
         }
 
-// Create the 8 table in WcTable
+        // Create the 8 table in WcTable
         WCTable.create(groupResult, function (err, team) {
           if (err) {
             res.send(err);
             console.log(err);
           }
         });
-// Create the 8 table in WcTable  
+        // Create the 8 table in WcTable  
 
         for (i = 0; i < 4; i++) {
           let teamId = groupResult[i].teamId;
@@ -370,7 +386,9 @@ app.post('/api/worldCupTableUpdateGroupTeams', function (req, res) {
 /* Get Table of certain group */
 app.get('/api/WCTable/:d', function (req, res) {
 
-    WCTable.find({'group': `${req.params.d}`}, function (err, fixtures) {
+  WCTable.find({
+    'group': `${req.params.d}`
+  }, function (err, fixtures) {
     if (err) {
       res.json(err);
     }
@@ -382,18 +400,53 @@ app.get('/api/WCTable/:d', function (req, res) {
 /* Get Team by it's Name */
 app.get('/api/WCTeam/:d', function (req, res) {
 
-  Teams.find({'name': `${req.params.d}`}, function (err, fixtures) {
-  if (err) {
-    res.json(err);
-  }
-  res.json(fixtures);
-});
+  Teams.find({
+    'name': `${req.params.d}`
+  }, function (err, fixtures) {
+    if (err) {
+      res.json(err);
+    }
+    res.json(fixtures);
+  });
 
 });
 
 
 
-//=================
+app.post('/api/worldCupNewsToMongo', function (req, res) {
+  axios.get('https://gist.githubusercontent.com/karimessouabni/491389a5478af135652f2a477d82d8d7/raw/4d5b15e1ef05115368da2eeebe6cb6470d8d9448/Wcup18')
+    .then(results => {
+      for (j = 0; j < results.data.length; j++) {
+        WCNews.create(results.data[j], function (err, team) {
+          if (err) {
+            res.send(err);
+            console.log(err);
+          }
+        });
+      }
+    }).catch(error => {
+      console.log(error);
+    });
+  res.json("Done");
+
+});
+
+
+// get News of team by name
+app.get('/api/WCTeam/:d', function (req, res) {
+
+  WCNews.find({
+    'name': `${req.params.d}`
+  }, function (err, fixtures) {
+    if (err) {
+      res.json(err);
+    }
+    res.json(fixtures);
+  });
+
+});
+
+//================= WORLD CUP END ====================// 
 
 
 // Pull competitions from api modify  the JSONS and push em in the mongo db

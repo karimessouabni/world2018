@@ -4,9 +4,9 @@
 
     <ion-card-content>
      
-        <ion-item>
+        <ion-item id="itemEntete" >
 
-              <div item-start>Groupe A</div> 
+              <div item-start>Groupe {{groupeName}}</div> 
   
               <div item-end>P</div> 
               <div item-end>G</div> 
@@ -15,8 +15,6 @@
               <div item-end>Pts</div>  
             </ion-item> 
       <ion-list>
-
-
 
 
           <ion-item class="item no-padding" id="item{{i}}" *ngFor="let element of groupe ;  let i = index" >

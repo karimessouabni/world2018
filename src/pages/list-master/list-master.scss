@@ -1,16 +1,20 @@
 page-list-master {
-
-  .toolbar-background, .item {
+  .toolbar-background,
+  .item {
     background-color: #242A31;
   }
-
-
+  [col-12] {
+    padding: 12px;
+  }
+  .row {
+    min-height: 43px;
+  }
   .titles1 {
     padding-left: 10px;
     color: #fff;
   }
   .titleMatch {
-    color: #666; 
+    color: #666;
     font-family: Roboto;
   }
   div {
@@ -30,7 +34,7 @@ page-list-master {
   }
   .item-md {
     padding-right: 16px;
-    min-height: 90px;
+    // min-height: 90px;
   }
 }
 
@@ -51,7 +55,8 @@ ion-col {
   margin: 0;
 }
 
-ion-avatar img, ion-thumbnail img {
+ion-avatar img,
+ion-thumbnail img {
   display: inline-block;
 }
 

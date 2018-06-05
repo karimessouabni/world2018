@@ -5,10 +5,17 @@ page-groupes {
   .card-content-md {
     padding: 0px;
   }
-#item0 #item2 {
+  #item0, #item2 {
+    // background-color: #EEEEEE;
     background-color: #EEEEEE;
   }
-  .arrow{
+
+   .scroll-content {
+    padding: 5px;
+    background-color: #313840;
+} 
+
+  .arrow{ 
     width: 21px; 
     height: 21px;
   }

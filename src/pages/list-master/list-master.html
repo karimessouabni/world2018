@@ -4,7 +4,7 @@
     <ion-title>
       <ion-row align-items-end>
         <ion-col col-12 item-end>
-          <img src="assets/img/worldCup.png" style="width:45px; height:57px" alt="" />
+          <img src="assets/img/worldCup.png" style="width: 60px; height: 70px;" alt="" />
         </ion-col>
       </ion-row>
 
@@ -58,7 +58,7 @@
           alt="" />
       </ion-row>
       <ion-row align-items-center>
-        <p class="titleMatch"> Groupe phase {{compet.currentMatchday}} </p>
+        <p class="titleMatch"> Groupes </p>
       </ion-row>
       <ion-row *ngFor="let fixture of FixtureByCompet[compet.league]" (click)="openCompet(fixture)" text-wrap style="background-color: #ffffff;">
         <ion-col col-4>

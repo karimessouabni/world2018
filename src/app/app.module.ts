@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage, IonicStorageModule } from '@ionic/storage';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 import { MyApp } from './app.component';
@@ -33,6 +35,8 @@ import { SecondHtBetsPage } from '../pages/3BetPages/second-ht-bets/second-ht-be
 import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { GroupesPage } from '../pages/groupes/groupes';
+import { NewsPage } from '../pages/news/news';
+import { VideosPage } from '../pages/videos/videos';
 
 import { AddFriendsPage, ProfilPage, ListMasterPage, SettingsPage, AllMatchBets, TabsPage, Bilan2PlayersPage } from '../pages/pages';
 
@@ -138,7 +142,9 @@ const firebaseConfig = {
     ProfilPage,
     AddFriendsPage,
     Bilan2PlayersPage,
-    GroupesPage
+    GroupesPage,
+    NewsPage,
+    VideosPage
   ],
   imports: [
     BrowserModule,
@@ -185,11 +191,15 @@ const firebaseConfig = {
     ProfilPage,
     AddFriendsPage,
     Bilan2PlayersPage,
-    GroupesPage
+    GroupesPage,
+    VideosPage,
+    NewsPage
   ],
   providers: [
     Api,
     ReviewsProvider,
+    InAppBrowser,
+    SocialSharing,
     CompetitionProvider,
     Items,
     Camera,

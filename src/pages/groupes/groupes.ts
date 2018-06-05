@@ -15,10 +15,12 @@ import { WorldCupProvider } from '../../providers/providers';
 })
 export class GroupesPage {
   groupe: any;
+  groupeName: any;
   fixture: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public worldCupProvider: WorldCupProvider) {
     this.fixture = navParams.data;
     worldCupProvider.getGroupOfTeam(this.fixture.homeTeamName).then(group =>{
+      this.groupeName = group;
       worldCupProvider.getWorldCupTable(group).then(data => {
         this.groupe = data;
       });

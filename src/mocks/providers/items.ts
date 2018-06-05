@@ -15,47 +15,44 @@ export class Items {
 
 
   constructor(public http: Http) {
-    let items = [
+    let BestScorer = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "Cristiano Ronaldo",
+        "pos": "1",
+        "team": "Portugal",
+        "pic": "assets/img/cr7.jpg",
+        "goals": "12"
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "Lionel Messi",
+        "pos": "2",
+        "team": "Argentina",
+        "pic": "assets/img/messi.jpg",
+        "goals": "11"
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "name": "Neymar",
+        "pos": "3",
+        "team": "Brazil",
+        "pic": "assets/img/naymar.jpg",
+        "goals": "5"
       },
       {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "name": "Mohamed Salah",
+        "pos": "4",
+        "team": "Portugal",
+        "pic": "assets/img/mosalah.jpg",
+        "goals": "5"
       },
       {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
-      },
-      {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "name": "Kylian Mbappé",
+        "pos": "5",
+        "team": "France",
+        "pic": "assets/img/mbape.jpg",
+        "goals": "3"
       }
     ];
-
-    for (let item of items) {
-      this.items.push(new Item(item));
-    }
+  
   }
 
   query(params?: any) {

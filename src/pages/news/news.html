@@ -1,0 +1,29 @@
+<ion-content padding>
+  <ion-card class="item no-padding" id="item{{i}}" *ngFor="let element of news ;  let i = index">
+
+    <img [src]="element.pic"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{element.title}}
+      </ion-card-title>
+      <p>
+        {{element.subtitle}}
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+        <ion-col>
+          <button (click)="openUrl(element.link)" ion-button clear small color="boursouramaPink" icon-start>
+            <ion-icon name='ios-expand'></ion-icon>
+            Open
+          </button>
+        </ion-col>
+    
+        <ion-col text-right>
+          <button (click)="regularShare(element.link)" ion-button clear small color="boursouramaPink" icon-start>
+            <ion-icon name='share-alt'></ion-icon>
+            Share
+          </button>
+        </ion-col>
+      </ion-row>
+  </ion-card>
+</ion-content>
