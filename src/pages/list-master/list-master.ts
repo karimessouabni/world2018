@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import * as moment from 'moment';
-import { NavController, ModalController, ToastController } from 'ionic-angular';
+import { NavController, ModalController, ToastController, MenuController } from 'ionic-angular';
 import { HomeBetPage } from '../home-bet/home-bet';
 import { Items } from '../../providers/providers';
 import { CompetitionProvider } from '../../providers/competition/competition';
@@ -22,12 +22,15 @@ export class ListMasterPage {
   now: any;
   dateEntete: any;
 
-  constructor(public navCtrl: NavController, public items: Items, public competitionsProvider: CompetitionProvider, public modalCtrl: ModalController, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController,public menuCtrl: MenuController, public items: Items, public competitionsProvider: CompetitionProvider, public modalCtrl: ModalController, public toastCtrl: ToastController) {
     this.now = moment();
     this.updateSelectedDate();
     this.updateListFixtureAndCompets();
   }
 
+  openSideMenu(){
+    this.menuCtrl.toggle('left')
+    }
 
   updateListFixtureAndCompets() {
     this.allCompetUpdated = [];

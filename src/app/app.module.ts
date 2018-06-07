@@ -7,38 +7,22 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 
+
 import { MyApp } from './app.component';
-import * as Raven from 'raven-js';
-Raven
-  .config('https://2bdcb53332114dc0babfaf648d280025@sentry.io/268959')
-  .install();
-
-export class RavenErrorHandler implements ErrorHandler {
-  handleError(err: any): void {
-    Raven.captureException(err.originalError || err);
-  }
-}
- 
 
 
-import { GameTypeSelect } from '../pages/game-type-select/game-type-select';
 import { ItemCreatePage } from '../pages/item-create/item-create';
 import { HomeBetPage } from '../pages/home-bet/home-bet';
-import { LoginPage } from '../pages/login/login';
-import { MenuPage } from '../pages/menu/menu';
-import { SearchPage } from '../pages/search/search';
-import { SignupPage } from '../pages/signup/signup';
 import { TutorialPage } from '../pages/tutorial/tutorial';
-import { WelcomePage } from '../pages/welcome/welcome';
-import { FirstHtBetsPage } from '../pages/3BetPages/first-ht-bets/first-ht-bets';
-import { SecondHtBetsPage } from '../pages/3BetPages/second-ht-bets/second-ht-bets';
-import { BilanBetPage } from '../pages/bilan-bet/bilan-bet';
-import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { GroupesPage } from '../pages/groupes/groupes';
 import { NewsPage } from '../pages/news/news';
 import { VideosPage } from '../pages/videos/videos';
+import { TopPlayersPage } from '../pages/top-players/top-players';
+import { WcNewsPage } from '../pages/wc-news/wc-news';
+import { WcVideosPage } from '../pages/wc-videos/wc-videos';
 
-import { AddFriendsPage, ProfilPage, ListMasterPage, SettingsPage, AllMatchBets, TabsPage, Bilan2PlayersPage } from '../pages/pages';
+
+import { ListMasterPage, TabsPage } from '../pages/pages';
 
 //TO REMOVE 
 import { Api } from '../providers/api';
@@ -58,9 +42,6 @@ import { DatePicker } from 'ionic2-date-picker';
 import { CalendarModule } from "ion2-calendar";
 import { SuperTabsModule } from "ionic2-super-tabs";
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth'
-import { AngularFirestoreModule } from 'angularfire2/firestore'
 import { Facebook } from '@ionic-native/facebook'; //Added Facebook
 
 
@@ -68,7 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 //Providers 
-import { CompetitionProvider, AuthProvider, Bet3SheetsProvider, PlayerProvider, TeamsProvider, GameProvider } from '../providers/providers';
+import { CompetitionProvider, Bet3SheetsProvider, PlayerProvider, TeamsProvider, GameProvider } from '../providers/providers';
 
 // Pipes 
 import { KeysPipe } from '../pages/home-bet/compet.pipes'
@@ -106,45 +87,26 @@ export function provideSettings(storage: Storage) {
   });
 }
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBWsilu-S_dM_bEJ5kfsEdQPxN9ZBPOL28",
-  authDomain: "fbloginparisfoot.firebaseapp.com",
-  databaseURL: "https://fbloginparisfoot.firebaseio.com",
-  projectId: "fbloginparisfoot",
-  storageBucket: "fbloginparisfoot.appspot.com",
-  messagingSenderId: "513895090448"
-};
+
 
 @NgModule({
   declarations: [
     MyApp,
-    GameTypeSelect,
     ItemCreatePage,
     HomeBetPage,
     ListMasterPage,
-    LoginPage,
-    MenuPage,
-    ResetPasswordPage,
-    SearchPage,
-    SettingsPage,
-    SignupPage,
     TabsPage,
     TutorialPage,
-    WelcomePage,
-    AllMatchBets,
-    BilanBetPage,
     KeysPipe,
     DatePipes,
     TeamNamePipe,
     DatePicker,
-    FirstHtBetsPage,
-    SecondHtBetsPage,
-    ProfilPage,
-    AddFriendsPage,
-    Bilan2PlayersPage,
     GroupesPage,
     NewsPage,
-    VideosPage
+    VideosPage,
+    TopPlayersPage,
+    WcNewsPage,
+    WcVideosPage
   ],
   imports: [
     BrowserModule,
@@ -162,38 +124,22 @@ const firebaseConfig = {
     }),
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule,
-    AngularFireAuthModule
-
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     DatePicker,
     MyApp,
-    GameTypeSelect,
     ItemCreatePage,
     HomeBetPage,
     ListMasterPage,
-    LoginPage,
-    MenuPage,
-    ResetPasswordPage,
-    SearchPage,
-    SettingsPage,
-    SignupPage,
     TabsPage,
     TutorialPage,
-    WelcomePage,
-    AllMatchBets,
-    FirstHtBetsPage,
-    SecondHtBetsPage,
-    BilanBetPage,
-    ProfilPage,
-    AddFriendsPage,
-    Bilan2PlayersPage,
     GroupesPage,
+    NewsPage,
     VideosPage,
-    NewsPage
+    TopPlayersPage,
+    WcNewsPage,
+    WcVideosPage
   ],
   providers: [
     Api,
@@ -209,12 +155,8 @@ const firebaseConfig = {
     TeamNamePipe,
     Bet3Sheets,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
-    // Keep this to enable Ionic's runtime error handling during development
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-    { provide: ErrorHandler, useClass: RavenErrorHandler },
     CompetitionProvider,
     TeamsProvider,
-    AuthProvider,
     Facebook,
     Bet3SheetsProvider,
     PlayerProvider,

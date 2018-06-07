@@ -4,30 +4,38 @@ import { Platform, Nav, Config } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { GameTypeSelect } from '../pages/game-type-select/game-type-select';
 import { FirstRunPage } from '../pages/pages';
 import { ListMasterPage } from '../pages/list-master/list-master';
-import { LoginPage } from '../pages/login/login';
-import { MenuPage } from '../pages/menu/menu';
-import { SearchPage } from '../pages/search/search';
-import { SettingsPage } from '../pages/settings/settings';
-import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
+import { TopPlayersPage } from '../pages/top-players/top-players';
+
 import { TutorialPage } from '../pages/tutorial/tutorial';
-import { WelcomePage } from '../pages/welcome/welcome';
-import { AddFriendsPage } from '../pages/add-friends/add-friends';
+
 
 import { Settings } from '../providers/providers';
 
-import { TranslateService } from '@ngx-translate/core'
-import { AngularFireAuth } from 'angularfire2/auth';
 
 
 @Component({
   template: `<ion-menu [content]="content">
-    <ion-header>
+    <ion-header classe="header1">
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+      <ion-title>
+      <ion-row>  
+      <ion-col>
+        <ion-avatar>
+           <img style ="height: 50px;margin-left: 54px;
+            width: 40px;"src="assets/img/trophy.png"/>
+        </ion-avatar>
+        </ion-col>
+        <ion-col>
+      
+          <p style ="margin-right: 42px;" class="titles1">WC2018</p>
+                
+        </ion-col>
+      </ion-row>
+    </ion-title>
+        
       </ion-toolbar>
     </ion-header>
 
@@ -44,37 +52,22 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class MyApp {
   // rootPage : any = FirstRunPage;
-  rootPage : any; 
+  rootPage: any;
 
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Tutorial', component: TutorialPage },
-    { title: 'Welcome', component: WelcomePage },
-    { title: 'Tabs', component: TabsPage },
-    { title: 'GameTypeSelect', component: GameTypeSelect },
-    { title: 'Login', component: LoginPage },
-    { title: 'Signup', component: SignupPage },
-    { title: 'Master Detail', component: ListMasterPage },
-    { title: 'Menu', component: MenuPage },
-    { title: 'Settings', component: SettingsPage },
-    { title: 'Search', component: SearchPage }
+    { title: 'Table', component: TabsPage },
+    { title: 'Videos', component: ListMasterPage },
+    { title: 'News', component: ListMasterPage },
+    { title: 'Players', component: TopPlayersPage },
   ]
 
-  constructor(afAuth: AngularFireAuth, private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
-    this.initTranslate();
+  constructor(private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
 
-    const authObserver = afAuth.authState.subscribe( user => {
-      if (user) {
-        console.log(user.email);
-        this.rootPage = ListMasterPage;
-        authObserver.unsubscribe();
-      } else {
-        this.rootPage = FirstRunPage;
-        authObserver.unsubscribe();
-      }
-    });
-    
+    this.rootPage = TabsPage;
+    // this.rootPage = FirstRunPage;
+
   }
 
   ionViewDidLoad() {
@@ -86,20 +79,6 @@ export class MyApp {
     });
   }
 
-  initTranslate() {
-    // Set the default language for translation strings, and the current language.
-    this.translate.setDefaultLang('fr');
-
-    if (this.translate.getBrowserLang() !== undefined) {
-      this.translate.use(this.translate.getBrowserLang());
-    } else {
-      this.translate.use('fr'); // Set your language here
-    }
-
-    this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {
-      this.config.set('ios', 'backButtonText', 'retour');
-    });
-  }
 
   openPage(page) {
     // Reset the content nav to have just this page
@@ -107,5 +86,5 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-  
+
 }

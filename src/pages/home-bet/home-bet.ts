@@ -3,13 +3,9 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Items } from '../../providers/providers';
 import { CompetitionProvider } from '../../providers/competition/competition';
 import { TeamsProvider } from '../../providers/teams/teams';
-import { FirstHtBetsPage } from '../3BetPages/first-ht-bets/first-ht-bets';
-import { SecondHtBetsPage } from '../3BetPages/second-ht-bets/second-ht-bets';
-import { BilanBetPage } from '../bilan-bet/bilan-bet';
 import { GroupesPage } from '../groupes/groupes';
 import { NewsPage } from '../news/news';
 import { VideosPage } from '../videos/videos';
-import { GameTypeSelect } from '../game-type-select/game-type-select';
 import { Bet3Sheets } from '../../models/bet3Sheets';
 import { Sheet } from '../../models/Sheet';
 import { Element } from '../../models/Element';
@@ -17,7 +13,7 @@ import { Cote } from '../../models/Cote';
 import { TeamNamePipe } from '../../pipes/team-name/team-name';
 import { Events } from 'ionic-angular';
 import { trigger, style, transition, animate, group } from '@angular/animations';
-
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
   selector: 'page-home-bet',
@@ -49,15 +45,13 @@ export class HomeBetPage {
   pageParis1: any = GroupesPage;
   pageParis2: any = NewsPage;
   pageParis3: any = VideosPage;
-  pageBetMode: any = GameTypeSelect;
-  BilanPage: any = BilanBetPage;
   sheet: Sheet;
   bet3Sheets: Bet3Sheets;
   betCount: number;
   sheetFixtureObj: any = null;
 
 
-  constructor(private pipeTeam: TeamNamePipe, public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items, public events: Events, public toastCtrl: ToastController) {
+  constructor(private socialSharing: SocialSharing, private pipeTeam: TeamNamePipe, public navCtrl: NavController, public competitionsProvider: CompetitionProvider, public teamsProvider: TeamsProvider, navParams: NavParams, items: Items, public events: Events, public toastCtrl: ToastController) {
 
     this.fixture = navParams.get('fixture');
     // this.betCount = this.bet3Sheets.sheetAllMatch.player;
@@ -74,6 +68,12 @@ export class HomeBetPage {
     // this.BilanPage.fillListPlayedElement();
   }
 
+
+
+  
+  regularShare(){
+    this.socialSharing.share("Sent from the best App for World Cup 2018 : \nWC2018! ", null, null, null);
+  }
 
 
 

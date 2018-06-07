@@ -14,6 +14,13 @@ page-home-bet {
     padding-right: 20%;
     color: white;
   }
+  .card-md {
+    margin: 0px;
+    border-radius: 2px;
+    width: 100%;
+    padding: 0px 0px 20px 0px !important;
+    margin-bottom: 20px;
+  }
   .titles2 {
     color: #003883;
     font-family: 'Barlow', sans-serif;
@@ -47,22 +54,29 @@ page-home-bet {
   }
   .fab-md {
     background-color: #242A31;
+    top: 42px;
   }
+
   ion-fab {
+    
     transition: none;
     padding-bottom: 2px;
     bottom: 37px;
     background-color: #242A31;
   }
-  .toolbar-background, .row1, super-tabs {
+  .toolbar-background,
+  .row1,
+  super-tabs {
     background-color: #242A31;
   }
-  .text-md, .ion-ios-football-outline {
+  .text-md,
+  .ion-ios-football-outline {
     color: white;
   }
-  [col-4], [col-3]{
+  [col-4],
+  [col-3] {
     color: white;
-}
+  }
 }
 
 super-tabs {

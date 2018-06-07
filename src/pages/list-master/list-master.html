@@ -2,9 +2,32 @@
   <ion-navbar>
 
     <ion-title>
-      <ion-row align-items-end>
-        <ion-col col-12 item-end>
+
+      <ion-row>
+        <ion-col>
+          <ion-fab top left edge>
+            <button (click)="openSideMenu()" ion-fab class="button-bg">
+              <ion-avatar>
+                <img src="assets/img/pull.png">
+              </ion-avatar>
+            </button>
+          </ion-fab>
+        </ion-col>
+
+
+        <ion-col>
           <img src="assets/img/worldCup.png" style="width: 60px; height: 70px;" alt="" />
+        </ion-col>
+
+
+        <ion-col>
+          <ion-fab (click)="updateListFixtureAndCompets()" top right edge>
+            <button ion-fab class="button-bg">
+              <ion-avatar>
+                <img src="assets/img/refresh.png">
+              </ion-avatar>
+            </button>
+          </ion-fab>
         </ion-col>
       </ion-row>
 
@@ -21,16 +44,16 @@
     <!-- <button item-start (click)="openCalendar()"> -->
 
     <ion-avatar item-center>
-      <ion-row >
+      <ion-row>
         <ion-col (click)="dayBefore()">
           <img src="assets/img/arrow1r.png">
         </ion-col>
         <ion-col (click)="openCalendar()">
           <ion-row>
 
-              <img src="assets/img/calendar.png">
-              <p item-start (click)="openCalendar()" class="titles1">{{dateEntete}}</p>
-           
+            <img src="assets/img/calendar.png">
+            <p item-start (click)="openCalendar()" class="titles1">{{dateEntete}}</p>
+
           </ion-row>
         </ion-col>
         <ion-col (click)="dayNext()">
@@ -58,7 +81,7 @@
           alt="" />
       </ion-row>
       <ion-row align-items-center>
-        <p class="titleMatch"> Groupes </p>
+        <p class="titleMatch"> Matchs </p>
       </ion-row>
       <ion-row *ngFor="let fixture of FixtureByCompet[compet.league]" (click)="openCompet(fixture)" text-wrap style="background-color: #ffffff;">
         <ion-col col-4>
@@ -82,7 +105,7 @@
   </ion-list>
 
   <ion-refresher (ionRefresh)="doRefresh($event)">
-      <ion-refresher-content></ion-refresher-content>
-    </ion-refresher>
-  
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
 </ion-content>

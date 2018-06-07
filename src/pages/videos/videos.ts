@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the VideosPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { WorldCupProvider } from '../../providers/providers';
 
 @IonicPage()
 @Component({
@@ -14,12 +9,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'videos.html',
 })
 export class VideosPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  videos: any;
+  constructor(private socialSharing: SocialSharing, public navCtrl: NavController, public navParams: NavParams, public worldCupProvider: WorldCupProvider) {
+    this.videos = worldCupProvider.getWorldCupVideos();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad VideosPage');
   }
+
+
+  compilemsg(index):string{
+    return index.concat(" \n Sent from WC2018 !");
+  }
+    
+  regularShare(index){
+    var msg = this.compilemsg(index);
+    this.socialSharing.share(msg, null, null, null);
+  }
+
 
 }

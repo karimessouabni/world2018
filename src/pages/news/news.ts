@@ -4,6 +4,7 @@ import { WorldCupProvider } from '../../providers/providers';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
+
 /**
  * Generated class for the NewsPage page.
  *

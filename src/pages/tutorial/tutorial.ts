@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController, NavController } from 'ionic-angular';
 
-import { WelcomePage } from '../welcome/welcome';
+import { ListMasterPage } from '../list-master/list-master';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -52,7 +52,7 @@ export class TutorialPage {
   }
 
   startApp() {
-    this.navCtrl.setRoot(WelcomePage, {}, {
+    this.navCtrl.setRoot(ListMasterPage, {}, {
       animate: true,
       direction: 'forward'
     });
