@@ -17,37 +17,7 @@ import { Settings } from '../providers/providers';
 
 
 @Component({
-  template: `<ion-menu [content]="content">
-    <ion-header classe="header1">
-      <ion-toolbar>
-      <ion-title>
-      <ion-row>  
-      <ion-col>
-        <ion-avatar>
-           <img style ="height: 50px;margin-left: 54px;
-            width: 40px;"src="assets/img/trophy.png"/>
-        </ion-avatar>
-        </ion-col>
-        <ion-col>
-      
-          <p style ="margin-right: 42px;" class="titles1">WC2018</p>
-                
-        </ion-col>
-      </ion-row>
-    </ion-title>
-        
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
-
-  </ion-menu>
+  template: `
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
@@ -56,12 +26,6 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
 
-  pages: any[] = [
-    { title: 'Table', component: TabsPage },
-    { title: 'Videos', component: ListMasterPage },
-    { title: 'News', component: ListMasterPage },
-    { title: 'Players', component: TopPlayersPage },
-  ]
 
   constructor(private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
 

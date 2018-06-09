@@ -112,7 +112,17 @@ export class WorldCupProvider {
   }
 
 
-  getWorldCupVideos(){
+  getWorldCupNews() {
+    return new Promise(resolve => {
+      this.http.get("http://188.166.174.3:8080/api/WCNews/")
+        .map(res => res.json())
+        .subscribe(table => {
+          resolve(table);
+        });
+    });
+  }
+
+  getWorldCupVideos() {
     return this.videos;
   }
 

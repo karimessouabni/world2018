@@ -461,6 +461,19 @@ app.get('/api/WCTeamNews/:d/:b', function (req, res) {
 
 });
 
+
+// get News af all teams
+
+app.get('/api/WCNews/', function (req, res) {
+
+  WCNews.find(function (err, data) {
+      if (err) {
+        res.json(err);
+      }
+      res.json(data);
+    });
+
+});
 //================= WORLD CUP END ====================// 
 
 
@@ -595,9 +608,9 @@ app.post('/api/updateACompetitionLeagueTableToMongo', function (req, res) {
           headers: {
             'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
           }
-        }).then(function (results) {
+        }).then( results => {
           for (j = 0; j < results.data.standing.length; j++) {
-            LeagueTable.create(results.data.standing[j], function (err, standing) {
+            LeagueTable.create(results.data.standing[j], (err, standing) => {
               if (err) {
                 res.send(err);
                 console.log(err);
