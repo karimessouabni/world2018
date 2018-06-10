@@ -98,6 +98,15 @@ var worldCupNewsSchema = new Schema({
   "strict": false
 });
 
+var worldCupVideosSchema = new Schema({
+  team: String,
+  link: String,
+  pic: String,
+  pos: String
+}, {
+  "strict": false
+});
+
 
 var Review = mongoose.model('Review', reviewSchema);
 
@@ -112,6 +121,7 @@ var Teams = mongoose.model('Teams', teamSchema);
 var LeagueTable = mongoose.model('LeagueTable', leagueTableSchema);
 var WCTable = mongoose.model('WCTable', worldCupTableSchema);
 var WCNews = mongoose.model('WCNews', worldCupNewsSchema);
+var WCVideos = mongoose.model('WCVideos', worldCupVideosSchema);
 
 
 
@@ -436,6 +446,30 @@ app.post('/api/worldCupNewsToMongo', function (req, res) {
   });
 });
 
+
+
+app.post('/api/worldCupVideosToMongo', function (req, res) {
+  WCVideos.remove({}, function (err) {
+    if (err) {
+      console.log("Removing all News documents failed" + err);
+    } else {
+      axios.get('https://gist.githubusercontent.com/karimessouabni/50b0b134bbe872b3fd698630f26dd094/raw/wcup18Videos')
+        .then(results => {
+          for (j = 0; j < results.data.length; j++) {
+            WCVideos.create(results.data[j], function (err, team) {
+              if (err) {
+                res.send(err);
+                console.log(err);
+              }
+            });
+          }
+        }).catch(error => {
+          console.log(error);
+        });
+      res.json("Done");
+    }
+  });
+});
 
 // get News of team by name
 app.get('/api/WCTeamNews/:d/:b', function (req, res) {

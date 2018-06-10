@@ -133,10 +133,25 @@ export class WorldCupProvider {
     });
   }
 
-  getWorldCupVideos() {
-    return this.videos;
+  getWorldCupVideosForTeam(teamName1: any, teamName2: any) {
+    return new Promise(resolve => {
+      this.http.get("http://188.166.174.3:8080/api/WCTeamVideos/" + teamName1 + "/" + teamName2)
+        .map(res => res.json())
+        .subscribe(table => {
+          resolve(table);
+        });
+    });
   }
 
+  getWorldCupVideos() {
+    return new Promise(resolve => {
+      this.http.get("http://188.166.174.3:8080/api/WCVideos/")
+        .map(res => res.json())
+        .subscribe(table => {
+          resolve(table);
+        });
+    });
+  }
 
 
 }
