@@ -13,7 +13,11 @@
   </ion-header>
   
 
-
-<ion-content padding>
-
-</ion-content>
+  <ion-content class="card-background-page">
+      <ion-card class="item no-padding" id="item{{i}}" *ngFor="let element of videos ;  let i = index">
+    
+              <img class="play" src="assets/img/play.png"/>
+              <img [src]="element.pic"/>
+            
+      </ion-card>
+    </ion-content>

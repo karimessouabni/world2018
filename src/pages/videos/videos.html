@@ -1,5 +1,5 @@
 <ion-content class="card-background-page">
-    <ion-card class="item no-padding" id="item{{i}}" *ngFor="let element of videos ;  let i = index">
+    <ion-card (click)="openUrl(element.link)" class="item no-padding" id="item{{i}}" *ngFor="let element of videos ;  let i = index">
   
             <img class="play" src="assets/img/play.png"/>
             <img [src]="element.pic"/>

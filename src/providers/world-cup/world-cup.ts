@@ -135,7 +135,7 @@ export class WorldCupProvider {
 
   getWorldCupVideosForTeam(teamName1: any, teamName2: any) {
     return new Promise(resolve => {
-      this.http.get("http://188.166.174.3:8080/api/WCTeamVideos/" + teamName1 + "/" + teamName2)
+      this.http.get("http://188.166.174.3:8080/api/WCVideos/" + teamName1 + "/" + teamName2)
         .map(res => res.json())
         .subscribe(table => {
           resolve(table);

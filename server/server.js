@@ -453,7 +453,7 @@ app.post('/api/worldCupVideosToMongo', function (req, res) {
     if (err) {
       console.log("Removing all News documents failed" + err);
     } else {
-      axios.get('https://gist.githubusercontent.com/karimessouabni/50b0b134bbe872b3fd698630f26dd094/raw/wcup18Videos')
+      axios.get('https://gist.githubusercontent.com/karimessouabni/50b0b134bbe872b3fd698630f26dd094/raw')
         .then(results => {
           for (j = 0; j < results.data.length; j++) {
             WCVideos.create(results.data[j], function (err, team) {
