@@ -1,9 +1,73 @@
 page-news {
-   img {
+  img {
     width: 100%;
   }
   .scroll-content {
     padding: 5px;
     background-color: #313840;
-} 
+  }
+  .no-padding {
+    padding: 0px 0px 0px 0px !important;
+    padding-right: 0px;
+  }
+  ion-app.md [padding],
+  ion-app.md [padding] .scroll-content {
+    padding: 0px;
+  }
+  .toolbar-title-md{
+    color: #fff;
+  }
+ 
+  .compet {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    font-family: "Times New Roman", Times, serif;
+    position: relative;
+  }
+  
+  page-list-master .item-md p {
+    bottom: -11%;
+    font-family: Roboto;
+    left: 0;
+  }
+  div {
+    font-family: '1.4rem', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+  }
+  .item-md.item-block .item-inner {
+    padding-right: 0px;
+    border-bottom: 0px;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  .item-md {
+    padding-right: 16px; // min-height: 90px;
+  }
+  
+}
+ion-app.md [padding] .scroll-content {
+  padding: 5px;
+}
+ion-col {
+  text-align: center;
+}
+
+.titles1 {
+  padding-left: 10px;
+  color: #fff;
+  font-family: '1.4rem', sans-serif;
+  font-weight: 100;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 2rem;
 }

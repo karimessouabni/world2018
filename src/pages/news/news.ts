@@ -20,6 +20,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 export class NewsPage {
   fixture: any;
   news: any;
+  header = false;
   constructor(private socialSharing: SocialSharing, public iab: InAppBrowser, public navCtrl: NavController, public navParams: NavParams, public worldCupProvider: WorldCupProvider) {
     this.fixture = navParams.data;
     worldCupProvider.getWorldCupNewsForTeam(this.fixture.homeTeamName, this.fixture.awayTeamName).then(data =>{

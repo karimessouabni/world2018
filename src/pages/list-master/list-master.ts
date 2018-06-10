@@ -21,21 +21,25 @@ export class ListMasterPage {
   allCompetUpdated = [];
   now: any;
   dateEntete: any;
+  nothing: any = false;
 
-  constructor(public navCtrl: NavController,public menuCtrl: MenuController, public items: Items, public competitionsProvider: CompetitionProvider, public modalCtrl: ModalController, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController, public items: Items, public competitionsProvider: CompetitionProvider, public modalCtrl: ModalController, public toastCtrl: ToastController) {
     this.now = moment();
     this.updateSelectedDate();
     this.updateListFixtureAndCompets();
   }
 
-  openSideMenu(){
+  openSideMenu() {
     this.menuCtrl.toggle('left')
-    }
+  }
 
   updateListFixtureAndCompets() {
     this.allCompetUpdated = [];
     this.competitionsProvider.getCompetitions2017()
       .then(dataCompet => {
+        if (dataCompet == null) {
+          this.nothing = true;
+        }
         this.allCompets = dataCompet;
         dataCompet.forEach(compet => { // pour chaque competition : PrimeraDivision
           this.competitionsProvider.getFixturesByDayAndCompet(this.selectedDate, compet.league)
@@ -65,6 +69,7 @@ export class ListMasterPage {
         });
 
       });
+
 
   }
 

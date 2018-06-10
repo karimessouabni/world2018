@@ -13,18 +13,19 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 
 @IonicPage()
 @Component({
-  selector: 'page-wc-news',
+  selector: 'page-news',
   templateUrl: 'news.html',
 })
 export class WcNewsPage {
   news :any;
+  header = true;
 
   constructor(private socialSharing: SocialSharing, public iab: InAppBrowser, public navCtrl: NavController, public navParams: NavParams, public worldCupProvider: WorldCupProvider) {
     worldCupProvider.getWorldCupNews().then(data =>{
       this.news = data;
     });
   }
-  
+
   openUrl(url: any) {
     const browser = this.iab.create(url);
     browser.show();

@@ -65,8 +65,11 @@
   </ion-avatar> -->
 
 </ion-header>
+<ion-content *ngIf="nothing">
+    <ion-title class="titleHeader">Nothing here ! Try another day</ion-title>
+</ion-content>
 
-<ion-content>
+<ion-content *ngIf="!nothing">
   <ion-list>
     <ion-item class="item no-padding" *ngFor="let compet of allCompetUpdated" style="background-color: #f1f7f7;">
       <ion-row>

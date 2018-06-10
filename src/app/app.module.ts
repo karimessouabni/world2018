@@ -18,8 +18,9 @@ import { GroupesPage } from '../pages/groupes/groupes';
 import { NewsPage } from '../pages/news/news';
 import { VideosPage } from '../pages/videos/videos';
 import { TopPlayersPage } from '../pages/top-players/top-players';
-import { WcNewsPage } from '../pages/wc-news/wc-news';
+import { WcNewsPage } from '../pages/news/wc-news';
 import { WcVideosPage } from '../pages/wc-videos/wc-videos';
+import { WcTablesPage } from '../pages/wc-tables/wc-tables';
 
 
 import { ListMasterPage, TabsPage } from '../pages/pages';
@@ -85,7 +86,7 @@ export function provideSettings(storage: Storage) {
     option4: 'Hello',
     option5: 'karimou'
   });
-}
+} 
 
 
 
@@ -106,7 +107,8 @@ export function provideSettings(storage: Storage) {
     VideosPage,
     TopPlayersPage,
     WcNewsPage,
-    WcVideosPage
+    WcVideosPage,
+    WcTablesPage
   ],
   imports: [
     BrowserModule,
@@ -139,7 +141,8 @@ export function provideSettings(storage: Storage) {
     VideosPage,
     TopPlayersPage,
     WcNewsPage,
-    WcVideosPage
+    WcVideosPage,
+    WcTablesPage  
   ],
   providers: [
     Api,
