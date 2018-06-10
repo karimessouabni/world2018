@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { WorldCupProvider } from '../../providers/providers'
 /**
  * Generated class for the TopPlayersPage page.
  *
@@ -15,7 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TopPlayersPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  players : any;
+  constructor(public wcProvider: WorldCupProvider, public navCtrl: NavController, public navParams: NavParams) {
+    this.wcProvider.getWorldCuptopPlayers().then(data => {
+      this.players = data;
+    });
   }
 
   ionViewDidLoad() {

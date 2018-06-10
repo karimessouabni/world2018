@@ -20,7 +20,7 @@ export class WcVideosPage {
   constructor(public iab: InAppBrowser, private socialSharing: SocialSharing, public navCtrl: NavController, public navParams: NavParams, public worldCupProvider: WorldCupProvider) {
     worldCupProvider.getWorldCupVideos().then(data => {
       this.videos = data;
-    });;
+    });
   }
 
   ionViewDidLoad() {

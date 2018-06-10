@@ -24,16 +24,19 @@
 
 
 
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="assets/img/marty-avatar.png">
-      </ion-avatar>
-      <div item-start>Marty McFly</div>
-      <!-- <div item-start><img [src]="assets/img/marty-avatar.png" onError="this.src='assets/img/badgeUnfound.ico';" style="width:20px; height:20" alt="" />  </div>  -->
+  <ion-item id="item{{i}}" *ngFor="let element of players ;  let i = index">
+    <ion-avatar item-start>
 
-      <div item-end>12&nbsp;&nbsp;</div>
-      <div item-end>23</div>
-    </ion-item>
+      <div item-start>
+
+        <img [src]="element.pic" />
+      </div>
+    </ion-avatar>
+    <div item-start>{{element.name}}</div>
+
+    <div item-end>12&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div item-end>23</div>
+  </ion-item>
 
 
 

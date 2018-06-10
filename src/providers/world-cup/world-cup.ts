@@ -154,4 +154,14 @@ export class WorldCupProvider {
   }
 
 
+  getWorldCuptopPlayers() {
+    return new Promise(resolve => {
+      this.http.get("http://188.166.174.3:8080/api/WCPlayers/")
+        .map(res => res.json())
+        .subscribe(table => {
+          resolve(table);
+        });
+    });
+  }
+
 }
