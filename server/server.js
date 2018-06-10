@@ -473,8 +473,6 @@ app.post('/api/worldCupVideosToMongo', function (req, res) {
 
 // get News of team by name
 app.get('/api/WCTeamNews/:d/:b', function (req, res) {
-
-
   WCNews.find({
       $or: [{
           'team': `${req.params.d}`
@@ -490,9 +488,6 @@ app.get('/api/WCTeamNews/:d/:b', function (req, res) {
       }
       res.json(fixtures);
     });
-
-
-
 });
 
 
@@ -501,6 +496,39 @@ app.get('/api/WCTeamNews/:d/:b', function (req, res) {
 app.get('/api/WCNews/', function (req, res) {
 
   WCNews.find(function (err, data) {
+      if (err) {
+        res.json(err);
+      }
+      res.json(data);
+    });
+
+});
+
+
+
+
+// get News of team by name
+app.get('/api/WCVideos/:d/:b', function (req, res) {
+  WCVideos.find({
+      $or: [{
+          'team': `${req.params.d}`
+        },
+        {
+          'team': `${req.params.b}`
+        }
+      ]
+    },
+    function (err, fixtures) {
+      if (err) {
+        res.json(err);
+      }
+      res.json(fixtures);
+    });
+});
+
+app.get('/api/WCVideos/', function (req, res) {
+
+  WCVideos.find(function (err, data) {
       if (err) {
         res.json(err);
       }
