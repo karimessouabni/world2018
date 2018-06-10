@@ -108,6 +108,17 @@ var worldCupVideosSchema = new Schema({
 });
 
 
+var worldCupPlayersSchema = new Schema({
+  name: String,
+  goals: String,
+  matchs: String,
+  pic: String,
+  pos: String
+}, {
+  "strict": false
+});
+
+
 var Review = mongoose.model('Review', reviewSchema);
 
 var Competitions = mongoose.model('Competitions', new Schema({
@@ -122,6 +133,7 @@ var LeagueTable = mongoose.model('LeagueTable', leagueTableSchema);
 var WCTable = mongoose.model('WCTable', worldCupTableSchema);
 var WCNews = mongoose.model('WCNews', worldCupNewsSchema);
 var WCVideos = mongoose.model('WCVideos', worldCupVideosSchema);
+var WCPlayer = mongoose.model('WCPlayer', worldCupPlayersSchema);
 
 
 
@@ -453,7 +465,7 @@ app.post('/api/worldCupVideosToMongo', function (req, res) {
     if (err) {
       console.log("Removing all News documents failed" + err);
     } else {
-      axios.get('https://gist.githubusercontent.com/karimessouabni/50b0b134bbe872b3fd698630f26dd094/raw')
+      axios.get('https://gist.githubusercontent.com/karimessouabni/50b0b134bbe872b3fd698630f26dd094/raw/wcup18Videos')
         .then(results => {
           for (j = 0; j < results.data.length; j++) {
             WCVideos.create(results.data[j], function (err, team) {
@@ -470,6 +482,31 @@ app.post('/api/worldCupVideosToMongo', function (req, res) {
     }
   });
 });
+
+
+app.post('/api/worldCupTopPlayersToMongo', function (req, res) {
+  WCPlayer.remove({}, function (err) {
+    if (err) {
+      console.log("Removing all News documents failed" + err);
+    } else {
+      axios.get('https://gist.githubusercontent.com/karimessouabni/d021d65ef7b7d7347dd788d8d2d64e2e/raw/Wcup18Players')
+        .then(results => {
+          for (j = 0; j < results.data.length; j++) {
+            WCPlayer.create(results.data[j], function (err, team) {
+              if (err) {
+                res.send(err);
+                console.log(err);
+              }
+            });
+          }
+        }).catch(error => {
+          console.log(error);
+        });
+      res.json("Done");
+    }
+  });
+});
+
 
 // get News of team by name
 app.get('/api/WCTeamNews/:d/:b', function (req, res) {
@@ -529,6 +566,18 @@ app.get('/api/WCVideos/:d/:b', function (req, res) {
 app.get('/api/WCVideos/', function (req, res) {
 
   WCVideos.find(function (err, data) {
+      if (err) {
+        res.json(err);
+      }
+      res.json(data);
+    });
+
+});
+
+
+app.get('/api/WCPlayers/', function (req, res) {
+
+  WCPlayer.find(function (err, data) {
       if (err) {
         res.json(err);
       }

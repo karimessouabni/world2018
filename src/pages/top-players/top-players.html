@@ -13,6 +13,35 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="cards-bg social-cards">
+  <ion-item id="itemEntete">
+
+    <div item-start>Players</div>
+
+    <div item-end>Goa</div>
+    <div item-end>Gam</div>
+  </ion-item>
+
+
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/marty-avatar.png">
+      </ion-avatar>
+      <div item-start>Marty McFly</div>
+      <!-- <div item-start><img [src]="assets/img/marty-avatar.png" onError="this.src='assets/img/badgeUnfound.ico';" style="width:20px; height:20" alt="" />  </div>  -->
+
+      <div item-end>12&nbsp;&nbsp;</div>
+      <div item-end>23</div>
+    </ion-item>
+
+
 
 </ion-content>
+
+<style>
+  .social-cards ion-col {
+    padding: 0;
+  }
+
+</style>

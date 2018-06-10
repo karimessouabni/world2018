@@ -22,7 +22,7 @@ export class TabsPage {
   tab1Title = "Matchs";
   tab2Title = "Videos";
   tab3Title = "News";
-  tab4Title = "Players";
+  tab4Title = "Scorers";
   tab5Title = "Tables";
 
   constructor(public navCtrl: NavController, public translateService: TranslateService) {

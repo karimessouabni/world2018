@@ -6,18 +6,18 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title class="titleHeader">WC 2018 Videos</ion-title>
-    </ion-navbar>
-  
-  </ion-header>
-  
+  <ion-navbar>
+    <ion-title class="titleHeader">WC 2018 Videos</ion-title>
+  </ion-navbar>
 
-  <ion-content class="card-background-page">
-      <ion-card class="item no-padding" id="item{{i}}" *ngFor="let element of videos ;  let i = index">
-    
-              <img class="play" src="assets/img/play.png"/>
-              <img [src]="element.pic"/>
-            
-      </ion-card>
-    </ion-content>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <ion-card (click)="openUrl(element.link)" class="item no-padding" id="item{{i}}" *ngFor="let element of videos ;  let i = index">
+
+    <img class="play" src="assets/img/play.png" />
+    <img [src]="element.pic" />
+
+  </ion-card>
+</ion-content>
