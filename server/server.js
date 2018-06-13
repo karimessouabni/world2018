@@ -538,7 +538,7 @@ app.get('/api/WCTeamNews/:d/:b', function (req, res) {
           'team': `${req.params.b}`
         }
       ]
-    },
+    }).sort('pos').exec(
     function (err, fixtures) {
       if (err) {
         res.json(err);
@@ -552,7 +552,7 @@ app.get('/api/WCTeamNews/:d/:b', function (req, res) {
 
 app.get('/api/WCNews/', function (req, res) {
 
-  WCNews.find(function (err, data) {
+  WCNews.find().sort('pos').exec(function (err, data) {
     if (err) {
       res.json(err);
     }
@@ -574,7 +574,7 @@ app.get('/api/WCVideos/:d/:b', function (req, res) {
           'team': `${req.params.b}`
         }
       ]
-    },
+    }).sort('pos').exec(
     function (err, fixtures) {
       if (err) {
         res.json(err);
@@ -585,7 +585,7 @@ app.get('/api/WCVideos/:d/:b', function (req, res) {
 
 app.get('/api/WCVideos/', function (req, res) {
 
-  WCVideos.find(function (err, data) {
+  WCVideos.find().sort('pos').exec(function (err, data) {
     if (err) {
       res.json(err);
     }
