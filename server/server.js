@@ -283,7 +283,10 @@ app.post('/api/worldCupFixturesToMongo', function (req, res) {
     if (err) {
       console.log("Removing all News Fixtures failed" + err);
     } else {
-      axios.get('http://api.football-data.org/v1/competitions/467/fixtures?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
+      axios.get('http://api.football-data.org/v1/competitions/467/fixtures'), {
+        headers: {
+          'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+        }
         .then(results => {
           for (j = 0; j < results.data.fixtures.length; j++) {
             var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
