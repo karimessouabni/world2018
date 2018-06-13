@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>topPlayers</ion-title>
+    <ion-title>WC 2018 Top Scorers</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,27 +18,28 @@
 
     <div item-start>Players</div>
 
-    <div item-end>Goa</div>
-    <div item-end>Gam</div>
+    <div item-end>G</div>
+    <div item-end>P</div>
   </ion-item>
 
 
 
   <ion-item id="item{{i}}" *ngFor="let element of players ;  let i = index">
+
     <ion-avatar item-start>
-
       <div item-start>
-
         <img [src]="element.pic" />
       </div>
     </ion-avatar>
-    <div item-start>{{element.name}}</div>
+    <div item-start>{{i+1}} - {{element.name}}
+    </div>
+    <div class="teamName" item-start><p>{{element.team}}</p></div>
 
-    <div item-end>12&nbsp;&nbsp;&nbsp;&nbsp;</div>
-    <div item-end>23</div>
-  </ion-item>
+    <div item-end>{{element.goals}}</div>
+    <div item-end>{{element.matchs}}</div>
+  </ion-item> 
 
-
+ 
 
 </ion-content>
 

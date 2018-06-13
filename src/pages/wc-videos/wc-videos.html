@@ -16,8 +16,12 @@
 <ion-content class="card-background-page">
   <ion-card (click)="openUrl(element.link)" class="item no-padding" id="item{{i}}" *ngFor="let element of videos ;  let i = index">
 
-    <img class="play" src="assets/img/play.png" />
-    <img [src]="element.pic" />
+
+    <div class="image">
+      <img class="play" src="assets/img/play.png" />
+      <img [src]="element.pic" />
+      <div class="card-title">{{element.team}}</div>
+    </div>
 
   </ion-card>
 </ion-content>

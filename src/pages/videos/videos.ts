@@ -33,7 +33,7 @@ export class VideosPage {
 
   regularShare(index) {
     var msg = this.compilemsg(index);
-    this.socialSharing.share(msg, null, null, null);
+    this.socialSharing.share("Video, news and live score : get it from the store : https://play.google.com/store/apps/details?id=com.parisFoot.karimou", null, null, null);
   }
 
 

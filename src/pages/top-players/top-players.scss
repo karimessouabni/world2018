@@ -67,7 +67,6 @@ page-top-players {
     width: 80px;
     left: 38%;
   }
-
   .pays {
     width: 30px;
     height: 23;
@@ -79,15 +78,25 @@ page-top-players {
     width: 100%;
     color: #fff;
   }
+  .item-md p {
+    font-size: 0.7em;
+  }
+  .item-md {
+    margin-bottom: 1px;
+  }
+  i {
+    margin-left: 12‒;
+    margin-right: 26px;
+  }
   #item0,
-  #item2 {
+  #item2,#item4 ,#item6 ,#item8 ,#item10 {
     // background-color: #EEEEEE;
     background-color: #EEEEEE;
     min-height: 60px;
     max-height: 45px;
   }
   #item3,
-  #item1 {
+  #item1,#item4 ,#item7 ,#item9 ,#item11{
     min-height: 60px;
     max-height: 45px;
   }

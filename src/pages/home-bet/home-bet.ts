@@ -72,7 +72,7 @@ export class HomeBetPage {
 
   
   regularShare(){
-    this.socialSharing.share("Sent from the best App for World Cup 2018 : \nWC2018! ", null, null, null);
+    this.socialSharing.share("Sent from the best App for World Cup 2018 : \n https://play.google.com/store/apps/details?id=com.parisFoot.karimou ", null, null, null);
   }
 
 

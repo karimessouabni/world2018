@@ -277,27 +277,36 @@ app.post('/api/worldCupCompetitions', function (req, res) {
     });
 });
 
-
+//****1 Updating Fiwture */
 app.post('/api/worldCupFixturesToMongo', function (req, res) {
-  axios.get('http://api.football-data.org/v1/competitions/467/fixtures?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
-    .then(results => {
-      for (j = 0; j < results.data.fixtures.length; j++) {
-        var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
-        var indexIdAwayTeam = results.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
+  Fixtures.remove({}, function (err) {
+    if (err) {
+      console.log("Removing all News Fixtures failed" + err);
+    } else {
+      axios.get('http://api.football-data.org/v1/competitions/467/fixtures?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
+        .then(results => {
+          for (j = 0; j < results.data.fixtures.length; j++) {
+            var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
+            var indexIdAwayTeam = results.data.fixtures[j]._links.awayTeam.href.lastIndexOf("/");
+            if (results.data.fixtures[j].name === "Iran") {
+              results.data.fixtures[j].crestUrl = "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg";
+            }
 
-        results.data.fixtures[j].idHomeTeam = results.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, results.data.fixtures[j]._links.homeTeam.href.length);
-        results.data.fixtures[j].idAwayTeam = results.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, results.data.fixtures[j]._links.awayTeam.href.length);
-        Fixtures.create(results.data.fixtures[j], function (err, fixture) {
-          if (err) {
-            res.send(err);
-            console.log(err);
+            results.data.fixtures[j].idHomeTeam = results.data.fixtures[j]._links.homeTeam.href.substring(indexIdHomeTeam + 1, results.data.fixtures[j]._links.homeTeam.href.length);
+            results.data.fixtures[j].idAwayTeam = results.data.fixtures[j]._links.awayTeam.href.substring(indexIdAwayTeam + 1, results.data.fixtures[j]._links.awayTeam.href.length);
+            Fixtures.create(results.data.fixtures[j], function (err, fixture) {
+              if (err) {
+                res.send(err);
+                console.log(err);
+              }
+            });
           }
+          res.json("Done");
+        }).catch(error => {
+          console.log(error);
         });
-      }
-      res.json("Done");
-    }).catch(error => {
-      console.log(error);
-    });
+    }
+  });
 });
 
 
@@ -306,6 +315,10 @@ app.post('/api/worldCupTeamsToMongo', function (req, res) {
     .then(results => {
       for (j = 0; j < results.data.teams.length; j++) {
         var indexIdTeam = results.data.teams[j]._links.self.href.lastIndexOf("/");
+
+        if (results.data.teams[j].name === "Iran") {
+          results.data.fixtures[j].crestUrl = "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg";
+        }
 
         results.data.teams[j].idTeam = results.data.teams[j]._links.self.href.substring(indexIdTeam + 1, results.data.teams[j]._links.self.href.length);
 
@@ -340,67 +353,74 @@ app.post('/api/worldCupTableToMongo', function (req, res) {
 });
 
 app.post('/api/worldCupTableUpdateGroupTeams', function (req, res) {
-  axios.get('http://api.football-data.org/v1/competitions/467/leagueTable?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
-    .then(results => {
-      let groupResult = results.data.standings.A;
-      for (j = 0; j < 8; j++) {
-        switch (j) {
-          case 0:
-            groupResult = results.data.standings.A;
-            break;
-          case 1:
-            groupResult = results.data.standings.B;
-            break;
-          case 2:
-            groupResult = results.data.standings.C;
-            break;
-          case 3:
-            groupResult = results.data.standings.D;
-            break;
-          case 4:
-            groupResult = results.data.standings.E;
-            break;
-          case 5:
-            groupResult = results.data.standings.F;
-            break;
-          case 6:
-            groupResult = results.data.standings.G;
-            break;
-          case 7:
-            groupResult = results.data.standings.H;
-            break;
+  WCTable.remove({}, function (err) {
+    if (err) {
+      console.log("Removing all tables failed" + err);
+    } else {
+      axios.get('http://api.football-data.org/v1/competitions/467/leagueTable?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
+        .then(results => {
+          let groupResult = results.data.standings.A;
+          for (j = 0; j < 8; j++) {
+            switch (j) {
+              case 0:
+                groupResult = results.data.standings.A;
+                break;
+              case 1:
+                groupResult = results.data.standings.B;
+                break;
+              case 2:
+                groupResult = results.data.standings.C;
+                break;
+              case 3:
+                groupResult = results.data.standings.D;
+                break;
+              case 4:
+                groupResult = results.data.standings.E;
+                break;
+              case 5:
+                groupResult = results.data.standings.F;
+                break;
+              case 6:
+                groupResult = results.data.standings.G;
+                break;
+              case 7:
+                groupResult = results.data.standings.H;
+                break;
 
-          default:
-            break;
-        }
+              default:
+                break;
+            }
 
-        // Create the 8 table in WcTable
-        WCTable.create(groupResult, function (err, team) {
-          if (err) {
-            res.send(err);
-            console.log(err);
+            // Create the 8 table in WcTable
+            WCTable.create(groupResult, function (err, team) {
+              if (err) {
+                res.send(err);
+                console.log(err);
+              }
+            });
+            // Create the 8 table in WcTable  
+
+            for (i = 0; i < 4; i++) {
+              let teamId = groupResult[i].teamId;
+              let group = groupResult[i].group;
+              var regex = new RegExp(teamId, "i");
+
+              Teams.findOneAndUpdate({
+                'idTeam': `${teamId}`
+              }, {
+                'group': group
+              }, function (err, team) {
+                if (err) return handleError(err);
+              });
+
+            }
           }
+        }).catch(error => {
+          console.log(error);
         });
-        // Create the 8 table in WcTable  
 
-        for (i = 0; i < 4; i++) {
-          let teamId = groupResult[i].teamId;
-          let group = groupResult[i].group;
-          var regex = new RegExp(teamId, "i");
-
-          Teams.findOneAndUpdate({
-            'idTeam': `${teamId}`
-          }, {
-            'group': group
-          }, function (err, team) {
-            if (err) return handleError(err);
-          });
-
-        }
-      }
-    }).catch(error => {
-      console.log(error);
-    });
+    }
+  });
   res.json("Done");
 
 });
@@ -533,11 +553,11 @@ app.get('/api/WCTeamNews/:d/:b', function (req, res) {
 app.get('/api/WCNews/', function (req, res) {
 
   WCNews.find(function (err, data) {
-      if (err) {
-        res.json(err);
-      }
-      res.json(data);
-    });
+    if (err) {
+      res.json(err);
+    }
+    res.json(data);
+  });
 
 });
 
@@ -566,11 +586,11 @@ app.get('/api/WCVideos/:d/:b', function (req, res) {
 app.get('/api/WCVideos/', function (req, res) {
 
   WCVideos.find(function (err, data) {
-      if (err) {
-        res.json(err);
-      }
-      res.json(data);
-    });
+    if (err) {
+      res.json(err);
+    }
+    res.json(data);
+  });
 
 });
 
@@ -578,11 +598,11 @@ app.get('/api/WCVideos/', function (req, res) {
 app.get('/api/WCPlayers/', function (req, res) {
 
   WCPlayer.find(function (err, data) {
-      if (err) {
-        res.json(err);
-      }
-      res.json(data);
-    });
+    if (err) {
+      res.json(err);
+    }
+    res.json(data);
+  });
 
 });
 //================= WORLD CUP END ====================// 
@@ -719,7 +739,7 @@ app.post('/api/updateACompetitionLeagueTableToMongo', function (req, res) {
           headers: {
             'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
           }
-        }).then( results => {
+        }).then(results => {
           for (j = 0; j < results.data.standing.length; j++) {
             LeagueTable.create(results.data.standing[j], (err, standing) => {
               if (err) {

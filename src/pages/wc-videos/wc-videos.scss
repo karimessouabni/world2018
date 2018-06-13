@@ -51,18 +51,21 @@ page-wc-videos {
     background-color: #313840;
   }
   .card-md {
-    margin: 9px 1px 9px 0px;
     border-radius: 2px;
   }
   .card-title {
-    position: absolute;
-    top: 36%;
+    position: absolute;x
     font-size: 2.0em;
     width: 100%;
     color: white;
     font-weight: 300;
     text-shadow: 0px 0px 74px black, 2px 2px 3px black;
-    top: 75%;
+    top: 64%;
+    color: white; 
+    letter-spacing: -1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
   }
   .play {
     position: absolute;
@@ -73,13 +76,20 @@ page-wc-videos {
   img {
     width: 100%;
   }
-  .card-subtitle {
-    font-size: 1.0em;
-    position: absolute;
-    top: 30%;
-    width: 100%;
-    color: #fff;
-  }
+  
+  .image { 
+    position: relative; 
+    width: 100%; /* for IE 6 */
+ }
+ 
+ h2 { 
+    position: absolute; 
+    top: 200px; 
+    left: 0; 
+    width: 100%; 
+ }
+
+
 }
 .no-padding {
     padding: 15px 0px 15px 0px !important;
