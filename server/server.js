@@ -284,10 +284,10 @@ app.post('/api/worldCupFixturesToMongo', function (req, res) {
       console.log("Removing all News Fixtures failed" + err);
     } else {
       axios.get('http://api.football-data.org/v1/competitions/467/fixtures', {
-        headers: {
-          'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
-        }
-      })
+          headers: {
+            'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+          }
+        })
         .then(results => {
           for (j = 0; j < results.data.fixtures.length; j++) {
             var indexIdHomeTeam = results.data.fixtures[j]._links.homeTeam.href.lastIndexOf("/");
@@ -361,7 +361,11 @@ app.post('/api/worldCupTableUpdateGroupTeams', function (req, res) {
     if (err) {
       console.log("Removing all tables failed" + err);
     } else {
-      axios.get('http://api.football-data.org/v1/competitions/467/leagueTable?X-Auth-Token=73d809746bd849fcb67e49ace137252a')
+      axios.get('http://api.football-data.org/v1/competitions/467/leagueTable', {
+          headers: {
+            'X-Auth-Token': '73d809746bd849fcb67e49ace137252a'
+          }
+        })
         .then(results => {
           let groupResult = results.data.standings.A;
           for (j = 0; j < 8; j++) {
@@ -535,14 +539,14 @@ app.post('/api/worldCupTopPlayersToMongo', function (req, res) {
 // get News of team by name
 app.get('/api/WCTeamNews/:d/:b', function (req, res) {
   WCNews.find({
-      $or: [{
-          'team': `${req.params.d}`
-        },
-        {
-          'team': `${req.params.b}`
-        }
-      ]
-    }).sort('pos').exec(
+    $or: [{
+        'team': `${req.params.d}`
+      },
+      {
+        'team': `${req.params.b}`
+      }
+    ]
+  }).sort('pos').exec(
     function (err, fixtures) {
       if (err) {
         res.json(err);
@@ -571,14 +575,14 @@ app.get('/api/WCNews/', function (req, res) {
 // get News of team by name
 app.get('/api/WCVideos/:d/:b', function (req, res) {
   WCVideos.find({
-      $or: [{
-          'team': `${req.params.d}`
-        },
-        {
-          'team': `${req.params.b}`
-        }
-      ]
-    }).sort('pos').exec(
+    $or: [{
+        'team': `${req.params.d}`
+      },
+      {
+        'team': `${req.params.b}`
+      }
+    ]
+  }).sort('pos').exec(
     function (err, fixtures) {
       if (err) {
         res.json(err);
