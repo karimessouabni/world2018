@@ -31,4 +31,18 @@ export class WcTablesPage {
 
   }
 
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    let str = "ABCDEFGH";
+    for (var i = 0; i < str.length; i++) {
+      this.worldCupProvider.getWorldCupTable(str.charAt(i)).then(groupe => {
+        this.groups.push(groupe);
+        refresher.complete();
+      });
+    }
+
+  }
+
+
 }

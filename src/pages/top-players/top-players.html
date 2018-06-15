@@ -33,13 +33,18 @@
     </ion-avatar>
     <div item-start>{{i+1}} - {{element.name}}
     </div>
-    <div class="teamName" item-start><p>{{element.team}}</p></div>
+    <div class="teamName" item-start>
+      <p>{{element.team}}</p>
+    </div>
 
     <div item-end>{{element.goals}}</div>
     <div item-end>{{element.matchs}}</div>
-  </ion-item> 
+  </ion-item>
 
- 
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
 </ion-content>
 

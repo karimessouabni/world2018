@@ -31,4 +31,15 @@ export class GroupesPage {
 
   }
 
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    this.worldCupProvider.getGroupOfTeam(this.fixture.homeTeamName).then(group =>{
+      this.groupeName = group;
+      this.worldCupProvider.getWorldCupTable(group).then(data => {
+        this.groupe = data;
+      });
+      refresher.complete();
+    });
+      
+  }
 }

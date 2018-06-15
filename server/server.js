@@ -486,7 +486,14 @@ app.post('/api/worldCupNewsToMongo', function (req, res) {
   });
 });
 
-
+app.post('/api/deletVideos', function (req, res) {
+  WCVideos.remove({}, function (err) {
+    if (err) {
+      console.log("Removing all News documents failed" + err);
+    } 
+    res.json("Done");
+  });
+});
 
 app.post('/api/worldCupVideosToMongo', function (req, res) {
   WCVideos.remove({}, function (err) {
@@ -605,7 +612,7 @@ app.get('/api/WCVideos/', function (req, res) {
 
 app.get('/api/WCPlayers/', function (req, res) {
 
-  WCPlayer.find(function (err, data) {
+  WCPlayer.find().sort('pos').exec(function (err, data) {
     if (err) {
       res.json(err);
     }

@@ -63,9 +63,7 @@ page-wc-tables {
     display: flex;
     justify-content: center;
   }
-  .item-md {
-    padding-right: 16px; // min-height: 90px;
-  }
+
 }
 
 ion-col {
@@ -81,7 +79,9 @@ ion-col {
 .label {
   margin: 0;
 }
-
+.item-md {
+  padding-right: 0px;
+}
 ion-avatar img,
 ion-thumbnail img {
   display: inline-block;

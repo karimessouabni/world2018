@@ -46,4 +46,12 @@ export class NewsPage {
     this.socialSharing.share("Video, news and live score : get it from the store : https://play.google.com/store/apps/details?id=com.parisFoot.karimou", null, null, null);
   }
 
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    this.worldCupProvider.getWorldCupNewsForTeam(this.fixture.homeTeamName, this.fixture.awayTeamName).then(data =>{
+      this.news = data;
+      refresher.complete();
+    });
+  }
 }

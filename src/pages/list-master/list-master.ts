@@ -102,6 +102,7 @@ export class ListMasterPage {
 
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
+    this.updateListFixtureAndCompets();
 
     setTimeout(() => {
       console.log('Async operation has ended');
@@ -114,18 +115,11 @@ export class ListMasterPage {
    */
 
   openCompet(fixture: any) {
-    if (fixture.status == "SCHEDULED" || fixture.status == "TIMED") {
+
       this.navCtrl.push(HomeBetPage, {
         fixture: fixture
       });
-    } else {
-      let toast = this.toastCtrl.create({
-        message: "Impossible de parier sur les matches passés !",
-        duration: 3000,
-        position: 'top'
-      });
-      toast.present();
-    }
+   
   }
 
 

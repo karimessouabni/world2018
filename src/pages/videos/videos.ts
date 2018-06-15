@@ -37,4 +37,14 @@ export class VideosPage {
   }
 
 
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    this.worldCupProvider.getWorldCupVideosForTeam(this.fixture.homeTeamName, this.fixture.awayTeamName).then(data => {
+      this.videos = data;
+      refresher.complete();
+    });
+
+  }
+
+
 }

@@ -41,5 +41,12 @@ export class WcVideosPage {
     this.socialSharing.share(msg, null, null, null);
   }
 
-
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    this.worldCupProvider.getWorldCupVideos().then(data => {
+      this.videos = data;
+      refresher.complete();
+    });
+  }
+  
 }

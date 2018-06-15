@@ -15,7 +15,7 @@ import { WorldCupProvider } from '../../providers/providers'
 })
 export class TopPlayersPage {
 
-  players : any;
+  players: any;
   constructor(public wcProvider: WorldCupProvider, public navCtrl: NavController, public navParams: NavParams) {
     this.wcProvider.getWorldCuptopPlayers().then(data => {
       this.players = data;
@@ -24,6 +24,16 @@ export class TopPlayersPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TopPlayersPage');
+  }
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+
+    this.wcProvider.getWorldCuptopPlayers().then(data => {
+      this.players = data;
+      refresher.complete();
+    });
+
   }
 
 }
