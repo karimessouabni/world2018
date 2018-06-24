@@ -587,9 +587,15 @@ app.get('/api/WCVideos/:d/:b', function (req, res) {
       },
       {
         'team': `${req.params.b}`
+      },
+      {
+        'team2': `${req.params.d}`
+      },
+      {
+        'team2': `${req.params.b}`
       }
     ]
-  }).sort('pos').exec(
+  }).sort({'pos': -1}).exec(
     function (err, fixtures) {
       if (err) {
         res.json(err);
